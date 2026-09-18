@@ -33,23 +33,37 @@
   .steps { color:var(--muted); margin:0 0 40px; font-size:15px; }
   .how { padding:0; margin:0 0 16px; }
   .how li { padding:2px 0; }
-  input { width:100%; padding:12px 14px; font:inherit; color:var(--fg); background:transparent; border:1px solid var(--line); border-radius:10px; margin-bottom:24px; }
-  details { border-top:1px solid var(--line); padding:14px 0; }
-  summary { cursor:pointer; font-weight:600; font-size:18px; list-style:none; }
-  summary::-webkit-details-marker { display:none; }
-  summary::before { content:"📁 "; }
-  details[open] summary::before { content:"📂 "; }
-  .ep { display:block; font-weight:400; font-size:13px; color:var(--muted); margin-top:2px; }
-  ul { list-style:none; margin:10px 0 0; padding:0 0 0 28px; }
-  li { padding:0; }
-  li b { font-weight:600; }
+  input { width:100%; min-height:44px; padding:12px 14px; font:inherit; color:var(--fg); background:transparent; border:1px solid var(--line); border-radius:10px; margin-bottom:24px; }
   a { color:var(--fg); }
-  li a, summary, footer a { min-height:44px; display:inline-flex; align-items:center; }
-  summary { display:flex; }
-  input { min-height:44px; }
-  .listen a { color:var(--muted); font-size:14px; }
-  summary { padding:6px 0; }
-  .note { color:var(--muted); font-size:13px; }
+  footer a { min-height:44px; display:inline-flex; align-items:center; }
+  #list { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:14px; }
+  .founder > summary { list-style:none; cursor:pointer; display:flex; flex-direction:column; gap:8px; padding:8px; border:1px solid var(--line); border-radius:14px; min-height:44px; }
+  .founder > summary::-webkit-details-marker, .co > summary::-webkit-details-marker { display:none; }
+  .founder > summary:hover { border-color:var(--muted); }
+  .founder img, .ph { width:100%; height:auto; aspect-ratio:1; border-radius:8px; object-fit:cover; display:block; background:var(--line); }
+  .ph { display:grid; place-items:center; font-size:40px; font-weight:700; color:var(--muted); }
+  .who { display:flex; flex-direction:column; }
+  .meta { color:var(--muted); font-size:13px; }
+  .founder[open] { grid-column:1 / -1; }
+  .founder[open] > summary { flex-direction:row; align-items:center; border-color:var(--fg); }
+  .founder[open] > summary img, .founder[open] > summary .ph { width:72px; font-size:20px; }
+  .inner { margin:12px 0 8px 22px; padding-left:18px; border-left:1px solid var(--line); }
+  .listen { display:inline-flex; align-items:center; min-height:44px; color:var(--muted); font-size:14px; }
+  .cos { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); gap:10px; margin-top:6px; }
+  .co { border:1px solid var(--line); border-radius:12px; padding:0 12px; }
+  .co.off { opacity:.6; }
+  .co[open] { grid-column:1 / -1; border-color:var(--muted); }
+  .tab { display:flex; align-items:center; gap:8px; min-height:44px; font-weight:600; cursor:pointer; text-decoration:none; list-style:none; }
+  .count { margin-left:auto; font-size:12px; font-weight:600; border:1px solid var(--line); border-radius:99px; padding:1px 8px; }
+  .co .note { display:block; color:var(--muted); font-size:12px; padding-bottom:10px; margin-top:-8px; }
+  .roles { list-style:none; margin:0 0 10px 10px; padding:0 0 0 16px; border-left:1px solid var(--line); }
+  .roles li { display:flex; flex-wrap:wrap; align-items:center; column-gap:10px; }
+  .roles a { min-height:44px; display:inline-flex; align-items:center; }
+  .roles li::before { content:"📄"; font-size:13px; }
+  .loc { color:var(--muted); font-size:12px; }
+  .more a { font-weight:600; }
+  .how { padding:0; margin:0 0 16px; list-style:none; }
+  .how li { padding:2px 0; }
   footer { margin-top:56px; color:var(--muted); font-size:13px; }
 </style>
 <script data-posthog-fleet>(function(){if(window.__posthogFleet)return;window.__posthogFleet=1;var s=document.createElement('script');s.async=true;s.src='https://us-assets.i.posthog.com/static/array.js';s.onload=function(){if(!window.posthog||!window.posthog.init)return;window.posthog.init('phc_FCpCP9mIsb9IcxpX0Qqi6FmJ48sVvscAYIrZmtRHIq4',{api_host:'https://us.i.posthog.com',person_profiles:'identified_only',capture_pageview:'history_change',capture_pageleave:true,autocapture:false,disable_session_recording:true,disable_surveys:true,loaded:function(p){p.register({site:location.hostname})}});};document.head.appendChild(s);})();</script>
@@ -63,8 +77,8 @@
     <li>2. Learn how they operate, from inside.</li>
     <li>3. Leave to build your own company.</li>
   </ul>
-  <p class="steps">__GUESTS__ founders, __COMPANIES__ companies with open careers pages. Source: the <a href="https://www.davidsenra.com/podcast">David Senra podcast</a> (also on <a href="https://podcasts.apple.com/us/podcast/david-senra/id1836497887">Apple Podcasts</a>). Get the <a href="/llms.txt">full list as plain text</a> or the <a href="/guests.json">raw data</a>.</p>
-  <input id="q" type="search" placeholder="Search founders or companies" aria-label="Search founders or companies">
+  <p class="steps">__GUESTS__ founders, __COMPANIES__ companies, __ROLES__ live roles. Source: the <a href="https://www.davidsenra.com/podcast">David Senra podcast</a> (also on <a href="https://podcasts.apple.com/us/podcast/david-senra/id1836497887">Apple Podcasts</a>). Get the <a href="/llms.txt">full list as plain text</a> or the <a href="/guests.json">raw data</a>.</p>
+  <input id="q" type="search" placeholder="Search founders, companies or roles" aria-label="Search founders, companies or roles">
   <div id="list">__LIST__</div>
   <footer>
     A free fan project, not affiliated with David Senra. Listen to his show and read the books.<br>
@@ -73,7 +87,7 @@
 </main>
 <script>
   const q = document.getElementById("q");
-  const items = [...document.querySelectorAll("#list details")];
+  const items = [...document.querySelectorAll("#list > details")];
   const filter = () => {
     const t = q.value.trim().toLowerCase();
     for (const d of items) {

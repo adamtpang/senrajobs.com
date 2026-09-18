@@ -19,13 +19,27 @@ console.log(out.length, "guests,", out.reduce((n, x) => n + x.companies.filter(c
 // Prerender the page so crawlers and assistants see the full list without JavaScript.
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const ext = 'target="_blank" rel="noopener"';
+const jobs = fs.existsSync("jobs.json") ? JSON.parse(fs.readFileSync("jobs.json", "utf8")) : {};
+const photos = fs.existsSync("photos.json") ? JSON.parse(fs.readFileSync("photos.json", "utf8")) : {};
+const SHOW = 12; // roles inline per company; the rest live behind "all roles" to keep the page light
+const initials = (n) => n.split(" ").map((w) => w[0]).slice(0, 2).join("");
 const list = out.map((g) => {
-  const ep = g.episode ? `<li class="listen"><a href="${esc(g.episode.url)}" ${ext}>🎧 ${esc(g.episode.title)}</a></li>` : "";
-  const lis = g.companies.map((c) => c.careers
-    ? `<li><b>${esc(c.name)}</b> · <a href="${esc(c.careers)}" ${ext}>open roles</a></li>`
-    : `<li><b>${esc(c.name)}</b><span class="note"> · ${esc(c.note)}</span></li>`).join("");
-  return `<details><summary>${esc(g.name)}</summary><ul>${ep}${lis}</ul></details>`;
-}).join("\n");
+  const photo = photos[g.name]
+    ? `<img src="${esc(photos[g.name])}" alt="${esc(g.name)}" width="300" height="300" loading="lazy" decoding="async">`
+    : `<span class="ph" aria-hidden="true">${esc(initials(g.name))}</span>`;
+  const live = g.companies.reduce((n, c) => n + (jobs[c.name]?.roles.length || 0), 0);
+  const meta = `${g.companies.length} compan${g.companies.length === 1 ? "y" : "ies"}${live ? ` · ${live} open roles` : ""}`;
+  const cos = g.companies.map((c) => {
+    const j = jobs[c.name];
+    if (!c.careers) return `<div class="co off"><span class="tab">📁 ${esc(c.name)}</span><span class="note">${esc(c.note)}</span></div>`;
+    if (!j) return `<div class="co"><a class="tab" href="${esc(c.careers)}" ${ext}>📁 ${esc(c.name)}</a><span class="note">roles on their careers site ↗</span></div>`;
+    const rows = j.roles.slice(0, SHOW).map((r) => `<li><a href="${esc(r.url)}" ${ext}>${esc(r.title)}</a>${r.location ? `<span class="loc">${esc(r.location)}</span>` : ""}</li>`).join("");
+    const more = j.roles.length > SHOW ? `<li class="more"><a href="${esc(c.careers)}" ${ext}>All ${j.roles.length} roles at ${esc(c.name)} ↗</a></li>` : "";
+    return `<details class="co"><summary class="tab">📁 ${esc(c.name)}<span class="count">${j.roles.length}</span></summary><ul class="roles">${rows}${more}</ul></details>`;
+  }).join("");
+  const ep = g.episode ? `<a class="listen" href="${esc(g.episode.url)}" ${ext}>🎧 ${esc(g.episode.title)}</a>` : "";
+  return `<details class="founder"><summary>${photo}<span class="who"><b>${esc(g.name)}</b><span class="meta">${meta}</span></span></summary><div class="inner">${ep}<div class="cos">${cos}</div></div></details>`;
+}).join("");
 const companies = out.reduce((n, x) => n + x.companies.filter((c) => c.careers).length, 0);
 const jsonld = {
   "@context": "https://schema.org",
@@ -40,7 +54,7 @@ const jsonld = {
   ]
 };
 const html = fs.readFileSync("template.html", "utf8")
-  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies)
+  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__ROLES__", Object.values(jobs).reduce((n, j) => n + (j?.roles.length || 0), 0).toLocaleString("en-US"))
   .replace("__JSONLD__", JSON.stringify(jsonld).replace(/</g, "\u003c"))
   .replace("__LIST__", list);
 fs.writeFileSync("index.html", html);
