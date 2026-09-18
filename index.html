@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senra Jobs</title>
+<meta name="description" content="Every founder David Senra has interviewed, every company they built, and where to apply. Join a great founder, learn from inside, then go build your own.">
+<meta property="og:title" content="Senra Jobs">
+<meta property="og:description" content="Work for the founders David Senra interviews. Learn from inside. Then build your own.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪜</text></svg>">
+<style>
+  :root { --bg:#fff; --fg:#111; --muted:#6b6b6b; --line:#e6e6e6; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b0b0b; --fg:#f2f2f2; --muted:#8f8f8f; --line:#222; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:72px 16px 96px; }
+  h1 { font-size:40px; letter-spacing:-.02em; margin:0 0 12px; }
+  .lede { font-size:19px; color:var(--muted); margin:0 0 8px; }
+  .steps { color:var(--muted); margin:0 0 40px; font-size:15px; }
+  input { width:100%; padding:12px 14px; font:inherit; color:var(--fg); background:transparent; border:1px solid var(--line); border-radius:10px; margin-bottom:24px; }
+  details { border-top:1px solid var(--line); padding:14px 0; }
+  summary { cursor:pointer; font-weight:600; font-size:18px; list-style:none; }
+  summary::-webkit-details-marker { display:none; }
+  summary::before { content:"📁 "; }
+  details[open] summary::before { content:"📂 "; }
+  .ep { display:block; font-weight:400; font-size:13px; color:var(--muted); margin-top:2px; }
+  ul { list-style:none; margin:10px 0 0; padding:0 0 0 28px; }
+  li { padding:4px 0; }
+  li b { font-weight:600; }
+  a { color:var(--fg); }
+  .note { color:var(--muted); font-size:13px; }
+  footer { margin-top:56px; color:var(--muted); font-size:13px; }
+</style>
+<script data-posthog-fleet>(function(){if(window.__posthogFleet)return;window.__posthogFleet=1;var s=document.createElement('script');s.async=true;s.src='https://us-assets.i.posthog.com/static/array.js';s.onload=function(){if(!window.posthog||!window.posthog.init)return;window.posthog.init('phc_FCpCP9mIsb9IcxpX0Qqi6FmJ48sVvscAYIrZmtRHIq4',{api_host:'https://us.i.posthog.com',person_profiles:'identified_only',capture_pageview:'history_change',capture_pageleave:true,autocapture:false,disable_session_recording:true,disable_surveys:true,loaded:function(p){p.register({site:location.hostname})}});};document.head.appendChild(s);})();</script>
+</head>
+<body>
+<main>
+  <h1>🪜 Senra Jobs</h1>
+  <p class="lede">Work for the founders David Senra interviews.</p>
+  <p class="steps">Join a great founder. Learn from inside. Then go build your own.</p>
+  <input id="q" type="search" placeholder="Search founders or companies" aria-label="Search founders or companies">
+  <div id="list"></div>
+  <footer>
+    A free fan project, not affiliated with David Senra. Listen to his show and read the books.<br>
+    Missing a founder or a broken link? Tell <a href="https://x.com/adamtpang">@adamtpang</a>.
+  </footer>
+</main>
+<script>
+  let guests = [];
+  const list = document.getElementById("list");
+  const q = document.getElementById("q");
+  function render() {
+    const term = q.value.trim().toLowerCase();
+    list.innerHTML = "";
+    for (const g of guests) {
+      const hit = !term || g.name.toLowerCase().includes(term) || g.companies.some(c => c.name.toLowerCase().includes(term));
+      if (!hit) continue;
+      const d = document.createElement("details");
+      if (term) d.open = true;
+      const s = document.createElement("summary");
+      s.textContent = g.name;
+      if (g.episode) {
+        const ep = document.createElement(g.episode.url ? "a" : "span");
+        ep.className = "ep";
+        ep.textContent = g.episode.title;
+        if (g.episode.url) { ep.href = g.episode.url; ep.target = "_blank"; ep.rel = "noopener"; }
+        s.appendChild(ep);
+      }
+      d.appendChild(s);
+      const ul = document.createElement("ul");
+      for (const c of g.companies) {
+        const li = document.createElement("li");
+        const b = document.createElement("b");
+        b.textContent = c.name;
+        li.appendChild(b);
+        if (c.careers) {
+          li.append(" · ");
+          const a = document.createElement("a");
+          a.href = c.careers; a.target = "_blank"; a.rel = "noopener";
+          a.textContent = "open roles";
+          li.appendChild(a);
+        } else if (c.note) {
+          const n = document.createElement("span");
+          n.className = "note";
+          n.textContent = " · " + c.note;
+          li.appendChild(n);
+        }
+        ul.appendChild(li);
+      }
+      d.appendChild(ul);
+      list.appendChild(d);
+    }
+  }
+  q.addEventListener("input", render);
+  fetch("guests.json").then(r => r.json()).then(data => { guests = data; render(); });
+</script>
+</body>
+</html>

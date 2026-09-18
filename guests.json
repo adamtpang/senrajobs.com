@@ -1,0 +1,600 @@
+[
+  {
+    "name": "Luca Ferrari",
+    "episode": {
+      "title": "Luca Ferrari on Building Bending Spoons: Extreme Ownership, Talent Science & Relentless Simplification (2026-09-13)",
+      "url": "https://podcasts.apple.com/us/podcast/luca-ferrari-on-building-bending-spoons-extreme-ownership/id1836497887?i=1000789287660"
+    },
+    "companies": [
+      {
+        "name": "Bending Spoons",
+        "careers": "https://jobs.bendingspoons.com"
+      }
+    ]
+  },
+  {
+    "name": "Mati Staniszewski",
+    "episode": {
+      "title": "Mati Staniszewski on ElevenLabs, Voice AI & Building the Communication Layer for AI (2026-09-09)",
+      "url": "https://podcasts.apple.com/us/podcast/mati-staniszewski-on-elevenlabs-voice-ai-building-the/id1836497887?i=1000788628928"
+    },
+    "companies": [
+      {
+        "name": "ElevenLabs",
+        "careers": "https://elevenlabs.io/careers"
+      }
+    ]
+  },
+  {
+    "name": "Zach Dell",
+    "episode": {
+      "title": "Zach Dell on Base Power, Energy Abundance & Building a Company for Life (2026-09-06)",
+      "url": "https://podcasts.apple.com/us/podcast/zach-dell-on-base-power-energy-abundance-building-a/id1836497887?i=1000788108719"
+    },
+    "companies": [
+      {
+        "name": "Base Power",
+        "careers": "https://www.basepowercompany.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "Doug Leone",
+    "episode": {
+      "title": "Doug Leone on Sequoia, Fear, Great Founders & Starting Over at 69 (2026-08-30)",
+      "url": "https://podcasts.apple.com/us/podcast/doug-leone-on-sequoia-fear-great-founders-starting/id1836497887?i=1000786771634"
+    },
+    "companies": [
+      {
+        "name": "Sequoia Capital (longtime leader, not founder)",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "Torsten Reil",
+    "episode": {
+      "title": "Building Defense Technologies to Protect Democracies | Torsten Reil, Helsing (2026-08-26)",
+      "url": "https://podcasts.apple.com/us/podcast/building-defense-technologies-to-protect-democracies/id1836497887?i=1000785968395"
+    },
+    "companies": [
+      {
+        "name": "Helsing",
+        "careers": "https://helsing.ai/careers"
+      },
+      {
+        "name": "NaturalMotion",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Sam Altman",
+    "episode": {
+      "title": "Sam Altman on Building OpenAI & Betting on the Impossible (2026-08-23)",
+      "url": "https://podcasts.apple.com/us/podcast/sam-altman-on-building-openai-betting-on-the-impossible/id1836497887?i=1000785201420"
+    },
+    "companies": [
+      {
+        "name": "OpenAI",
+        "careers": "https://openai.com/careers"
+      },
+      {
+        "name": "Tools for Humanity (World)",
+        "careers": "https://www.toolsforhumanity.com/careers"
+      },
+      {
+        "name": "Loopt",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Travis Kalanick",
+    "episode": {
+      "title": "Travis Kalanick, Founder of Uber & Atoms (2026-08-16)",
+      "url": "https://podcasts.apple.com/us/podcast/travis-kalanick-founder-of-uber-atoms/id1836497887?i=1000783566781"
+    },
+    "companies": [
+      {
+        "name": "Atoms (formerly City Storage Systems)",
+        "careers": "https://atoms.com/pages/careers"
+      },
+      {
+        "name": "CloudKitchens",
+        "careers": "https://jobs.ashbyhq.com/cloudkitchens"
+      },
+      {
+        "name": "Uber (co-founder, no longer leads)",
+        "careers": "https://www.uber.com/us/en/careers/"
+      },
+      {
+        "name": "Scour, Red Swoosh",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Lulu Cheng Meservey",
+    "episode": {
+      "title": "Lulu Cheng Meservey, Founder of Rostra (2026-08-12)",
+      "url": "https://podcasts.apple.com/us/podcast/lulu-cheng-meservey-founder-of-rostra/id1836497887?i=1000782903883"
+    },
+    "companies": [
+      {
+        "name": "Rostra",
+        "careers": "https://jobs.ashbyhq.com/rostra"
+      }
+    ]
+  },
+  {
+    "name": "Michael Ovitz",
+    "episode": {
+      "title": "Michael Ovitz, Co-founder of CAA (2026-08-09)",
+      "url": "https://podcasts.apple.com/us/podcast/michael-ovitz-co-founder-of-caa/id1836497887?i=1000781174011"
+    },
+    "companies": [
+      {
+        "name": "Creative Artists Agency (co-founder, no longer leads)",
+        "careers": "https://www.caa.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "Micky Malka",
+    "episode": {
+      "title": "Lessons From Backing The Best Founders In Fintech | Micky Malka (2026-08-02)",
+      "url": "https://podcasts.apple.com/us/podcast/lessons-from-backing-the-best-founders-in-fintech/id1836497887?i=1000779512444"
+    },
+    "companies": [
+      {
+        "name": "Ribbit Capital",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "David Heinemeier Hansson",
+    "episode": {
+      "title": "DHH: How to Build a Profitable Company Without Losing Control (2026-07-26)",
+      "url": "https://podcasts.apple.com/us/podcast/dhh-how-to-build-a-profitable-company-without/id1836497887?i=1000778390525"
+    },
+    "companies": [
+      {
+        "name": "37signals",
+        "careers": "https://37signals.com/jobs"
+      }
+    ]
+  },
+  {
+    "name": "Jeff Zalaznick",
+    "episode": {
+      "title": "The Restaurant Genius Behind Carbone, ZZ's, Torrisi & More | Jeff Zalaznick (2026-07-19)",
+      "url": "https://podcasts.apple.com/us/podcast/the-restaurant-genius-behind-carbone-zzs-torrisi-more/id1836497887?i=1000777404038"
+    },
+    "companies": [
+      {
+        "name": "Major Food Group",
+        "careers": "https://www.majorfood.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "Eric Glyman",
+    "episode": {
+      "title": "Eric Glyman, Co-founder of Ramp (2026-07-12)",
+      "url": "https://podcasts.apple.com/us/podcast/eric-glyman-co-founder-of-ramp/id1836497887?i=1000776445689"
+    },
+    "companies": [
+      {
+        "name": "Ramp",
+        "careers": "https://ramp.com/careers"
+      },
+      {
+        "name": "Paribus",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Jonathan Ross",
+    "episode": {
+      "title": "Jonathan Ross, Founder of Groq (2026-07-05)",
+      "url": "https://podcasts.apple.com/us/podcast/jonathan-ross-founder-of-groq/id1836497887?i=1000775505304"
+    },
+    "companies": [
+      {
+        "name": "Groq",
+        "careers": "https://groq.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "Scott Wu",
+    "episode": {
+      "title": "Scott Wu, Cognition (2026-06-28)",
+      "url": "https://podcasts.apple.com/us/podcast/scott-wu-cognition/id1836497887?i=1000774533148"
+    },
+    "companies": [
+      {
+        "name": "Cognition",
+        "careers": "https://cognition.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "Steve Stoute",
+    "episode": {
+      "title": "Steve Stoute, UnitedMasters (2026-06-21)",
+      "url": "https://podcasts.apple.com/us/podcast/steve-stoute-unitedmasters/id1836497887?i=1000773587421"
+    },
+    "companies": [
+      {
+        "name": "UnitedMasters",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Translation",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "Ed Catmull",
+    "episode": {
+      "title": "Ed Catmull, Co-founder of Pixar (2026-06-14)",
+      "url": "https://podcasts.apple.com/us/podcast/ed-catmull-co-founder-of-pixar/id1836497887?i=1000772605875"
+    },
+    "companies": [
+      {
+        "name": "Pixar",
+        "careers": "https://www.pixar.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "Gustav Soderstrom",
+    "episode": {
+      "title": "Gustav Soderstrom, Spotify (2026-06-07)",
+      "url": "https://podcasts.apple.com/us/podcast/gustav-s%C3%B6derstr%C3%B6m-spotify/id1836497887?i=1000771527349"
+    },
+    "companies": [
+      {
+        "name": "Spotify (executive, not founder)",
+        "careers": "https://www.lifeatspotify.com/jobs"
+      }
+    ]
+  },
+  {
+    "name": "Ivanka Trump",
+    "episode": {
+      "title": "Ivanka Trump on Building an Authentic Life (2026-05-31)",
+      "url": "https://podcasts.apple.com/us/podcast/ivanka-trump-on-building-an-authentic-life/id1836497887?i=1000770406545"
+    },
+    "companies": [
+      {
+        "name": "Ivanka Trump brand",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Rick Rubin",
+    "episode": {
+      "title": "The Simple Genius of Rick Rubin (2026-05-24)",
+      "url": "https://podcasts.apple.com/us/podcast/the-simple-genius-of-rick-rubin/id1836497887?i=1000769313715"
+    },
+    "companies": [
+      {
+        "name": "Def Jam (co-founder)",
+        "note": "acquired or closed"
+      },
+      {
+        "name": "American Recordings",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "Strauss Zelnick",
+    "episode": {
+      "title": "Strauss Zelnick, Take-Two Interactive (2026-05-17)",
+      "url": "https://podcasts.apple.com/us/podcast/strauss-zelnick-take-two-interactive/id1836497887?i=1000768231102"
+    },
+    "companies": [
+      {
+        "name": "Take-Two Interactive (CEO)",
+        "careers": "https://careers.take2games.com"
+      },
+      {
+        "name": "ZelnickMedia (founder)",
+        "careers": "https://www.zelnickmedia.com"
+      }
+    ]
+  },
+  {
+    "name": "Dana White",
+    "episode": {
+      "title": "Dana White, UFC (2026-05-10)",
+      "url": "https://podcasts.apple.com/us/podcast/dana-white-ufc/id1836497887?i=1000767030170"
+    },
+    "companies": [
+      {
+        "name": "UFC (CEO, now part of TKO Group)",
+        "careers": "https://www.ufc.com/careers"
+      },
+      {
+        "name": "TKO Group Holdings",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "Adam Foroughi",
+    "episode": {
+      "title": "Adam Foroughi, AppLovin (2026-05-03)",
+      "url": "https://podcasts.apple.com/us/podcast/adam-foroughi-applovin/id1836497887?i=1000765867558"
+    },
+    "companies": [
+      {
+        "name": "AppLovin",
+        "careers": "https://www.applovin.com/en/careers"
+      }
+    ]
+  },
+  {
+    "name": "David Baszucki",
+    "episode": {
+      "title": "David Baszucki, Roblox (2026-04-26)",
+      "url": "https://podcasts.apple.com/us/podcast/david-baszucki-roblox/id1836497887?i=1000763644606"
+    },
+    "companies": [
+      {
+        "name": "Roblox",
+        "careers": "https://careers.roblox.com"
+      },
+      {
+        "name": "Knowledge Revolution",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Evan Spiegel",
+    "episode": {
+      "title": "Evan Spiegel, Snap (2026-04-12)",
+      "url": "https://podcasts.apple.com/us/podcast/evan-spiegel-snap/id1836497887?i=1000760911961"
+    },
+    "companies": [
+      {
+        "name": "Snap",
+        "careers": "https://careers.snap.com"
+      }
+    ]
+  },
+  {
+    "name": "Tony Xu",
+    "episode": {
+      "title": "Tony Xu, DoorDash (2026-03-29)",
+      "url": "https://podcasts.apple.com/us/podcast/tony-xu-doordash/id1836497887?i=1000758009872"
+    },
+    "companies": [
+      {
+        "name": "DoorDash",
+        "careers": "https://careersatdoordash.com"
+      }
+    ]
+  },
+  {
+    "name": "Marc Andreessen",
+    "episode": {
+      "title": "Marc Andreessen, co-founder of a16z & Netscape (2026-03-15)",
+      "url": "https://podcasts.apple.com/us/podcast/marc-andreessen-co-founder-of-a16z-netscape/id1836497887?i=1000755371069"
+    },
+    "companies": [
+      {
+        "name": "Andreessen Horowitz",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Netscape",
+        "note": "acquired or closed"
+      },
+      {
+        "name": "Loudcloud/Opsware",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Brian Armstrong",
+    "episode": {
+      "title": "Brian Armstrong, Coinbase (2026-03-01)",
+      "url": "https://podcasts.apple.com/us/podcast/brian-armstrong-coinbase/id1836497887?i=1000752296350"
+    },
+    "companies": [
+      {
+        "name": "Coinbase",
+        "careers": "https://www.coinbase.com/careers/positions"
+      },
+      {
+        "name": "NewLimit",
+        "careers": "https://www.newlimit.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "Jason Fried",
+    "episode": {
+      "title": "Jason Fried, 37signals (makers of Basecamp, HEY and ONCE) (2026-02-15)",
+      "url": "https://podcasts.apple.com/us/podcast/jason-fried-37signals-makers-of-basecamp-hey-and-once/id1836497887?i=1000749812872"
+    },
+    "companies": [
+      {
+        "name": "37signals",
+        "careers": "https://37signals.com/jobs"
+      }
+    ]
+  },
+  {
+    "name": "Jimmy Iovine",
+    "episode": {
+      "title": "Jimmy Iovine, Interscope Records & Beats by Dre (2026-02-01)",
+      "url": "https://podcasts.apple.com/us/podcast/jimmy-iovine-interscope-records-beats-by-dre/id1836497887?i=1000747548154"
+    },
+    "companies": [
+      {
+        "name": "Interscope Records",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Beats by Dre",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Tobi Lutke",
+    "episode": {
+      "title": "Tobi Lutke, Shopify (2026-01-18)",
+      "url": "https://podcasts.apple.com/us/podcast/tobi-l%C3%BCtke-shopify/id1836497887?i=1000745613647"
+    },
+    "companies": [
+      {
+        "name": "Shopify",
+        "careers": "https://www.shopify.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "John Mackey",
+    "episode": {
+      "title": "John Mackey, Whole Foods Market (2026-01-04)",
+      "url": "https://podcasts.apple.com/us/podcast/john-mackey-whole-foods-market/id1836497887?i=1000743678150"
+    },
+    "companies": [
+      {
+        "name": "Whole Foods Market",
+        "careers": "https://careers.wholefoods.com"
+      },
+      {
+        "name": "Love.Life",
+        "careers": "https://www.love.life/careers"
+      }
+    ]
+  },
+  {
+    "name": "Patrick O'Shaughnessy",
+    "episode": {
+      "title": "Patrick O'Shaughnessy, Colossus & Positive Sum (2025-12-21)",
+      "url": "https://podcasts.apple.com/us/podcast/patrick-oshaughnessy-colossus-positive-sum/id1836497887?i=1000742180653"
+    },
+    "companies": [
+      {
+        "name": "Colossus",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Positive Sum",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "James Dyson",
+    "episode": {
+      "title": "James Dyson, Dyson (2025-12-07)",
+      "url": "https://podcasts.apple.com/us/podcast/james-dyson-dyson/id1836497887?i=1000740057726"
+    },
+    "companies": [
+      {
+        "name": "Dyson",
+        "careers": "https://careers.dyson.com/en-gb"
+      }
+    ]
+  },
+  {
+    "name": "Todd Graves",
+    "episode": {
+      "title": "Todd Graves, Raising Cane's (2025-11-09)",
+      "url": "https://podcasts.apple.com/us/podcast/todd-graves-raising-canes/id1836497887?i=1000735941190"
+    },
+    "companies": [
+      {
+        "name": "Raising Cane's",
+        "careers": "https://www.raisingcanes.com/careers"
+      }
+    ]
+  },
+  {
+    "name": "Brad Jacobs",
+    "episode": {
+      "title": "How Brad Jacobs Built 8 Billion-Dollar Companies (2025-10-26)",
+      "url": "https://podcasts.apple.com/us/podcast/how-brad-jacobs-built-8-billion-dollar-companies/id1836497887?i=1000733532389"
+    },
+    "companies": [
+      {
+        "name": "QXO",
+        "careers": "https://qxo.com/careers"
+      },
+      {
+        "name": "XPO",
+        "careers": "https://jobs.xpo.com"
+      },
+      {
+        "name": "GXO Logistics",
+        "careers": "https://jobs.gxo.com"
+      },
+      {
+        "name": "RXO",
+        "careers": "https://careers.rxo.com"
+      },
+      {
+        "name": "United Rentals",
+        "careers": "https://jobs.unitedrentals.com"
+      },
+      {
+        "name": "United Waste Systems",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Michael Dell",
+    "episode": {
+      "title": "Michael Dell, Dell Technologies (2025-10-12)",
+      "url": "https://podcasts.apple.com/us/podcast/michael-dell-dell-technologies/id1836497887?i=1000731426300"
+    },
+    "companies": [
+      {
+        "name": "Dell Technologies",
+        "careers": "https://jobs.dell.com"
+      },
+      {
+        "name": "MSD Capital",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "Daniel Ek",
+    "episode": {
+      "title": "Daniel Ek, Spotify (2025-09-28)",
+      "url": "https://podcasts.apple.com/us/podcast/daniel-ek-spotify/id1836497887?i=1000728863493"
+    },
+    "companies": [
+      {
+        "name": "Spotify",
+        "careers": "https://www.lifeatspotify.com/jobs"
+      },
+      {
+        "name": "Neko Health",
+        "careers": "https://www.neko.health/careers"
+      },
+      {
+        "name": "Prima Materia",
+        "note": "no public careers page yet"
+      }
+    ]
+  }
+]
