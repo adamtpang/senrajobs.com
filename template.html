@@ -10,9 +10,13 @@
 <meta name="description" content="Every founder David Senra has interviewed, every company they built, and where to apply. Join a great founder, learn from inside, then go build your own.">
 <meta property="og:title" content="Senra Jobs: work for the founders David Senra interviews">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://senrajobs.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://senrajobs.com/og.png">
 <meta property="og:url" content="https://senrajobs.com/">
 <meta property="og:site_name" content="Senra Jobs">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Senra Jobs: work for the founders David Senra interviews">
 <meta name="twitter:description" content="Work for the founders David Senra interviews. Learn from inside. Then build your own.">
 <script type="application/ld+json">__JSONLD__</script>
@@ -37,9 +41,12 @@
   details[open] summary::before { content:"📂 "; }
   .ep { display:block; font-weight:400; font-size:13px; color:var(--muted); margin-top:2px; }
   ul { list-style:none; margin:10px 0 0; padding:0 0 0 28px; }
-  li { padding:4px 0; }
+  li { padding:0; }
   li b { font-weight:600; }
-  a { color:var(--fg); display:inline-block; min-height:24px; padding:4px 0; }
+  a { color:var(--fg); }
+  li a, summary, footer a { min-height:44px; display:inline-flex; align-items:center; }
+  summary { display:flex; }
+  input { min-height:44px; }
   .listen a { color:var(--muted); font-size:14px; }
   summary { padding:6px 0; }
   .note { color:var(--muted); font-size:13px; }
@@ -56,7 +63,7 @@
     <li>2. Learn how they operate, from inside.</li>
     <li>3. Leave to build your own company.</li>
   </ul>
-  <p class="steps">__GUESTS__ founders, __COMPANIES__ companies with open careers pages. Source: the <a href="https://www.davidsenra.com/podcast">David Senra podcast</a> (also on <a href="https://podcasts.apple.com/us/podcast/david-senra/id1836497887">Apple Podcasts</a>).</p>
+  <p class="steps">__GUESTS__ founders, __COMPANIES__ companies with open careers pages. Source: the <a href="https://www.davidsenra.com/podcast">David Senra podcast</a> (also on <a href="https://podcasts.apple.com/us/podcast/david-senra/id1836497887">Apple Podcasts</a>). Get the <a href="/llms.txt">full list as plain text</a> or the <a href="/guests.json">raw data</a>.</p>
   <input id="q" type="search" placeholder="Search founders or companies" aria-label="Search founders or companies">
   <div id="list">__LIST__</div>
   <footer>
@@ -67,14 +74,17 @@
 <script>
   const q = document.getElementById("q");
   const items = [...document.querySelectorAll("#list details")];
-  q.addEventListener("input", () => {
+  const filter = () => {
     const t = q.value.trim().toLowerCase();
     for (const d of items) {
       const hit = !t || d.textContent.toLowerCase().includes(t);
       d.hidden = !hit;
       d.open = !!t && hit;
     }
-  });
+  };
+  q.addEventListener("input", filter);
+  const pre = new URLSearchParams(location.search).get("q");
+  if (pre) { q.value = pre; filter(); }
 </script>
 </body>
 </html>

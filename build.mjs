@@ -31,12 +31,12 @@ const jsonld = {
   "@context": "https://schema.org",
   "@graph": [
     { "@type": "WebSite", "@id": "https://senrajobs.com/#site", url: "https://senrajobs.com/", name: "Senra Jobs",
-      description: "Work for the founders David Senra interviews. Learn from inside. Then build your own.", publisher: { "@id": "https://senrajobs.com/#org" } },
-    { "@type": "Organization", "@id": "https://senrajobs.com/#org", name: "Senra Jobs", url: "https://senrajobs.com/",
+      description: "Work for the founders David Senra interviews. Learn from inside. Then build your own.",
+      publisher: { "@id": "https://senrajobs.com/#org" }, author: { "@id": "https://senrajobs.com/#adam" },
+      potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: "https://senrajobs.com/?q={search_term_string}" }, "query-input": "required name=search_term_string" } },
+    { "@type": "Organization", "@id": "https://senrajobs.com/#org", name: "Senra Jobs", url: "https://senrajobs.com/", logo: "https://senrajobs.com/og.png",
       sameAs: ["https://github.com/adamtpang/senrajobs.com", "https://x.com/adamtpang"] },
-    { "@type": "ItemList", name: "Founders interviewed on the David Senra podcast", numberOfItems: out.length,
-      itemListElement: out.map((g, i) => ({ "@type": "ListItem", position: i + 1, item: { "@type": "Person", name: g.name,
-        worksFor: g.companies.filter((c) => c.careers).map((c) => ({ "@type": "Organization", name: c.name, url: c.careers })) } })) }
+    { "@type": "Person", "@id": "https://senrajobs.com/#adam", name: "Adam Pang", sameAs: ["https://x.com/adamtpang", "https://github.com/adamtpang"] }
   ]
 };
 const html = fs.readFileSync("template.html", "utf8")
