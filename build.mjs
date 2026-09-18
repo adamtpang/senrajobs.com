@@ -20,11 +20,11 @@ console.log(out.length, "guests,", out.reduce((n, x) => n + x.companies.filter(c
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const ext = 'target="_blank" rel="noopener"';
 const list = out.map((g) => {
-  const ep = g.episode ? `<a class="ep" href="${esc(g.episode.url)}" ${ext}>${esc(g.episode.title)}</a>` : "";
+  const ep = g.episode ? `<li class="listen"><a href="${esc(g.episode.url)}" ${ext}>🎧 ${esc(g.episode.title)}</a></li>` : "";
   const lis = g.companies.map((c) => c.careers
     ? `<li><b>${esc(c.name)}</b> · <a href="${esc(c.careers)}" ${ext}>open roles</a></li>`
     : `<li><b>${esc(c.name)}</b><span class="note"> · ${esc(c.note)}</span></li>`).join("");
-  return `<details><summary>${esc(g.name)}${ep}</summary><ul>${lis}</ul></details>`;
+  return `<details><summary>${esc(g.name)}</summary><ul>${ep}${lis}</ul></details>`;
 }).join("\n");
 const companies = out.reduce((n, x) => n + x.companies.filter((c) => c.careers).length, 0);
 const jsonld = {
