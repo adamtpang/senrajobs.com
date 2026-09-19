@@ -40,7 +40,8 @@ const list = out.map((g) => {
   const ep = g.episode ? `<a class="listen" href="${esc(g.episode.url)}" ${ext}>🎧 ${esc(g.episode.title)}</a>` : "";
   return `<details class="founder"><summary>${photo}<span class="who"><b>${esc(g.name)}</b><span class="meta">${meta}</span></span></summary><div class="inner">${ep}<div class="cos">${cos}</div></div></details>`;
 }).join("");
-const companies = out.reduce((n, x) => n + x.companies.filter((c) => c.careers).length, 0);
+const companies = new Set(out.flatMap((x) => x.companies.filter((c) => c.careers).map((c) => c.name.split(" (")[0]))).size;
+const updated = new Date(Math.max(0, ...Object.values(jobs).filter(Boolean).map((j) => Date.parse(j.fetched)))).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 const jsonld = {
   "@context": "https://schema.org",
   "@graph": [
@@ -54,7 +55,7 @@ const jsonld = {
   ]
 };
 const html = fs.readFileSync("template.html", "utf8")
-  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__ROLES__", Object.values(jobs).reduce((n, j) => n + (j?.roles.length || 0), 0).toLocaleString("en-US"))
+  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__UPDATED__", updated).replaceAll("__ROLES__", Object.values(jobs).reduce((n, j) => n + (j?.roles.length || 0), 0).toLocaleString("en-US"))
   .replace("__JSONLD__", JSON.stringify(jsonld).replace(/</g, "\u003c"))
   .replace("__LIST__", list);
 fs.writeFileSync("index.html", html);

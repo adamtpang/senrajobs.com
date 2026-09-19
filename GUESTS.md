@@ -22,7 +22,7 @@ Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.meg
 - Loopt: defunct (acquired by Green Dot 2012), skipped
 
 ## Travis Kalanick (episode: Travis Kalanick, Founder of Uber & Atoms, 2026-08-16, https://podcasts.apple.com/us/podcast/travis-kalanick-founder-of-uber-atoms/id1836497887?i=1000783566781)
-- Atoms (formerly City Storage Systems): https://atoms.com/pages/careers (unverified)
+- Atoms (formerly City Storage Systems): https://job-boards.greenhouse.io/atoms (verified 2026-09-19; the old atoms.com careers page is dead)
 - CloudKitchens: https://jobs.ashbyhq.com/cloudkitchens
 - Uber (co-founder, no longer leads): https://www.uber.com/us/en/careers/ (unverified)
 - Scour, Red Swoosh: defunct/acquired, skipped
@@ -47,7 +47,8 @@ Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.meg
 - Paribus: acquired by Capital One (2016), skipped
 
 ## Jonathan Ross (episode: Jonathan Ross, Founder of Groq, 2026-07-05, https://podcasts.apple.com/us/podcast/jonathan-ross-founder-of-groq/id1836497887?i=1000775505304)
-- Groq: https://groq.com/careers (redirects to https://groq.com/company, unverified as a jobs page; Groq signed a licensing deal with Nvidia in Dec 2025 and Ross reportedly joined Nvidia, check current status)
+- Groq (founder; Groq stays independent after the Dec 2025 Nvidia licensing deal, no public careers page found 2026-09-19): no public careers page
+- Nvidia (Ross joined as Chief Software Architect, 2026): https://www.nvidia.com/en-us/about-nvidia/careers/
 
 ## Scott Wu (episode: Scott Wu, Cognition, 2026-06-28, https://podcasts.apple.com/us/podcast/scott-wu-cognition/id1836497887?i=1000774533148)
 - Cognition: https://cognition.com/careers

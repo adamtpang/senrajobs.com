@@ -98,7 +98,7 @@
     "companies": [
       {
         "name": "Atoms (formerly City Storage Systems)",
-        "careers": "https://atoms.com/pages/careers"
+        "careers": "https://job-boards.greenhouse.io/atoms"
       },
       {
         "name": "CloudKitchens",
@@ -204,8 +204,12 @@
     },
     "companies": [
       {
-        "name": "Groq",
-        "careers": "https://groq.com/careers"
+        "name": "Groq (founder; Groq stays independent after the Dec 2025 Nvidia licensing deal, no public careers page found 2026-09-19)",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Nvidia (Ross joined as Chief Software Architect, 2026)",
+        "careers": "https://www.nvidia.com/en-us/about-nvidia/careers/"
       }
     ]
   },

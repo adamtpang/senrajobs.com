@@ -24,7 +24,7 @@
 - Loopt: acquired or closed
 
 ## Travis Kalanick
-- Atoms (formerly City Storage Systems): https://atoms.com/pages/careers
+- Atoms (formerly City Storage Systems): https://job-boards.greenhouse.io/atoms
 - CloudKitchens: https://jobs.ashbyhq.com/cloudkitchens
 - Uber (co-founder, no longer leads): https://www.uber.com/us/en/careers/
 - Scour, Red Swoosh: acquired or closed
@@ -49,7 +49,8 @@
 - Paribus: acquired or closed
 
 ## Jonathan Ross
-- Groq: https://groq.com/careers
+- Groq (founder; Groq stays independent after the Dec 2025 Nvidia licensing deal, no public careers page found 2026-09-19): no public careers page yet
+- Nvidia (Ross joined as Chief Software Architect, 2026): https://www.nvidia.com/en-us/about-nvidia/careers/
 
 ## Scott Wu
 - Cognition: https://cognition.com/careers
