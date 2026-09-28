@@ -1,6 +1,13 @@
 # Senra Jobs
 
-> Free directory of the 38 living founders interviewed on the David Senra podcast, their companies, and careers links. Join a great founder, learn from inside, then build your own.
+> Free directory of the 40 living founders interviewed on the David Senra podcast, their companies, and careers links. Join a great founder, learn from inside, then build your own.
+
+## Ronnie Fieg
+- Kith: https://kith.wd1.myworkdayjobs.com/Kith_External_Careers
+
+## Peter Rahal
+- David Protein: https://apply.workable.com/david-protein/
+- RXBAR: acquired or closed
 
 ## Luca Ferrari
 - Bending Spoons: https://jobs.bendingspoons.com
@@ -63,7 +70,7 @@
 - Pixar: https://www.pixar.com/careers
 
 ## Gustav Soderstrom
-- Spotify (executive, not founder): https://www.lifeatspotify.com/jobs
+- Spotify (executive, not founder): https://jobs.lever.co/spotify
 
 ## Ivanka Trump
 - Ivanka Trump brand: acquired or closed
@@ -91,7 +98,7 @@
 - Snap: https://careers.snap.com
 
 ## Tony Xu
-- DoorDash: https://careersatdoordash.com
+- DoorDash: https://job-boards.greenhouse.io/doordashusa
 
 ## Marc Andreessen
 - Andreessen Horowitz: no public careers page yet
@@ -139,6 +146,6 @@
 - MSD Capital: no public careers page yet
 
 ## Daniel Ek
-- Spotify: https://www.lifeatspotify.com/jobs
+- Spotify: https://jobs.lever.co/spotify
 - Neko Health: https://www.neko.health/careers
 - Prima Materia: no public careers page yet

@@ -20,15 +20,16 @@ const PATTERNS = [
   ["ashby", /jobs\.ashbyhq\.com\/([a-z0-9_.%-]+)/i],
   ["smartrecruiters", /(?:careers|jobs)\.smartrecruiters\.com\/([a-z0-9_-]+)/i],
   ["workable", /apply\.workable\.com\/([a-z0-9_-]+)/i],
+  ["workday", /([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com\/(?:[a-z]{2}-[A-Z]{2}\/)?([A-Za-z0-9_-]+)/],
 ];
 const NOT_SLUGS = new Set(["embed", "api", "v1", "js", "static", "assets", "jobs", "careers"]);
 
 async function detect(careers) {
-  for (const [kind, re] of PATTERNS) { const m = careers.match(re); if (m && !NOT_SLUGS.has(m[1].toLowerCase())) return { kind, slug: m[1] }; }
+  for (const [kind, re] of PATTERNS) { const m = careers.match(re); if (m && !NOT_SLUGS.has(m[1].toLowerCase())) return { kind, slug: kind === "workday" ? `${m[1]}|${m[2]}|${m[3]}` : m[1] }; }
   const page = await get(careers, false);
   if (!page) return null;
   const hay = page.url + " " + page.text;
-  for (const [kind, re] of PATTERNS) { const m = hay.match(re); if (m && !NOT_SLUGS.has(m[1].toLowerCase())) return { kind, slug: m[1] }; }
+  for (const [kind, re] of PATTERNS) { const m = hay.match(re); if (m && !NOT_SLUGS.has(m[1].toLowerCase())) return { kind, slug: kind === "workday" ? `${m[1]}|${m[2]}|${m[3]}` : m[1] }; }
   return null;
 }
 
@@ -53,6 +54,26 @@ async function roles({ kind, slug }) {
     const r = await get(`https://apply.workable.com/api/v1/widget/accounts/${slug}`);
     return r?.jobs?.map((j) => ({ title: j.title, url: j.url || j.shortlink, location: j.city || j.country || "" }));
   }
+  if (kind === "workday") {
+    // Public Workday candidate API (the same JSON the careers page uses). Paged, capped at 200 roles.
+    const [tenant, wd, site] = slug.split("|");
+    const base = `https://${tenant}.${wd}.myworkdayjobs.com`;
+    const out = [];
+    let total = 0;
+    for (let offset = 0; offset < 200; offset += 20) {
+      let r;
+      try {
+        const res = await fetch(`${base}/wday/cxs/${tenant}/${site}/jobs`, { method: "POST", headers: { ...UA, "content-type": "application/json" },
+          body: JSON.stringify({ appliedFacets: {}, limit: 20, offset, searchText: "" }), signal: AbortSignal.timeout(15000) });
+        r = res.ok ? await res.json() : null;
+      } catch { r = null; }
+      if (!r?.jobPostings?.length) break;
+      if (r.total) total = r.total; // Workday only reports the total on the first page
+      out.push(...r.jobPostings.map((j) => ({ title: j.title, url: `${base}/${site}${j.externalPath}`, location: j.locationsText || "" })));
+      if (out.length >= total) break;
+    }
+    return out.length ? out : null;
+  }
   return null;
 }
 
@@ -70,14 +91,21 @@ const OVERRIDES = {
   ElevenLabs: { kind: "ashby", slug: "elevenlabs" },
   "Base Power": { kind: "ashby", slug: "base-power" },
   "Neko Health": { kind: "ashby", slug: "neko-health" },
+  Snap: { kind: "workday", slug: "snapchat|wd1|snap" },
+  "Nvidia (Ross joined as Chief Software Architect, 2026)": { kind: "workday", slug: "nvidia|wd5|NVIDIAExternalCareerSite" },
 };
 
 const jobs = {};
 const tasks = guests.flatMap((g) => g.companies.filter((c) => c.careers).map((c) => c));
+const byCareers = new Map(); // one fetch per board, shared by guests who list the same company
 await Promise.all(tasks.map(async (c) => {
+  if (!byCareers.has(c.careers)) byCareers.set(c.careers, (async () => {
   let src = OVERRIDES[c.name] || (await detect(c.careers));
   let list = src && (await roles(src));
   if (!list?.length) { const g = await guessGreenhouse(c.name); if (g) { src = g; list = await roles(g); } }
+  return { src, list };
+  })());
+  const { src, list } = await byCareers.get(c.careers);
   jobs[c.name] = list?.length ? { source: `${src.kind}:${src.slug}`, fetched: new Date().toISOString(), roles: list } : null;
   console.log(`${c.name.padEnd(40)} ${list?.length ? `${list.length} roles (${src.kind})` : "no public API, link only"}`);
 }));

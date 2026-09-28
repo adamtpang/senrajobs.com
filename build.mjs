@@ -55,7 +55,7 @@ const jsonld = {
   ]
 };
 const html = fs.readFileSync("template.html", "utf8")
-  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__UPDATED__", updated).replaceAll("__ROLES__", Object.values(jobs).reduce((n, j) => n + (j?.roles.length || 0), 0).toLocaleString("en-US"))
+  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__UPDATED__", updated).replaceAll("__ROLES__", [...new Map(Object.values(jobs).filter(Boolean).map((j) => [j.source, j.roles.length])).values()].reduce((n, x) => n + x, 0).toLocaleString("en-US"))
   .replace("__JSONLD__", JSON.stringify(jsonld).replace(/</g, "\u003c"))
   .replace("__LIST__", list);
 fs.writeFileSync("index.html", html);

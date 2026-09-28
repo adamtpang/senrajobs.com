@@ -1,5 +1,35 @@
 [
   {
+    "name": "Ronnie Fieg",
+    "episode": {
+      "title": "Building the Streetwear Empire Kith | Ronnie Fieg (2026-09-27)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000791842256"
+    },
+    "companies": [
+      {
+        "name": "Kith",
+        "careers": "https://kith.wd1.myworkdayjobs.com/Kith_External_Careers"
+      }
+    ]
+  },
+  {
+    "name": "Peter Rahal",
+    "episode": {
+      "title": "Building One of the Fastest Growing CPG Companies in History | Peter Rahal of David Protein, Medici Brands & RXBAR (2026-09-20)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000790757685"
+    },
+    "companies": [
+      {
+        "name": "David Protein",
+        "careers": "https://apply.workable.com/david-protein/"
+      },
+      {
+        "name": "RXBAR",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
     "name": "Luca Ferrari",
     "episode": {
       "title": "Luca Ferrari on Building Bending Spoons: Extreme Ownership, Talent Science & Relentless Simplification (2026-09-13)",
@@ -265,7 +295,7 @@
     "companies": [
       {
         "name": "Spotify (executive, not founder)",
-        "careers": "https://www.lifeatspotify.com/jobs"
+        "careers": "https://jobs.lever.co/spotify"
       }
     ]
   },
@@ -385,7 +415,7 @@
     "companies": [
       {
         "name": "DoorDash",
-        "careers": "https://careersatdoordash.com"
+        "careers": "https://job-boards.greenhouse.io/doordashusa"
       }
     ]
   },
@@ -589,7 +619,7 @@
     "companies": [
       {
         "name": "Spotify",
-        "careers": "https://www.lifeatspotify.com/jobs"
+        "careers": "https://jobs.lever.co/spotify"
       },
       {
         "name": "Neko Health",

@@ -1,5 +1,12 @@
 Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.megaphone.fm/david-senra), davidsenra.com/podcast, company sites fetched with curl. Compiled 2026-09-18. Links marked (unverified) returned 403/404/406/429/timeout to an automated fetch (often bot protection, not necessarily a dead page).
 
+## Ronnie Fieg (episode: Building the Streetwear Empire Kith | Ronnie Fieg, 2026-09-27, https://podcasts.apple.com/us/podcast/id1836497887?i=1000791842256)
+- Kith: https://kith.wd1.myworkdayjobs.com/Kith_External_Careers
+
+## Peter Rahal (episode: Building One of the Fastest Growing CPG Companies in History | Peter Rahal of David Protein, Medici Brands & RXBAR, 2026-09-20, https://podcasts.apple.com/us/podcast/id1836497887?i=1000790757685)
+- David Protein: https://apply.workable.com/david-protein/
+- RXBAR: acquired by Kellogg (2017), skipped
+
 ## Luca Ferrari (episode: Luca Ferrari on Building Bending Spoons: Extreme Ownership, Talent Science & Relentless Simplification, 2026-09-13, https://podcasts.apple.com/us/podcast/luca-ferrari-on-building-bending-spoons-extreme-ownership/id1836497887?i=1000789287660)
 - Bending Spoons: https://jobs.bendingspoons.com
 
@@ -61,7 +68,7 @@ Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.meg
 - Pixar: acquired by Disney (2006), still operating as a studio: https://www.pixar.com/careers
 
 ## Gustav Soderstrom (episode: Gustav Soderstrom, Spotify, 2026-06-07, https://podcasts.apple.com/us/podcast/gustav-s%C3%B6derstr%C3%B6m-spotify/id1836497887?i=1000771527349)
-- Spotify (executive, not founder): https://www.lifeatspotify.com/jobs
+- Spotify (executive, not founder): https://jobs.lever.co/spotify
 
 ## Ivanka Trump (episode: Ivanka Trump on Building an Authentic Life, 2026-05-31, https://podcasts.apple.com/us/podcast/ivanka-trump-on-building-an-authentic-life/id1836497887?i=1000770406545)
 - Ivanka Trump brand: defunct (closed 2018), skipped
@@ -89,7 +96,7 @@ Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.meg
 - Snap: https://careers.snap.com
 
 ## Tony Xu (episode: Tony Xu, DoorDash, 2026-03-29, https://podcasts.apple.com/us/podcast/tony-xu-doordash/id1836497887?i=1000758009872)
-- DoorDash: https://careersatdoordash.com
+- DoorDash: https://job-boards.greenhouse.io/doordashusa
 
 ## Marc Andreessen (episode: Marc Andreessen, co-founder of a16z & Netscape, 2026-03-15, https://podcasts.apple.com/us/podcast/marc-andreessen-co-founder-of-a16z-netscape/id1836497887?i=1000755371069)
 - Andreessen Horowitz: https://a16z.com/careers (unverified, 404; https://jobs.a16z.com is the portfolio job board)
@@ -137,6 +144,6 @@ Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.meg
 - MSD Capital: merged into BDT & MSD Partners (2023), no careers page found (unverified)
 
 ## Daniel Ek (episode: Daniel Ek, Spotify, 2025-09-28, https://podcasts.apple.com/us/podcast/daniel-ek-spotify/id1836497887?i=1000728863493)
-- Spotify: https://www.lifeatspotify.com/jobs
+- Spotify: https://jobs.lever.co/spotify
 - Neko Health: https://www.neko.health/careers
 - Prima Materia: https://primamateria.com (unverified, no careers page found)
