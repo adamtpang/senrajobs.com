@@ -1,5 +1,8 @@
 Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.megaphone.fm/david-senra), davidsenra.com/podcast, company sites fetched with curl. Compiled 2026-09-18. Links marked (unverified) returned 403/404/406/429/timeout to an automated fetch (often bot protection, not necessarily a dead page).
 
+## Alexander Taubman (episode: Bringing AI to the Real Economy | Alexander Taubman, 2026-09-30, https://podcasts.apple.com/us/podcast/id1836497887?i=1000792339679)
+- Long Lake: https://jobs.ashbyhq.com/long-lake (verified 2026-09-30; longlake.com/careers renders the same board)
+
 ## Ronnie Fieg (episode: Building the Streetwear Empire Kith | Ronnie Fieg, 2026-09-27, https://podcasts.apple.com/us/podcast/id1836497887?i=1000791842256)
 - Kith: https://kith.wd1.myworkdayjobs.com/Kith_External_Careers
 
