@@ -1,0 +1,18 @@
+# repos.yaml v0 - see github.com/adamtpang/repos.chat
+repo: senrajobs.com
+is: A free directory of the living founders David Senra interviews, their companies, and open roles pulled from each company's public job board.
+url: https://senrajobs.com
+
+provides:
+  - id: founder-company-map
+    what: every guest of the David Senra interview show mapped to the companies they founded or lead, with a checked careers link per company
+    at: GUESTS.md
+  - id: founder-led-roles-feed
+    what: open roles (title, location, apply link) per company, fetched from Greenhouse, Ashby, Lever, Workable and Workday public APIs, served at /jobs.json
+    at: fetch-jobs.mjs
+
+stack: [static-html, node]
+
+kin:
+  - repo: skill.supply
+    why: senrajobs.com lists roles; skill.supply matches a person to one. On 2026-10-01 the match was run by hand for Adam, jobs.json supplied the candidate roles (Cognition, Long Lake, ElevenLabs), and skill.supply's profile at data/profiles/adam-pangelinan is the candidate side. skill.supply's lib/jobs.ts reads Greenhouse and Ashby boards only, so this repo's feed adds Lever, Workable and Workday companies it cannot see. No code link exists yet, and the AI interview stays unbuilt until skill.supply has a funded ANTHROPIC_API_KEY.
