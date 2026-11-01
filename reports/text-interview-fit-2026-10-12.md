@@ -1,0 +1,13 @@
+# Text interview and explainable fit
+
+Implemented October 12, 2026. Floating interview preserves the guest-first page; Enter sends, Shift+Enter adds a newline. Eight adaptive sections, progress and estimated12–15 minutes. Résumé text can populate several areas. No JSON or profile utility UI; anonymous context remains in page memory. No accounts implemented.
+
+Five source-anchored criteria: skills30, experience25, direction20, environment15, practical10. Unknown criteria widen a range. S90+, A80+, B65+, C50+, D below50. Ranges crossing tiers remain provisional; S additionally requires fresh sources, high confidence and supported core requirements. Unverified practical constraints force that criterion unknown. Unsupported or fabricated evidence anchors are dropped. Estimates are model-dependent alignment assessments, not hiring probabilities or independent qualification verification.
+
+Full catalog retrieval; up to36 candidates considered and up to8 deeply assessed. Explore all roles shows assessed postings first. Every other indexed role supports on-demand assessment using the same profile and rubric. No claim every role already has a deep score. Profile corrections clear browser assessments. Target URL resolves against the local catalog before any public detail fetch. Failed/outside-catalog requests refund credits.
+
+Refreshed employer feeds and private descriptions. Index6931 unique URLs; Texas497 including Austin275, plus205 separately classified US-remote possibilities. Partial feeds can retain older roles; unsupported/blocked portals remain careers links. Malformed source records are excluded and feed coverage marked partial. City/state matching now requires the same published location record, avoiding AustinMN plus DallasTX false positives.
+
+Validation: build, board, client projection, pay/sorting, geography, assistant and new rubric checks pass. Actual local AI interview/profile/shortlist and individual-role tests passed with fictional data, including core criteria, unknown-pay handling, source whitelisting, session isolation, credit metering and refunds. Native Helium confirmed Enter/newline, section handoff/ETA, close/focus restoration. Fit-renderer test used the real fictional API result through a test-only response stub; native Explore all roles and320/390px layouts pass. New code uses the existing encrypted24h queue and authorized local CLI inference. No person-to-person communication.
+
+Production artifact: .cache/public-deploy-6R0sjX. Initial CLI deployment without explicit scope failed Not authorized; explicit verified team scope uploaded successfully. Production state/live verification is recorded in CLAUDE.md after completion.

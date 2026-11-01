@@ -1,0 +1,144 @@
+{
+  "checkedAt": "2026-10-12T14:39:06.737Z",
+  "origin": "https://senrajobs.com",
+  "result": {
+    "summary": "Base Power's Austin backend role is a promising fit on Python, ownership and energy, but Go, cloud, containers and pay are unverified.",
+    "matches": [
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/23bc4e94-d63c-4933-926b-edcb69138410",
+        "title": "Software Engineer, Backend",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": null,
+        "parts": {
+          "role": 60,
+          "experience": 9,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-12T14:08:29.548Z",
+        "preferenceScore": 89,
+        "scoreRange": [
+          64,
+          75
+        ],
+        "tier": "U",
+        "confidence": "medium",
+        "provisional": true,
+        "knownWeight": 90,
+        "criteria": [
+          {
+            "key": "skills",
+            "label": "Required skills",
+            "weight": 30,
+            "rating": 66,
+            "reason": "Your production Python fits one of the two named languages. Go, AWS, Docker/Kubernetes, Terraform and Temporal are not established in your evidence.",
+            "candidateEvidence": "Built and maintained production APIs for five years.",
+            "jobEvidence": "Write, test, and deploy backend services in Golang and Python"
+          },
+          {
+            "key": "experience",
+            "label": "Experience and results",
+            "weight": 25,
+            "rating": 80,
+            "reason": "Your five years of owning services end to end, including on-call, match the posting's ownership scope and its 1–5 year range. You are at the senior end of that range.",
+            "candidateEvidence": "Owned services through deployment and incident response.",
+            "jobEvidence": "Take responsibility for the features and services you build, from design through production"
+          },
+          {
+            "key": "direction",
+            "label": "Direction and learning",
+            "weight": 20,
+            "rating": 78,
+            "reason": "You want to learn reliable distributed systems, and the team's work covers that. Energy is one of your target industries. The posting doesn't describe founder-led decision-making or founder access.",
+            "candidateEvidence": "Reliable distributed systems and how a founder-led company makes decisions.",
+            "jobEvidence": "distributed commanding systems that orchestrate a growing fleet as a single grid asset"
+          },
+          {
+            "key": "environment",
+            "label": "Working environment",
+            "weight": 15,
+            "rating": 58,
+            "reason": "Direct responsibility and feedback match the posting's values. The stated all-in intensity may conflict with your wish for sustainable on-call, and on-call practices aren't described.",
+            "candidateEvidence": "Founder-led team with direct responsibility, useful feedback and sustainable on-call practices.",
+            "jobEvidence": "It’s not a 9-to-5. We are all-in."
+          },
+          {
+            "key": "practical",
+            "label": "Practical fit",
+            "weight": 10,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          }
+        ],
+        "requirements": [
+          {
+            "status": "met",
+            "jobEvidence": "1–5 years of professional software development experience",
+            "candidateEvidence": "Five years of backend software engineering"
+          },
+          {
+            "status": "met",
+            "jobEvidence": "Proficiency in a backend language (Go, Python, Java, or similar)",
+            "candidateEvidence": "Built and maintained production APIs for five years."
+          },
+          {
+            "status": "met",
+            "jobEvidence": "the ability to write clear, well-tested code",
+            "candidateEvidence": "Reduced repeated incidents by adding tests, alerts and runbooks."
+          },
+          {
+            "status": "unknown",
+            "jobEvidence": "A working understanding of distributed systems",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "unknown",
+            "jobEvidence": "Some exposure to cloud infrastructure (AWS or GCP) and containerization (Docker, Kubernetes)",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "We work in-person.",
+            "candidateEvidence": "Austin, Texas job location"
+          },
+          {
+            "status": "unknown",
+            "jobEvidence": "Strong communication",
+            "candidateEvidence": ""
+          }
+        ],
+        "assessment": "reviewed",
+        "method": "evidence-rubric-v1",
+        "reason": "Your Python service ownership, incident response work and Austin location fit this backend role, though you'd need to build up Go and infrastructure skills.",
+        "gap": "Your evidence doesn't show the required cloud and container exposure (AWS/GCP, Docker/Kubernetes) or Go, the posting's main language. Terraform and IoT/workflow orchestration are only preferred. Pay is also not listed.",
+        "nextStep": "Before applying, ask Base Power for the annual USD pay range and what on-call looks like. Also prepare a concrete example of a distributed-systems failure you handled in production.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-12T14:15:05.360Z"
+      }
+    ],
+    "ranked": 764,
+    "searched": 6931,
+    "examined": 1,
+    "reviewed": 1,
+    "targetUrl": "https://jobs.ashbyhq.com/base-power/23bc4e94-d63c-4933-926b-edcb69138410"
+  },
+  "checks": {
+    "catalogOnly": true,
+    "refund": true,
+    "correctRole": true,
+    "weightedCriteria": true,
+    "unknownSalary": true,
+    "credits": true
+  }
+}

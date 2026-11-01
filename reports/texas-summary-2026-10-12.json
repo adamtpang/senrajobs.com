@@ -1,0 +1,84 @@
+{
+  "observedAt": "2026-10-12T14:19:06.126Z",
+  "austin": 275,
+  "texas": 497,
+  "groups": [
+    {
+      "company": "Base Power",
+      "guests": "Zach Dell",
+      "austin": 161,
+      "texas": 177,
+      "coverage": "complete"
+    },
+    {
+      "company": "DoorDash",
+      "guests": "Tony Xu",
+      "austin": 57,
+      "texas": 62,
+      "coverage": "complete"
+    },
+    {
+      "company": "Nvidia",
+      "guests": "Jonathan Ross",
+      "austin": 28,
+      "texas": 39,
+      "coverage": "partial"
+    },
+    {
+      "company": "United Rentals",
+      "guests": "Brad Jacobs",
+      "austin": 11,
+      "texas": 184,
+      "coverage": "partial"
+    },
+    {
+      "company": "Cognition",
+      "guests": "Scott Wu",
+      "austin": 8,
+      "texas": 8,
+      "coverage": "complete"
+    },
+    {
+      "company": "Snap",
+      "guests": "Evan Spiegel",
+      "austin": 6,
+      "texas": 6,
+      "coverage": "partial"
+    },
+    {
+      "company": "Atoms",
+      "guests": "Travis Kalanick",
+      "austin": 4,
+      "texas": 4,
+      "coverage": "complete"
+    },
+    {
+      "company": "TKO Group Holdings",
+      "guests": "Ari Emanuel, Dana White",
+      "austin": 0,
+      "texas": 10,
+      "coverage": "partial"
+    },
+    {
+      "company": "Kith",
+      "guests": "Ronnie Fieg",
+      "austin": 0,
+      "texas": 5,
+      "coverage": "complete"
+    },
+    {
+      "company": "Creative Artists Agency",
+      "guests": "Michael Ovitz",
+      "austin": 0,
+      "texas": 1,
+      "coverage": "partial"
+    },
+    {
+      "company": "WME Group",
+      "guests": "Ari Emanuel",
+      "austin": 0,
+      "texas": 1,
+      "coverage": "complete"
+    }
+  ]
+}

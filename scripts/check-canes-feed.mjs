@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {parseCanes,fetchCanes} from '../canes-feed.mjs';
+const at='2026-10-26T00:00:00Z';
+const job=(id=1)=>({requisitionID:id,title:'Crew',originalURL:`crew/job/${id}`,locations:[{city:'Austin',stateAbbr:'TX',countryAbbr:'US'}],isInternal:'false',internalHRData:'do not project'});
+const page=(jobs,total=jobs.length,n=1,next='')=>`<script>window.__PRELOAD_STATE__ = ${JSON.stringify({jobSearch:{jobs,totalJob:total,params:{page_number:n},isLoading:false}})}; window.__BUILD__ = 1;</script>${next?`<a href="${next}" data-testid="jobs-pagination_link_next">Next</a>`:''}`;
+const p=parseCanes(page([job()]),'https://jobs.raisingcanes.com/jobs',at);
+assert.equal(p.rows[0].url,'https://jobs.raisingcanes.com/crew/job/1');assert.equal(p.rows[0].location,'Austin, TX, US');assert.ok(!JSON.stringify(p).includes('internalHRData'));
+assert.equal(parseCanes(page([{...job(),isInternal:'true'}]),'https://jobs.raisingcanes.com/jobs',at).excluded,1);
+assert.equal(parseCanes(page([{...job(),originalURL:'https://other.example/crew/job/1'}]),'https://jobs.raisingcanes.com/jobs',at).invalid,1);
+assert.throws(()=>parseCanes(page([job()],2,1,'https://other.example/page/2'),'https://jobs.raisingcanes.com/jobs',at),/pagination/);
+const collected=await fetchCanes({observedAt:at,request:async u=>({ok:true,text:u.endsWith('/2')?page([job(2)],2,2):page([job()],2,1,'/jobs/page/2')})});
+assert.equal(collected.status,'complete');assert.equal(collected.rows.length,2);assert.equal(collected.pageReceipts.length,2);
+const changed=await fetchCanes({observedAt:at,request:async u=>({ok:true,text:u.endsWith('/2')?page([job(2)],3,2):page([job()],2,1,'/jobs/page/2')})});assert.equal(changed.status,'partial');
+const failed=await fetchCanes({observedAt:at,request:async()=>({ok:false,error:'HTTP 403'})});assert.equal(failed.status,'failed');
+console.log('PASS: Cane’s public fields, location provenance, private-record exclusion, strict URLs, pagination and changing totals.');
