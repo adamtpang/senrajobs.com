@@ -1,6 +1,7 @@
 // Deploy-shape and syntax checks. No network.
 import fs from 'node:fs';
 import { spawnSync } from 'node:child_process';
+import { isInWindow, formatPay, matchesPlace, matchesTrack, WINDOW_MS } from './feed.mjs';
 
 let failed = 0;
 const bad = (msg) => { console.error(msg); failed++; };
@@ -29,6 +30,27 @@ for (const file of ['index.html','jobs.json','guests.json','llms.txt']) {
 if (fs.existsSync('public/reports') || fs.existsSync('public/docs') || fs.existsSync('public/AGENTS.md') || fs.existsSync('public/api')) bad('public/ contains non-public paths');
 const html = fs.readFileSync('index.html','utf8');
 if (!html.includes('Last updated') || !/<time datetime="[^"]+"/.test(html)) bad('homepage is missing the Last updated timestamp');
+const now = Date.parse('2026-11-01T18:00:00.000Z');
+if (!isInWindow({ observedAt: '2026-11-01T16:00:00.000Z' }, now)) bad('recent observation should be inside 48h');
+if (isInWindow({ observedAt: '2026-09-30T12:00:00.000Z' }, now)) bad('September observation should be outside 48h');
+if (!isInWindow({ observedAt: '2026-09-30T12:00:00.000Z', publishedAt: '2026-11-01T12:00:00.000Z' }, now)) bad('old role posted today should be inside');
+if (!matchesPlace({ location: 'Austin, TX', workplace: 'OnSite' }, 'austin-texas')) bad('Austin');
+if (!matchesPlace({ location: 'United States', workplace: 'Remote' }, 'remote')) bad('remote workplace');
+if (!matchesTrack({ title: 'Forward Deployed Engineer' }, 'forward-deployed')) bad('FDE');
+if (formatPay(null) != null) bad('missing pay');
+if (formatPay({ min: 50, max: 70, currency: 'USD', period: 'hour' }) !== 'USD 50–70 hour') bad('hourly pay was rewritten');
+if (WINDOW_MS !== 48 * 60 * 60 * 1000) bad('window');
+if (!fs.existsSync('new.json') || !fs.readFileSync('vercel.json','utf8').includes('"/new"')) bad('new feed route missing');
+const feed = JSON.parse(fs.readFileSync('new.json','utf8'));
+const anchor = Date.parse(feed.generatedAt);
+if (!Array.isArray(feed.roles) || feed.roles.length < 1) bad('feed is empty');
+for (const role of feed.roles) {
+  if (!role.company || !role.title || !role.url || !role.firstSeen) bad('feed role missing fields');
+  if (!isInWindow({ firstSeen: role.firstSeen, publishedAt: role.postedAt }, anchor)) bad(`outside window ${role.title}`);
+  if (role.pay && JSON.stringify(role.pay).includes('[object Object]')) bad('pay stringified an object');
+}
+if (!fs.readFileSync('index.html','utf8').includes('href="/new"')) bad('homepage missing new-role link');
+if (!fs.readFileSync('new.html','utf8').includes('https://senrajobs.com/new.json')) bad('page missing feed url');
 if (fs.existsSync('targets.json')) {
   const targets = JSON.parse(fs.readFileSync('targets.json','utf8'));
   const names = new Set(targets.map(t => t.name));

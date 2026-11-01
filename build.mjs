@@ -7,6 +7,7 @@ import { careerResearch } from './career-research.mjs';
 import { createExtractPrompt } from './assistant/extract-prompt.mjs';
 import {matchesLocation,displayLocation} from './location-utils.mjs';
 import {applyCompanyConnections} from './company-connections.mjs';
+import { isInWindow, feedItem, formatPay, trackIds, isRemote } from './feed.mjs';
 const out = [];
 let g = null;
 for (const line of fs.readFileSync("GUESTS.md", "utf8").split(/\r?\n/)) {
@@ -114,7 +115,35 @@ fs.mkdirSync('assets', { recursive:true });
 fs.copyFileSync('job-utils.mjs', 'assets/job-utils.js');
 fs.copyFileSync('role-emoji.mjs', 'assets/role-emoji.js');
 fs.writeFileSync("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: https://senrajobs.com/sitemap.xml\n");
-fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod></url></urlset>\n`);
-fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.\n\n` +
+const anchorMs = Math.max(0, ...boardRoles.map(role => Date.parse(role.observedAt || role.fetched || role.firstSeen || "")).filter(Number.isFinite), ...Object.values(jobs).filter(Boolean).map(board => Date.parse(board.fetched)).filter(Number.isFinite));
+const anchor = new Date(anchorMs || Date.now());
+const seenUrls = new Set();
+const fresh = [];
+for (const role of boardRoles) {
+  if (!role?.url || seenUrls.has(role.url) || !isInWindow(role, anchor.getTime())) continue;
+  seenUrls.add(role.url);
+  fresh.push(feedItem(role));
+}
+fresh.sort((a, b) => (Date.parse(b.postedAt || b.firstSeen) || 0) - (Date.parse(a.postedAt || a.firstSeen) || 0) || a.company.localeCompare(b.company) || a.title.localeCompare(b.title));
+fs.writeFileSync("new.json", JSON.stringify({ generatedAt: anchor.toISOString(), windowHours: 48, page: "https://senrajobs.com/new", json: "https://senrajobs.com/new.json", rss: "https://senrajobs.com/new.xml", roles: fresh }) + "\n");
+const xmlEsc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const rssItems = fresh.map((role) => {
+  const payText = formatPay(role.pay);
+  const bits = [role.location, role.remote === true ? "Remote" : "", payText ? `Pay posted: ${payText}` : "", role.firstSeen ? `First seen ${role.firstSeen}` : "", role.postedAt ? `Posted ${role.postedAt}` : ""].filter(Boolean);
+  const when = role.postedAt || role.firstSeen || anchor.toISOString();
+  return `  <item>\n    <title>${xmlEsc(`${role.company} — ${role.title}`)}</title>\n    <link>${xmlEsc(role.url)}</link>\n    <guid isPermaLink="true">${xmlEsc(role.url)}</guid>\n    <pubDate>${xmlEsc(new Date(when).toUTCString())}</pubDate>\n    <description>${xmlEsc(bits.join(" · "))}</description>\n  </item>`;
+}).join("\n");
+fs.writeFileSync("new.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n  <title>Senra Jobs — new roles</title>\n  <link>https://senrajobs.com/new</link>\n  <description>Roles first seen or posted in the 48 hours before ${xmlEsc(anchor.toISOString())}.</description>\n  <lastBuildDate>${xmlEsc(anchor.toUTCString())}</lastBuildDate>\n${rssItems}\n</channel>\n</rss>\n`);
+const generatedLabel = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(anchor);
+const rows = fresh.map((role) => {
+  const austin = /\baustin\b|\btexas\b|\btx\b/i.test(role.location || "");
+  const tracks = trackIds(role.title).join(" ");
+  const payText = formatPay(role.pay);
+  const sub = [role.company, role.location, role.remote === true ? "Remote" : "", role.firstSeen ? `First seen ${String(role.firstSeen).slice(0, 10)}` : "", role.postedAt ? `Posted ${String(role.postedAt).slice(0, 10)}` : ""].filter(Boolean).join(" · ");
+  return `<li data-austin="${austin ? "1" : "0"}" data-remote="${role.remote === true ? "1" : "0"}" data-tracks="${esc(tracks)}"><a href="${esc(role.url)}" ${ext}>${esc(role.title)}</a><span class="sub">${esc(sub)}</span>${payText ? `<span class="pay">${esc(payText)}</span>` : ""}</li>`;
+}).join("");
+fs.writeFileSync("new.html", fs.readFileSync("new-template.html","utf8").replaceAll("__COUNT__", fresh.length.toLocaleString("en-US")).replaceAll("__GENERATED__", esc(generatedLabel)).replace("__LIST__", rows));
+fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/new</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url></urlset>\n`);
+fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.\n\nNew roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.\n\n` +
   out.map((g) => `## ${g.name}\n` + g.companies.map((c) => `- ${c.name}: ${c.careers || c.note}`).join("\n")).join("\n\n") +
   (targets.length ? `\n\n## Target companies\n` + targets.map((t) => `- ${t.name}: ${t.careers}${t.boardName ? ` (board name: ${t.boardName})` : ""}`).join("\n") : "") + "\n");

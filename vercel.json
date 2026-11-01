@@ -1,5 +1,6 @@
 {
   "outputDirectory": "public",
+  "rewrites": [{ "source": "/new", "destination": "/new.html" }],
   "functions": { "api/assistant.mjs": { "maxDuration": 30 } },
   "headers": [
     {

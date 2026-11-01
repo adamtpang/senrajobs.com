@@ -10,6 +10,9 @@ provides:
   - id: founder-led-roles-feed
     what: open roles (title, location, apply link) per company, fetched from Greenhouse, Ashby, Lever, Workable and Workday public APIs, served at /jobs.json
     at: fetch-jobs.mjs
+  - id: new-roles-feed
+    what: roles first seen or posted in the 48 hours before the last fetch, with company, title, location, remote, posted pay, url, and first-seen date, served at /new.json and /new.xml
+    at: feed.mjs
 
 stack: [static-html, node]
 
