@@ -2,6 +2,8 @@
 
 > Free directory of the 41 living founders interviewed on the David Senra podcast, their companies, and careers links. Join a great founder, learn from inside, then build your own.
 
+New roles, first seen or posted in the 48 hours before the last fetch: https://senrajobs.com/new.json (RSS: https://senrajobs.com/new.xml, page: https://senrajobs.com/new). Pay is included only when the company's board posted it.
+
 ## Alexander Taubman
 - Long Lake: https://jobs.ashbyhq.com/long-lake
 
