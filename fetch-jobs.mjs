@@ -96,6 +96,7 @@ const OVERRIDES = {
 };
 
 const jobs = {};
+const previous = fs.existsSync("jobs.json") ? JSON.parse(fs.readFileSync("jobs.json", "utf8")) : {};
 const tasks = guests.flatMap((g) => g.companies.filter((c) => c.careers).map((c) => c));
 const byCareers = new Map(); // one fetch per board, shared by guests who list the same company
 await Promise.all(tasks.map(async (c) => {
@@ -106,8 +107,17 @@ await Promise.all(tasks.map(async (c) => {
   return { src, list };
   })());
   const { src, list } = await byCareers.get(c.careers);
-  jobs[c.name] = list?.length ? { source: `${src.kind}:${src.slug}`, fetched: new Date().toISOString(), roles: list } : null;
-  console.log(`${c.name.padEnd(40)} ${list?.length ? `${list.length} roles (${src.kind})` : "no public API, link only"}`);
+  // null/undefined means the board request failed. An empty array is a real "no open roles" result.
+  if (list == null && previous[c.name]?.roles?.length) {
+    jobs[c.name] = previous[c.name];
+    console.log(`${c.name.padEnd(40)} kept ${previous[c.name].roles.length} previous roles (fetch failed)`);
+  } else if (list?.length) {
+    jobs[c.name] = { source: `${src.kind}:${src.slug}`, fetched: new Date().toISOString(), roles: list };
+    console.log(`${c.name.padEnd(40)} ${list.length} roles (${src.kind})`);
+  } else {
+    jobs[c.name] = null;
+    console.log(`${c.name.padEnd(40)} no public API, link only`);
+  }
 }));
 fs.writeFileSync("jobs.json", JSON.stringify(jobs, null, 1) + "\n");
 

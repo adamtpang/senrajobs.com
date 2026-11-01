@@ -41,7 +41,10 @@ const list = out.map((g) => {
   return `<details class="founder"><summary>${photo}<span class="who"><b>${esc(g.name)}</b><span class="meta">${meta}</span></span></summary><div class="inner">${ep}<div class="cos">${cos}</div></div></details>`;
 }).join("");
 const companies = new Set(out.flatMap((x) => x.companies.filter((c) => c.careers).map((c) => c.name.split(" (")[0]))).size;
-const updated = new Date(Math.max(0, ...Object.values(jobs).filter(Boolean).map((j) => Date.parse(j.fetched)))).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+const fetchedTimes = Object.values(jobs).filter(Boolean).map((j) => Date.parse(j.fetched)).filter((n) => Number.isFinite(n));
+const fetchedAt = new Date(fetchedTimes.length ? Math.max(...fetchedTimes) : Date.now());
+const updatedIso = fetchedAt.toISOString();
+const updated = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(fetchedAt);
 const jsonld = {
   "@context": "https://schema.org",
   "@graph": [
@@ -55,7 +58,7 @@ const jsonld = {
   ]
 };
 const html = fs.readFileSync("template.html", "utf8")
-  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__UPDATED__", updated).replaceAll("__ROLES__", [...new Map(Object.values(jobs).filter(Boolean).map((j) => [j.source, j.roles.length])).values()].reduce((n, x) => n + x, 0).toLocaleString("en-US"))
+  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__UPDATED_ISO__", updatedIso).replaceAll("__UPDATED__", updated).replaceAll("__ROLES__", [...new Map(Object.values(jobs).filter(Boolean).map((j) => [j.source, j.roles.length])).values()].reduce((n, x) => n + x, 0).toLocaleString("en-US"))
   .replace("__JSONLD__", JSON.stringify(jsonld).replace(/</g, "\u003c"))
   .replace("__LIST__", list);
 fs.writeFileSync("index.html", html);
