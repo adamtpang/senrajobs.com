@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {parseGroqBrowserReceipt,groqPay} from '../groq-feed.mjs';
+import {formatPublishedPay} from '../job-utils.mjs';
+const base='.cache/employer-discovery-2026-10-26';
+const list=JSON.parse(fs.readFileSync(`${base}/groq-list.json`)),details=JSON.parse(fs.readFileSync(`${base}/groq-details.json`));
+const result=parseGroqBrowserReceipt(list,details);
+assert.equal(result.board.coverage.status,'complete');
+assert.equal(result.board.coverage.total,37);
+assert(result.board.roles.length<37);
+assert.equal(result.board.roles.length+result.board.roles.reduce((n,r)=>n+r.alternateUrls.length,0),37);
+assert.equal(new Set(result.board.roles.map(r=>r.id)).size,result.board.roles.length);
+assert.equal(parseGroqBrowserReceipt({...list,rows:list.rows.slice(1)},details).board.coverage.status,'partial');
+assert.throws(()=>parseGroqBrowserReceipt({...list,rows:[...list.rows,list.rows[0]]},details),/duplicate/);
+assert.throws(()=>parseGroqBrowserReceipt({...list,rows:[{...list.rows[0],url:'https://example.com/groq/fake'}]},details),/Invalid/);
+assert.throws(()=>parseGroqBrowserReceipt(list,{...details,[list.rows[0].url]:{...details[list.rows[0].url],title:'Wrong role'}}),/mismatched/);
+const pay=groqPay('\nCompensation\nTotal cash salary range specific to candidates located in the United States: $40/hr\nUS Job Posting','https://jobs.gem.com/groq/test');
+assert.equal(pay[0].min,40);assert.equal(pay[0].period,'hour');assert.equal(pay[0].currency,'USD');
+const ranges=groqPay('\nCompensation\nTotal cash salary ranges specific to candidates located in the United States\n- Staff: $270,400 - $365,000\n- Sr. Staff: $341,400 - $401,600\nUS Job Posting','https://jobs.gem.com/groq/test');
+assert.equal(ranges.length,2);assert.equal(ranges[0].period,null);assert.equal(ranges[1].label,'Sr. Staff');
+assert.match(formatPublishedPay({payRanges:ranges}),/Staff · USD 270,400–365,000 · period unspecified · total cash incl\. potential bonus \(\+1 other level\)/);
+assert.match(formatPublishedPay({payRanges:pay}),/^USD 40\/hour/);
+assert.equal(groqPay('\nCompensation:\nSalary range $10–$20\nUS Job Posting','https://jobs.gem.com/groq/test').length,1);
+for(const d of Object.values(details)){if(/\nCompensation:?\s*\n/.test(d.text))assert.ok(groqPay(d.text,d.url).length,d.title);}
+console.log(JSON.stringify({result:'PASS Groq receipt, identity, alias deduplication and compensation checks',postings:37,requisitions:result.board.roles.length}));

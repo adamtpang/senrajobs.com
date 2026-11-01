@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {parseUnitedMasters} from '../unitedmasters-feed.mjs';
+import {mapATSJob,sourceIdentityMatches} from '../ats.mjs';
+const tree={departments:[{id:1,name:'UnitedMasters',parent_id:null},{id:2,name:'Translation',parent_id:null},{id:3,name:'Engineering',parent_id:1},{id:4,name:'Production',parent_id:2}]};
+const job=(id,dept)=>({id,title:'Builder',absolute_url:`https://job-boards.greenhouse.io/unitedmasterstranslation/jobs/${id}`,departments:[{id:dept,name:'Team'}],location:{name:'Brooklyn, NY'},content:'&lt;p&gt;Build products&lt;/p&gt;',privateHRField:'omit'});
+const p=parseUnitedMasters({jobs:[job(1,3),job(2,4)],meta:{total:2}},tree,'2026-10-26',mapATSJob);
+assert.equal(p.status,'complete');assert.deepEqual(p.rows.map(r=>r.employerBrand),['UnitedMasters','Translation']);assert.equal(p.rows[0].description,'Build products');assert.ok(!JSON.stringify(p.rows).includes('privateHRField'));
+assert.equal(parseUnitedMasters({jobs:[job(1,999)],meta:{total:1}},tree,'2026-10-26',mapATSJob).status,'partial');
+assert.equal(parseUnitedMasters({jobs:[job(1,3)],meta:{total:2}},tree,'2026-10-26',mapATSJob).status,'partial');
+assert.ok(sourceIdentityMatches({kind:'unitedmasters-public',slug:'unitedmasterstranslation'},'UnitedMasters / Translation (shared careers board)'));
+assert.ok(!sourceIdentityMatches({kind:'unitedmasters-public',slug:'unitedmasterstranslation'},'Other'));
+console.log('PASS: shared-employer brand hierarchy, unknown-brand disclosure, source bounds and public-field projection.');

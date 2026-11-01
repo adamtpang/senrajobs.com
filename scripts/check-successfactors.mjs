@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {parseSuccessFactors,fetchSuccessFactors} from '../successfactors.mjs';
+const at='2026-10-19T20:00:00Z';
+const card=(id,location='Austin, TX, US')=>`<tr class="data-row"><td><a href="/job/test/${id}/" class="jobTitle-link">Engineer &amp; Builder</a><a class="jobTitle-link" href="/job/test/${id}/">Mobile duplicate</a></td><td class="colLocation hidden-phone"><span>${location}</span></td><td><span class="jobDate">Oct 19, 2026</span></td></tr>`;
+const page=(start,end,total,ids,next)=>`Results ${start} – ${end} of ${total}${ids.map(id=>card(id)).join('')}${next==null?'':`<a href="?q=&amp;startrow=${next}">Next</a>`}`;
+const first=parseSuccessFactors(page(1,2,3,['1','2'],2),'https://jobs.xpo.com/search/',at);
+assert.equal(first.rows.length,2);assert.equal(first.rows[0].title,'Engineer & Builder');assert.equal(first.rows[0].location,'Austin, TX, US');assert.equal(first.next,'https://jobs.xpo.com/search/?q=&startrow=2');
+const complete=await fetchSuccessFactors({slug:'xpo'},{observedAt:at,request:async url=>({ok:true,text:url.includes('startrow=2')?page(3,3,3,['3']):page(1,2,3,['1','2'],2)})});
+assert.equal(complete.status,'complete');assert.equal(complete.rows.length,3);assert.equal(complete.pageReceipts.length,2);
+const repeated=await fetchSuccessFactors({slug:'xpo'},{observedAt:at,request:async()=>({ok:true,text:page(1,2,3,['1','2'],2)})});assert.equal(repeated.status,'partial');assert.equal(repeated.rows.length,2);
+const changed=await fetchSuccessFactors({slug:'xpo'},{observedAt:at,request:async url=>({ok:true,text:url.includes('startrow=2')?page(3,3,4,['3']):page(1,2,3,['1','2'],2)})});assert.equal(changed.status,'partial');
+const missing=await fetchSuccessFactors({slug:'gxo'},{observedAt:at,request:async()=>({ok:true,text:'Loading'})});assert.equal(missing.status,'failed');
+const countMismatch=await fetchSuccessFactors({slug:'xpo'},{observedAt:at,request:async()=>({ok:true,text:page(1,2,2,['1','1'])})});assert.equal(countMismatch.status,'partial');
+console.log('SuccessFactors public pagination: dedupe, range verification, totals, changed totals and missing-page guards pass.');

@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {uberBasePay} from '../uber-pay.mjs';
+import {formatPublishedPay} from '../job-utils.mjs';
+const url='https://jobs.uber.com/en/jobs/156640/';
+const text='For Chicago, IL-based roles: The total on-target earnings (OTE) range for this position is USD $170,000 - USD $188,333. The OTE includes a base salary range of USD $102,000 per year - USD $113,000 per year and an annualized cash variable incentive target of USD $68,000 - USD $75,333. For New York City, NY-based roles: The base salary range for this role is USD $113,000 per year - USD $126,000 per year.';
+const pay=uberBasePay(text,url);assert.equal(pay.length,2);assert.equal(pay[0].min,102000);assert.equal(pay[0].max,113000);assert.equal(pay[0].location,'Chicago, IL');assert.equal(pay[1].max,126000);
+assert.equal(uberBasePay('Benefits total USD $500,000 annually.',url).length,0);
+assert.equal(uberBasePay('For Austin, TX-based roles: The base salary range for this role is USD $10 - USD $20.',url).length,0);
+assert.equal(uberBasePay(text.replace('USD $113,000 per year - USD $126,000','USD $900,000 per year - USD $126,000'),url).length,1);
+assert.throws(()=>uberBasePay(text,'https://other.example/en/jobs/156640/'),/source/);
+assert.match(formatPublishedPay({payRanges:pay}),/base salary/);
+console.log('Uber pay: explicit annual base ranges, location association, OTE separation and unknown/inverted/source rejection passed.');

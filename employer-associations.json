@@ -1,0 +1,2260 @@
+[
+  {
+    "guest": "Lulu Cheng Meservey",
+    "company": "Rostra",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Rostra's official About page identifies Lulu Cheng Meservey as its founder. No public careers link appeared on the inspected homepage or About page; this does not establish that the firm is not hiring.",
+    "sources": [
+      {
+        "url": "https://rostra.co/about/",
+        "supports": "Official company About page names Meservey as founder."
+      },
+      {
+        "url": "https://www.davidsenra.com/episode/lulu-cheng-meservey",
+        "supports": "Official show page independently identifies the guest as Rostra's founder."
+      }
+    ]
+  },
+  {
+    "guest": "Lulu Cheng Meservey",
+    "company": "TrailRunner International (co-founder; former president)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Meservey co-founded TrailRunner International and served as COO, then president, through June 2021. This does not establish a current leadership role. TrailRunner is now a PPHC member firm; unrelated PPHC roles are excluded.",
+    "sources": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480524000038/yearend2023mic-april102024.htm",
+        "supports": "Shopify's 2024 circular identifies co-founding and COO/president tenure through June 2021."
+      },
+      {
+        "url": "https://investors.pphcompany.com/node/7081/pdf",
+        "supports": "PPHC identifies TrailRunner International as a member firm."
+      },
+      {
+        "url": "https://trailrunnerint.com/careers/",
+        "supports": "Official employer site links the exact trailrunner.bamboohr.com careers account."
+      }
+    ]
+  },
+  {
+    "guest": "Brian Armstrong",
+    "company": "ResearchHub (co-founder)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "ResearchHub's official About page identifies Brian Armstrong as co-founder. The related Foundation corroborates the relationship. Current official hiring-channel coverage remains unresolved.",
+    "sources": [
+      {
+        "url": "https://www.researchhub.com/about",
+        "supports": "Official operating-platform team identifies Brian Armstrong as co-founder."
+      },
+      {
+        "url": "https://www.researchhub.foundation/about",
+        "supports": "Related Foundation identifies ResearchHub's founders and explains its separate community/governance function."
+      }
+    ]
+  },
+  {
+    "guest": "Nik Storonsky",
+    "company": "Revolut (co-founder and CEO)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Storonsky as Revolut co-founder and CEO.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "83a212f4-d028-11f1-a6f0-1790ecd91cbc",
+        "itemTitle": "Competition, Intensity & Building a $115 Billion Global Bank | Nik Storonsky, Revolut",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Kurt MacAlpine",
+    "company": "Corient",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies MacAlpine as Corient partner and CEO, not its sole founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "1c170f54-ca79-11f1-9497-3784be4db4a3",
+        "itemTitle": "Managing $525 Billion by Rethinking Wealth Management | Kurt MacAlpine, Corient",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Alexandr Wang",
+    "company": "Scale AI (co-founder, no longer CEO)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Wang as Scale AI co-founder and describes leaving Scale for Meta.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "3bd67d32-c52b-11f1-8dc9-b74edd6b172f",
+        "itemTitle": "Creating Muse: The Fastest-Growing AI Product Since ChatGPT | Alexandr Wang, Meta",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Alexandr Wang",
+    "company": "Meta (chief AI officer, not founder)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Wang as Meta chief AI officer; he is not represented as Meta founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "3bd67d32-c52b-11f1-8dc9-b74edd6b172f",
+        "itemTitle": "Creating Muse: The Fastest-Growing AI Product Since ChatGPT | Alexandr Wang, Meta",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Ari Emanuel",
+    "company": "WME Group (executive chairman)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Emanuel as WME Group executive chairman.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "b2fb32e6-c20f-11f1-88e3-a75966f52347",
+        "itemTitle": "Channeling Rage, Rolling Calls & Building an Entertainment Empire | Ari Emanuel, WME & TKO",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Ari Emanuel",
+    "company": "TKO Group Holdings",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Emanuel as TKO executive chair and CEO.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "b2fb32e6-c20f-11f1-88e3-a75966f52347",
+        "itemTitle": "Channeling Rage, Rolling Calls & Building an Entertainment Empire | Ari Emanuel, WME & TKO",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Ari Emanuel",
+    "company": "MARI (founder)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Emanuel as MARI founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "b2fb32e6-c20f-11f1-88e3-a75966f52347",
+        "itemTitle": "Channeling Rage, Rolling Calls & Building an Entertainment Empire | Ari Emanuel, WME & TKO",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Jeremy Stern",
+    "company": "Colossus (editor-in-chief, not founder)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Stern as Colossus editor-in-chief, not founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "a6d4431a-bfb5-11f1-a1b5-ff88724036a5",
+        "itemTitle": "How Mark Zuckerberg, Palmer Luckey, Josh Kushner & Scott Wu Think | Jeremy Stern",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Alexander Taubman",
+    "company": "Long Lake",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Taubman as Long Lake co-founder and CEO. Subsidiary acquisition completion is a separate coverage question.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "57d2fe40-bc73-11f1-823e-d7309e0e304b",
+        "itemTitle": "Bringing AI to the Real Economy | Alexander Taubman",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Ronnie Fieg",
+    "company": "Kith",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Fieg as Kith founder, CEO and creative director.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "9eb76400-b9f2-11f1-be95-7768896ad95f",
+        "itemTitle": "Building the Streetwear Empire Kith | Ronnie Fieg",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Peter Rahal",
+    "company": "Medici Brands (co-founder; parent group)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Rahal as Medici Brands co-founder. Brand and acquisition mappings require separate source checks.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "c4a6781c-b499-11f1-8aa9-2faed89cc513",
+        "itemTitle": "Building One of the Fastest Growing CPG Companies in History | Peter Rahal of David Protein, Medici Brands & RXBAR",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Peter Rahal",
+    "company": "David Protein",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Rahal as David Protein co-founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "c4a6781c-b499-11f1-8aa9-2faed89cc513",
+        "itemTitle": "Building One of the Fastest Growing CPG Companies in History | Peter Rahal of David Protein, Medici Brands & RXBAR",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Luca Ferrari",
+    "company": "Bending Spoons",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Ferrari as Bending Spoons co-founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "2fca5144-af14-11f1-a7e2-dfa14381c3c1",
+        "itemTitle": "Luca Ferrari on Building Bending Spoons: Extreme Ownership, Talent Science & Relentless Simplification",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Mati Staniszewski",
+    "company": "ElevenLabs",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Staniszewski as ElevenLabs co-founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "f22d28be-a93e-11f1-9476-b7d871e971a0",
+        "itemTitle": "Mati Staniszewski on ElevenLabs, Voice AI & Building the Communication Layer for AI",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Zach Dell",
+    "company": "Base Power",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Dell as Base Power co-founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "49a51026-a93e-11f1-b730-cf206b1c2e56",
+        "itemTitle": "Zach Dell on Base Power, Energy Abundance & Building a Company for Life",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Doug Leone",
+    "company": "Sequoia Capital (longtime leader, not founder)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode describes Leone as a longtime Sequoia leader and a returning investor; it does not identify him as founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "e1bcab5e-a3de-11f1-aa35-67d2173479f4",
+        "itemTitle": "Doug Leone on Sequoia, Fear, Great Founders & Starting Over at 69",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Torsten Reil",
+    "company": "Helsing",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Reil as a Helsing co-founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "87a547a6-a0fb-11f1-8478-d75e756ffb88",
+        "itemTitle": "Building Defense Technologies to Protect Democracies | Torsten Reil, Helsing",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Sam Altman",
+    "company": "OpenAI",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode describes Altman helping start OpenAI in 2015.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "364d73d2-9e59-11f1-aaec-63397276caa4",
+        "itemTitle": "Sam Altman on Building OpenAI & Betting on the Impossible",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "Uber (co-founder, no longer leads)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Kalanick as Uber co-founder and describes his past leadership.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "c9217642-992f-11f1-aa5d-0b1dc93c48d7",
+        "itemTitle": "Travis Kalanick, Founder of Uber & Atoms",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Michael Ovitz",
+    "company": "Creative Artists Agency (co-founder, no longer leads)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Ovitz as CAA co-founder and describes his past agency leadership.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "90b02a70-92a3-11f1-b4a9-7741115b4570",
+        "itemTitle": "Michael Ovitz, Co-founder of CAA",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Micky Malka",
+    "company": "Ribbit Capital",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Malka as Ribbit Capital founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "29d26468-8d34-11f1-9eec-870995133588",
+        "itemTitle": "Lessons From Backing The Best Founders In Fintech | Micky Malka",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "David Heinemeier Hansson",
+    "company": "37signals",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Hansson as 37signals co-founder.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Official episode introduction supports the stated relationship.",
+        "itemGuid": "283d5630-88c0-11f1-88fe-57aeced199a3",
+        "itemTitle": "DHH: How to Build a Profitable Company Without Losing Control",
+        "observedAt": "2026-10-27T18:05:15.706Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Nik Storonsky",
+    "company": "QuantumLight (founder)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "QuantumLight identifies Storonsky as the person who launched the firm. Its portfolio investments are not treated as companies he founded or operates.",
+    "sources": [
+      {
+        "url": "https://quantumlightcapital.com/",
+        "supports": "Official homepage identifies QuantumLight as launched by Nik Storonsky."
+      }
+    ]
+  },
+  {
+    "guest": "Ben Wilson",
+    "company": "How to Take Over the World (creator and host)",
+    "relationship": "creator",
+    "reviewedOn": "2026-10-27",
+    "claim": "The official podcast About page describes Wilson creating the show in 2017 and operating it full time. Historical figures covered by the show are not additional employers.",
+    "sources": [
+      {
+        "url": "https://www.takeoverpod.com/about",
+        "supports": "First-person show history identifies Wilson as creator and operator."
+      }
+    ]
+  },
+  {
+    "guest": "Micky Malka",
+    "company": "OnePay (Walmart-Ribbit venture; Malka founding-board association)",
+    "relationship": "venture-builder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Malka describes helping build the Walmart-Ribbit venture that became OnePay. Walmart named him on its founding board in 2021. This does not assert he is the current CEO, or treat every Ribbit investment as an operating company association.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/micky-malka",
+        "supports": "Malka describes building the venture with Walmart and identifies the resulting company as OnePay."
+      },
+      {
+        "url": "https://corporate.walmart.com/news/2021/01/11/walmart-announces-creation-of-new-fintech-startup",
+        "supports": "Walmart announces the Ribbit venture and names Meyer Malka on its board."
+      },
+      {
+        "url": "https://www.onepay.com/careers",
+        "supports": "Official careers page links the legacy oneapp Ashby account."
+      }
+    ]
+  },
+  {
+    "guest": "Jeff Zalaznick",
+    "company": "Major Food Group",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Zalaznick co-founded Major Food Group. Restaurant brand coverage is audited separately.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "13040624-8325-11f1-834f-7377e2e16888",
+        "itemTitle": "The Restaurant Genius Behind Carbone, ZZ’s, Torrisi & More | Jeff Zalaznick",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Eric Glyman",
+    "company": "Ramp",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Glyman co-founded Ramp.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "b63590f4-7db4-11f1-a7da-93832f21367c",
+        "itemTitle": "Eric Glyman, Co-founder of Ramp",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Eric Glyman",
+    "company": "Paribus",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Glyman and Karim Atiyeh started Paribus, which Capital One acquired in 2016. This is a historical founder association, not a claim that the entire bank is his company.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "b63590f4-7db4-11f1-a7da-93832f21367c",
+        "itemTitle": "Eric Glyman, Co-founder of Ramp",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Jonathan Ross",
+    "company": "Groq (founder)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Ross founded Groq. His subsequent Nvidia role does not establish that Groq stopped hiring.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "2c8010e0-7266-11f1-9383-c3bb503fe22f",
+        "itemTitle": "Jonathan Ross, Founder of Groq",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Scott Wu",
+    "company": "Cognition",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Wu co-founded Cognition.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "1cc32b08-72b9-11f1-8d4a-0bcf6c39a01c",
+        "itemTitle": "Scott Wu, Cognition",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Scott Wu",
+    "company": "Lunchclub (co-founder)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Wu co-founded Lunchclub before Cognition. A current leadership role is not established. The homepage-linked Lever destination returned a provider 404 on October 27; current hiring remains unknown.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "1cc32b08-72b9-11f1-8d4a-0bcf6c39a01c",
+        "itemTitle": "Scott Wu, Cognition",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      },
+      {
+        "url": "https://lunchclub.com/",
+        "supports": "Official homepage Careers link inspected in browser."
+      },
+      {
+        "url": "https://jobs.lever.co/lunchclub",
+        "supports": "Homepage-linked destination returned Lever not-found page, not a verified current careers board."
+      }
+    ]
+  },
+  {
+    "guest": "Steve Stoute",
+    "company": "UnitedMasters / Translation (shared careers board)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Stoute founded Translation and launched UnitedMasters in 2017. The employer publishes a shared careers board; individual role brands must follow its department hierarchy.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "751b879c-6ce1-11f1-a92d-37477a373828",
+        "itemTitle": "Steve Stoute, UnitedMasters",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Ed Catmull",
+    "company": "Pixar",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Catmull co-founded Pixar. The episode describes its 2006 Disney acquisition and his past leadership; it does not make all Disney jobs Pixar jobs.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "aaf8181c-64ad-11f1-8221-bb2c423a5242",
+        "itemTitle": "Ed Catmull, Co-founder of Pixar",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Gustav Soderstrom",
+    "company": "Spotify (executive, not founder)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Soderstrom is a Spotify executive, not its founder. The episode identifies his appointment as co-CEO at the beginning of 2026.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "26d852a8-621a-11f1-99b5-0bbdcd79da93",
+        "itemTitle": "Gustav Söderström, Spotify",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "David Baszucki",
+    "company": "Roblox",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Baszucki co-founded Roblox.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "b28c64d4-4112-11f1-a6f7-b3f19d167e12",
+        "itemTitle": "David Baszucki, Roblox",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "David Baszucki",
+    "company": "Knowledge Revolution",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Baszucki co-founded Knowledge Revolution with Greg Baszucki. The episode describes its 1998 acquisition by MSC Software; successor hiring requires separate verification.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "b28c64d4-4112-11f1-a6f7-b3f19d167e12",
+        "itemTitle": "David Baszucki, Roblox",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Evan Spiegel",
+    "company": "Snap",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Spiegel co-founded Snap, the company behind Snapchat.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "73caa6ca-3622-11f1-b3b0-bfa17f046afe",
+        "itemTitle": "Evan Spiegel, Snap",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Tony Xu",
+    "company": "DoorDash",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Xu co-founded DoorDash.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "9ac04ae6-2b19-11f1-af8e-f74d13d4328f",
+        "itemTitle": "Tony Xu, DoorDash",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "Scribe Media (CEO)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The episode identifies Jorgenson as Scribe Media CEO. Its Elon Musk subject connections are separately labeled and are not claims that Jorgenson operates those employers.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "83596172-2735-11f1-b76e-83428ec9e008",
+        "itemTitle": "The Book of Elon with Eric Jorgenson",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Marc Andreessen",
+    "company": "Andreessen Horowitz",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Andreessen co-founded Andreessen Horowitz. Ordinary portfolio investments are not automatically added as his operating employers.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "1a0a51ec-2008-11f1-8bcc-33c3796274ce",
+        "itemTitle": "Marc Andreessen, co-founder of a16z & Netscape",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Marc Andreessen",
+    "company": "Netscape",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Andreessen co-founded Netscape. This historical association does not establish a currently independent hiring company.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "1a0a51ec-2008-11f1-8bcc-33c3796274ce",
+        "itemTitle": "Marc Andreessen, co-founder of a16z & Netscape",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Marc Andreessen",
+    "company": "Loudcloud/Opsware",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Andreessen co-founded Loudcloud. Its renaming and successor hiring must remain distinguished from a current independent employer.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "1a0a51ec-2008-11f1-8bcc-33c3796274ce",
+        "itemTitle": "Marc Andreessen, co-founder of a16z & Netscape",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Brian Armstrong",
+    "company": "Coinbase",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Armstrong co-founded Coinbase with Fred Ehrsam.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "11595a70-1522-11f1-87f7-ff45f4457fd7",
+        "itemTitle": "Brian Armstrong, Coinbase",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Jason Fried",
+    "company": "37signals",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Fried co-founded 37signals, which makes Basecamp, HEY and ONCE. These products are not automatically separate employers.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "665d8efa-0a33-11f1-bbc4-abca83177928",
+        "itemTitle": "Jason Fried, 37signals (makers of Basecamp, HEY and ONCE)",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Jimmy Iovine",
+    "company": "Interscope Records",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Iovine co-founded Interscope Records. Parent UMG roles require label-specific evidence before being counted for Interscope.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "0c59793e-ff32-11f0-835d-d3cf0dd6726d",
+        "itemTitle": "Jimmy Iovine, Interscope Records & Beats by Dre",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Jimmy Iovine",
+    "company": "Beats by Dre",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Iovine co-founded Beats by Dre. Apple’s current public job descriptions establish continuing Beats team hiring and shared product work. The directory does not expand this association to every Apple job.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "0c59793e-ff32-11f0-835d-d3cf0dd6726d",
+        "itemTitle": "Jimmy Iovine, Interscope Records & Beats by Dre",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/2014/05/28Apple-to-Acquire-Beats-Music-Beats-Electronics/",
+        "supports": "Apple identifies Iovine and Dr. Dre as Beats co-founders and announces the proposed acquisition."
+      },
+      {
+        "url": "https://jobs.apple.com/en-us/details/200666875-2605/automation-engineer?team=HRDWR",
+        "supports": "Current employer description explicitly identifies the Beats Engineering team within Apple."
+      }
+    ]
+  },
+  {
+    "guest": "Tobi Lutke",
+    "company": "Shopify",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Lutke co-founded Shopify.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "e4f0bf2a-f431-11f0-9f84-8b9f9f8ab46f",
+        "itemTitle": "Tobi Lütke, Shopify",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "John Mackey",
+    "company": "Whole Foods Market",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Mackey co-founded Whole Foods and served as CEO through 2022. The episode describes its Amazon acquisition; only explicitly associated brand jobs belong in this listing.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "16420fc2-e918-11f0-8c20-37a155960153",
+        "itemTitle": "John Mackey, Whole Foods Market",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "John Mackey",
+    "company": "Love.Life",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Mackey co-founded Love.Life.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "16420fc2-e918-11f0-8c20-37a155960153",
+        "itemTitle": "John Mackey, Whole Foods Market",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Patrick O'Shaughnessy",
+    "company": "Colossus",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "O’Shaughnessy founded Colossus.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "4493f896-de04-11f0-b4bd-d306ce05aee3",
+        "itemTitle": "Patrick O'Shaughnessy, Colossus & Positive Sum",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Patrick O'Shaughnessy",
+    "company": "Positive Sum",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "O’Shaughnessy founded Positive Sum. Its portfolio companies are not automatically included.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "4493f896-de04-11f0-b4bd-d306ce05aee3",
+        "itemTitle": "Patrick O'Shaughnessy, Colossus & Positive Sum",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "James Dyson",
+    "company": "Dyson",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Dyson founded the Dyson technology company.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "60a6994a-d32c-11f0-b288-8f99b75c636a",
+        "itemTitle": "James Dyson, Dyson",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Todd Graves",
+    "company": "Raising Cane's",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Graves founded Raising Cane’s. Franchise and independent entities require explicit source attribution.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "c301488e-bd1e-11f0-b919-9f149538ea18",
+        "itemTitle": "Todd Graves, Raising Cane's",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Michael Dell",
+    "company": "Dell Technologies",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Dell founded Dell Technologies. Other affiliated employers are verified separately.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "81ba18e4-a70f-11f0-bc68-ef72c2c00a99",
+        "itemTitle": "Michael Dell, Dell Technologies",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Daniel Ek",
+    "company": "Spotify",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Ek co-founded Spotify. This supports the founding relationship; the older episode introduction is not evidence of his current executive title.",
+    "sources": [
+      {
+        "url": "https://feeds.megaphone.fm/david-senra",
+        "supports": "Reviewed episode introduction supports this relationship.",
+        "itemGuid": "f6ec62ee-9598-11f0-ab8f-cf72c9da0620",
+        "itemTitle": "Daniel Ek, Spotify",
+        "observedAt": "2026-10-27T18:17:56.350Z",
+        "sha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885"
+      }
+    ]
+  },
+  {
+    "guest": "Ivanka Trump",
+    "company": "Planet Harvest (co-founder)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Planet Harvest identifies Trump and Melissa Melshenker Ackerman as co-founders. Its homepage and About page exposed no careers destination at observation; this is not proof of no vacancies.",
+    "sources": [
+      {
+        "url": "https://www.planet-harvest.com/about-us",
+        "supports": "Official founder biographies explicitly identify both co-founders."
+      },
+      {
+        "url": "https://www.planet-harvest.com/",
+        "supports": "Official business and navigation inspected; no hiring destination found."
+      }
+    ]
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "Tesla (Elon Musk; episode subject)",
+    "relationship": "episode-subject",
+    "reviewedOn": "2026-10-27",
+    "claim": "Elon Musk is the subject of Jorgenson’s Book of Elon episode. Tesla’s official biography identifies Musk’s founding/leadership connection to Tesla; Starlink is described as a SpaceX project. This is not a claim that Jorgenson founded or works at the employer.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/eric-jorgenson",
+        "supports": "Official episode summary and transcript establish the Elon Musk book subject."
+      },
+      {
+        "url": "https://www.tesla.com/elon-musk",
+        "supports": "Official biography identifies Tesla, SpaceX, Neuralink and The Boring Company associations, and Starlink as a SpaceX project."
+      }
+    ]
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "SpaceX / Starlink (Elon Musk; episode subject)",
+    "relationship": "episode-subject",
+    "reviewedOn": "2026-10-27",
+    "claim": "Elon Musk is the subject of Jorgenson’s Book of Elon episode. Tesla’s official biography identifies Musk’s founding/leadership connection to SpaceX / Starlink; Starlink is described as a SpaceX project. This is not a claim that Jorgenson founded or works at the employer.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/eric-jorgenson",
+        "supports": "Official episode summary and transcript establish the Elon Musk book subject."
+      },
+      {
+        "url": "https://www.tesla.com/elon-musk",
+        "supports": "Official biography identifies Tesla, SpaceX, Neuralink and The Boring Company associations, and Starlink as a SpaceX project."
+      }
+    ]
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "Neuralink (Elon Musk; episode subject)",
+    "relationship": "episode-subject",
+    "reviewedOn": "2026-10-27",
+    "claim": "Elon Musk is the subject of Jorgenson’s Book of Elon episode. Tesla’s official biography identifies Musk’s founding/leadership connection to Neuralink; Starlink is described as a SpaceX project. This is not a claim that Jorgenson founded or works at the employer.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/eric-jorgenson",
+        "supports": "Official episode summary and transcript establish the Elon Musk book subject."
+      },
+      {
+        "url": "https://www.tesla.com/elon-musk",
+        "supports": "Official biography identifies Tesla, SpaceX, Neuralink and The Boring Company associations, and Starlink as a SpaceX project."
+      }
+    ]
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "xAI / X (Elon Musk; episode subject)",
+    "relationship": "episode-subject",
+    "reviewedOn": "2026-10-27",
+    "claim": "Elon Musk is the subject of Jorgenson’s Book of Elon episode. The xAI site confirms acquisition by SpaceX and publishes a combined SpaceXSI and X hiring page. This is an episode-subject connection, not Jorgenson employment or a claim that all SpaceX postings are xAI roles.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/eric-jorgenson",
+        "supports": "Official episode summary and transcript establish the Elon Musk book subject."
+      },
+      {
+        "url": "https://www.tesla.com/elon-musk",
+        "supports": "Official biography identifies Tesla, SpaceX, Neuralink and The Boring Company associations, and Starlink as a SpaceX project."
+      },
+      {
+        "url": "https://x.ai/news/xai-joins-spacex",
+        "supports": "Official February 2, 2026 announcement confirms SpaceX acquired xAI."
+      },
+      {
+        "url": "https://x.ai/careers/open-roles",
+        "supports": "Current official combined SpaceXSI and X Platform public careers page."
+      }
+    ]
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "The Boring Company (Elon Musk; episode subject)",
+    "relationship": "episode-subject",
+    "reviewedOn": "2026-10-27",
+    "claim": "Elon Musk is the subject of Jorgenson’s Book of Elon episode. Tesla’s official biography identifies Musk’s founding/leadership connection to The Boring Company; Starlink is described as a SpaceX project. This is not a claim that Jorgenson founded or works at the employer.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/eric-jorgenson",
+        "supports": "Official episode summary and transcript establish the Elon Musk book subject."
+      },
+      {
+        "url": "https://www.tesla.com/elon-musk",
+        "supports": "Official biography identifies Tesla, SpaceX, Neuralink and The Boring Company associations, and Starlink as a SpaceX project."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "QXO",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "QXO identifies Brad Jacobs as its founder, chairman and CEO. This is a current operating-leadership relationship.",
+    "sources": [
+      {
+        "url": "https://www.qxo.com/qxo-leadership/brad-jacobs",
+        "supports": "Current company leadership biography identifies the founder, chairman and CEO."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "XPO",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Jacobs created XPO through an investment in Express-1 in 2011. His executive chairmanship ended December 31, 2025; the subsequently announced advisory term ran through June 30, 2026. Preserve the historical founding relationship without describing him as XPO's current leader.",
+    "sources": [
+      {
+        "url": "https://www.jpe.com/",
+        "supports": "Explains the 2011 Express-1 investment and creation of XPO."
+      },
+      {
+        "url": "https://news.xpo.com/3130/xpo-announces-brad-jacobs-to-step-down-as-executive-chairman/",
+        "supports": "Documents chairmanship end and limited advisory term."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1166003/000110465926040425/tm261502-1_def14a.htm",
+        "supports": "2026 proxy excludes Jacobs from current directors and executive officers."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "GXO Logistics",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "QXO credits Jacobs with founding GXO; his firm explains that he led its 2021 spin-off from XPO. He was GXO's non-executive chairman through December 31, 2025. This is a spin-off/founding and former-chair relationship, not current executive leadership.",
+    "sources": [
+      {
+        "url": "https://www.qxo.com/qxo-leadership/brad-jacobs",
+        "supports": "Includes GXO among Jacobs-founded companies."
+      },
+      {
+        "url": "https://www.jpe.com/",
+        "supports": "Identifies GXO as the 2021 XPO spin-off Jacobs led."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1166003/000110465926040425/tm261502-1_def14a.htm",
+        "supports": "Dates GXO non-executive chair service through December 31, 2025."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "RXO",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "QXO credits Jacobs with founding RXO; his firm identifies the 2022 XPO spin-off he led. His RXO chairman/director service ended May 21, 2025. Do not imply he currently operates or chairs RXO.",
+    "sources": [
+      {
+        "url": "https://www.qxo.com/qxo-leadership/brad-jacobs",
+        "supports": "Includes RXO among Jacobs-founded companies."
+      },
+      {
+        "url": "https://www.jpe.com/",
+        "supports": "Identifies RXO as the 2022 XPO spin-off Jacobs led."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1929561/000114036126011983/ny20063858x1_def14a.htm",
+        "supports": "2026 RXO proxy states Jacobs ceased director service May 21, 2025."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1166003/000110465926040425/tm261502-1_def14a.htm",
+        "supports": "Records the same end date for his RXO non-executive chairmanship."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "United Rentals",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Jacobs founded United Rentals in 1997 and led it for ten years. The verified association is historical founder and former leader, not current management.",
+    "sources": [
+      {
+        "url": "https://www.jpe.com/",
+        "supports": "Official biography states founding in 1997 and ten years of leadership."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1166003/000110465926040425/tm261502-1_def14a.htm",
+        "supports": "Corroborates founding and former CEO/executive-chair tenure."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "United Waste Systems",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Jacobs founded United Waste Systems in 1989 and led it until its 1997 sale. USA Waste's 1997 filing confirms the merger completed August 26, 1997. Treat this as a historical company; it does not establish a current independent hiring board or Jacobs leadership of the buyer.",
+    "sources": [
+      {
+        "url": "https://www.jpe.com/",
+        "supports": "Documents founding, eight years as chairman/CEO, and 1997 sale."
+      },
+      {
+        "url": "https://investors.wm.com/static-files/1da7050f-172e-415b-9864-aacd6b831780",
+        "supports": "USA Waste Services 1997 Form 10-K, Business Combinations, confirms the August 26, 1997 United Waste merger."
+      }
+    ]
+  },
+  {
+    "guest": "Michael Dell",
+    "company": "DFO Management (formerly MSD Capital)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Michael Dell formed MSD Capital in 1998. The family office was restructured as DFO Management at the end of 2022 and manages Dell-family capital. This supports a founder/family-office relationship, not a claim that Dell is its day-to-day investment CEO or founded all portfolio employers.",
+    "sources": [
+      {
+        "url": "https://www.dellfamilyoffice.com/about",
+        "supports": "Describes Dell-family investment office and 1998/2022 history."
+      },
+      {
+        "url": "https://www.dellfamilyoffice.com/Michael_Dell",
+        "supports": "States Michael formed predecessor MSD Capital."
+      }
+    ]
+  },
+  {
+    "guest": "Michael Dell",
+    "company": "Michael & Susan Dell Foundation",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Michael and Susan Dell established their foundation in 1999. The foundation identifies Michael as a founder and Susan as co-founder/board chair; Michael should not be mislabeled its current board chair.",
+    "sources": [
+      {
+        "url": "https://www.dell.org/employee/michael-dell/",
+        "supports": "Foundation biography names Michael a founder and dates establishment to 1999."
+      },
+      {
+        "url": "https://www.dell.org/employee/susan-dell/",
+        "supports": "Foundation identifies Susan as co-founder and chair."
+      },
+      {
+        "url": "https://www.dellfamilyoffice.com/Michael_Dell",
+        "supports": "States Michael and Susan established the foundation together in 1999."
+      }
+    ]
+  },
+  {
+    "guest": "Daniel Ek",
+    "company": "Neko Health",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Neko's official history identifies Daniel Ek and Hjalmar Nilsonne as founders and dates the company's beginning to 2018. This establishes co-founding, without assuming Ek is its day-to-day CEO.",
+    "sources": [
+      {
+        "url": "https://www.nekohealth.com/us/en/about",
+        "supports": "Company history identifies both founders and the 2018 beginning."
+      }
+    ]
+  },
+  {
+    "guest": "Daniel Ek",
+    "company": "Prima Materia",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Prima Materia identifies Daniel Ek and Shakil Khan as founders and principal investors. It operates independently of Spotify. The relationship does not turn every portfolio company into an employer Ek founded or operates.",
+    "sources": [
+      {
+        "url": "https://primamateria.com/faqs/",
+        "supports": "Official FAQ identifies founders and independence from Spotify."
+      }
+    ]
+  },
+  {
+    "guest": "Brian Armstrong",
+    "company": "NewLimit",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "NewLimit identifies Brian Armstrong as co-founder and board member. Its current leadership page identifies Jacob Kimmel as CEO; Armstrong should not be presented as NewLimit's CEO.",
+    "sources": [
+      {
+        "url": "https://www.newlimit.com/company",
+        "supports": "Current leadership page identifies Armstrong as co-founder/board member and Kimmel as CEO."
+      }
+    ]
+  },
+  {
+    "guest": "Adam Foroughi",
+    "company": "AppLovin",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "AppLovin identifies Adam Foroughi as co-founder and CEO. Its April 2026 leadership announcement made Craig Billings independent board chair while Foroughi continued as CEO/director; do not reuse the older chairperson title for Foroughi.",
+    "sources": [
+      {
+        "url": "https://www.applovin.com/en/about",
+        "supports": "Current About page identifies Foroughi as founder and CEO."
+      },
+      {
+        "url": "https://investors.applovin.com/news/news-details/2026/AppLovin-Announces-Succession-Plans-for-Key-Leadership-Roles-and-New-Independent-Chairperson/default.aspx",
+        "supports": "April 7, 2026 announcement identifies co-founder/CEO and new independent chair."
+      }
+    ]
+  },
+  {
+    "guest": "Strauss Zelnick",
+    "company": "Take-Two Interactive (CEO)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Take-Two identifies Strauss Zelnick as chairman and CEO, with chairmanship beginning in 2007 and CEO service in 2011. This is an executive association, not a claim that he founded Take-Two.",
+    "sources": [
+      {
+        "url": "https://taketwointeractivesoftwareinc.gcs-web.com/management/strauss-zelnick/",
+        "supports": "Official management biography identifies roles and start dates."
+      }
+    ]
+  },
+  {
+    "guest": "Strauss Zelnick",
+    "company": "ZMC (founder)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "ZMC identifies Strauss Zelnick as founder and managing partner. Its connection to ZelnickMedia is supported by Take-Two's disclosed management-agreement assignment from ZelnickMedia Corporation to ZMC Advisors, L.P. in May 2022; this should not be simplified into proof that those legal entities are identical.",
+    "sources": [
+      {
+        "url": "https://zmclp.com/team/",
+        "supports": "Current team page identifies founder and managing partner."
+      },
+      {
+        "url": "https://taketwointeractivesoftwareinc.gcs-web.com/management/strauss-zelnick/",
+        "supports": "Take-Two independently identifies Zelnick as a founder of and partner in ZMC."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/946581/000130817922000343/lttwo2022_def14a.htm",
+        "supports": "Take-Two 2022 proxy documents assignment from ZelnickMedia Corporation to ZMC Advisors, L.P."
+      }
+    ]
+  },
+  {
+    "guest": "Ari Emanuel",
+    "company": "Endeavor",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Emanuel co-founded the predecessor Endeavor Agency. Silver Lake completed the take-private of Endeavor Group Holdings on March 24, 2025. Its representation-business portfolio became WME Group, with Emanuel executive chairman; privately held Endeavor retained its controlling TKO stake. Describing the entire Endeavor legal entity as closed or simply renamed WME is too broad. WME and TKO hiring should not be counted twice.",
+    "sources": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1766363/000119312524223783/d872751dprer14c.htm",
+        "supports": "Endeavor's filed information statement identifies Ariel Emanuel and partners as founders of the 1995 Endeavor Agency; indexed filing excerpt inspected."
+      },
+      {
+        "url": "https://www.silverlake.com/endeavor-announces-completion-of-acquisition-by-silver-lake/",
+        "supports": "Official transaction release distinguishes the privately held holding company from the WME Group representation portfolio and names Emanuel executive chairman."
+      }
+    ]
+  },
+  {
+    "guest": "Peter Rahal",
+    "company": "HallPass (Medici brand)",
+    "relationship": "venture-builder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Rahal co-founded Medici, whose official portfolio includes HallPass. The episode describes HallPass as a Medici business unit. This supports a relationship through Rahal's parent company, not a separate claim that he personally founded or currently manages every HallPass operation.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/peter-rahal",
+        "supports": "Official episode introduction identifies Rahal as Medici co-founder and names HallPass; business-unit structure is discussed."
+      },
+      {
+        "url": "https://www.medicibrands.com/",
+        "supports": "Official portfolio links HallPass as a brand."
+      }
+    ]
+  },
+  {
+    "guest": "Peter Rahal",
+    "company": "Epogee (Medici subsidiary)",
+    "relationship": "venture-builder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Epogee is in Medici's official portfolio. David, co-founded by Rahal, acquired Epogee in 2025. This is an acquisition/parent-company association, not evidence that Rahal founded Epogee.",
+    "sources": [
+      {
+        "url": "https://www.medicibrands.com/",
+        "supports": "Official portfolio identifies Epogee."
+      },
+      {
+        "url": "https://hgventures.com/epogee-acquired-by-david/",
+        "supports": "Epogee's former investor announced the acquisition on May 29, 2025 and identifies Rahal as David co-founder and CEO."
+      },
+      {
+        "url": "https://www.davidsenra.com/episode/peter-rahal",
+        "supports": "Official episode identifies Rahal's Medici relationship and discusses acquisition of Epogee."
+      }
+    ]
+  },
+  {
+    "guest": "Peter Rahal",
+    "company": "RXBAR (co-founder; now a Kellanova/Mars brand)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Rahal co-founded and sold RXBAR. Mars completed its Kellanova acquisition on December 11, 2025 and explicitly included RXBAR in the acquired portfolio. This is a historical founding association with a continuing brand; it does not make Rahal a founder of Mars/Kellanova or establish his present operating involvement. Generic successor vacancies must not all be called RXBAR jobs.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/peter-rahal",
+        "supports": "Official episode identifies RXBAR co-founding and sale."
+      },
+      {
+        "url": "https://www.mars.com/en-cz/news-and-stories/press-releases-statements/mars-completes-acquisition-of-kellanova",
+        "supports": "Mars completion announcement includes RXBAR in Kellanova's portfolio."
+      },
+      {
+        "url": "https://www.kellanovacareers.com/",
+        "supports": "Official career site states Kellanova continues necessary hiring while being integrated into Mars."
+      }
+    ]
+  },
+  {
+    "guest": "Torsten Reil",
+    "company": "NaturalMotion (co-founder; now part of Zynga)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Reil founded NaturalMotion and later sold it. NaturalMotion's official history records its 2014 Zynga acquisition and the 2022 Take-Two/Zynga combination; its current studio site still links vacancies. Acquisition did not mean the studio closed, and this historical founder association does not establish Reil as its current manager.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/torsten-reil",
+        "supports": "Official episode documents Reil founding and selling NaturalMotion before Helsing."
+      },
+      {
+        "url": "https://www.naturalmotion.com/who-we-are/",
+        "supports": "Official history documents the acquisitions and current studio/careers navigation."
+      }
+    ]
+  },
+  {
+    "guest": "Sam Altman",
+    "company": "Tools for Humanity (World)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Tools for Humanity's official site states it was founded in 2019 by Alex Blania, CEO, and Sam Altman, chairman. World is identified as its current project. This verifies Altman's company relationship without treating every organization associated with World as the same legal employer.",
+    "sources": [
+      {
+        "url": "https://www.toolsforhumanity.com/",
+        "supports": "Official homepage names founders, current titles, World project and careers destination."
+      }
+    ]
+  },
+  {
+    "guest": "Sam Altman",
+    "company": "Loopt",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Green Dot's transaction announcement identifies Altman as Loopt co-founder and CEO. Green Dot's 2012 proxy states it acquired Loopt on March 30, 2012. This is a historical founding/acquisition association, not evidence of a current independent Loopt employer or of Altman currently leading Green Dot. Standalone service shutdown timing was not established from these primary sources.",
+    "sources": [
+      {
+        "url": "https://ir.greendot.com/news-releases/news-release-details/green-dot-acquire-loopt/",
+        "supports": "Acquirer announcement names Loopt co-founder and CEO Sam Altman."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1386278/000138627812000044/a2012proxystatement.htm",
+        "supports": "Green Dot's filed proxy confirms completed acquisition on March 30, 2012."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "Atoms (formerly City Storage Systems)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The official episode identifies Kalanick as Atoms founder. His official Atoms announcement describes the business's industrial ambition, and investor a16z explains its continuity with City Storage Systems/CloudKitchens. Atoms is the physical-automation company at atoms.co, not the similarly named footwear brand.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/travis-kalanick",
+        "supports": "Official episode identifies the founder relationship."
+      },
+      {
+        "url": "https://atoms.co/unfinished-business",
+        "supports": "Kalanick-signed official company announcement."
+      },
+      {
+        "url": "https://a16z.com/travis-is-back/",
+        "supports": "Direct investor and board member explains the Atoms/City Storage Systems history."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "CloudKitchens",
+    "relationship": "venture-builder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Atoms' official portfolio identifies CloudKitchens as one of its companies and links its own website and careers route. Kalanick's Atoms relationship therefore supports CloudKitchens as a group-company association. This does not assert that Kalanick originally founded CloudKitchens or that every Atoms role works on it.",
+    "sources": [
+      {
+        "url": "https://atoms.co/",
+        "supports": "Official company portfolio lists and links CloudKitchens."
+      },
+      {
+        "url": "https://www.davidsenra.com/episode/travis-kalanick",
+        "supports": "Official episode identifies Kalanick as founder of Atoms."
+      },
+      {
+        "url": "https://a16z.com/travis-is-back/",
+        "supports": "Direct investor discusses Kalanick's work on City Storage Systems, also called CloudKitchens."
+      }
+    ]
+  },
+  {
+    "guest": "Jonathan Ross",
+    "company": "Nvidia (Ross Chief Software Architect; confirmed July 2026)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The July 5, 2026 official episode identifies Ross as Nvidia Chief Software Architect, and the interview describes his work there. Groq had announced on December 24, 2025 that Ross would join Nvidia under a non-exclusive technology licence while Groq remained independent. The role is supported by July 2026, but the exact start date is not: replace 'joined ... 2026' with an as-of title, and do not call Groq closed or wholly acquired.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/jonathan-ross",
+        "supports": "Official episode summary, guest follow biography and interview identify his Nvidia role."
+      },
+      {
+        "url": "https://groq.com/newsroom/groq-and-nvidia-enter-non-exclusive-inference-technology-licensing-agreement-to-accelerate-ai-inference-at-global-scale",
+        "supports": "Official December 24, 2025 announcement specifies the licensing deal, personnel move and Groq's continuing independence."
+      }
+    ]
+  },
+  {
+    "guest": "Ivanka Trump",
+    "company": "Ivanka Trump brand",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The official episode describes Trump's own fashion brand and her confirmation that she shut down her business when moving into government. This supports a historical founder relationship, not current brand hiring. The precise 2018 closure date and present status of residual licensing entities were not independently established in this primary-source pass.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/ivanka-trump",
+        "supports": "Official summary describes her fashion brand; transcript contains Senra's shutdown question and Trump's confirmation."
+      }
+    ]
+  },
+  {
+    "guest": "Rick Rubin",
+    "company": "Def Jam (co-founder)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "UMG identifies Rubin as Def Jam co-founder; its official artist biography says he left Def Jam to establish Def American. Def Jam remains an active label in UMG's current portfolio, so acquisition should not suppress it as closed. Rubin's historical founding does not establish current management or access to him through a job.",
+    "sources": [
+      {
+        "url": "https://www.universalmusic.com/label/republic-records/",
+        "supports": "Official UMG American Recordings description names Rubin as Def Jam co-founder."
+      },
+      {
+        "url": "https://www.universalmusic.fr/artistes/20000154286",
+        "supports": "Official artist biography describes departure from Def Jam and creation of Def American; exact founding/departure years differ from other histories, so no year is asserted."
+      },
+      {
+        "url": "https://www.universalmusic.com/label/def-jam/",
+        "supports": "Current official UMG label page shows Def Jam continuing and links UMG careers."
+      }
+    ]
+  },
+  {
+    "guest": "Rick Rubin",
+    "company": "American Recordings",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "UMG's artist biography identifies Rubin as creator of Def American, now American Recordings. UMG's current Republic page describes American Recordings as an independent label headed by Rubin whose releases go through Republic. This verifies an active founder/leader association, not that Rubin founded Republic or UMG; distribution does not by itself prove an employer ownership chain. Dedicated hiring coverage remains unresolved.",
+    "sources": [
+      {
+        "url": "https://www.universalmusic.fr/artistes/20000154286",
+        "supports": "Official artist biography supports formation of Def American by Rubin."
+      },
+      {
+        "url": "https://www.universalmusic.com/label/republic-records/",
+        "supports": "Official label page explicitly identifies Rubin as head and describes the Republic release relationship."
+      }
+    ]
+  },
+  {
+    "guest": "Dana White",
+    "company": "UFC (CEO, now part of TKO Group)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "The official episode identifies Dana White as UFC president and CEO, and describes him receiving a stake and the presidency when the Fertittas bought the already-existing UFC in 2001. TKO's current website identifies UFC among its properties. White should be represented as an executive, not UFC's original founder.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/dana-white",
+        "supports": "Official introduction and summary distinguish his leadership from UFC's original founding."
+      },
+      {
+        "url": "https://tkogrp.com/",
+        "supports": "Current parent-company site lists UFC as an owned property."
+      }
+    ]
+  },
+  {
+    "guest": "Dana White",
+    "company": "TKO Group Holdings",
+    "relationship": "brand-successor",
+    "reviewedOn": "2026-10-27",
+    "claim": "White's TKO connection is through his leadership of UFC, a TKO property. He is not established here as TKO founder, parent-company CEO or a leader of every TKO business. Shared-parent job listings require explicit employer/brand labels; the relationship does not make all TKO positions UFC positions.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/dana-white",
+        "supports": "Official introduction identifies White as UFC president and CEO."
+      },
+      {
+        "url": "https://tkogrp.com/",
+        "supports": "Official current portfolio establishes the parent-company connection."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "Scour (co-founder)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Kalanick's archived-era WEF biography identifies Scour co-founding during 1998–2000. This is a historical relationship; the precise shutdown, successor and current independent hiring identity remain unresolved.",
+    "sources": [
+      {
+        "url": "https://www.weforum.org/people/travis-kalanick/",
+        "supports": "First-party participant biography documents the two early relationships; its 'since 2001' title is historical, not current verification."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1086222/000095013507002853/b65011b3e424b3.htm",
+        "supports": "May 4, 2007 Akamai prospectus supplement footnote 9 confirms Red Swoosh and subsequent Akamai employment."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312508173424/d10q.htm",
+        "supports": "Akamai's filed report states acquisition of Red Swoosh on April 12, 2007."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "Red Swoosh (founder)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-27",
+    "claim": "Kalanick's WEF biography documents founding Red Swoosh. Akamai's 2007 filings identify him as its former director/executive and confirm the April 2007 acquisition. This is a historical employer relationship, not proof he currently leads Akamai or that Red Swoosh remains an independent employer.",
+    "sources": [
+      {
+        "url": "https://www.weforum.org/people/travis-kalanick/",
+        "supports": "First-party participant biography documents the two early relationships; its 'since 2001' title is historical, not current verification."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1086222/000095013507002853/b65011b3e424b3.htm",
+        "supports": "May 4, 2007 Akamai prospectus supplement footnote 9 confirms Red Swoosh and subsequent Akamai employment."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312508173424/d10q.htm",
+        "supports": "Akamai's filed report states acquisition of Red Swoosh on April 12, 2007."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "Jacobs Private Equity (founder)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "The firm's official biography says Brad Jacobs formed Jacobs Private Equity in 2010 and currently serves as managing partner. No individual vacancies were found on the inspected homepage; public hiring remains unknown. Investment portfolio companies are not included by inference.",
+    "sources": [
+      {
+        "url": "https://www.jpe.com/",
+        "supports": "Official biography establishes formation in 2010 and current managing-partner role."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "Pronto AI (Atoms group company)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Atoms' official Companies section lists Pronto AI, and its careers page identifies Travis Kalanick as CEO of Atoms. Pronto's own Careers link redirects to Atoms' group jobs filtered to Pronto. This is an association through the group Kalanick leads, not a claim that he founded Pronto or personally holds its standalone CEO position.",
+    "sources": [
+      {
+        "url": "https://atoms.co/",
+        "supports": "Official group Companies section names Pronto AI and links pronto.ai."
+      },
+      {
+        "url": "https://atoms.co/careers",
+        "supports": "Official group careers page identifies Travis Kalanick as CEO."
+      },
+      {
+        "url": "https://pronto.ai/",
+        "supports": "Official Pronto site links Careers to i.atoms.co/pronto, which redirects to the Atoms openroles page with company=Pronto."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "Lab37 (Atoms group company)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Atoms' official Companies section lists Lab37 and links its website and careers page. Atoms identifies Travis Kalanick as its CEO. The association is through the operating group he leads; it does not establish that he personally founded Lab37 or holds its standalone CEO position.",
+    "sources": [
+      {
+        "url": "https://atoms.co/",
+        "supports": "Official group Companies section names Lab37 and links lab37.us and its careers page."
+      },
+      {
+        "url": "https://atoms.co/careers",
+        "supports": "Official group careers page identifies Travis Kalanick as CEO."
+      },
+      {
+        "url": "https://www.lab37.us/careers",
+        "supports": "Official brand careers page links the separate greenhouse.io/lab37 public board."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "Otter (Atoms group company)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Atoms' official Companies section lists the restaurant software business Otter and links tryotter.com and its jobs page. Atoms identifies Travis Kalanick as CEO. This is an operating-group association, not a claim that Kalanick personally founded or individually leads Otter, and not a connection to the unrelated Otter.ai transcription service.",
+    "sources": [
+      {
+        "url": "https://atoms.co/",
+        "supports": "Official group Companies section names Otter and links the restaurant software company's exact website."
+      },
+      {
+        "url": "https://atoms.co/careers",
+        "supports": "Official group careers page identifies Travis Kalanick as CEO."
+      },
+      {
+        "url": "https://www.tryotter.com/jobs",
+        "supports": "Official Otter careers page; its public page script identifies the greenhouse.io/otter jobs source."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "Picnic (Atoms group company)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Atoms' official Companies section lists the office-meal delivery business Picnic and links trypicnic.com. Atoms identifies Travis Kalanick as CEO. Picnic's own careers page embeds the Atoms group Greenhouse board, whose brand metadata identifies Picnic Delivery. This is an operating-group association, not a claim that he founded Picnic or a connection to unrelated grocery/food-robotics companies named Picnic.",
+    "sources": [
+      {
+        "url": "https://atoms.co/",
+        "supports": "Official group Companies section names Picnic and links trypicnic.com."
+      },
+      {
+        "url": "https://atoms.co/careers",
+        "supports": "Official group careers page identifies Travis Kalanick as CEO."
+      },
+      {
+        "url": "https://trypicnic.com/careers",
+        "supports": "Official Picnic careers page's public script embeds the Greenhouse cssmerge group board."
+      },
+      {
+        "url": "https://boards-api.greenhouse.io/v1/boards/cssmerge/jobs?content=true",
+        "supports": "Current official group source includes explicit Picnic Delivery brand metadata and matching job descriptions."
+      }
+    ]
+  },
+  {
+    "guest": "Travis Kalanick",
+    "company": "ProFood Properties (Atoms group company)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Atoms' official Companies section lists ProFood and links profoodproperties.com, a food-production and cold-storage real estate business. Atoms identifies Travis Kalanick as CEO. This is an association through the group he leads, not proof of Kalanick's personal founding or separate executive title at ProFood. Brand-specific public hiring remains unresolved.",
+    "sources": [
+      {
+        "url": "https://atoms.co/",
+        "supports": "Official group Companies section names ProFood and links the exact ProFood Properties website."
+      },
+      {
+        "url": "https://atoms.co/careers",
+        "supports": "Official group careers page identifies Travis Kalanick as CEO."
+      },
+      {
+        "url": "https://profoodproperties.com/",
+        "supports": "Official brand site identifies the food-production and cold-storage real estate business. No careers link was found in the inspected homepage navigation."
+      }
+    ]
+  },
+  {
+    "guest": "Patrick O'Shaughnessy",
+    "company": "O'Shaughnessy Asset Management (former CEO; chairman emeritus)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Patrick previously served as OSAM CEO and portfolio manager, moving to chairman emeritus on December 31, 2023. Franklin Templeton announced completion of its OSAM acquisition on January 4, 2022; OSAM retains a named operating identity. Parent careers is verified, but current OSAM-specific vacancies were not established in this bounded pass.",
+    "sources": [
+      {
+        "url": "https://osfunds.com/fundpdfs/TSR_20240731.pdf",
+        "supports": "Fund shareholder report page4 records December 31, 2023 transition from CEO/portfolio manager to chairman emeritus."
+      },
+      {
+        "url": "https://investors.franklintempleton.com/news-center/press-releases/press-release-details/2022/Franklin-Templeton-Completes-Acquisition-of-OShaughnessy-Asset-Management-a-Leading-Custom-Indexing-Provider-Through-Its-Canvas-Platform/default.aspx",
+        "supports": "Official completion release says OSAM retains its brand and is a wholly owned subsidiary."
+      },
+      {
+        "url": "https://www.franklintempleton.com/about-us/osam",
+        "supports": "Current named OSAM operating/leadership page; old osam.com careers redirects here. Footer links the Franklin careers site."
+      },
+      {
+        "url": "https://careers.franklintempleton.com/us/en",
+        "supports": "Current official parent careers destination; not proof each vacancy belongs to OSAM."
+      }
+    ]
+  },
+  {
+    "guest": "Micky Malka",
+    "company": "NODE Foundation (co-founder; nonprofit)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "Malka describes creating NODE with his wife in the official Senra transcript. NODE identifies itself as a nonprofit foundation and operates its own careers page. Four substantive vacancies, one explicitly uncertain/promotional named entry and one general application were observed.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/micky-malka",
+        "supports": "First-person account describes Malka and his wife creating NODE and operating its digital-art space."
+      },
+      {
+        "url": "https://nodefoundation.com/about",
+        "supports": "Employer explicitly identifies NODE as a nonprofit foundation."
+      },
+      {
+        "url": "https://nodefoundation.com/careers",
+        "supports": "Six linked entries; details distinguish four substantive vacancies, one uncertain promotional listing, and general interest."
+      }
+    ]
+  },
+  {
+    "guest": "Jimmy Iovine",
+    "company": "USC Iovine and Young Academy (co-founder; nonprofit school)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-27",
+    "claim": "USC states Iovine and Andre Young founded the Academy through their 2013 gift; it became a USC professional school in 2018. This is a scoped school association, not Iovine founding or controlling USC. One current Academy-assigned faculty posting was independently read.",
+    "sources": [
+      {
+        "url": "https://iovine-young.usc.edu/discover/mission-and-values",
+        "supports": "Official school history establishes founding gift and school identity."
+      },
+      {
+        "url": "https://iovine-young.usc.edu/faculty-positions",
+        "supports": "Academy-specific faculty hiring page, distinct from university-wide hiring."
+      },
+      {
+        "url": "https://usccareers.usc.edu/job/los-angeles/assistant-associate-professor-of-practice-in-human-ai-interaction-machine-learning-and-data-design/1209/100684964720",
+        "supports": "Live official USC job REQ20180117 expressly names the Academy, annual base pay and November1,2026 deadline."
+      }
+    ]
+  },
+  {
+    "guest": "Strauss Zelnick",
+    "company": "Crystal Dynamics (former president and CEO)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Take-Two's official biography identifies Zelnick as a former Crystal Dynamics president and CEO. Crystal Dynamics continues as a named operating studio with its own careers channel; its linked legal notice names Crystal Dynamics, Inc.",
+    "sources": [
+      {
+        "url": "https://taketwointeractivesoftwareinc.gcs-web.com/management/strauss-zelnick/",
+        "supports": "Official biography states former president/CEO of Crystal Dynamics before BMG."
+      },
+      {
+        "url": "https://www.crystaldynamics.com/careers/",
+        "supports": "Current official studio maintenance page directly links its live named Greenhouse job board; earlier full careers page also described the studio internship program."
+      },
+      {
+        "url": "https://www.crystaldynamics.com/legal/privacy/",
+        "supports": "Official linked legal notice names Crystal Dynamics, Inc. and Eidos Interactive Corporation."
+      },
+      {
+        "url": "https://job-boards.greenhouse.io/crystaldynamics",
+        "supports": "Fresh public feed and board advertise 11 entries: 10 Spring 2027 internships plus 1 general application. All 10 internship detail URLs are current; eligibility requires a relevant 2026 college/university degree, not current enrollment."
+      }
+    ]
+  },
+  {
+    "guest": "Strauss Zelnick",
+    "company": "20th Century Studios (formerly 20th Century Fox; former president and COO)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-27",
+    "claim": "Zelnick formerly ran the 20th Century Fox motion-picture/distribution business as president and COO. Disney's official history documents the 2019 acquisition and 2020 rename of that film studio to 20th Century Studios. Disney Careers links to a dedicated 20th Century Studios page.",
+    "sources": [
+      {
+        "url": "https://taketwointeractivesoftwareinc.gcs-web.com/management/strauss-zelnick/",
+        "supports": "Official biography states four years as 20th Century Fox president/COO overseeing worldwide motion pictures and distribution."
+      },
+      {
+        "url": "https://d23.com/a-to-z/21st-century-fox/",
+        "supports": "Disney's official encyclopedia states film-studio acquisition completedMarch 20,2019 and January 2020 rename to 20th Century Studios."
+      },
+      {
+        "url": "https://join.disneycareers.com/global/en",
+        "supports": "Disney Careers business gallery has a 20th Century Studios-specific View all jobs link."
+      },
+      {
+        "url": "https://join.disneycareers.com/global/en/20th-century-studios",
+        "supports": "That employer-specific destination resolves with 20th Century Studios heading and film-studio description."
+      }
+    ]
+  },
+  {
+    "guest": "Gustav Soderstrom",
+    "company": "Kenet Works (co-founder; former CEO)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-28",
+    "claim": "Soderstrom co-founded and led Kenet Works AB; Yahoo acquired the company in 2006. No present Kenet Works team or employer-specific careers destination was established. His subsequent Yahoo Mobile director role ended in 2009; neither fact justifies attributing current Yahoo-wide vacancies to Kenet Works.",
+    "sources": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1639920/000119312518063434/d494294df1.htm",
+        "supports": "SEC-filed Spotify biography states 2003 founding, CEO tenure and 2006 Yahoo acquisition."
+      },
+      {
+        "url": "https://gustavsoderstrom.com/?p=45",
+        "supports": "Founder first-person January 2009 post calls himself CEO/co-founder and describes departure from Yahoo for Spotify."
+      }
+    ]
+  },
+  {
+    "guest": "Micky Malka",
+    "company": "Lemon Bank (co-founder; historical)",
+    "relationship": "co-founder",
+    "reviewedOn": "2026-10-28",
+    "claim": "Malka's Lemon Bank co-founding is supported by his official interview and Stanford's primary talk introduction. Brazil central-bank research describes Banco do Brasil assuming its correspondent network in 2009 while Lemon received performance-linked revenue. This is narrower than proof Banco do Brasil acquired every Lemon legal entity.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/micky-malka",
+        "supports": "Malka affirms co-founding Lemon Bank and describes selling the business."
+      },
+      {
+        "url": "https://ecorner.stanford.edu/wp-content/uploads/sites/2/2011/05/2687.pdf",
+        "supports": "Stanford first-party talk introduction identifies Casares/Malka as co-founders of Lemon Bank."
+      },
+      {
+        "url": "https://www.bcb.gov.br/content/publicacoes/WorkingPaperSeries/wps433.pdf",
+        "supports": "Central-bank research page8 describes2009 correspondent-network arrangement, not proof of whole-bank acquisition or current employment continuity."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "Amerex Oil Associates (co-founder; former CEO)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-28",
+    "claim": "Jacobs co-founded Amerex Oil Associates and served as CEO from 1979 to 1983. Current Amerex Brokers describes an energy brokerage founded in 1978; its identity as a successor to Jacobs's company is not established by the inspected primary sources.",
+    "sources": [
+      {
+        "url": "https://www.jpe.com/",
+        "supports": "Official founder biography names Amerex Oil Associates and 1979–1983 CEO tenure."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1166003/000095012311069724/k50546dadefa14a.htm",
+        "supports": "Jacobs's 2011 SEC-filed interview states co-founding in 1979 and sale in 1983; does not name buyer."
+      },
+      {
+        "url": "https://www.amerexenergy.com/",
+        "supports": "Current official site search rendering identifies Amerex Brokers LLC as a 1978-founded energy brokerage and BGC indirect subsidiary, but does not identify Jacobs or Amerex Oil Associates."
+      }
+    ]
+  },
+  {
+    "guest": "Brad Jacobs",
+    "company": "Hamilton Resources (founder; former executive chairman)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-28",
+    "claim": "JPE identifies Hamilton Resources as Jacobs's 1984 startup and states he was executive chairman through 1989. No verified surviving employer, acquisition chain or company-specific careers channel was established.",
+    "sources": [
+      {
+        "url": "https://www.jpe.com/",
+        "supports": "Official biography establishes 1984 founding and executive-chair service 1984–1989."
+      },
+      {
+        "url": "https://investors.xpo.com/static-files/e49f200d-97d1-4113-9221-6e3a87437c87",
+        "supports": "XPO filing identifies fuller historical name Hamilton Resources (UK) Ltd. and former chairman/COO role."
+      }
+    ]
+  },
+  {
+    "guest": "Strauss Zelnick",
+    "company": "BMG Entertainment (former president and CEO)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-28",
+    "claim": "Zelnick was BMG Entertainment president/CEO after leading its North American unit. Bertelsmann's 2009 report distinguishes the 2008 sale of its Sony BMG stake from launching the new BMG Rights Management business. Its current BMG page still dates that business to 2008. These are not interchangeable employer identities.",
+    "sources": [
+      {
+        "url": "https://taketwointeractivesoftwareinc.gcs-web.com/management/strauss-zelnick/",
+        "supports": "Official biography establishes BMG North America 1994–1998 then parent BMG Entertainment leadership."
+      },
+      {
+        "url": "https://www.bertelsmann.com/en/media/news/bertelsmann-reports-solid-business-performance-and-strengthened-portfolio.html",
+        "supports": "Bertelsmann'sMarch 23,2009 release distinguishes Sony BMG stake sale from new BMG Rights Management launch in 2008."
+      },
+      {
+        "url": "https://www.bertelsmann.com/en/divisions/bmg/",
+        "supports": "Current official division page explicitly describes BMG as founded in 2008 and names BMG Rights Management GmbH."
+      }
+    ]
+  },
+  {
+    "guest": "Strauss Zelnick",
+    "company": "Vestron Inc. (former president and COO)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-28",
+    "claim": "Zelnick rose to Vestron president and COO. A 2019 Lionsgate-filed indenture names Vestron Inc.; Lionsgate's 2025 report includes Vestron titles in its library. Neither establishes a presently independent Vestron hiring business or a standalone careers channel.",
+    "sources": [
+      {
+        "url": "https://taketwointeractivesoftwareinc.gcs-web.com/management/strauss-zelnick/",
+        "supports": "Official biography documents former president/COO position at Vestron Inc."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/929351/000119312519027002/d702402dex41.htm",
+        "supports": "2019 Lionsgate indenture includes Vestron Inc. among named signing entities; establishes historical corporate linkage only."
+      },
+      {
+        "url": "https://s205.q4cdn.com/746463231/files/doc_financials/2025/ar/97b80c30-77b4-43c4-a35d-6717bcf9b5f8.pdf",
+        "supports": "Lionsgate Studios 2025 Form 10-K,p 11 identifies Vestron titles in its home-entertainment library."
+      }
+    ]
+  },
+  {
+    "guest": "Kurt MacAlpine",
+    "company": "CI Financial (CEO; not founder)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-28",
+    "claim": "The current CI Financial homepage identifies Kurt MacAlpine as CEO and director; Corient’s current executive biography independently identifies both roles. This is an operating executive association, not a founding claim. The explicitly linked CI Financial Workday board is separate from the Corient board. CI’s own 2026 financial report says Corient was distributed to their shared parent on January 1, 2026, so the companies should not be treated as a simple current parent/subsidiary pair.",
+    "sources": [
+      {
+        "url": "https://www.cifinancial.com/",
+        "supports": "Current leadership section names MacAlpine CEO and director."
+      },
+      {
+        "url": "https://corient.com/ca/en/about-us/executive-leadership",
+        "supports": "MacAlpine biography names CEO of Corient and CEO/director of CI Financial."
+      },
+      {
+        "url": "https://www.cifinancial.com/ci-financial/ca/en/about-us/careers.html",
+        "supports": "Current Openings links CI_FINANCIAL_EXTERNAL_CAREER-SITE on the ci Workday tenant, distinct from CORIENT_EXTERNAL_CAREER-SITE."
+      },
+      {
+        "url": "https://s28.q4cdn.com/266555903/files/doc_financials/2026/q1/CIX-03-31-2026-Q1-Financials-Full.pdf",
+        "supports": "2026Q1 report records distribution of Corient to CI Financial Holdings Ltd on January1,2026."
+      }
+    ]
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "PayPal (Elon Musk; episode subject; historical co-founder)",
+    "relationship": "episode-subject",
+    "reviewedOn": "2026-10-28",
+    "claim": "Adam explicitly includes Elon Musk’s associated companies through Eric Jorgenson’s Elon-book episode. PayPal’s 2002 prospectus states Musk founded X.com in March1999 and was CEO of PayPal from May to September2000. X.com merged with Confinity and became PayPal. PayPal Holdings was a new2015 holding company for the separated PayPal business; this is historical business continuity, not Musk founding the2015 legal entity or currently leading PayPal. The current employee and contractor careers channels are independently verified.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/eric-jorgenson",
+        "supports": "Official episode topic establishes the indirect Elon connection; Eric is the interview guest."
+      },
+      {
+        "url": "https://www.paypalobjects.com/html/PayPal_Prospectus.pdf",
+        "supports": "Physical PDF page76 (printed72) names Musk as X.com founder, former PayPal CEO and Zip2 co-founder."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1633917/000163391717000027/pypl201610-k.htm",
+        "supports": "Presentation of Information explains new2015 PayPal Holdings parent and transfer of PayPal business/assets before separation from eBay."
+      },
+      {
+        "url": "https://newsroom.paypal-corp.com/2015-07-20-PayPal-Celebrates-Listing-on-Nasdaq-and-Completes-Separation-from-eBay-Inc",
+        "supports": "Official completion release verifies independent PayPal business after eBay separation."
+      },
+      {
+        "url": "https://www.paypal.com/us/webapps/mpp/jobs",
+        "supports": "Redirects to official careers.pypl.com, linking Eightfold account and Magnit contractor channel."
+      },
+      {
+        "url": "https://paypal.eightfold.ai/careers",
+        "supports": "Public PayPal employee board, distinct from internal-only and candidate-account routes."
+      }
+    ]
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "Zip2 (Elon Musk; episode subject; historical co-founder)",
+    "relationship": "episode-subject",
+    "reviewedOn": "2026-10-28",
+    "claim": "PayPal’s2002 prospectus identifies Musk as Zip2 co-founder in1995 and leader through February1999. Tesla’s official investor biography confirms Compaq acquired Zip2 in1999. No current Zip2-specific hiring identity has been established. This historical episode-subject association does not authorize importing Compaq/HP-wide jobs.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/eric-jorgenson",
+        "supports": "Eric Jorgenson interview concerns his Elon Musk book; indirect topic connection only."
+      },
+      {
+        "url": "https://www.paypalobjects.com/html/PayPal_Prospectus.pdf",
+        "supports": "Physical PDF page76 (printed72) identifies Zip2 co-founding and1995–1999 leadership."
+      },
+      {
+        "url": "https://ir.tesla.com/corporate/elon-musk",
+        "supports": "Historical official biography identifies Zip2 acquisition by Compaq in1999. Its old Twitter title is not used as current leadership evidence."
+      }
+    ]
+  },
+  {
+    "guest": "Micky Malka",
+    "company": "Bling Nation / Lemon (co-founder; historical)",
+    "relationship": "co-founder-former-leader",
+    "reviewedOn": "2026-10-28",
+    "claim": "Stanford’s2011 speaker biography names Malka founder/co-CEO of Bling Nation. SEC-filed Lemon financial statements establish that Bling Nation discontinued mobile payments in2011 and legally merged into Lemon inMarch2012. LifeLock’s December2013 8-K verifies completed acquisition of Lemon. No current independent Bling/Lemon employer or scoped successor hiring team has been established; this is distinct from Malka’s Brazilian Lemon Bank. No LifeLock/Gen-wide roles are attributed.",
+    "sources": [
+      {
+        "url": "https://stvp.stanford.edu/people/meyer-malka",
+        "supports": "Event-host biography associated with May18,2011 talk names Bling Nation founder/co-CEO."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1383871/000156459014000313/lock-ex992_2013121141.htm",
+        "supports": "Company note and capital note establish Bling Nation-to-Lemon legal merger inMarch2012, and discontinued earlier service."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1383871/000119312513470740/d643875d8k.htm",
+        "supports": "Items1.01/2.01 establish completed LifeLock acquisition onDecember11,2013."
+      }
+    ]
+  },
+  {
+    "guest": "Micky Malka",
+    "company": "Patagon (founder of Venezuelan branch; historical)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-28",
+    "claim": "Stanford’s event-host biography specifically says Malka founded and developed Patagon’s Venezuelan branch; it does not identify him as founder of Santander or the original Spanish Openbank. Santander’s2002 RNS announcement distinguishes sale of Patagon America from retained European businesses and brand. A current successor/hiring identity for the Venezuelan operation remains unresolved. Do not map this historical relationship to all Santander or Openbank jobs.",
+    "sources": [
+      {
+        "url": "https://stvp.stanford.edu/people/meyer-malka",
+        "supports": "Narrow primary biography: founding and development of Patagon’s Venezuelan branch."
+      },
+      {
+        "url": "https://www.investegate.co.uk/announcement/rns/banco-santander-s-a---bnc/disposal-/365450",
+        "supports": "Issuer RNS release onMay24,2002: Patagon America sold, Europe and name retained separately; Latin American affiliate to cease using name."
+      },
+      {
+        "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2005-16458",
+        "supports": "Spanish official gazette records Patagon Bank→Open Bank Santander Consumer name change; does not establish continuity of Malka’s Venezuelan operation."
+      }
+    ]
+  },
+  {
+    "guest": "Kenn Ricci",
+    "company": "Flexjet (chairman)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-28",
+    "claim": "The official David Senra episode and company biography identify Kenn Ricci as Flexjet chairman. He acquired the business rather than founding the original Bombardier division. The group careers board includes explicitly labeled associated operating brands; no founder access or exact reporting line is implied.",
+    "sources": [
+      {
+        "url": "https://www.davidsenra.com/episode/kenn-ricci",
+        "supports": "Official episode identity, October28 publication and current chairman association."
+      },
+      {
+        "url": "https://directional.com/leadership/kenneth-ricci/",
+        "supports": "Directional official leadership biography identifies him as Flexjet chairman."
+      },
+      {
+        "url": "https://careers.flexjet.com/us/en",
+        "supports": "Official global group careers page, linked by Flexjet culture page."
+      }
+    ]
+  },
+  {
+    "guest": "Kenn Ricci",
+    "company": "Directional Aviation (founder and principal)",
+    "relationship": "founder",
+    "reviewedOn": "2026-10-28",
+    "claim": "Flexjet official history says Kenn Ricci formed Directional Aviation in2003; Directional identifies him as principal. An investment in a portfolio business alone is not treated as a direct operating/founding relationship, and the full portfolio is not automatically imported.",
+    "sources": [
+      {
+        "url": "https://flexjet.com/en-gb/culture",
+        "supports": "Official history explicitly states Ricci formed Directional in2003."
+      },
+      {
+        "url": "https://directional.com/leadership/kenneth-ricci/",
+        "supports": "Current Directional principal biography."
+      },
+      {
+        "url": "https://directional.com/about-us/approach/",
+        "supports": "Explains the investment firm and operating/investment approach; no dedicated careers board established."
+      }
+    ]
+  },
+  {
+    "guest": "Kenn Ricci",
+    "company": "Corporate Wings (early owner and operator)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-28",
+    "claim": "Kenn acquired and operated Corporate Wings early in his aviation career. Sources differ on whether to describe this as starting/founding in1980 or acquiring in1981; this record uses the narrower verified owner/operator relationship without asserting he founded the predecessor entity. Corporate Wings remains a named operating employer.",
+    "sources": [
+      {
+        "url": "https://flexjet.com/en-gb/culture",
+        "supports": "Official timeline says Ricci acquired Corporate Wings in1981."
+      },
+      {
+        "url": "https://directional.com/leadership/kenneth-ricci/",
+        "supports": "Describes Corporate Wings as his first company; founding/acquisition phrasing is preserved as a source discrepancy."
+      },
+      {
+        "url": "https://corporatewings.com/about/",
+        "supports": "Current aircraft-management business and Directional relationship."
+      },
+      {
+        "url": "https://corporatewings.com/careers",
+        "supports": "Redirects to the exact Corporate Wings public ClearCompany board."
+      }
+    ]
+  },
+  {
+    "guest": "Kenn Ricci",
+    "company": "Sentient Jet (chairman)",
+    "relationship": "executive",
+    "reviewedOn": "2026-10-28",
+    "claim": "Sentient Jet directly lists Kenn Ricci as chairman. This is a leadership association, not a claim he invented or founded Sentient Jet. Its one named-board opening is also mirrored in the Flexjet group careers feed.",
+    "sources": [
+      {
+        "url": "https://sentient.com/team/kenneth-c-ricci/",
+        "supports": "Official team page labels Kenn Ricci Chairman."
+      },
+      {
+        "url": "https://sentient.com/private-jet-careers/",
+        "supports": "Official careers page links the exact Sentient public ATS destination."
+      },
+      {
+        "url": "https://flexjet.com/en-gb/culture",
+        "supports": "Official history records Sentient joining the platform in2012."
+      }
+    ]
+  },
+  {
+    "guest": "Kenn Ricci",
+    "company": "Flexjet Technical Services (Nextant Aerospace / Constant Aviation operations)",
+    "relationship": "brand-successor",
+    "reviewedOn": "2026-10-28",
+    "claim": "Ricci’s first-person business history documents founding Nextant Aerospace and Constant Aviation. Nextant now redirects to Flexjet Technical Services, whose current site explicitly describes Nextant’s engineering legacy. Constant redirects to its services site; Flexjet history records acquiring Constant in2023. This describes current operating/brand routing, not a verified legal dissolution or blanket transfer of every historical entity.",
+    "sources": [
+      {
+        "url": "https://kennricci.com/entrepreneurship/",
+        "supports": "First-person history explicitly identifies the founding of Nextant Aerospace and Constant Aviation."
+      },
+      {
+        "url": "https://www.nextantaerospace.com/",
+        "supports": "Redirects to current Flexjet Technical Services; landing page identifies Nextant engineering legacy."
+      },
+      {
+        "url": "https://www.constantaviation.com/",
+        "supports": "Redirects to Flexjet Technical Services services page."
+      },
+      {
+        "url": "https://flexjet.com/en-gb/culture",
+        "supports": "Records Flexjet acquisition of Constant Aviation in2023."
+      },
+      {
+        "url": "https://careers.flexjet.com/us/en",
+        "supports": "Named Technical Services hiring category; only explicitly assigned roles attributed to this division."
+      }
+    ]
+  }
+]

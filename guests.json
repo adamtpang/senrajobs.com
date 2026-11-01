@@ -1,5 +1,153 @@
 [
   {
+    "name": "Rafael Vivas",
+    "episode": {
+      "title": "High School Dropout to Multi-Billionaire: The Relentless Drive of Rafael Vivas (2026-11-01)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000799195101"
+    },
+    "companies": [
+      {
+        "name": "AppLovin",
+        "careers": "https://www.applovin.com/en/careers"
+      },
+      {
+        "name": "Lion Studios (co-founder)",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
+    "name": "Kenn Ricci",
+    "episode": {
+      "title": "From a $27,500 Charter Company to a $4 Billion Private Jet Giant | Kenn Ricci, Flexjet (2026-10-28)",
+      "url": "https://www.davidsenra.com/episode/kenn-ricci"
+    },
+    "companies": [
+      {
+        "name": "Flexjet (chairman)",
+        "careers": "https://careers.flexjet.com/us/en"
+      },
+      {
+        "name": "Sentient Jet (chairman)",
+        "careers": "https://sentient.com/private-jet-careers/"
+      },
+      {
+        "name": "Corporate Wings (early owner and operator)",
+        "careers": "https://corporatewings.com/careers"
+      },
+      {
+        "name": "Flexjet Technical Services (Nextant Aerospace / Constant Aviation operations)",
+        "careers": "https://careers.flexjet.com/us/en/c/aircraft-maintenance-and-support-jobs"
+      },
+      {
+        "name": "Directional Aviation (founder and principal)",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "Nik Storonsky",
+    "episode": {
+      "title": "Competition, Intensity & Building a $115 Billion Global Bank | Nik Storonsky, Revolut (2026-10-25)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000797995956"
+    },
+    "companies": [
+      {
+        "name": "Revolut (co-founder and CEO)",
+        "careers": "https://www.revolut.com/careers/"
+      },
+      {
+        "name": "QuantumLight (founder)",
+        "careers": "https://revolutpeople.com/quantum-light/public/careers"
+      }
+    ]
+  },
+  {
+    "name": "Kurt MacAlpine",
+    "episode": {
+      "title": "Managing $525 Billion by Rethinking Wealth Management | Kurt MacAlpine, Corient (2026-10-18)",
+      "url": "https://www.davidsenra.com/episode/kurt-macalpine"
+    },
+    "companies": [
+      {
+        "name": "Corient",
+        "careers": "https://ci.wd3.myworkdayjobs.com/CORIENT_EXTERNAL_CAREER-SITE"
+      },
+      {
+        "name": "CI Financial (CEO; not founder)",
+        "careers": "https://ci.wd3.myworkdayjobs.com/en-US/CI_FINANCIAL_EXTERNAL_CAREER-SITE"
+      }
+    ]
+  },
+  {
+    "name": "Ben Wilson",
+    "episode": {
+      "title": "Lessons from Napoleon, Steve Jobs, Joan of Arc & Other Leaders | Ben Wilson (2026-10-14)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000796270200"
+    },
+    "companies": [
+      {
+        "name": "How to Take Over the World (creator and host)",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "Alexandr Wang",
+    "episode": {
+      "title": "Creating Muse: The Fastest-Growing AI Product Since ChatGPT | Alexandr Wang, Meta (2026-10-11)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000795226761"
+    },
+    "companies": [
+      {
+        "name": "Scale AI (co-founder, no longer CEO)",
+        "careers": "https://job-boards.greenhouse.io/scaleai"
+      },
+      {
+        "name": "Meta (chief AI officer, not founder)",
+        "careers": "https://www.metacareers.com/"
+      }
+    ]
+  },
+  {
+    "name": "Ari Emanuel",
+    "episode": {
+      "title": "Channeling Rage, Rolling Calls & Building an Entertainment Empire | Ari Emanuel, WME & TKO (2026-10-07)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000793617594"
+    },
+    "companies": [
+      {
+        "name": "WME Group (executive chairman)",
+        "careers": "https://wmeimg.wd1.myworkdayjobs.com/WMEGRP"
+      },
+      {
+        "name": "TKO Group Holdings",
+        "careers": "https://wwecorp.wd5.myworkdayjobs.com/TKO"
+      },
+      {
+        "name": "MARI (founder)",
+        "careers": "https://mari.careers.hibob.com/"
+      },
+      {
+        "name": "Endeavor",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
+    "name": "Jeremy Stern",
+    "episode": {
+      "title": "How Mark Zuckerberg, Palmer Luckey, Josh Kushner & Scott Wu Think | Jeremy Stern (2026-10-04)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000793064145"
+    },
+    "companies": [
+      {
+        "name": "Colossus (editor-in-chief, not founder)",
+        "note": "no public careers page yet"
+      }
+    ]
+  },
+  {
     "name": "Alexander Taubman",
     "episode": {
       "title": "Bringing AI to the Real Economy | Alexander Taubman (2026-09-30)",
@@ -33,12 +181,24 @@
     },
     "companies": [
       {
-        "name": "David Protein",
-        "careers": "https://apply.workable.com/david-protein/"
+        "name": "Medici Brands (co-founder; parent group)",
+        "careers": "https://davidprotein.com/pages/careers"
       },
       {
-        "name": "RXBAR",
-        "note": "acquired or closed"
+        "name": "David Protein",
+        "careers": "https://davidprotein.com/pages/careers"
+      },
+      {
+        "name": "HallPass (Medici brand)",
+        "careers": "https://davidprotein.com/pages/careers"
+      },
+      {
+        "name": "Epogee (Medici subsidiary)",
+        "careers": "https://davidprotein.com/pages/careers"
+      },
+      {
+        "name": "RXBAR (co-founder; now a Kellanova/Mars brand)",
+        "careers": "https://www.kellanovacareers.com/"
       }
     ]
   },
@@ -106,8 +266,8 @@
         "careers": "https://helsing.ai/careers"
       },
       {
-        "name": "NaturalMotion",
-        "note": "acquired or closed"
+        "name": "NaturalMotion (co-founder; now part of Zynga)",
+        "careers": "https://job-boards.greenhouse.io/nmcareers"
       }
     ]
   },
@@ -141,18 +301,42 @@
     "companies": [
       {
         "name": "Atoms (formerly City Storage Systems)",
-        "careers": "https://job-boards.greenhouse.io/atoms"
+        "careers": "https://atoms.co/openroles"
       },
       {
         "name": "CloudKitchens",
-        "careers": "https://jobs.ashbyhq.com/cloudkitchens"
+        "careers": "https://atoms.co/openroles?company=CloudKitchens"
+      },
+      {
+        "name": "Pronto AI (Atoms group company)",
+        "careers": "https://atoms.co/openroles?company=Pronto"
+      },
+      {
+        "name": "Lab37 (Atoms group company)",
+        "careers": "https://www.lab37.us/careers"
+      },
+      {
+        "name": "Otter (Atoms group company)",
+        "careers": "https://www.tryotter.com/jobs"
+      },
+      {
+        "name": "Picnic (Atoms group company)",
+        "careers": "https://trypicnic.com/careers"
+      },
+      {
+        "name": "ProFood Properties (Atoms group company)",
+        "note": "no public careers page yet"
       },
       {
         "name": "Uber (co-founder, no longer leads)",
-        "careers": "https://www.uber.com/us/en/careers/"
+        "careers": "https://jobs.uber.com/en/"
       },
       {
-        "name": "Scour, Red Swoosh",
+        "name": "Scour (co-founder)",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Red Swoosh (founder)",
         "note": "acquired or closed"
       }
     ]
@@ -166,7 +350,11 @@
     "companies": [
       {
         "name": "Rostra",
-        "careers": "https://jobs.ashbyhq.com/rostra"
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "TrailRunner International (co-founder; former president)",
+        "careers": "https://trailrunner.bamboohr.com/careers"
       }
     ]
   },
@@ -192,6 +380,26 @@
     "companies": [
       {
         "name": "Ribbit Capital",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "OnePay (Walmart-Ribbit venture; Malka founding-board association)",
+        "careers": "https://www.onepay.com/careers"
+      },
+      {
+        "name": "NODE Foundation (co-founder; nonprofit)",
+        "careers": "https://nodefoundation.com/careers"
+      },
+      {
+        "name": "Lemon Bank (co-founder; historical)",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Bling Nation / Lemon (co-founder; historical)",
+        "note": "acquired or closed"
+      },
+      {
+        "name": "Patagon (founder of Venezuelan branch; historical)",
         "note": "no public careers page yet"
       }
     ]
@@ -247,11 +455,11 @@
     },
     "companies": [
       {
-        "name": "Groq (founder; Groq stays independent after the Dec 2025 Nvidia licensing deal, no public careers page found 2026-09-19)",
-        "note": "no public careers page yet"
+        "name": "Groq (founder)",
+        "careers": "https://jobs.gem.com/groq"
       },
       {
-        "name": "Nvidia (Ross joined as Chief Software Architect, 2026)",
+        "name": "Nvidia (Ross Chief Software Architect; confirmed July 2026)",
         "careers": "https://www.nvidia.com/en-us/about-nvidia/careers/"
       }
     ]
@@ -266,6 +474,10 @@
       {
         "name": "Cognition",
         "careers": "https://cognition.com/careers"
+      },
+      {
+        "name": "Lunchclub (co-founder)",
+        "note": "no public careers page yet"
       }
     ]
   },
@@ -277,12 +489,8 @@
     },
     "companies": [
       {
-        "name": "UnitedMasters",
-        "note": "no public careers page yet"
-      },
-      {
-        "name": "Translation",
-        "note": "no public careers page yet"
+        "name": "UnitedMasters / Translation (shared careers board)",
+        "careers": "https://job-boards.greenhouse.io/unitedmasterstranslation"
       }
     ]
   },
@@ -309,6 +517,10 @@
       {
         "name": "Spotify (executive, not founder)",
         "careers": "https://jobs.lever.co/spotify"
+      },
+      {
+        "name": "Kenet Works (co-founder; former CEO)",
+        "note": "acquired or closed"
       }
     ]
   },
@@ -322,6 +534,10 @@
       {
         "name": "Ivanka Trump brand",
         "note": "acquired or closed"
+      },
+      {
+        "name": "Planet Harvest (co-founder)",
+        "note": "no public careers page yet"
       }
     ]
   },
@@ -334,7 +550,7 @@
     "companies": [
       {
         "name": "Def Jam (co-founder)",
-        "note": "acquired or closed"
+        "careers": "https://www.umusiccareers.com/jobs/defjam"
       },
       {
         "name": "American Recordings",
@@ -351,11 +567,27 @@
     "companies": [
       {
         "name": "Take-Two Interactive (CEO)",
-        "careers": "https://careers.take2games.com"
+        "careers": "https://careers.take2games.com/jobs"
       },
       {
-        "name": "ZelnickMedia (founder)",
-        "careers": "https://www.zelnickmedia.com"
+        "name": "ZMC (founder)",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Crystal Dynamics (former president and CEO)",
+        "careers": "https://www.crystaldynamics.com/careers/"
+      },
+      {
+        "name": "20th Century Studios (formerly 20th Century Fox; former president and COO)",
+        "careers": "https://join.disneycareers.com/global/en/20th-century-studios"
+      },
+      {
+        "name": "BMG Entertainment (former president and CEO)",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Vestron Inc. (former president and COO)",
+        "note": "no public careers page yet"
       }
     ]
   },
@@ -368,11 +600,11 @@
     "companies": [
       {
         "name": "UFC (CEO, now part of TKO Group)",
-        "careers": "https://www.ufc.com/careers"
+        "careers": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc"
       },
       {
         "name": "TKO Group Holdings",
-        "note": "no public careers page yet"
+        "careers": "https://wwecorp.wd5.myworkdayjobs.com/TKO"
       }
     ]
   },
@@ -415,7 +647,7 @@
     "companies": [
       {
         "name": "Snap",
-        "careers": "https://careers.snap.com"
+        "careers": "https://careers.snap.com/jobs"
       }
     ]
   },
@@ -433,6 +665,103 @@
     ]
   },
   {
+    "name": "Eric Jorgenson",
+    "episode": {
+      "title": "The Book of Elon with Eric Jorgenson (2026-03-24)",
+      "url": "https://www.davidsenra.com/episode/eric-jorgenson"
+    },
+    "companies": [
+      {
+        "name": "Scribe Media (CEO)",
+        "careers": "https://scribemedia.com/careers"
+      },
+      {
+        "name": "Tesla (Elon Musk; episode subject)",
+        "careers": "https://www.tesla.com/careers/search/",
+        "connection": {
+          "type": "episode-subject",
+          "subject": "Elon Musk",
+          "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+          "companySource": "https://www.tesla.com/elon-musk",
+          "checkedOn": "2026-10-19",
+          "label": "Episode topic: Elon Musk"
+        }
+      },
+      {
+        "name": "SpaceX / Starlink (Elon Musk; episode subject)",
+        "careers": "https://www.spacex.com/careers/",
+        "connection": {
+          "type": "episode-subject",
+          "subject": "Elon Musk",
+          "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+          "companySource": "https://www.tesla.com/elon-musk",
+          "checkedOn": "2026-10-19",
+          "label": "Episode topic: Elon Musk"
+        }
+      },
+      {
+        "name": "Neuralink (Elon Musk; episode subject)",
+        "careers": "https://neuralink.com/careers/",
+        "connection": {
+          "type": "episode-subject",
+          "subject": "Elon Musk",
+          "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+          "companySource": "https://www.tesla.com/elon-musk",
+          "checkedOn": "2026-10-19",
+          "label": "Episode topic: Elon Musk"
+        }
+      },
+      {
+        "name": "xAI / X (Elon Musk; episode subject)",
+        "careers": "https://x.ai/careers/open-roles",
+        "connection": {
+          "type": "episode-subject",
+          "subject": "Elon Musk",
+          "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+          "companySource": "https://x.ai/careers/open-roles",
+          "checkedOn": "2026-10-19",
+          "label": "Episode topic: Elon Musk"
+        }
+      },
+      {
+        "name": "The Boring Company (Elon Musk; episode subject)",
+        "careers": "https://www.boringcompany.com/careers",
+        "connection": {
+          "type": "episode-subject",
+          "subject": "Elon Musk",
+          "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+          "companySource": "https://www.tesla.com/elon-musk",
+          "checkedOn": "2026-10-19",
+          "label": "Episode topic: Elon Musk"
+        }
+      },
+      {
+        "name": "PayPal (Elon Musk; episode subject; historical co-founder)",
+        "careers": "https://paypal.eightfold.ai/careers",
+        "connection": {
+          "type": "episode-subject",
+          "subject": "Elon Musk",
+          "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+          "companySource": "https://www.paypalobjects.com/html/PayPal_Prospectus.pdf",
+          "checkedOn": "2026-10-28",
+          "label": "Episode topic: Elon Musk"
+        }
+      },
+      {
+        "name": "Zip2 (Elon Musk; episode subject; historical co-founder)",
+        "note": "acquired or closed",
+        "connection": {
+          "type": "episode-subject",
+          "subject": "Elon Musk",
+          "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+          "companySource": "https://www.paypalobjects.com/html/PayPal_Prospectus.pdf",
+          "checkedOn": "2026-10-28",
+          "label": "Episode topic: Elon Musk"
+        }
+      }
+    ]
+  },
+  {
     "name": "Marc Andreessen",
     "episode": {
       "title": "Marc Andreessen, co-founder of a16z & Netscape (2026-03-15)",
@@ -441,7 +770,7 @@
     "companies": [
       {
         "name": "Andreessen Horowitz",
-        "note": "no public careers page yet"
+        "careers": "https://a16z.com/about/jobs/"
       },
       {
         "name": "Netscape",
@@ -467,6 +796,10 @@
       {
         "name": "NewLimit",
         "careers": "https://www.newlimit.com/careers"
+      },
+      {
+        "name": "ResearchHub (co-founder)",
+        "note": "no public careers page yet"
       }
     ]
   },
@@ -492,11 +825,15 @@
     "companies": [
       {
         "name": "Interscope Records",
-        "note": "no public careers page yet"
+        "careers": "https://www.umusiccareers.com/gethired"
       },
       {
         "name": "Beats by Dre",
-        "note": "acquired or closed"
+        "careers": "https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA"
+      },
+      {
+        "name": "USC Iovine and Young Academy (co-founder; nonprofit school)",
+        "careers": "https://iovine-young.usc.edu/faculty-positions"
       }
     ]
   },
@@ -526,7 +863,7 @@
       },
       {
         "name": "Love.Life",
-        "careers": "https://www.love.life/careers"
+        "careers": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=17763c3e-6689-4e44-8e0b-eac90764d9d5&ccId=9200392115678_2&lang=en_US"
       }
     ]
   },
@@ -544,6 +881,10 @@
       {
         "name": "Positive Sum",
         "note": "no public careers page yet"
+      },
+      {
+        "name": "O'Shaughnessy Asset Management (former CEO; chairman emeritus)",
+        "careers": "https://careers.franklintempleton.com/us/en"
       }
     ]
   },
@@ -556,7 +897,7 @@
     "companies": [
       {
         "name": "Dyson",
-        "careers": "https://careers.dyson.com/en-gb"
+        "careers": "https://careers.dyson.com/en-gb/"
       }
     ]
   },
@@ -569,7 +910,7 @@
     "companies": [
       {
         "name": "Raising Cane's",
-        "careers": "https://www.raisingcanes.com/careers"
+        "careers": "https://jobs.raisingcanes.com/"
       }
     ]
   },
@@ -594,15 +935,27 @@
       },
       {
         "name": "RXO",
-        "careers": "https://careers.rxo.com"
+        "careers": "https://rxo.wd501.myworkdayjobs.com/rxojobs"
       },
       {
         "name": "United Rentals",
         "careers": "https://jobs.unitedrentals.com"
       },
       {
+        "name": "Jacobs Private Equity (founder)",
+        "note": "no public careers page yet"
+      },
+      {
         "name": "United Waste Systems",
         "note": "acquired or closed"
+      },
+      {
+        "name": "Amerex Oil Associates (co-founder; former CEO)",
+        "note": "no public careers page yet"
+      },
+      {
+        "name": "Hamilton Resources (founder; former executive chairman)",
+        "note": "no public careers page yet"
       }
     ]
   },
@@ -618,8 +971,12 @@
         "careers": "https://jobs.dell.com"
       },
       {
-        "name": "MSD Capital",
-        "note": "no public careers page yet"
+        "name": "DFO Management (formerly MSD Capital)",
+        "careers": "https://www.dellfamilyoffice.com/careers"
+      },
+      {
+        "name": "Michael & Susan Dell Foundation",
+        "careers": "https://www.dell.org/careers/"
       }
     ]
   },

@@ -1,0 +1,209 @@
+{
+  "checkedAt": "2026-10-09T09:50:15.914Z",
+  "origin": "https://senrajobs.com",
+  "interview": {
+    "question": "Please review your profile. Since you'd work on-site or remotely, I set work mode to \"Any\"; change it if you don't want hybrid roles.",
+    "ready": true,
+    "profile": {
+      "experience": "Five years of backend software engineering experience with Python and TypeScript",
+      "role": "Software Engineer",
+      "location": "Austin, Texas",
+      "workMode": "Any",
+      "learning": "How reliable systems are built",
+      "minimumPay": 120000,
+      "currency": "USD"
+    }
+  },
+  "match": {
+    "summary": "I picked six Austin, TX roles that best match five years of Python/TypeScript backend work and your goal of learning reliable systems. The backend software engineer role at Base Power is the closest fit. The others carry clearer gaps, such as seniority level, languages or hardware work. Base Power does not list pay for any of these roles, so I couldn't check them against your $120,000 USD minimum. Atoms lists $158,000–210,000 but doesn't name the currency. All six postings describe in-person work. These are suggestions, not predictions of whether you'd get hired, and the scores only reflect your stated preferences. Being linked to a well-known founder doesn't mean you'd work directly with them. Check that each role is still open before you apply.",
+    "matches": [
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/23bc4e94-d63c-4933-926b-edcb69138410",
+        "title": "Software Engineer, Backend",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": 89,
+        "parts": {
+          "role": 60,
+          "experience": 9,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-07T05:10:05.690Z",
+        "reason": "This backend role uses Python, asks for an experience range that includes your five years, and involves running reliability-critical services at a founder-led startup, which fits both your skills and your learning goals.",
+        "gap": "The posting also uses Go, Terraform/AWS and workflow tools like Temporal, and your profile doesn't show experience with these; pay isn't listed.",
+        "nextStep": "Update your resume to highlight production Python services and any incidents you've handled, then ask the recruiter about pay before you go far into the process.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-09T09:33:15.919Z"
+      },
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/d5149c86-5649-48bd-8d30-7708c3e36233",
+        "title": "Senior Software Engineer, Backend",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": 89,
+        "parts": {
+          "role": 60,
+          "experience": 9,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-07T05:10:05.690Z",
+        "reason": "This senior backend role builds the same reliability-focused systems in Python and lines up closely with your goal of learning reliable systems.",
+        "gap": "It asks for 6+ years of experience, with architecture leadership and infrastructure-as-code; you have five years, and your profile doesn't show leadership scope; pay isn't listed.",
+        "nextStep": "Gather concrete examples of systems you've owned and design decisions you've led, then decide whether to apply here, to the backend role (ID 0), or both.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-09T09:33:15.932Z"
+      },
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/10772e1c-dfad-4161-9e9e-5f34728c4745",
+        "title": "Software Engineer, Infrastructure",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": 86,
+        "parts": {
+          "role": 60,
+          "experience": 6,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-07T05:10:05.690Z",
+        "reason": "This infrastructure role focuses on building reliable shared platforms and asks for backend skills in languages like Python, so it overlaps with your background and your reliability goal.",
+        "gap": "Your profile doesn't show experience with infrastructure-as-code, CI/CD system design or cloud platforms, and those are central to this role; pay isn't listed.",
+        "nextStep": "Write down any CI/CD, cloud or deployment work you've done, and if you have little, build a small Terraform project to fill the gap.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-09T09:33:15.919Z"
+      },
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/e0c632cd-2375-4e0f-8a9f-11dbb820e885",
+        "title": "Data Engineer",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": 86,
+        "parts": {
+          "role": 60,
+          "experience": 6,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-07T05:10:05.690Z",
+        "reason": "This data infrastructure role is backend engineering in Python, and its experience level is close to your five years.",
+        "gap": "Your profile doesn't show SQL depth, data warehouses or pipeline tools such as Airflow or dbt; pay isn't listed.",
+        "nextStep": "Check your hands-on experience with data pipelines and SQL against the posting before applying.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-09T09:33:15.921Z"
+      },
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/d5346efc-51b9-44f8-89f6-41f6178825c9",
+        "title": "System Integration Engineer",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": 86,
+        "parts": {
+          "role": 60,
+          "experience": 6,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-07T05:10:05.690Z",
+        "reason": "This is an exploratory pick: the role uses Python to build integration testing and CI/CD for system reliability, which relates to your learning goal.",
+        "gap": "It focuses on hardware interfaces and embedded C/C++, which your profile doesn't show; pay isn't listed.",
+        "nextStep": "Read the full posting and only apply if you're comfortable learning hardware-adjacent work quickly.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-09T09:33:15.920Z"
+      },
+      {
+        "url": "https://job-boards.greenhouse.io/atoms/jobs/8538728002",
+        "title": "Senior Software Engineer - Data Infrastructure",
+        "company": "Atoms",
+        "location": "Austin, TX",
+        "pay": "$ 158,000–210,000/year · currency unspecified",
+        "guests": [
+          "Travis Kalanick"
+        ],
+        "score": 86,
+        "parts": {
+          "role": 60,
+          "experience": 6,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-07T05:33:41.531Z",
+        "reason": "This data infrastructure role at Atoms suits your general software engineering experience, and its listed pay range looks higher than your minimum.",
+        "gap": "It asks for Java or Go plus Azure/GCP, and your profile doesn't show these; the pay range doesn't state a currency, so treat it as unconfirmed.",
+        "nextStep": "Ask whether strong Python/TypeScript backend experience would be considered, and confirm the pay currency.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://boards-api.greenhouse.io/v1/boards/atoms/jobs?content=true",
+        "requirementsChecked": "2026-10-09T09:33:17.111Z"
+      }
+    ],
+    "ranked": 118,
+    "searched": 6785
+  },
+  "sage": {
+    "answer": "Evidence gap: none of these notes covers how to choose an employer. The criteria below are my own inferences from related lessons.\n\nWhat the notes document:\n- Ovitz used a junior mail-room job to study old client files and contracts and to learn from experienced people beyond his assigned work.\n- Marcus Wallenberg did routine work in training placements and studied the industries he would later oversee. He also kept in touch with people who had helped him.\n- Honda built his reputation on hard repairs that other shops had failed at or refused. He later let young engineers propose and own their own research.\n\nMy inferences for you, as a backend engineer interested in reliable systems and founder-led companies:\n- Pick for access more than title. Look for a place where you could see incident reviews, architecture decisions, customer contracts and the founders' reasoning.\n- Prefer places that give hard reliability problems to people who volunteer for them.\n- Check whether engineers can own projects from start to finish.\n- In interviews, ask which records and people you could learn from.\n- When you leave, thank the people who helped you and stay in touch.\n\nYou'll need to check pay (at least $120k) and location fit yourself. I can't confirm that any specific role is open.",
+    "sources": [
+      {
+        "title": "The Rise and Fall (and Rise) of the Most Powerful Man in Hollywood: Michael Ovitz",
+        "url": "https://www.youtube.com/watch?v=UplmZ1GgHcA"
+      },
+      {
+        "title": "The Wallenberg Family Dynasty",
+        "url": "https://www.youtube.com/watch?v=tLZgU4vbQLE"
+      },
+      {
+        "title": "The Practical Genius of Honda",
+        "url": "https://www.youtube.com/watch?v=oA_FT515VFM"
+      }
+    ],
+    "coverage": "Advice based on selected Sage synthesis notes. Coverage is partial; these are not full transcripts."
+  },
+  "checks": {
+    "crossSession": true,
+    "credits": true,
+    "clear": true
+  }
+}

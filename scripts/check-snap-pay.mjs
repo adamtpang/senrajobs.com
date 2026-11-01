@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {snapPay} from '../snap-pay.mjs';
+const url='https://snapchat.wd1.myworkdayjobs.com/wday/cxs/snapchat/snap/job/Austin/Role_R123';
+const header='In the United States, work locations are assigned a pay zone which determines the salary range for the position.';
+const bands='<p>Zone A (CA, WA, NYC):</p>The base salary range for this position is $173,000-$259,000 annually. <p>Zone B:</p>The base salary range for this position is $164,000-$246,000 annually. <p>Zone C:</p>The base salary range for this position is $147,000-$220,000 annually.';
+const parsed=snapPay(header+bands,url);
+assert.equal(parsed.length,3);assert.deepEqual(parsed.map(r=>[r.min,r.max]),[[173000,259000],[164000,246000],[147000,220000]]);
+assert.deepEqual(parsed.map(r=>r.location),['US Zone A (CA, WA, NYC)','US Zone B','US Zone C']);
+assert(parsed.every(r=>r.currency==='USD'&&r.period==='year'&&!r.location.includes('Austin')));
+assert.equal(snapPay(bands,url).length,0,'Dollar symbol alone does not establish US pay');
+assert.equal(snapPay(header+'Zone C: The base salary range for this position is $200,000-$100,000 annually.',url).length,0);
+assert.equal(snapPay(header+'Target revenue $500,000. Salary competitive. Equity $100,000.',url).length,0);
+assert.throws(()=>snapPay(header+bands,'https://example.com/job'));
+console.log('PASS: Snap salary bands retain US zone scope, exclude bonus/equity, and do not infer Austin eligibility or currency from a dollar symbol alone.');

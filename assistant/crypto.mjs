@@ -1,0 +1,6 @@
+import { randomBytes, createCipheriv, createDecipheriv, createHmac, timingSafeEqual } from 'node:crypto';
+function key() { const value=Buffer.from(process.env.SENRA_QUEUE_KEY || '', 'base64'); if(value.length!==32) throw new Error('Queue key not configured'); return value; }
+export function encrypt(value, id) { const iv=randomBytes(12), cipher=createCipheriv('aes-256-gcm',key(),iv); cipher.setAAD(Buffer.from(id)); const body=Buffer.concat([cipher.update(JSON.stringify(value),'utf8'),cipher.final()]); return [iv,cipher.getAuthTag(),body].map(x=>x.toString('base64url')).join('.'); }
+export function decrypt(value,id) { const [iv,tag,body]=value.split('.').map(x=>Buffer.from(x,'base64url')); const cipher=createDecipheriv('aes-256-gcm',key(),iv); cipher.setAAD(Buffer.from(id)); cipher.setAuthTag(tag); return JSON.parse(Buffer.concat([cipher.update(body),cipher.final()]).toString('utf8')); }
+export function sign(value) { if(!process.env.SENRA_SESSION_SECRET) throw new Error('Session secret not configured'); return createHmac('sha256',process.env.SENRA_SESSION_SECRET).update(value).digest('base64url'); }
+export function verify(value,signature) { const expected=sign(value); return signature?.length===expected.length && timingSafeEqual(Buffer.from(signature),Buffer.from(expected)); }
