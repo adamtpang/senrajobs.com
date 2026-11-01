@@ -1,8 +1,43 @@
 # Senra Jobs
 
-> Free directory of the 41 living founders interviewed on the David Senra podcast, their companies, and careers links. Join a great founder, learn from inside, then build your own.
+> Free directory of the 50 guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.
 
-New roles, first seen or posted in the 48 hours before the last fetch: https://senrajobs.com/new.json (RSS: https://senrajobs.com/new.xml, page: https://senrajobs.com/new). Pay is included only when the company's board posted it.
+New roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.
+
+## Rafael Vivas
+- AppLovin: https://www.applovin.com/en/careers
+- Lion Studios (co-founder): acquired or closed
+
+## Kenn Ricci
+- Flexjet (chairman): https://careers.flexjet.com/us/en
+- Sentient Jet (chairman): https://sentient.com/private-jet-careers/
+- Corporate Wings (early owner and operator): https://corporatewings.com/careers
+- Flexjet Technical Services (Nextant Aerospace / Constant Aviation operations): https://careers.flexjet.com/us/en/c/aircraft-maintenance-and-support-jobs
+- Directional Aviation (founder and principal): no public careers page yet
+
+## Nik Storonsky
+- Revolut (co-founder and CEO): https://www.revolut.com/careers/
+- QuantumLight (founder): https://revolutpeople.com/quantum-light/public/careers
+
+## Kurt MacAlpine
+- Corient: https://ci.wd3.myworkdayjobs.com/CORIENT_EXTERNAL_CAREER-SITE
+- CI Financial (CEO; not founder): https://ci.wd3.myworkdayjobs.com/en-US/CI_FINANCIAL_EXTERNAL_CAREER-SITE
+
+## Ben Wilson
+- How to Take Over the World (creator and host): no public careers page yet
+
+## Alexandr Wang
+- Scale AI (co-founder, no longer CEO): https://job-boards.greenhouse.io/scaleai
+- Meta (chief AI officer, not founder): https://www.metacareers.com/
+
+## Ari Emanuel
+- WME Group (executive chairman): https://wmeimg.wd1.myworkdayjobs.com/WMEGRP
+- TKO Group Holdings: https://wwecorp.wd5.myworkdayjobs.com/TKO
+- MARI (founder): https://mari.careers.hibob.com/
+- Endeavor: no public careers page yet
+
+## Jeremy Stern
+- Colossus (editor-in-chief, not founder): no public careers page yet
 
 ## Alexander Taubman
 - Long Lake: https://jobs.ashbyhq.com/long-lake
@@ -11,8 +46,11 @@ New roles, first seen or posted in the 48 hours before the last fetch: https://s
 - Kith: https://kith.wd1.myworkdayjobs.com/Kith_External_Careers
 
 ## Peter Rahal
-- David Protein: https://apply.workable.com/david-protein/
-- RXBAR: acquired or closed
+- Medici Brands (co-founder; parent group): https://davidprotein.com/pages/careers
+- David Protein: https://davidprotein.com/pages/careers
+- HallPass (Medici brand): https://davidprotein.com/pages/careers
+- Epogee (Medici subsidiary): https://davidprotein.com/pages/careers
+- RXBAR (co-founder; now a Kellanova/Mars brand): https://www.kellanovacareers.com/
 
 ## Luca Ferrari
 - Bending Spoons: https://jobs.bendingspoons.com
@@ -28,7 +66,7 @@ New roles, first seen or posted in the 48 hours before the last fetch: https://s
 
 ## Torsten Reil
 - Helsing: https://helsing.ai/careers
-- NaturalMotion: acquired or closed
+- NaturalMotion (co-founder; now part of Zynga): https://job-boards.greenhouse.io/nmcareers
 
 ## Sam Altman
 - OpenAI: https://openai.com/careers
@@ -36,19 +74,31 @@ New roles, first seen or posted in the 48 hours before the last fetch: https://s
 - Loopt: acquired or closed
 
 ## Travis Kalanick
-- Atoms (formerly City Storage Systems): https://job-boards.greenhouse.io/atoms
-- CloudKitchens: https://jobs.ashbyhq.com/cloudkitchens
-- Uber (co-founder, no longer leads): https://www.uber.com/us/en/careers/
-- Scour, Red Swoosh: acquired or closed
+- Atoms (formerly City Storage Systems): https://atoms.co/openroles
+- CloudKitchens: https://atoms.co/openroles?company=CloudKitchens
+- Pronto AI (Atoms group company): https://atoms.co/openroles?company=Pronto
+- Lab37 (Atoms group company): https://www.lab37.us/careers
+- Otter (Atoms group company): https://www.tryotter.com/jobs
+- Picnic (Atoms group company): https://trypicnic.com/careers
+- ProFood Properties (Atoms group company): no public careers page yet
+- Uber (co-founder, no longer leads): https://jobs.uber.com/en/
+- Scour (co-founder): no public careers page yet
+- Red Swoosh (founder): acquired or closed
 
 ## Lulu Cheng Meservey
-- Rostra: https://jobs.ashbyhq.com/rostra
+- Rostra: no public careers page yet
+- TrailRunner International (co-founder; former president): https://trailrunner.bamboohr.com/careers
 
 ## Michael Ovitz
 - Creative Artists Agency (co-founder, no longer leads): https://www.caa.com/careers
 
 ## Micky Malka
 - Ribbit Capital: no public careers page yet
+- OnePay (Walmart-Ribbit venture; Malka founding-board association): https://www.onepay.com/careers
+- NODE Foundation (co-founder; nonprofit): https://nodefoundation.com/careers
+- Lemon Bank (co-founder; historical): no public careers page yet
+- Bling Nation / Lemon (co-founder; historical): acquired or closed
+- Patagon (founder of Venezuelan branch; historical): no public careers page yet
 
 ## David Heinemeier Hansson
 - 37signals: https://37signals.com/jobs
@@ -61,36 +111,42 @@ New roles, first seen or posted in the 48 hours before the last fetch: https://s
 - Paribus: acquired or closed
 
 ## Jonathan Ross
-- Groq (founder; Groq stays independent after the Dec 2025 Nvidia licensing deal, no public careers page found 2026-09-19): no public careers page yet
-- Nvidia (Ross joined as Chief Software Architect, 2026): https://www.nvidia.com/en-us/about-nvidia/careers/
+- Groq (founder): https://jobs.gem.com/groq
+- Nvidia (Ross Chief Software Architect; confirmed July 2026): https://www.nvidia.com/en-us/about-nvidia/careers/
 
 ## Scott Wu
 - Cognition: https://cognition.com/careers
+- Lunchclub (co-founder): no public careers page yet
 
 ## Steve Stoute
-- UnitedMasters: no public careers page yet
-- Translation: no public careers page yet
+- UnitedMasters / Translation (shared careers board): https://job-boards.greenhouse.io/unitedmasterstranslation
 
 ## Ed Catmull
 - Pixar: https://www.pixar.com/careers
 
 ## Gustav Soderstrom
 - Spotify (executive, not founder): https://jobs.lever.co/spotify
+- Kenet Works (co-founder; former CEO): acquired or closed
 
 ## Ivanka Trump
 - Ivanka Trump brand: acquired or closed
+- Planet Harvest (co-founder): no public careers page yet
 
 ## Rick Rubin
-- Def Jam (co-founder): acquired or closed
+- Def Jam (co-founder): https://www.umusiccareers.com/jobs/defjam
 - American Recordings: no public careers page yet
 
 ## Strauss Zelnick
-- Take-Two Interactive (CEO): https://careers.take2games.com
-- ZelnickMedia (founder): https://www.zelnickmedia.com
+- Take-Two Interactive (CEO): https://careers.take2games.com/jobs
+- ZMC (founder): no public careers page yet
+- Crystal Dynamics (former president and CEO): https://www.crystaldynamics.com/careers/
+- 20th Century Studios (formerly 20th Century Fox; former president and COO): https://join.disneycareers.com/global/en/20th-century-studios
+- BMG Entertainment (former president and CEO): no public careers page yet
+- Vestron Inc. (former president and COO): no public careers page yet
 
 ## Dana White
-- UFC (CEO, now part of TKO Group): https://www.ufc.com/careers
-- TKO Group Holdings: no public careers page yet
+- UFC (CEO, now part of TKO Group): https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc
+- TKO Group Holdings: https://wwecorp.wd5.myworkdayjobs.com/TKO
 
 ## Adam Foroughi
 - AppLovin: https://www.applovin.com/en/careers
@@ -100,57 +156,82 @@ New roles, first seen or posted in the 48 hours before the last fetch: https://s
 - Knowledge Revolution: acquired or closed
 
 ## Evan Spiegel
-- Snap: https://careers.snap.com
+- Snap: https://careers.snap.com/jobs
 
 ## Tony Xu
 - DoorDash: https://job-boards.greenhouse.io/doordashusa
 
+## Eric Jorgenson
+- Scribe Media (CEO): https://scribemedia.com/careers
+- Tesla (Elon Musk; episode subject): https://www.tesla.com/careers/search/
+- SpaceX / Starlink (Elon Musk; episode subject): https://www.spacex.com/careers/
+- Neuralink (Elon Musk; episode subject): https://neuralink.com/careers/
+- xAI / X (Elon Musk; episode subject): https://x.ai/careers/open-roles
+- The Boring Company (Elon Musk; episode subject): https://www.boringcompany.com/careers
+- PayPal (Elon Musk; episode subject; historical co-founder): https://paypal.eightfold.ai/careers
+- Zip2 (Elon Musk; episode subject; historical co-founder): acquired or closed
+
 ## Marc Andreessen
-- Andreessen Horowitz: no public careers page yet
+- Andreessen Horowitz: https://a16z.com/about/jobs/
 - Netscape: acquired or closed
 - Loudcloud/Opsware: acquired or closed
 
 ## Brian Armstrong
 - Coinbase: https://www.coinbase.com/careers/positions
 - NewLimit: https://www.newlimit.com/careers
+- ResearchHub (co-founder): no public careers page yet
 
 ## Jason Fried
 - 37signals: https://37signals.com/jobs
 
 ## Jimmy Iovine
-- Interscope Records: no public careers page yet
-- Beats by Dre: acquired or closed
+- Interscope Records: https://www.umusiccareers.com/gethired
+- Beats by Dre: https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA
+- USC Iovine and Young Academy (co-founder; nonprofit school): https://iovine-young.usc.edu/faculty-positions
 
 ## Tobi Lutke
 - Shopify: https://www.shopify.com/careers
 
 ## John Mackey
 - Whole Foods Market: https://careers.wholefoods.com
-- Love.Life: https://www.love.life/careers
+- Love.Life: https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=17763c3e-6689-4e44-8e0b-eac90764d9d5&ccId=9200392115678_2&lang=en_US
 
 ## Patrick O'Shaughnessy
 - Colossus: no public careers page yet
 - Positive Sum: no public careers page yet
+- O'Shaughnessy Asset Management (former CEO; chairman emeritus): https://careers.franklintempleton.com/us/en
 
 ## James Dyson
-- Dyson: https://careers.dyson.com/en-gb
+- Dyson: https://careers.dyson.com/en-gb/
 
 ## Todd Graves
-- Raising Cane's: https://www.raisingcanes.com/careers
+- Raising Cane's: https://jobs.raisingcanes.com/
 
 ## Brad Jacobs
 - QXO: https://qxo.com/careers
 - XPO: https://jobs.xpo.com
 - GXO Logistics: https://jobs.gxo.com
-- RXO: https://careers.rxo.com
+- RXO: https://rxo.wd501.myworkdayjobs.com/rxojobs
 - United Rentals: https://jobs.unitedrentals.com
+- Jacobs Private Equity (founder): no public careers page yet
 - United Waste Systems: acquired or closed
+- Amerex Oil Associates (co-founder; former CEO): no public careers page yet
+- Hamilton Resources (founder; former executive chairman): no public careers page yet
 
 ## Michael Dell
 - Dell Technologies: https://jobs.dell.com
-- MSD Capital: no public careers page yet
+- DFO Management (formerly MSD Capital): https://www.dellfamilyoffice.com/careers
+- Michael & Susan Dell Foundation: https://www.dell.org/careers/
 
 ## Daniel Ek
 - Spotify: https://jobs.lever.co/spotify
 - Neko Health: https://www.neko.health/careers
 - Prima Materia: no public careers page yet
+
+## Target companies
+- Fluidstack: https://jobs.ashbyhq.com/fluidstack
+- Aalo Atomics: https://www.aalo.com/careers
+- SpaceX: https://job-boards.greenhouse.io/spacex
+- SpaceX Global: https://job-boards.greenhouse.io/spacexglobal (board name: SpaceX_Global)
+- xAI: https://job-boards.greenhouse.io/xai (board name: SpaceXSI)
+- Neuralink: https://job-boards.greenhouse.io/neuralink

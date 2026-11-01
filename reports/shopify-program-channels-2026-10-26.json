@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-26T17:08:27.955Z",
+  "receipts": [
+    {
+      "url": "https://internships.shopify.com/",
+      "observedAt": "2026-10-26T17:08:26.619Z",
+      "status": 200,
+      "sha256": "d2c74b444b456695aa39f3f0dc90df9b764709a175345b8c40cbc7f631632bc2",
+      "characters": 70968
+    },
+    {
+      "url": "https://internships.shopify.com/a/faq/",
+      "observedAt": "2026-10-26T17:08:27.040Z",
+      "status": 200,
+      "sha256": "f6168c09814fb92bba56374312c2d891fc9509692f2b940dce35c0cdaf11add4",
+      "characters": 63816
+    },
+    {
+      "url": "https://apm.shopify.com/",
+      "observedAt": "2026-10-26T17:08:27.288Z",
+      "status": 200,
+      "sha256": "125362c7da597a6ff3356db2f1ca3441856f6fe2a088b37beff7bd36a0449f7f",
+      "characters": 60052
+    },
+    {
+      "url": "https://apm.shopify.com/pages/faq",
+      "observedAt": "2026-10-26T17:08:27.444Z",
+      "status": 200,
+      "sha256": "2f19b0778dc71cf05bdd70ff127ef57d23e60f857f889afdf110ec2268839987",
+      "characters": 51954
+    },
+    {
+      "url": "https://shopify.design/dap",
+      "observedAt": "2026-10-26T17:08:27.954Z",
+      "status": 200,
+      "sha256": "5c1a5b1bffe73e08dc080481fbb16ef54cfc617bef9209aa27e8cdb4ad65443f",
+      "characters": 83985
+    }
+  ],
+  "channels": [
+    {
+      "name": "Engineering and Data internships",
+      "urls": [
+        "https://internships.shopify.com/",
+        "https://internships.shopify.com/a/faq/"
+      ],
+      "status": "No current application link located; notification links only",
+      "eligibility": "FAQ explicitly includes career switchers and bootcamp graduates with less than two years of work experience in the craft. No college enrollment prerequisite stated. Exact candidate experience duration still needs confirmation.",
+      "location": "At least three days weekly in Montreal, Ottawa, Toronto, Bellevue or New York City. Not an Austin-remote role."
+    },
+    {
+      "name": "Apprentice Product Manager",
+      "urls": [
+        "https://apm.shopify.com/",
+        "https://apm.shopify.com/pages/faq"
+      ],
+      "status": "Future intake; official pages conflict on timing",
+      "timing": "Main page advertises applications November 2 for March 2027. FAQ still says September 8, 2026 cohort and closed applications. Treat the newer main-page dates as tentative pending an actual application link.",
+      "eligibility": "No degree or prior PM role required; US/Canada work authorization and North America location needed; sponsorship not provided. Paid 12-month program; amount not published in these pages."
+    },
+    {
+      "name": "Design Apprentice Program",
+      "urls": [
+        "https://shopify.design/dap"
+      ],
+      "status": "Applications closed",
+      "timing": "September 2026 to March 2027 cohort",
+      "eligibility": "US or Canada and full-time authorization; design fundamentals and a portfolio required."
+    }
+  ],
+  "scope": "Separate program pages reviewed; no program landing page counted as an open job. No notifications or application forms submitted."
+}

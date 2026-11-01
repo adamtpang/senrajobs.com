@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {importAdpBrowser} from '../adp-browser-feed.mjs';
+const url='https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=test&ccId=board&lang=en_US',at='2026-10-26T20:00:00Z';
+const card={id:'card1',title:'Support',text:'Support\nAustin, TX, US\n10 days agoFull Time'};
+const details=[{url:url+'&jobId=123',title:'Support',card,observedAt:at,text:'Support\nOperations\nFull Time\nAustin, TX, US\n10 days ago\nRequisition ID: 10\nApply\nSalary:\n$20.00 Hourly\nHelp customers and resolve problems. Requirements are published here.'}];
+const input={identity:{careers:url,source:'https://example.com/careers'},list:{heading:'Current Openings (1 of 1)',rows:[card],observedAt:at,url},details};
+const result=importAdpBrowser(input);assert.equal(result.board.roles[0].payRanges[0].min,20);assert.equal(result.board.roles[0].payRanges[0].currency,null);
+assert.throws(()=>importAdpBrowser({...input,list:{...input.list,heading:'Current Openings (1 of 2)'}}));
+assert.throws(()=>importAdpBrowser({...input,details:[{...details[0],url:details[0].url.replace('cid=test','cid=other')}]}));
+assert.throws(()=>importAdpBrowser({...input,details:[{...details[0],title:'Other role'}]}));
+console.log('ADP browser import: exhausted list, employer/detail identity and pay provenance pass.');

@@ -1,0 +1,56 @@
+{
+  "reviewedOn": "2026-10-27",
+  "scope": "Additional employer leads explicitly present in reviewed official episode introductions. These are not a complete company census or verified current hiring destinations. They are separate from the pending evidence review of existing registry rows.",
+  "source": "https://feeds.megaphone.fm/david-senra",
+  "feedSha256": "3e19a01cf0d70fb13b337311e6d6541acbb8f1debf12dfd0ecd2de6767573885",
+  "leads": [
+    {
+      "guest": "Gustav Soderstrom",
+      "company": "Kenet Works",
+      "relationshipLead": "Founded in 2003; acquired by Yahoo in 2006 according to episode introduction.",
+      "next": "Verify primary acquisition and successor identity before assigning any current Yahoo roles."
+    },
+    {
+      "guest": "Gustav Soderstrom",
+      "company": "13th Lab",
+      "relationshipLead": "Co-founded; acquired by Facebook Oculus according to episode introduction.",
+      "next": "Verify primary acquisition and current product or team successor. Do not treat every Meta role as a 13th Lab role."
+    },
+    {
+      "guest": "Jimmy Iovine",
+      "company": "USC Jimmy Iovine and Andre Young Academy",
+      "relationshipLead": "Co-founded according to episode introduction.",
+      "next": "Verify institution identity and academy-specific vacancies within USC's public hiring channels."
+    },
+    {
+      "guest": "Ivanka Trump",
+      "company": "The Trump Organization",
+      "relationshipLead": "Episode describes running real-estate acquisitions alongside her fashion brand.",
+      "next": "Verify former executive role, dates and appropriate current employer scope; avoid attributing unrelated family-owned entities."
+    },
+    {
+      "guest": "Patrick O'Shaughnessy",
+      "company": "O'Shaughnessy Asset Management",
+      "relationshipLead": "Episode identifies chairman emeritus status.",
+      "next": "Verify leadership and successor ownership, then inspect employer-specific hiring rather than all parent-company jobs."
+    },
+    {
+      "guest": "Micky Malka",
+      "company": "Node",
+      "relationshipLead": "Digital-art venture mentioned in the episode.",
+      "next": "Verify exact company identity and Malka's operating/founding relationship before adding a common-name company."
+    },
+    {
+      "guest": "Micky Malka",
+      "company": "Lemon Bank",
+      "relationshipLead": "Earlier business discussed in the episode.",
+      "next": "Verify founding relationship, acquisition and surviving employer/product identity; avoid unrelated Lemon companies."
+    },
+    {
+      "guest": "Alexander Taubman",
+      "company": "American Express Global Business Travel",
+      "relationshipLead": "Long Lake acquisition discussed in the episode.",
+      "next": "Verify whether the transaction closed and the precise acquiring entity before expanding current subsidiary hiring coverage."
+    }
+  ]
+}

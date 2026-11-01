@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {dysonPay} from '../dyson-pay.mjs';
+const url='https://dyson.wd3.myworkdayjobs.com/wday/cxs/dyson/dyson_careers/job/Office/Role_JR123';
+let p=dysonPay('Minimum revenue of $150m. Compensation: $69,600 - $87,000 annually + bonus opportunity',url,'United States - Chicago Office');
+assert.equal(p.length,1);assert.equal(p[0].min,69600);assert.equal(p[0].max,87000);assert.equal(p[0].period,'year');assert.equal(p[0].currency,null);assert.equal(p[0].displayCurrency,'$');
+p=dysonPay('Salary: $205,816.00 - 215,000.00',url);assert.equal(p[0].period,null);
+assert.equal(dysonPay('Sales target $150m. 401K up to 4%. Pay is competitive.',url).length,0);
+assert.equal(dysonPay('Salary: $90,000-$80,000 annually',url).length,0);
+assert.equal(dysonPay('Salary: $1 70,200-212,750 annually',url).length,0);
+assert.equal(dysonPay('Salary: $21-$25 per hour',url)[0].period,'hour');
+assert.throws(()=>dysonPay('Salary: $10-$20 annually','https://example.com/job'));
+console.log('Dyson pay: salary evidence, bonus separation, unspecified currency/period and malformed ranges pass.');

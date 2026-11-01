@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {parseWholeFoods,fetchWholeFoods} from '../wholefoods-feed.mjs';
+const at='2026-10-19T20:00:00Z';
+const job=id=>({requisitionID:id,title:'Team Member',originalURL:`team-member/job/${id}`,isInternal:'false',isRemote:false,locations:[{city:'Austin',stateAbbr:'TX',countryAbbr:'US',streetAddress:'Do not project arbitrary fields'}],customFields:[{cfKey:'internal_salary',value:'not-public-pay'}]});
+const page=(n,total,jobs,next)=>`<script>window.__PRELOAD_STATE__ = ${JSON.stringify({jobSearch:{params:{page_number:n},totalJob:total,isLoading:false,jobs}})}; window.__BUILD__ = 'fixture'</script>${next?`<a href="/jobs/page/${next}" data-testid="jobs-pagination_link_next">Next</a>`:''}`;
+const a=parseWholeFoods(page(1,3,[job('one'),{...job('hidden'),isInternal:'true'},{...job('private'),customFields:[{cfKey:'cf_private_posting',value:'1'}]}],2),'https://careers.wholefoods.com/jobs',at);
+assert.equal(a.rows.length,1);assert.equal(a.excluded,2);assert.equal(a.rows[0].location,'Austin, TX, US');assert.ok(!JSON.stringify(a.rows).includes('not-public-pay'));assert.ok(!JSON.stringify(a.rows).includes('arbitrary'));assert.equal(a.rows[0].workplace,'');
+const r=await fetchWholeFoods({observedAt:at,request:async url=>({ok:true,text:url.endsWith('/2')?page(2,2,[job('two')]):page(1,2,[job('one')],2)})});assert.equal(r.status,'complete');assert.equal(r.pages,2);
+const repeated=await fetchWholeFoods({observedAt:at,request:async()=>({ok:true,text:page(1,2,[job('one')],2)})});assert.equal(repeated.status,'partial');
+const changed=await fetchWholeFoods({observedAt:at,request:async url=>({ok:true,text:url.endsWith('/2')?page(2,3,[job('two')]):page(1,2,[job('one')],2)})});assert.equal(changed.status,'partial');
+const missing=await fetchWholeFoods({observedAt:at,request:async()=>({ok:true,text:'Loading'})});assert.equal(missing.status,'failed');
+console.log('Whole Foods public feed: external-only projection, pagination, total changes and failure guards pass.');
