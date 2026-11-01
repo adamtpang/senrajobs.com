@@ -66,6 +66,10 @@
   .more a { font-weight:600; }
   .how { padding:0; margin:0 0 16px; list-style:none; }
   .how li { padding:2px 0; }
+  h2 { font-size:22px; letter-spacing:-.02em; margin:36px 0 8px; }
+  #targets { margin-top:8px; }
+  #targets > .meta { margin:0 0 12px; }
+  .board { display:block; color:var(--muted); font-size:12px; margin:0 0 8px 10px; }
   footer { margin-top:56px; color:var(--muted); font-size:13px; }
 </style>
 <script data-posthog-fleet>(function(){if(window.__posthogFleet)return;window.__posthogFleet=1;var s=document.createElement('script');s.async=true;s.src='https://us-assets.i.posthog.com/static/array.js';s.onload=function(){if(!window.posthog||!window.posthog.init)return;window.posthog.init('phc_FCpCP9mIsb9IcxpX0Qqi6FmJ48sVvscAYIrZmtRHIq4',{api_host:'https://us.i.posthog.com',person_profiles:'identified_only',capture_pageview:'history_change',capture_pageleave:true,autocapture:false,disable_session_recording:true,disable_surveys:true,loaded:function(p){p.register({site:location.hostname})}});};document.head.appendChild(s);})();</script>
@@ -79,9 +83,10 @@
     <li>2. Learn how they operate, from inside.</li>
     <li>3. Leave to build your own company.</li>
   </ul>
-  <p class="steps">__GUESTS__ founders, __COMPANIES__ companies, __ROLES__ open roles (updated __UPDATED__). Source: the <a href="https://www.davidsenra.com/podcast">David Senra podcast</a> (also on <a href="https://podcasts.apple.com/us/podcast/david-senra/id1836497887">Apple Podcasts</a>). Get the <a href="/llms.txt">full list as plain text</a> or the <a href="/guests.json">raw data</a>.</p>
+  <p class="steps">__GUESTS__ founders, __COMPANIES__ companies, __ROLES__ open roles (updated __UPDATED__). Source: the <a href="https://www.davidsenra.com/podcast">David Senra podcast</a> (also on <a href="https://podcasts.apple.com/us/podcast/david-senra/id1836497887">Apple Podcasts</a>). Also <a href="#targets">target companies</a>. Get the <a href="/llms.txt">full list as plain text</a> or the <a href="/guests.json">raw data</a>.</p>
   <input id="q" type="search" placeholder="Search founders, companies or roles" aria-label="Search founders, companies or roles">
   <div id="list">__LIST__</div>
+  __TARGETS__
   <footer>
     A free fan project, not affiliated with David Senra. Listen to his show and read the books.<br>
     Missing a founder or a broken link? Tell <a href="https://x.com/adamtpang">@adamtpang</a>.
@@ -89,7 +94,7 @@
 </main>
 <script>
   const q = document.getElementById("q");
-  const items = [...document.querySelectorAll("#list > details")];
+  const items = [...document.querySelectorAll("#list > details, #targets details")];
   const filter = () => {
     const t = q.value.trim().toLowerCase();
     for (const d of items) {

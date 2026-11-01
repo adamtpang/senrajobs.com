@@ -152,3 +152,11 @@
 - Spotify: https://jobs.lever.co/spotify
 - Neko Health: https://www.neko.health/careers
 - Prima Materia: no public careers page yet
+
+## Target companies
+- Fluidstack: https://jobs.ashbyhq.com/fluidstack
+- Aalo Atomics: https://www.aalo.com/careers
+- SpaceX: https://job-boards.greenhouse.io/spacex
+- SpaceX Global: https://job-boards.greenhouse.io/spacexglobal (board name: SpaceX_Global)
+- xAI: https://job-boards.greenhouse.io/xai (board name: SpaceXSI)
+- Neuralink: https://job-boards.greenhouse.io/neuralink

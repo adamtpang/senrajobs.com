@@ -54,6 +54,26 @@ async function roles({ kind, slug }) {
     const r = await get(`https://apply.workable.com/api/v1/widget/accounts/${slug}`);
     return r?.jobs?.map((j) => ({ title: j.title, url: j.url || j.shortlink, location: j.city || j.country || "" }));
   }
+  if (kind === "rippling") {
+    // Public Rippling board JSON (page is 0-based). Used by the company's own careers page.
+    const out = [];
+    const seen = new Set();
+    for (let page = 0; page < 30; page++) {
+      const r = await get(`https://ats.rippling.com/api/v2/board/${encodeURIComponent(slug)}/jobs?page=${page}`);
+      if (!r?.items) return out.length ? out : null;
+      if (!r.items.length) break;
+      for (const j of r.items) {
+        if (!j?.url || seen.has(j.url)) continue;
+        seen.add(j.url);
+        const places = (j.locations || []).map((l) => l.name || [l.city, l.stateCode].filter(Boolean).join(", ")).filter(Boolean);
+        const remote = (j.locations || []).some((l) => /REMOTE/i.test(l.workplaceType || ""));
+        const location = remote ? [...places, "Remote"].join("; ") : places.join("; ");
+        out.push({ title: j.name, url: j.url, location });
+      }
+      if (page + 1 >= (r.totalPages || page + 1)) break;
+    }
+    return out.length ? out : null;
+  }
   if (kind === "workday") {
     // Public Workday candidate API (the same JSON the careers page uses). Paged, capped at 200 roles.
     const [tenant, wd, site] = slug.split("|");
@@ -109,6 +129,20 @@ await Promise.all(tasks.map(async (c) => {
   jobs[c.name] = list?.length ? { source: `${src.kind}:${src.slug}`, fetched: new Date().toISOString(), roles: list } : null;
   console.log(`${c.name.padEnd(40)} ${list?.length ? `${list.length} roles (${src.kind})` : "no public API, link only"}`);
 }));
+
+// Target companies are not Senra guests. Slugs in targets.json were checked against each board's API.
+const targets = fs.existsSync("targets.json") ? JSON.parse(fs.readFileSync("targets.json", "utf8")) : [];
+const guestNames = new Set(tasks.map((c) => c.name));
+for (const t of targets) {
+  if (guestNames.has(t.name)) { console.log(`${t.name.padEnd(40)} already on a guest list`); continue; }
+  const list = await roles(t.source);
+  if (list?.length) {
+    jobs[t.name] = { source: `${t.source.kind}:${t.source.slug}`, fetched: new Date().toISOString(), roles: list };
+    console.log(`${t.name.padEnd(40)} ${list.length} roles (${t.source.kind})`);
+  } else {
+    console.log(`${t.name.padEnd(40)} target board failed`);
+  }
+}
 fs.writeFileSync("jobs.json", JSON.stringify(jobs, null, 1) + "\n");
 
 // Portraits: the show's episode artwork is a portrait of each guest. Match by Apple episode id.
@@ -121,4 +155,6 @@ for (const g of guests) {
 }
 fs.writeFileSync("photos.json", JSON.stringify(photos, null, 1) + "\n");
 const withRoles = Object.values(jobs).filter(Boolean);
-console.log(`\n${withRoles.length}/${tasks.length} companies with live roles, ${withRoles.reduce((n, j) => n + j.roles.length, 0)} roles total, ${Object.keys(photos).length}/${guests.length} photos`);
+const guestLive = tasks.filter((c) => jobs[c.name]?.roles?.length).length;
+const targetLive = targets.filter((t) => jobs[t.name]?.roles?.length).length;
+console.log(`\n${guestLive}/${tasks.length} guest companies with live roles, ${targetLive}/${targets.length} target boards, ${withRoles.reduce((n, j) => n + j.roles.length, 0)} roles total, ${Object.keys(photos).length}/${guests.length} photos`);
