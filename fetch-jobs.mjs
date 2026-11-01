@@ -63,6 +63,19 @@ async function refresh(company){
 }
 const selectedTasks=[...tasks.values()].filter(company=>(!guestCompanies||guestCompanies.has(company.name)) && (!workdayOnly || previous[company.name]?.source?.startsWith('workday:')) && (!greenhouseOnly || previous[company.name]?.source?.startsWith('greenhouse:')));
 await pool(selectedTasks,4,async company=>{jobs[company.name]=await refresh(company);const board=jobs[company.name];console.log(`${company.name}: ${board.roles.length} roles; ${board.coverage.status}${board.coverage.total!=null?`; advertised ${board.coverage.total}`:''}; ${board.coverage.reason||'public listing retrieved'}`);});
+const targets=fs.existsSync('targets.json')?JSON.parse(fs.readFileSync('targets.json','utf8')):[];
+for(const target of targets){
+ const sourceKey=`${target.source.kind}:${target.source.slug}`;
+ if(tasks.has(target.name)||Object.values({...previous,...jobs}).some(board=>board?.source===sourceKey)){console.log(`${target.name}: already covered by ${sourceKey}`);continue;}
+ const observedAt=new Date().toISOString();
+ const result=await fetchBoard(target.source,{observedAt,preferredUrls:previousUrls});
+ result.source=`${target.source.kind}:${target.source.slug}`;
+ const board=retainBoard(previous[target.name],result,observedAt);
+ board.careersUrl=target.careers;
+ if(target.boardName)board.boardName=target.boardName;
+ jobs[target.name]=board;
+ console.log(`${target.name}: ${board.roles.length} roles; ${board.coverage.status}`);
+}
 // Preserve closed-company history in data, but never expose it as current hiring.
 for(const [name,board]of Object.entries(previous))if(!tasks.has(name))jobs[name]=board;
 fs.writeFileSync('jobs.json',JSON.stringify(jobs,null,1)+'\n');

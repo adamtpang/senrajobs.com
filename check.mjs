@@ -29,5 +29,13 @@ for (const file of ['index.html','jobs.json','guests.json','llms.txt']) {
 if (fs.existsSync('public/reports') || fs.existsSync('public/docs') || fs.existsSync('public/AGENTS.md') || fs.existsSync('public/api')) bad('public/ contains non-public paths');
 const html = fs.readFileSync('index.html','utf8');
 if (!html.includes('Last updated') || !/<time datetime="[^"]+"/.test(html)) bad('homepage is missing the Last updated timestamp');
+if (fs.existsSync('targets.json')) {
+  const targets = JSON.parse(fs.readFileSync('targets.json','utf8'));
+  const names = new Set(targets.map(t => t.name));
+  for (const name of ['Fluidstack','Aalo Atomics','SpaceX Global']) if (!names.has(name)) bad(`missing target ${name}`);
+  if (names.has('Tesla') || names.has('Terafab')) bad('Tesla and Terafab have no separate public board to add');
+  const jobs = JSON.parse(fs.readFileSync('jobs.json','utf8'));
+  if (jobs['Base Power']?.source !== 'ashby:base-power' && !String(jobs['Base Power']?.source||'').includes('base-power')) bad('Base Power board changed');
+}
 if (failed) { console.error(`${failed} check(s) failed`); process.exit(1); }
 console.log('ok');

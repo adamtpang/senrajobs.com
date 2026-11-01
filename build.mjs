@@ -31,8 +31,25 @@ const jobs = fs.existsSync("jobs.json") ? JSON.parse(fs.readFileSync("jobs.json"
 const photos = fs.existsSync("photos.json") ? JSON.parse(fs.readFileSync("photos.json", "utf8")) : {};
 const logos = fs.existsSync('company-logos.json') ? JSON.parse(fs.readFileSync('company-logos.json', 'utf8')) : {};
 const boardRoles = compileRoles(out, jobs);
+const targets = fs.existsSync('targets.json') ? JSON.parse(fs.readFileSync('targets.json','utf8')) : [];
+const knownUrls = new Set(boardRoles.map(role => role.url));
+for (const target of targets) {
+  const board = jobs[target.name];
+  if (!board?.roles?.length) continue;
+  for (const role of board.roles) {
+    if (!role?.url || knownUrls.has(role.url)) continue;
+    knownUrls.add(role.url);
+    const { pageReceipts, partitionReceipt, ...roleCoverage } = board.coverage || { status: 'complete' };
+    boardRoles.push({ ...role, company: target.name, careers: target.careers || board.careersUrl || '', founders: [], companyAssociations: [target.name], coverage: role.coverage?.status ? role.coverage : roleCoverage, fetched: board.fetched, observedAt: role.observedAt || board.fetched, sourceUrl: role.sourceUrl || board.sourceUrl || role.url, sourceStatus: role.sourceStatus || 'current' });
+  }
+}
 for (const role of boardRoles) role.logo = logos[role.company.split(' (')[0]]?.src || '';
 const companyRows = compileCompanies(out, boardRoles, logos);
+for (const target of targets) {
+  const board = jobs[target.name];
+  if (!board?.roles?.length || companyRows.some(row => row.name === target.name)) continue;
+  companyRows.push({ name: target.name, logo: '', guests: [], connections: [], careers: target.careers || '', note: target.boardName ? `Board name: ${target.boardName}` : 'Target company', roles: boardRoles.filter(role => role.company === target.name) });
+}
 const discovery=discoveryReports(out,jobs,boardRoles);
 fs.mkdirSync('data',{recursive:true});fs.mkdirSync('reports',{recursive:true});
 fs.writeFileSync('data/texas-roles.json',JSON.stringify(discovery.inventory,null,2)+'\n');
@@ -99,4 +116,5 @@ fs.copyFileSync('role-emoji.mjs', 'assets/role-emoji.js');
 fs.writeFileSync("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: https://senrajobs.com/sitemap.xml\n");
 fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod></url></urlset>\n`);
 fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.\n\n` +
-  out.map((g) => `## ${g.name}\n` + g.companies.map((c) => `- ${c.name}: ${c.careers || c.note}`).join("\n")).join("\n\n") + "\n");
+  out.map((g) => `## ${g.name}\n` + g.companies.map((c) => `- ${c.name}: ${c.careers || c.note}`).join("\n")).join("\n\n") +
+  (targets.length ? `\n\n## Target companies\n` + targets.map((t) => `- ${t.name}: ${t.careers}${t.boardName ? ` (board name: ${t.boardName})` : ""}`).join("\n") : "") + "\n");

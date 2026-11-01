@@ -179,6 +179,27 @@ export async function fetchBoard(source,{request=requestPublic,maxPages=500,obse
  if(source.kind==='wholefoods-page')return fetchWholeFoods({request,maxPages,observedAt});
  if(source.kind==='successfactors-page')return fetchSuccessFactors(source,{request,maxPages,observedAt});
  if(['oracle-dell','oracle-uber','shopify-page','spoons-page','boring-page','signals-page'].includes(source.kind))return fetchEmployerBoard(source,{request,maxPages,observedAt});
+ if(source.kind==='rippling'){
+  const endpoint=`https://ats.rippling.com/api/v2/board/${encodeURIComponent(source.slug)}/jobs`;
+  const rows=[]; const seen=new Set(); let pages=0, total=null, status='complete', reason='';
+  for(let page=0; page<30; page++){
+   const result=await request(`${endpoint}?page=${page}`); pages++;
+   const items=result.data?.items;
+   if(!result.ok||!Array.isArray(items)){ status=rows.length?'partial':'failed'; reason=result.error||'Unexpected response'; break; }
+   if(!items.length) break;
+   if(Number.isFinite(result.data.totalItems)) total=result.data.totalItems;
+   for(const job of items){
+    if(!job?.url||seen.has(job.url)) continue; seen.add(job.url);
+    const places=(job.locations||[]).map(l=>l.name||[l.city,l.stateCode].filter(Boolean).join(', ')).filter(Boolean);
+    const workplace=(job.locations||[]).some(l=>/REMOTE/i.test(l.workplaceType||''))?'Remote':(job.locations||[]).some(l=>/ON_SITE|HYBRID/i.test(l.workplaceType||''))?'OnSite':'';
+    const locations=(job.locations||[]).map(l=>locationRecord(l.name||[l.city,l.state].filter(Boolean).join(', '), l, endpoint, observedAt)).filter(l=>l.raw||l.city);
+    rows.push({id:String(job.id||''),title:job.name,url:job.url,department:job.department?.name||'',workplace,location:places.join('; '),rawLocation:places.join('; '),secondaryLocations:[],locations,locationStatus:places.length?'published':'unknown',sourceUrl:endpoint,observedAt,sourceStatus:'current',locationSource:'ats',publishedAt:'',pay:null,payRanges:[]});
+   }
+   if(page+1>=(result.data.totalPages||page+1)) break;
+  }
+  if(total!=null&&rows.length<total){status=rows.length?'partial':'failed'; reason=`Feed listed ${total} postings and returned ${rows.length} unique URLs`;}
+  return {status,rows,endpoint,reason,pages,total};
+ }
  const {kind,slug}=source;let endpoint='',total=null,rows=[],pages=0,status='complete',reason='';
  let invalid=0;
  const process=items=>items.filter(j=>j&&(kind!=='ashby'||j.isListed!==false)).map(j=>mapATSJob(kind,j,endpoint,observedAt,source)).filter(row=>{
