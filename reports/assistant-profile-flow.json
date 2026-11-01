@@ -1,0 +1,794 @@
+{
+  "origin": "http://127.0.0.1:4173",
+  "checkedAt": "2026-10-12T14:19:52.585Z",
+  "followup": "Walk me through your most relevant work. What did you own, for how long, and at what scale?",
+  "reviewCoverage": {
+    "covered": [
+      "direction",
+      "experience",
+      "skills",
+      "proof",
+      "preferences",
+      "constraints",
+      "learning",
+      "tradeoffs"
+    ],
+    "missing": []
+  },
+  "ranking": {
+    "summary": "Base Power's Software Engineer, Backend fits you best; other roles add gaps in Go, infrastructure-as-code, scale or seniority, and pay mostly needs confirming.",
+    "matches": [
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/23bc4e94-d63c-4933-926b-edcb69138410",
+        "title": "Software Engineer, Backend",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": null,
+        "parts": {
+          "role": 60,
+          "experience": 9,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-12T14:08:29.548Z",
+        "preferenceScore": 89,
+        "scoreRange": [
+          67,
+          77
+        ],
+        "tier": "B",
+        "confidence": "medium",
+        "provisional": true,
+        "knownWeight": 90,
+        "criteria": [
+          {
+            "key": "skills",
+            "label": "Required skills",
+            "weight": 30,
+            "rating": 72,
+            "reason": "Your Python production work meets the language requirement. Go, Terraform, AWS and Kubernetes exposure are not shown.",
+            "candidateEvidence": "Built and maintained production APIs for five years.",
+            "jobEvidence": "Proficiency in a backend language (Go, Python, Java, or similar)"
+          },
+          {
+            "key": "experience",
+            "label": "Experience and results",
+            "weight": 25,
+            "rating": 78,
+            "reason": "Your five years sits at the top of the range, and owning services matches \"Own your slice\".",
+            "candidateEvidence": "Five years of backend software engineering with Python and TypeScript, owning services and incident response.",
+            "jobEvidence": "1–5 years of professional software development experience"
+          },
+          {
+            "key": "direction",
+            "label": "Direction and learning",
+            "weight": 20,
+            "rating": 82,
+            "reason": "The role centres on reliable distributed services in energy, which matches what you want to learn and your interest in the energy industry.",
+            "candidateEvidence": "Reliable distributed systems and how a founder-led company makes decisions.",
+            "jobEvidence": "A working understanding of distributed systems — what can go wrong in production, and why"
+          },
+          {
+            "key": "environment",
+            "label": "Working environment",
+            "weight": 15,
+            "rating": 60,
+            "reason": "The posting states direct feedback and ownership as values, but its intensity may conflict with your wish for sustainable on-call. Founder access is not stated.",
+            "candidateEvidence": "Founder-led team with direct responsibility, useful feedback and sustainable on-call practices.",
+            "jobEvidence": "It’s not a 9-to-5. We are all-in."
+          },
+          {
+            "key": "practical",
+            "label": "Practical fit",
+            "weight": 10,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          }
+        ],
+        "requirements": [
+          {
+            "status": "met",
+            "jobEvidence": "1–5 years of professional software development experience",
+            "candidateEvidence": "Five years of backend software engineering"
+          },
+          {
+            "status": "met",
+            "jobEvidence": "Proficiency in a backend language (Go, Python, Java, or similar)",
+            "candidateEvidence": "Built and maintained production APIs for five years."
+          },
+          {
+            "status": "unknown",
+            "jobEvidence": "A working understanding of distributed systems",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Some exposure to cloud infrastructure (AWS or GCP) and containerization (Docker, Kubernetes)",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "We work in-person.",
+            "candidateEvidence": "Austin, Texas job location"
+          }
+        ],
+        "assessment": "reviewed",
+        "method": "evidence-rubric-v1",
+        "reason": "Your Python service ownership and incident work match the role's level and scope, and it is in Austin.",
+        "gap": "The posting requires cloud and container exposure, and you have not shown AWS, Docker or Kubernetes experience.",
+        "nextStep": "Confirm that annual pay meets USD 120,000, and prepare an example of how a production failure in one of your services was diagnosed.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-12T14:15:05.360Z"
+      },
+      {
+        "url": "https://job-boards.greenhouse.io/atoms/jobs/8538728002",
+        "title": "Senior Software Engineer - Data Infrastructure",
+        "company": "Atoms",
+        "location": "Austin, TX",
+        "pay": "$ 158,000–210,000/year · currency unspecified",
+        "guests": [
+          "Travis Kalanick"
+        ],
+        "score": 55,
+        "parts": {
+          "role": 60,
+          "experience": 6,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-12T14:08:30.469Z",
+        "preferenceScore": 86,
+        "scoreRange": [
+          55,
+          55
+        ],
+        "tier": "C",
+        "confidence": "medium",
+        "provisional": true,
+        "knownWeight": 100,
+        "criteria": [
+          {
+            "key": "skills",
+            "label": "Required skills",
+            "weight": 30,
+            "rating": 40,
+            "reason": "Your languages differ from the required Java or Go, and Docker and Kubernetes experience is not shown.",
+            "candidateEvidence": "Five years of backend software engineering with Python and TypeScript",
+            "jobEvidence": "Proficiency in Java or GoLang programming languages."
+          },
+          {
+            "key": "experience",
+            "label": "Experience and results",
+            "weight": 25,
+            "rating": 65,
+            "reason": "You exceed the years required and have worked independently. Infrastructure or platform background is only preferred.",
+            "candidateEvidence": "Owned services through deployment and incident response.",
+            "jobEvidence": "3+ years of experience as a software engineer"
+          },
+          {
+            "key": "direction",
+            "label": "Direction and learning",
+            "weight": 20,
+            "rating": 55,
+            "reason": "This is data infrastructure rather than the reliable services you want to learn about, and it is outside your target industries.",
+            "candidateEvidence": "Reliable distributed systems",
+            "jobEvidence": "real-time and batch processing pipelines"
+          },
+          {
+            "key": "environment",
+            "label": "Working environment",
+            "weight": 15,
+            "rating": 55,
+            "reason": "The posting offers independence but gives no evidence on founder access, feedback or on-call practices.",
+            "candidateEvidence": "Founder-led team with direct responsibility",
+            "jobEvidence": "work independently in a fast-paced, dynamic environment"
+          },
+          {
+            "key": "practical",
+            "label": "Practical fit",
+            "weight": 10,
+            "rating": 75,
+            "reason": "The Austin onsite location matches and the pay is annual, but the currency is not stated explicitly as USD.",
+            "candidateEvidence": "Annual compensation at least USD 120000",
+            "jobEvidence": "$158,000 - $210,000 per year"
+          }
+        ],
+        "requirements": [
+          {
+            "status": "met",
+            "jobEvidence": "3+ years of experience as a software engineer",
+            "candidateEvidence": "Five years of backend software engineering"
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Proficiency in Java or GoLang programming languages.",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Familiarity with Azure and GCP cloud environments, and deployment tools such as Docker and Kubernetes",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "This role is based in our Austin office.",
+            "candidateEvidence": "Austin, Texas job location"
+          }
+        ],
+        "assessment": "reviewed",
+        "method": "evidence-rubric-v1",
+        "reason": "The pay and location look feasible, but the required languages and data focus are a weak match for you.",
+        "gap": "The role requires Java or Go proficiency, and you have neither.",
+        "nextStep": "Ask whether strong Python engineers are considered, and confirm the pay currency.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://boards-api.greenhouse.io/v1/boards/atoms/jobs?content=true",
+        "requirementsChecked": "2026-10-12T14:15:06.064Z"
+      },
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/10772e1c-dfad-4161-9e9e-5f34728c4745",
+        "title": "Software Engineer, Infrastructure",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": null,
+        "parts": {
+          "role": 60,
+          "experience": 6,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-12T14:08:29.548Z",
+        "preferenceScore": 86,
+        "scoreRange": [
+          53,
+          63
+        ],
+        "tier": "C",
+        "confidence": "medium",
+        "provisional": true,
+        "knownWeight": 90,
+        "criteria": [
+          {
+            "key": "skills",
+            "label": "Required skills",
+            "weight": 30,
+            "rating": 50,
+            "reason": "Your reliability tooling helps, but infrastructure-as-code, CI/CD design and cloud platform experience are not shown.",
+            "candidateEvidence": "Added incident analysis, automated tests and dashboards.",
+            "jobEvidence": "Experience defining and operating infrastructure using infrastructure-as-code tools"
+          },
+          {
+            "key": "experience",
+            "label": "Experience and results",
+            "weight": 25,
+            "rating": 55,
+            "reason": "Your incident reduction is relevant, but the role sets standards across the whole organisation, which goes beyond the scope you have shown.",
+            "candidateEvidence": "Reduced repeated incidents by adding tests, alerts and runbooks.",
+            "jobEvidence": "Experience working on complex or failure-prone systems"
+          },
+          {
+            "key": "direction",
+            "label": "Direction and learning",
+            "weight": 20,
+            "rating": 75,
+            "reason": "Infrastructure is one of your target roles and matches your goal of learning distributed systems.",
+            "candidateEvidence": "Software engineer, infrastructure",
+            "jobEvidence": "simplify complex distributed systems"
+          },
+          {
+            "key": "environment",
+            "label": "Working environment",
+            "weight": 15,
+            "rating": 60,
+            "reason": "There is clear direct responsibility. Founder access and how sustainable on-call is are not stated.",
+            "candidateEvidence": "Founder-led team with direct responsibility",
+            "jobEvidence": "Comfort taking ownership of broad, evolving infrastructure responsibilities"
+          },
+          {
+            "key": "practical",
+            "label": "Practical fit",
+            "weight": 10,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          }
+        ],
+        "requirements": [
+          {
+            "status": "gap",
+            "jobEvidence": "Experience defining and operating infrastructure using infrastructure-as-code tools",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "unknown",
+            "jobEvidence": "Hands-on experience with modern cloud platforms such as AWS, GCP, or Azure.",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "Strong programming skills in languages commonly used for backend services or tooling (e.g., Go, Python).",
+            "candidateEvidence": "Built and maintained production APIs for five years."
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Experience designing and evolving CI/CD systems",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "Experience working on complex or failure-prone systems",
+            "candidateEvidence": "Reduced repeated incidents by adding tests, alerts and runbooks."
+          }
+        ],
+        "assessment": "reviewed",
+        "method": "evidence-rubric-v1",
+        "reason": "This role fits your infrastructure direction, but it needs platform-level skills you have not yet shown.",
+        "gap": "Infrastructure-as-code and CI/CD system design are central requirements and are not established.",
+        "nextStep": "Decide whether to stretch for this role or apply to the backend role first, and confirm the pay.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-12T14:15:05.360Z"
+      },
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/d5149c86-5649-48bd-8d30-7708c3e36233",
+        "title": "Senior Software Engineer, Backend",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": null,
+        "parts": {
+          "role": 60,
+          "experience": 9,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-12T14:08:29.548Z",
+        "preferenceScore": 89,
+        "scoreRange": [
+          53,
+          63
+        ],
+        "tier": "C",
+        "confidence": "medium",
+        "provisional": true,
+        "knownWeight": 90,
+        "criteria": [
+          {
+            "key": "skills",
+            "label": "Required skills",
+            "weight": 30,
+            "rating": 55,
+            "reason": "Your Python depth is plausible, but Terraform, Kubernetes and fluency with cloud infrastructure are not shown.",
+            "candidateEvidence": "Built and maintained production APIs for five years.",
+            "jobEvidence": "Deep proficiency in a backend language (Go, Python, Java, or similar)"
+          },
+          {
+            "key": "experience",
+            "label": "Experience and results",
+            "weight": 25,
+            "rating": 50,
+            "reason": "You are one year short, and you have not shown architecture across teams or mentoring.",
+            "candidateEvidence": "Five years of backend software engineering",
+            "jobEvidence": "6+ years of professional software development experience"
+          },
+          {
+            "key": "direction",
+            "label": "Direction and learning",
+            "weight": 20,
+            "rating": 75,
+            "reason": "The role's focus matches your learning goal, but it expects you to already have that experience.",
+            "candidateEvidence": "Reliable distributed systems",
+            "jobEvidence": "Real experience building and operating distributed systems in production"
+          },
+          {
+            "key": "environment",
+            "label": "Working environment",
+            "weight": 15,
+            "rating": 60,
+            "reason": "The stated values on feedback and ownership match. The in-person intensity and founder access are not clear.",
+            "candidateEvidence": "direct responsibility, useful feedback",
+            "jobEvidence": "Give & Get Feedback: Be direct, be humble"
+          },
+          {
+            "key": "practical",
+            "label": "Practical fit",
+            "weight": 10,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          }
+        ],
+        "requirements": [
+          {
+            "status": "gap",
+            "jobEvidence": "6+ years of professional software development experience",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "Deep proficiency in a backend language (Go, Python, Java, or similar)",
+            "candidateEvidence": "Built and maintained production APIs for five years."
+          },
+          {
+            "status": "unknown",
+            "jobEvidence": "Real experience building and operating distributed systems in production",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Experience with infrastructure as code (Terraform or similar)",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "A track record of cross-functional leadership",
+            "candidateEvidence": ""
+          }
+        ],
+        "assessment": "reviewed",
+        "method": "evidence-rubric-v1",
+        "reason": "You match the backend domain, but the seniority and leadership bar is above what you have shown.",
+        "gap": "The role expects 6+ years plus architecture and leadership across teams, and you have not shown these.",
+        "nextStep": "Apply to the backend role (ID 0) instead, unless a recruiter confirms that senior levelling is flexible.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-12T14:15:05.367Z"
+      },
+      {
+        "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-WA-Remote/Senior-Software-Engineer---Distributed-Systems-Engineer--EDA-Infrastructure_JR2024825-1",
+        "title": "Senior Software Engineer - Distributed Systems Engineer, EDA Infrastructure",
+        "company": "Nvidia",
+        "location": "US, WA, Remote / US, MA, Westford / US, TX, Austin / US, Remote / US, NC, Durham / US, CA, Remote",
+        "pay": "Pay not listed",
+        "guests": [
+          "Jonathan Ross"
+        ],
+        "score": null,
+        "parts": {
+          "role": 60,
+          "experience": 3,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-12T14:08:32.830Z",
+        "preferenceScore": 83,
+        "scoreRange": [
+          45,
+          70
+        ],
+        "tier": "D",
+        "confidence": "medium",
+        "provisional": true,
+        "knownWeight": 75,
+        "criteria": [
+          {
+            "key": "skills",
+            "label": "Required skills",
+            "weight": 30,
+            "rating": 55,
+            "reason": "Your Python and on-call work match, but there is no evidence of Linux fleet automation, schedulers or hardware lifecycle work.",
+            "candidateEvidence": "Owned Python APIs, TypeScript integrations and on-call incident response.",
+            "jobEvidence": "Strong programming experience in Go or Python"
+          },
+          {
+            "key": "experience",
+            "label": "Experience and results",
+            "weight": 25,
+            "rating": 55,
+            "reason": "You meet the number of years, but you have not shown large-scale infrastructure experience.",
+            "candidateEvidence": "Five years of backend software engineering",
+            "jobEvidence": "5+ years of software engineering or infrastructure engineering experience supporting large-scale production systems"
+          },
+          {
+            "key": "direction",
+            "label": "Direction and learning",
+            "weight": 20,
+            "rating": 72,
+            "reason": "Building reliable distributed infrastructure matches what you want to learn, but this is not a founder-led setting.",
+            "candidateEvidence": "Reliable distributed systems",
+            "jobEvidence": "building systems that remain reliable as infrastructure grows"
+          },
+          {
+            "key": "environment",
+            "label": "Working environment",
+            "weight": 15,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          },
+          {
+            "key": "practical",
+            "label": "Practical fit",
+            "weight": 10,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          }
+        ],
+        "requirements": [
+          {
+            "status": "unknown",
+            "jobEvidence": "5+ years of software engineering or infrastructure engineering experience supporting large-scale production systems",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "Strong programming experience in Go or Python",
+            "candidateEvidence": "Owned Python APIs"
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Experience designing automation for distributed systems and large fleets of Linux-based compute nodes",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "Experience with infrastructure automation, software deployment, observability, and operational recovery",
+            "candidateEvidence": "Owned services through deployment and incident response."
+          }
+        ],
+        "assessment": "reviewed",
+        "method": "evidence-rubric-v1",
+        "reason": "Your Python reliability and incident experience match the operations side of this role, and the location and listed pay look feasible.",
+        "gap": "You have not shown automation for large Linux compute fleets, which the role requires.",
+        "nextStep": "Ask which level fits five years of experience and confirm the annual base pay for Austin.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/job/US-WA-Remote/Senior-Software-Engineer---Distributed-Systems-Engineer--EDA-Infrastructure_JR2024825-1",
+        "requirementsChecked": "2026-10-12T14:18:32.016Z"
+      },
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/e0c632cd-2375-4e0f-8a9f-11dbb820e885",
+        "title": "Data Engineer",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": null,
+        "parts": {
+          "role": 60,
+          "experience": 6,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-12T14:08:29.548Z",
+        "preferenceScore": 86,
+        "scoreRange": [
+          39,
+          69
+        ],
+        "tier": "D",
+        "confidence": "medium",
+        "provisional": true,
+        "knownWeight": 70,
+        "criteria": [
+          {
+            "key": "skills",
+            "label": "Required skills",
+            "weight": 30,
+            "rating": 55,
+            "reason": "Your Python and PostgreSQL work match the coding requirement, but warehouse, streaming and orchestration experience is missing.",
+            "candidateEvidence": "Designed schemas and investigated slow queries.",
+            "jobEvidence": "Strong coding skills in Python and SQL"
+          },
+          {
+            "key": "experience",
+            "label": "Experience and results",
+            "weight": 25,
+            "rating": 55,
+            "reason": "You meet the years, but you have not shown a strong data focus.",
+            "candidateEvidence": "Five years of backend software engineering",
+            "jobEvidence": "5+ years in data engineering or backend engineering with a strong data focus"
+          },
+          {
+            "key": "direction",
+            "label": "Direction and learning",
+            "weight": 20,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          },
+          {
+            "key": "environment",
+            "label": "Working environment",
+            "weight": 15,
+            "rating": 60,
+            "reason": "There is direct responsibility. Founder access and on-call practices are not stated.",
+            "candidateEvidence": "direct responsibility",
+            "jobEvidence": "You'll have real input into how we build"
+          },
+          {
+            "key": "practical",
+            "label": "Practical fit",
+            "weight": 10,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          }
+        ],
+        "requirements": [
+          {
+            "status": "unknown",
+            "jobEvidence": "5+ years in data engineering or backend engineering with a strong data focus",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Deep experience building data infrastructure",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "met",
+            "jobEvidence": "Strong coding skills in Python and SQL",
+            "candidateEvidence": "Designed schemas and investigated slow queries."
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Comfortable building and maintaining production pipelines using modern orchestration frameworks",
+            "candidateEvidence": ""
+          }
+        ],
+        "assessment": "reviewed",
+        "method": "evidence-rubric-v1",
+        "reason": "This is an adjacent stretch: your Python, SQL and schema work transfer, but you have not shown data infrastructure experience.",
+        "gap": "You have no shown experience with data warehouses, streaming systems or pipeline orchestration.",
+        "nextStep": "Gather any pipeline or data-heavy service work from your history before deciding whether to apply.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-12T14:15:05.362Z"
+      },
+      {
+        "url": "https://jobs.ashbyhq.com/base-power/d5346efc-51b9-44f8-89f6-41f6178825c9",
+        "title": "System Integration Engineer",
+        "company": "Base Power",
+        "location": "Austin, TX",
+        "pay": "Pay not listed",
+        "guests": [
+          "Zach Dell"
+        ],
+        "score": null,
+        "parts": {
+          "role": 60,
+          "experience": 6,
+          "location": 20,
+          "pay": 0
+        },
+        "gaps": [
+          "Annual pay in your chosen currency is unverified."
+        ],
+        "checked": "2026-10-12T14:08:29.548Z",
+        "preferenceScore": 86,
+        "scoreRange": [
+          34,
+          64
+        ],
+        "tier": "D",
+        "confidence": "medium",
+        "provisional": true,
+        "knownWeight": 70,
+        "criteria": [
+          {
+            "key": "skills",
+            "label": "Required skills",
+            "weight": 30,
+            "rating": 45,
+            "reason": "Your testing work is relevant, but hardware interfaces, C/C++ and HIL pipelines are not shown.",
+            "candidateEvidence": "Added incident analysis, automated tests and dashboards.",
+            "jobEvidence": "Expertise building integration test automation, CI/CD pipelines, and tooling"
+          },
+          {
+            "key": "experience",
+            "label": "Experience and results",
+            "weight": 25,
+            "rating": 45,
+            "reason": "You have the Python, but you have no shown experience integrating with hardware products.",
+            "candidateEvidence": "Owned Python APIs",
+            "jobEvidence": "with a focus on systems integration, distributed systems, or embedded/software interfaces for hardware products"
+          },
+          {
+            "key": "direction",
+            "label": "Direction and learning",
+            "weight": 20,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          },
+          {
+            "key": "environment",
+            "label": "Working environment",
+            "weight": 15,
+            "rating": 60,
+            "reason": "The ownership is high. Founder access and how sustainable the work is are not stated.",
+            "candidateEvidence": "direct responsibility",
+            "jobEvidence": "establish and lead the software-driven integration function"
+          },
+          {
+            "key": "practical",
+            "label": "Practical fit",
+            "weight": 10,
+            "rating": null,
+            "reason": "Not enough supported information.",
+            "candidateEvidence": "",
+            "jobEvidence": ""
+          }
+        ],
+        "requirements": [
+          {
+            "status": "gap",
+            "jobEvidence": "3-5 years of experience in Python, Golang, and/or bare-metal C and C++, with a focus on systems integration",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "gap",
+            "jobEvidence": "Expertise building integration test automation, CI/CD pipelines",
+            "candidateEvidence": ""
+          },
+          {
+            "status": "unknown",
+            "jobEvidence": "A systems-level mindset and passion for integrating hardware, firmware, and software",
+            "candidateEvidence": ""
+          }
+        ],
+        "assessment": "reviewed",
+        "method": "evidence-rubric-v1",
+        "reason": "This is a substantial stretch: your Python and testing work only partly cover a role centred on hardware integration.",
+        "gap": "You have no shown experience with hardware interfaces or HIL test pipelines, which the role is built around.",
+        "nextStep": "Rank this role below the Base backend roles unless you want to move towards hardware integration.",
+        "evidence": "Employer requirements checked",
+        "requirementsSource": "https://api.ashbyhq.com/posting-api/job-board/base-power?includeCompensation=true",
+        "requirementsChecked": "2026-10-12T14:15:05.361Z"
+      }
+    ],
+    "ranked": 661,
+    "searched": 6931,
+    "examined": 36,
+    "reviewed": 7
+  },
+  "checks": {
+    "continuedInterview": true,
+    "evidenceRetained": true,
+    "verifiedUrls": true,
+    "guardedTiers": true,
+    "credits": true,
+    "sessionIsolation": true
+  }
+}

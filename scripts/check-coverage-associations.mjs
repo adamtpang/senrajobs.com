@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {compileRoles} from '../board-data.mjs';
+import {discoveryReports} from '../discovery-reports.mjs';
+const guests=[{name:'Guest',companies:[{name:'Parent',careers:'https://example.com/jobs'},{name:'Brand (subsidiary)',careers:'https://example.com/jobs'}]}];
+const role={title:'Engineer',url:'https://example.com/job/1',location:'Austin, TX',sourceStatus:'current'};
+const board={roles:[role],coverage:{status:'complete'}};
+const roles=compileRoles(guests,{Parent:board,'Brand (subsidiary)':board});
+const {coverage}=discoveryReports(guests,{Parent:board,'Brand (subsidiary)':board},roles);
+assert.equal(coverage.counts.roles,1,'shared URL must stay unique globally');
+assert.equal(coverage.companies.find(c=>c.company==='Parent').roles,1);
+assert.equal(coverage.companies.find(c=>c.company==='Brand').roles,1,'brand must retain its shared role');
+assert.equal(coverage.companies.find(c=>c.company==='Brand').texasRoles,1);
+console.log('PASS: shared parent/brand roles counted for both associations, once globally.');

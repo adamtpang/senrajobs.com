@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Fluidstack",
+    "careers": "https://jobs.ashbyhq.com/fluidstack",
+    "source": { "kind": "ashby", "slug": "fluidstack" }
+  },
+  {
+    "name": "Aalo Atomics",
+    "careers": "https://www.aalo.com/careers",
+    "source": { "kind": "rippling", "slug": "aalo-atomics" }
+  },
+  {
+    "name": "SpaceX",
+    "careers": "https://job-boards.greenhouse.io/spacex",
+    "source": { "kind": "greenhouse", "slug": "spacex" }
+  },
+  {
+    "name": "SpaceX Global",
+    "careers": "https://job-boards.greenhouse.io/spacexglobal",
+    "boardName": "SpaceX_Global",
+    "source": { "kind": "greenhouse", "slug": "spacexglobal" }
+  },
+  {
+    "name": "xAI",
+    "careers": "https://job-boards.greenhouse.io/xai",
+    "boardName": "SpaceXSI",
+    "source": { "kind": "greenhouse", "slug": "xai" }
+  },
+  {
+    "name": "Neuralink",
+    "careers": "https://job-boards.greenhouse.io/neuralink",
+    "source": { "kind": "greenhouse", "slug": "neuralink" }
+  }
+]

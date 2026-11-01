@@ -1,124 +1,89 @@
-// Pull live roles for every company in guests.json from public job-board APIs, plus guest portraits
-// from the show's Apple Podcasts episode artwork. Writes jobs.json and photos.json; build.mjs renders them.
-// Run: node build.mjs && node fetch-jobs.mjs && node build.mjs
-import fs from "node:fs";
-
-const guests = JSON.parse(fs.readFileSync("guests.json", "utf8"));
-const UA = { "user-agent": "Mozilla/5.0 (senrajobs.com job index)" };
-const get = async (url, json = true) => {
-  try {
-    const r = await fetch(url, { headers: UA, redirect: "follow", signal: AbortSignal.timeout(15000) });
-    if (!r.ok) return null;
-    return json ? await r.json() : { url: r.url, text: await r.text() };
-  } catch { return null; }
-};
-
-const PATTERNS = [
-  ["greenhouse", /(?:boards|job-boards)(?:\.eu)?\.greenhouse\.io\/(?:embed\/job_board(?:\/js)?\?for=)?([a-z0-9_-]+)/i],
-  ["greenhouse", /boards-api\.greenhouse\.io\/v1\/boards\/([a-z0-9_-]+)/i],
-  ["lever", /jobs(?:\.eu)?\.lever\.co\/([a-z0-9_.-]+)/i],
-  ["ashby", /jobs\.ashbyhq\.com\/([a-z0-9_.%-]+)/i],
-  ["smartrecruiters", /(?:careers|jobs)\.smartrecruiters\.com\/([a-z0-9_-]+)/i],
-  ["workable", /apply\.workable\.com\/([a-z0-9_-]+)/i],
-  ["workday", /([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com\/(?:[a-z]{2}-[A-Z]{2}\/)?([A-Za-z0-9_-]+)/],
-];
-const NOT_SLUGS = new Set(["embed", "api", "v1", "js", "static", "assets", "jobs", "careers"]);
-
-async function detect(careers) {
-  for (const [kind, re] of PATTERNS) { const m = careers.match(re); if (m && !NOT_SLUGS.has(m[1].toLowerCase())) return { kind, slug: kind === "workday" ? `${m[1]}|${m[2]}|${m[3]}` : m[1] }; }
-  const page = await get(careers, false);
-  if (!page) return null;
-  const hay = page.url + " " + page.text;
-  for (const [kind, re] of PATTERNS) { const m = hay.match(re); if (m && !NOT_SLUGS.has(m[1].toLowerCase())) return { kind, slug: kind === "workday" ? `${m[1]}|${m[2]}|${m[3]}` : m[1] }; }
-  return null;
+// Public ATS refresh with explicit pagination, location provenance and coverage.
+import fs from 'node:fs';
+import { SOURCE_OVERRIDES,sourceIdentityMatches,requestPublic,detectSource,fetchBoard,enrichRole,retainBoard } from './ats.mjs';
+import { isLocationUnknown,texasEvidence } from './location-utils.mjs';
+const guests=JSON.parse(fs.readFileSync('guests.json','utf8'));
+const previous=fs.existsSync('jobs.json')?JSON.parse(fs.readFileSync('jobs.json','utf8')):{};
+const previousUrls=[...new Set(Object.values(previous).flatMap(board=>(board.roles||[]).map(role=>role.url)))];
+const logos=JSON.parse(fs.readFileSync('company-logos.json','utf8'));
+const workdayOnly=process.argv.includes('--workday-only');
+const greenhouseOnly=process.argv.includes('--greenhouse-only');
+const guestName=process.argv.find(arg=>arg.startsWith('--guest='))?.slice('--guest='.length);
+const companyName=process.argv.find(arg=>arg.startsWith('--company='))?.slice('--company='.length);
+if(companyName&&guestName)throw new Error('Choose --company or --guest, not both');
+if(companyName&&!guests.some(g=>g.companies.some(c=>c.name===companyName&&c.note!=='acquired or closed')))throw new Error(`Unknown current company: ${companyName}`);
+const selectedGuest=guestName?guests.find(guest=>guest.name===guestName):null;
+if(guestName&&!selectedGuest)throw new Error(`Unknown guest: ${guestName}`);
+const guestCompanies=companyName?new Set([companyName]):selectedGuest?new Set(selectedGuest.companies.filter(company=>company.note!=='acquired or closed').map(company=>company.name)):null;
+const jobs=workdayOnly||greenhouseOnly||guestCompanies?{...previous}:{},tasks=new Map(),shared=new Map();
+// Requirements text supports private matching; public jobs.json carries listing metadata.
+const contentPath='.cache/job-content.json';
+const content=fs.existsSync(contentPath)?JSON.parse(fs.readFileSync(contentPath,'utf8')):{};
+for(const guest of guests)for(const company of guest.companies)if(company.note!=='acquired or closed')tasks.set(company.name,company);
+async function pool(items,limit,action){let index=0;await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{while(index<items.length){const i=index++;await action(items[i],i);}}));}
+async function refresh(company){
+ const observedAt=new Date().toISOString();const name=company.name.split(' (')[0];let careers=company.careers,src=SOURCE_OVERRIDES[company.name],detection;
+ if(!careers){
+  const domain=logos[name]?.domain;
+  if(domain)for(const path of ['/careers','/jobs']){
+   const candidate=`https://${domain}${path}`;const result=await detectSource(candidate);
+   if(result.source&&sourceIdentityMatches(result.source,company.name)){detection=result;careers=candidate;break;}
+  }
+  if(!careers)return {source:'research',sourceUrl:domain?`https://${domain}`:null,fetched:null,roles:[],coverage:{status:'link-only',listingStatus:'link-only',reason:domain?'No supported ATS found during bounded official-site discovery':'No verified careers URL or official domain in research',lastAttempt:observedAt}};
+ }
+ if(!src){detection ||= await detectSource(careers);src=detection.source;}
+ if(!src && previous[company.name]?.source && previous[company.name].source!=='research') {
+  const [kind,...slug]=previous[company.name].source.split(':');
+  const known={kind,slug:slug.join(':')};if(sourceIdentityMatches(known,company.name))src=known;
+ }
+ if(src&&!sourceIdentityMatches(src,company.name))return {roles:[],fetched:null,sourceUrl:careers,coverage:{status:'link-only',listingStatus:'link-only',reason:`Discovered ATS account ${src.slug} does not match this employer; portfolio jobs excluded`,lastAttempt:observedAt}};
+ if(!src){
+  if(previous[company.name] && (previous[company.name].roles?.length || detection?.failed))return {...retainBoard(previous[company.name],{status:'failed',reason:detection?.error||'ATS discovery failed'},observedAt),sourceUrl:careers};
+  return {fetched:null,roles:[],sourceUrl:careers,coverage:{status:detection?.failed?'failed':'link-only',listingStatus:detection?.failed?'failed':'link-only',reason:detection?.error||'No supported public ATS',lastAttempt:observedAt}};
+ }
+ const key=`${src.kind}:${src.slug}`;
+ if(!shared.has(key))shared.set(key,(async()=>{
+  const result=await fetchBoard(src,{observedAt,preferredUrls:previousUrls});result.source=key;
+  if(result.status==='failed')return result;
+  const candidates=result.rows.filter(role=>isLocationUnknown(role)||/^\d+ locations?$/i.test(role.location)||role.locations?.some(location=>/^\d+ locations?$/i.test(location.raw))||(src.kind==='greenhouse'&&texasEvidence(role).length));
+  const selected=candidates.slice(0,75);
+  const enriched=new Map();await pool(selected,5,async role=>enriched.set(role.url,await enrichRole(role,src,{observedAt})));
+  result.rows=result.rows.map(role=>enriched.get(role.url)||role);
+  result.enrichment={eligible:candidates.length,attempted:selected.length,unattempted:Math.max(0,candidates.length-selected.length),limitPerBoard:75};
+  return result;
+ })());
+ const result=await shared.get(key);
+ const publicRows=result.rows.map(({description,...row})=>{if(description)content[row.url]={text:description,closed:false,observedAt,source:row.sourceUrl||result.endpoint};return row;});
+ const board=retainBoard(previous[company.name],{...result,rows:publicRows},observedAt);
+ board.careersUrl=careers;
+ const missing=board.roles.filter(isLocationUnknown).length;
+ board.coverage={...board.coverage,...(result.listingStatus?{listingStatus:result.listingStatus}:{}),...(result.excluded?{excluded:result.excluded}:{}),identityUrl:src.identityUrl||careers,...(src.scope?{scope:src.scope}:{}),unknownLocations:missing,enrichment:result.enrichment};
+ if(result.status==='complete'&&missing){board.coverage.status='partial';board.coverage.reason=`All advertised listings retrieved; ${missing} job locations remain unresolved after bounded detail retrieval`;}
+ return board;
 }
-
-async function roles({ kind, slug }) {
-  if (kind === "greenhouse") {
-    const r = await get(`https://boards-api.greenhouse.io/v1/boards/${slug}/jobs`);
-    return r?.jobs?.map((j) => ({ title: j.title, url: j.absolute_url, location: j.location?.name || "" }));
-  }
-  if (kind === "lever") {
-    const r = await get(`https://api.lever.co/v0/postings/${slug}?mode=json`);
-    return Array.isArray(r) ? r.map((j) => ({ title: j.text, url: j.hostedUrl, location: j.categories?.location || "" })) : null;
-  }
-  if (kind === "ashby") {
-    const r = await get(`https://api.ashbyhq.com/posting-api/job-board/${slug}`);
-    return r?.jobs?.filter((j) => j.isListed !== false).map((j) => ({ title: j.title, url: j.jobUrl, location: j.location || "" }));
-  }
-  if (kind === "smartrecruiters") {
-    const r = await get(`https://api.smartrecruiters.com/v1/companies/${slug}/postings?limit=100`);
-    return r?.content?.map((j) => ({ title: j.name, url: `https://jobs.smartrecruiters.com/${slug}/${j.id}`, location: j.location?.city || "" }));
-  }
-  if (kind === "workable") {
-    const r = await get(`https://apply.workable.com/api/v1/widget/accounts/${slug}`);
-    return r?.jobs?.map((j) => ({ title: j.title, url: j.url || j.shortlink, location: j.city || j.country || "" }));
-  }
-  if (kind === "workday") {
-    // Public Workday candidate API (the same JSON the careers page uses). Paged, capped at 200 roles.
-    const [tenant, wd, site] = slug.split("|");
-    const base = `https://${tenant}.${wd}.myworkdayjobs.com`;
-    const out = [];
-    let total = 0;
-    for (let offset = 0; offset < 200; offset += 20) {
-      let r;
-      try {
-        const res = await fetch(`${base}/wday/cxs/${tenant}/${site}/jobs`, { method: "POST", headers: { ...UA, "content-type": "application/json" },
-          body: JSON.stringify({ appliedFacets: {}, limit: 20, offset, searchText: "" }), signal: AbortSignal.timeout(15000) });
-        r = res.ok ? await res.json() : null;
-      } catch { r = null; }
-      if (!r?.jobPostings?.length) break;
-      if (r.total) total = r.total; // Workday only reports the total on the first page
-      out.push(...r.jobPostings.map((j) => ({ title: j.title, url: `${base}/${site}${j.externalPath}`, location: j.locationsText || "" })));
-      if (out.length >= total) break;
-    }
-    return out.length ? out : null;
-  }
-  return null;
+const selectedTasks=[...tasks.values()].filter(company=>(!guestCompanies||guestCompanies.has(company.name)) && (!workdayOnly || previous[company.name]?.source?.startsWith('workday:')) && (!greenhouseOnly || previous[company.name]?.source?.startsWith('greenhouse:')));
+await pool(selectedTasks,4,async company=>{jobs[company.name]=await refresh(company);const board=jobs[company.name];console.log(`${company.name}: ${board.roles.length} roles; ${board.coverage.status}${board.coverage.total!=null?`; advertised ${board.coverage.total}`:''}; ${board.coverage.reason||'public listing retrieved'}`);});
+const targets=fs.existsSync('targets.json')?JSON.parse(fs.readFileSync('targets.json','utf8')):[];
+for(const target of targets){
+ const sourceKey=`${target.source.kind}:${target.source.slug}`;
+ if(tasks.has(target.name)||Object.values({...previous,...jobs}).some(board=>board?.source===sourceKey)){console.log(`${target.name}: already covered by ${sourceKey}`);continue;}
+ const observedAt=new Date().toISOString();
+ const result=await fetchBoard(target.source,{observedAt,preferredUrls:previousUrls});
+ result.source=`${target.source.kind}:${target.source.slug}`;
+ const board=retainBoard(previous[target.name],result,observedAt);
+ board.careersUrl=target.careers;
+ if(target.boardName)board.boardName=target.boardName;
+ jobs[target.name]=board;
+ console.log(`${target.name}: ${board.roles.length} roles; ${board.coverage.status}`);
 }
-
-// Guess a Greenhouse board by name only when the board's own name matches the company (no wrong-company roles).
-async function guessGreenhouse(name) {
-  const slug = name.toLowerCase().replace(/\(.*?\)/g, "").replace(/[^a-z0-9]/g, "");
-  const board = await get(`https://boards-api.greenhouse.io/v1/boards/${slug}`);
-  const norm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-  return board && norm(board.name).startsWith(slug.slice(0, 5)) ? { kind: "greenhouse", slug } : null;
-}
-
-// Boards found by hand (slug checked against the company) where the careers page hides the ATS.
-const OVERRIDES = {
-  OpenAI: { kind: "ashby", slug: "openai" },
-  ElevenLabs: { kind: "ashby", slug: "elevenlabs" },
-  "Base Power": { kind: "ashby", slug: "base-power" },
-  "Neko Health": { kind: "ashby", slug: "neko-health" },
-  Snap: { kind: "workday", slug: "snapchat|wd1|snap" },
-  "Nvidia (Ross joined as Chief Software Architect, 2026)": { kind: "workday", slug: "nvidia|wd5|NVIDIAExternalCareerSite" },
-};
-
-const jobs = {};
-const tasks = guests.flatMap((g) => g.companies.filter((c) => c.careers).map((c) => c));
-const byCareers = new Map(); // one fetch per board, shared by guests who list the same company
-await Promise.all(tasks.map(async (c) => {
-  if (!byCareers.has(c.careers)) byCareers.set(c.careers, (async () => {
-  let src = OVERRIDES[c.name] || (await detect(c.careers));
-  let list = src && (await roles(src));
-  if (!list?.length) { const g = await guessGreenhouse(c.name); if (g) { src = g; list = await roles(g); } }
-  return { src, list };
-  })());
-  const { src, list } = await byCareers.get(c.careers);
-  jobs[c.name] = list?.length ? { source: `${src.kind}:${src.slug}`, fetched: new Date().toISOString(), roles: list } : null;
-  console.log(`${c.name.padEnd(40)} ${list?.length ? `${list.length} roles (${src.kind})` : "no public API, link only"}`);
-}));
-fs.writeFileSync("jobs.json", JSON.stringify(jobs, null, 1) + "\n");
-
-// Portraits: the show's episode artwork is a portrait of each guest. Match by Apple episode id.
-const feed = await get("https://itunes.apple.com/lookup?id=1836497887&entity=podcastEpisode&limit=200");
-const byId = Object.fromEntries((feed?.results || []).filter((x) => x.trackId).map((x) => [String(x.trackId), x.artworkUrl600]));
-const photos = {};
-for (const g of guests) {
-  const id = g.episode?.url?.match(/[?&]i=(\d+)/)?.[1];
-  if (id && byId[id]) photos[g.name] = byId[id].replace("600x600bb", "300x300bb");
-}
-fs.writeFileSync("photos.json", JSON.stringify(photos, null, 1) + "\n");
-const withRoles = Object.values(jobs).filter(Boolean);
-console.log(`\n${withRoles.length}/${tasks.length} companies with live roles, ${withRoles.reduce((n, j) => n + j.roles.length, 0)} roles total, ${Object.keys(photos).length}/${guests.length} photos`);
+// Preserve closed-company history in data, but never expose it as current hiring.
+for(const [name,board]of Object.entries(previous))if(!tasks.has(name))jobs[name]=board;
+fs.writeFileSync('jobs.json',JSON.stringify(jobs,null,1)+'\n');
+fs.mkdirSync('.cache',{recursive:true});fs.writeFileSync(contentPath,JSON.stringify(content));
+// Existing portraits are retained on lookup failure. No candidate or private data is read.
+const feed=await requestPublic('https://itunes.apple.com/lookup?id=1836497887&entity=podcastEpisode&limit=200');
+const byId=Object.fromEntries((feed.data?.results||[]).filter(x=>x.trackId).map(x=>[String(x.trackId),x.artworkUrl600]));
+const photos=fs.existsSync('photos.json')?JSON.parse(fs.readFileSync('photos.json','utf8')):{};
+for(const guest of guests){const id=guest.episode?.url?.match(/[?&]i=(\d+)/)?.[1];if(id&&byId[id])photos[guest.name]=byId[id].replace('600x600bb','300x300bb');}
+fs.writeFileSync('photos.json',JSON.stringify(photos,null,1)+'\n');
+console.log(`Screened ${selectedTasks.length} current company associations; ${shared.size} unique ATS feeds. Run node build.mjs for inventory and coverage reports.`);

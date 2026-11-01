@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New roles · Senra Jobs</title>
+<link rel="canonical" href="https://senrajobs.com/new">
+<link rel="alternate" type="application/json" title="New roles JSON" href="https://senrajobs.com/new.json">
+<link rel="alternate" type="application/rss+xml" title="New roles RSS" href="https://senrajobs.com/new.xml">
+<meta name="description" content="Roles first seen by Senra Jobs, or posted by the company, in the 48 hours before the last fetch.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪜</text></svg>">
+<style>
+  :root { --bg:#fff; --fg:#111; --muted:#6b6b6b; --line:#e6e6e6; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b0b0b; --fg:#f2f2f2; --muted:#8f8f8f; --line:#222; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:48px 16px 96px; }
+  h1 { font-size:32px; letter-spacing:-.02em; margin:0 0 8px; }
+  a { color:var(--fg); }
+  .meta, .doc { color:var(--muted); }
+  .filters { display:flex; flex-wrap:wrap; gap:12px; margin:20px 0; }
+  label { display:flex; flex-direction:column; gap:4px; font-size:13px; color:var(--muted); min-width:min(100%, 220px); }
+  select { min-height:44px; font:inherit; color:var(--fg); background:transparent; border:1px solid var(--line); border-radius:10px; padding:8px 10px; }
+  .roles { list-style:none; margin:0; padding:0; }
+  .roles li { padding:12px 0; border-top:1px solid var(--line); }
+  .roles a { font-weight:600; }
+  .sub { color:var(--muted); font-size:13px; display:block; }
+  .pay { font-size:13px; }
+  #empty { display:none; }
+  code { font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="/">← Senra Jobs</a></p>
+  <h1>New in 48 hours</h1>
+  <p class="meta" id="summary">__COUNT__ roles first seen by this index, or posted by the company, in the 48 hours before __GENERATED__. First seen is the first time this index recorded the role, so a gap between fetches includes roles the company posted earlier. A posted date is shown only when the board provides one.</p>
+  <form class="filters">
+    <label>Place
+      <select id="place" aria-label="Filter by place">
+        <option value="all">Anywhere</option>
+        <option value="austin-texas">Austin / Texas</option>
+        <option value="remote">Remote</option>
+        <option value="either">Austin / Texas or remote</option>
+      </select>
+    </label>
+    <label>Role
+      <select id="track" aria-label="Filter by role">
+        <option value="all">Any role</option>
+        <option value="forward-deployed">Forward deployed engineer</option>
+        <option value="applied-ai">Applied AI</option>
+        <option value="ai-agents">AI agents</option>
+        <option value="solutions-engineer">Solutions engineer</option>
+      </select>
+    </label>
+  </form>
+  <p id="empty">No roles in this window match those filters.</p>
+  <ul class="roles" id="roles">__LIST__</ul>
+  <p class="doc">Machine-readable feed for a daily 7:00 AM CT reader: <a href="/new.json">https://senrajobs.com/new.json</a> (and <a href="/new.xml">RSS</a>). Each item has company, title, location, remote, pay only when the board posted it, url, firstSeen, and postedAt. The file is rewritten when the job fetch runs. Pay is omitted when the source has no figure. Nothing here is an estimate.</p>
+</main>
+<script>
+  const TRACKS = [
+    ["forward-deployed", /forward[\s-]*deployed|\bfde\b/i],
+    ["applied-ai", /applied\s+ai/i],
+    ["ai-agents", /\bai agents?\b|\bagentic\b/i],
+    ["solutions-engineer", /solutions?\s+engineer/i],
+  ];
+  const items = [...document.querySelectorAll("#roles > li")];
+  const placeEl = document.getElementById("place");
+  const trackEl = document.getElementById("track");
+  const empty = document.getElementById("empty");
+  const apply = () => {
+    const place = placeEl.value;
+    const track = trackEl.value;
+    let shown = 0;
+    for (const li of items) {
+      const austin = li.dataset.austin === "1";
+      const remote = li.dataset.remote === "1";
+      const tracks = li.dataset.tracks || "";
+      const placeOk = place === "all" || (place === "austin-texas" && austin) || (place === "remote" && remote) || (place === "either" && (austin || remote));
+      const trackOk = track === "all" || tracks.split(" ").includes(track);
+      const hit = placeOk && trackOk;
+      li.hidden = !hit;
+      if (hit) shown++;
+    }
+    empty.style.display = shown ? "none" : "block";
+  };
+  placeEl.addEventListener("change", apply);
+  trackEl.addEventListener("change", apply);
+  const params = new URLSearchParams(location.search);
+  if (params.get("place")) placeEl.value = params.get("place");
+  if (params.get("track")) trackEl.value = params.get("track");
+  apply();
+</script>
+</body>
+</html>

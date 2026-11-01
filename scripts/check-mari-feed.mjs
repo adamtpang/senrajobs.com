@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {parseMariAds,parseTodayTix,fetchMari} from '../mari-feed.mjs';
+const at='2026-10-19T00:00:00Z';
+const ad={id:'c4be0472-9e4b-4cf4-8f4f-dd46e7db5f0a',title:'Example',site:'US - MARI Events CST',country:'United States',description:'<p>Public job description&#39;s text.</p>',workspaceTypeId:'hybrid',department:'Events',payTransparencyMinSalary:60000,payTransparencyMaxSalary:80000,payTransparencySalaryCurrency:'USD',payTransparencySalaryPayPeriod:'Annual',privateField:'discard'};
+const parsed=parseMariAds({jobAdDetails:[ad,{...ad,id:'bad/id'}]},at);
+assert.equal(parsed.rows.length,1);assert.equal(parsed.invalid,1);assert.equal(parsed.rows[0].workplace,'Hybrid');assert.equal(parsed.rows[0].pay.period,'year');assert.equal(parsed.rows[0].locations[0].country,'United States');assert.ok(!parsed.rows[0].locations[0].city);assert.ok(!('privateField' in parsed.rows[0]));assert.equal(parsed.rows[0].url,'https://mari.careers.hibob.com/jobs/'+ad.id);
+assert.throws(()=>parseMariAds({},at),/missing/);
+const job={id:'a',text:'Engineer',hostedUrl:'https://jobs.lever.co/todaytixgroup/a',categories:{location:'New York',allLocations:['New York','London'],department:'Technology'},country:'US',descriptionPlain:'Build useful tools.',privateField:'discard'};
+const tt=parseTodayTix([{title:'Technology',postings:[job,job,{...job,id:'b',hostedUrl:'https://evil.example/job'}]}],at);
+assert.equal(tt.rows.length,1);assert.equal(tt.duplicates,1);assert.equal(tt.invalid,1);assert.deepEqual(tt.rows[0].secondaryLocations,['London']);assert.equal(tt.rows[0].employerBrand,'TodayTix Group');assert.ok(!('privateField' in tt.rows[0]));
+assert.equal(tt.rows[0].locations[1].country,'');
+assert.throws(()=>parseTodayTix({jobs:[]},at),/missing/);
+const calls=[];
+const combined=await fetchMari({observedAt:at,request:async(url,options)=>{calls.push({url,options});return {ok:true,data:url.includes('hibob')?{jobAdDetails:[ad]}:[{title:'Technology',postings:[job]}]};}});
+assert.equal(combined.rows.length,2);assert.equal(combined.pages,2);assert.equal(combined.status,'partial');assert.equal(calls[0].options.headers.companyIdentifier,'mari');assert.equal(combined.pageReceipts[1].url,'https://www.todaytixgroup.com/api/open-roles');
+const failed=await fetchMari({observedAt:at,request:async()=>({ok:false,error:'HTTP403'})});assert.equal(failed.status,'failed');assert.equal(failed.rows.length,0);
+console.log('PASS: MARI public fields, country/site precision, TodayTix source identity/deduplication and honest multi-channel scope.');

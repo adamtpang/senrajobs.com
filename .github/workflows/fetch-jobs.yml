@@ -1,0 +1,51 @@
+# Refresh committed job data once a day.
+# GitHub Actions fits this repo: the site is static files (jobs.json + rendered index.html)
+# with no server and no database. A Vercel cron would need a function plus a token to commit
+# the result. This workflow uses the built-in GITHUB_TOKEN only.
+#
+# Schedule is 12:00 UTC: 6:00 AM CT during standard time and 7:00 AM CT during daylight time.
+# Scheduled workflows run from the default branch only, after this file is on main.
+name: Daily job fetch
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: fetch-jobs
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node fetch-jobs.mjs
+      - run: node build.mjs
+      - run: node check.mjs
+      - name: Commit refreshed roles
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add jobs.json photos.json index.html llms.txt sitemap.xml robots.txt guests.json
+          if git diff --staged --quiet; then
+            echo "No job changes"
+            exit 0
+          fi
+          git commit -m "Refresh open roles"
+          if git push origin HEAD:main; then
+            exit 0
+          fi
+          branch="job-refresh-${GITHUB_RUN_ID}"
+          git push origin HEAD:"$branch"
+          gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$branch" --title "Refresh open roles" --body "The daily fetch could not push to main. Merge this pull request to publish the updated boards."

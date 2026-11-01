@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {reconcileFeed} from './audit-coverage.mjs';
+const item=(title,id)=>`<item><title><![CDATA[${title}]]></title><guid>${id}</guid></item>`;
+const guests=[{name:'Michael Ovitz'},{name:'David Heinemeier Hansson'}];
+const xml='<rss>'+item('Welcome to David Senra','t')+item('Interview | Michael Ovitz','a')+item('Another | Michael Ovitz','b')+item('DHH: Building','c')+'</rss>';
+const good=reconcileFeed(xml,guests);assert.equal(good.reconciled,true);assert.equal(good.interviewEpisodes,3);assert.equal(good.distinctMatchedGuests,2);
+const unknown=reconcileFeed(xml+item('New guest | Unknown Person','d'),guests);assert.equal(unknown.reconciled,false);assert.equal(unknown.unresolved.length,1);assert.equal(unknown.interviewEpisodes,4);
+assert.equal(reconcileFeed(xml+item('Interview | Michael Ovitz','a'),guests).reconciled,false);
+assert.equal(reconcileFeed(xml,[...guests,{name:'Unobserved Person'}]).reconciled,false);
+console.log('PASS: repeated guests, trailer, DHH alias, new unmatched guests, duplicate GUIDs and unmatched registry entries.');

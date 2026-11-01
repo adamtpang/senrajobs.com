@@ -1,0 +1,508 @@
+{
+  "checkedOn": "2026-10-09",
+  "cohort": "43 unique guests in guests.json, through Ari Emanuel's October 7, 2026 episode; repeat interviews count once",
+  "definition": "Employee, apprentice or intern at an organization belonging to someone else before a documented commercial business founding. Student status, investing, mentors and running one's own business do not themselves qualify. Compensation is not always reported. Nonprofit/student organizations are outside the commercial-company definition.",
+  "limitations": "A confirmed first-company sequence refers to the earliest identifiable commercial business found in the cited histories, not proof that no earlier venture ever existed. Childhood businesses and simultaneous work/startup projects make some sequences unclear. Unclear never means never employed. These are evidence-backed lower bounds within this interview cohort, not population estimates or proof that employment causes founder success.",
+  "records": [
+    {
+      "name": "Ari Emanuel",
+      "firstKnownBusiness": "Endeavor, 1995",
+      "employment": "CAA trainee and ICM agent",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Agency employment predates co-founding Endeavor. Informal childhood lawn-mowing is not a separate identifiable company in this classification.",
+      "sources": [
+        "https://www.newyorker.com/magazine/2021/04/26/ari-emanuel-takes-on-the-world",
+        "https://s29.q4cdn.com/745718849/files/doc_financials/2021/q4/5d2670a0-453c-4b1a-99bd-2f4c75627382.pdf",
+        "https://www.davidsenra.com/episode/ari-emanuel"
+      ]
+    },
+    {
+      "name": "Jeremy Stern",
+      "firstKnownBusiness": null,
+      "employment": "Journalism and military service",
+      "beforeFirst": "not_applicable",
+      "beforeLater": "not_applicable",
+      "evidence": "Guest is Colossus editor-in-chief. No commercial founder role established in this research; do not confuse him with Colossus founder Patrick O'Shaughnessy.",
+      "sources": [
+        "https://www.davidsenra.com/episode/jeremy-stern",
+        "https://colossus.com/about-us/"
+      ]
+    },
+    {
+      "name": "Alexander Taubman",
+      "firstKnownBusiness": "Taubman Capital / Long Lake",
+      "employment": "Goldman Sachs analyst; Oaktree",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Describes starting his career at Goldman and then building investment and operating businesses.",
+      "sources": [
+        "https://www.davidsenra.com/episode/alexander-taubman"
+      ]
+    },
+    {
+      "name": "Ronnie Fieg",
+      "firstKnownBusiness": "Kith, 2011",
+      "employment": "David Z stock boy, salesperson and buyer",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Started at David Z at 13 and worked there for approximately 15 years before Kith.",
+      "sources": [
+        "https://kith.com/pages/about",
+        "https://www.davidsenra.com/episode/ronnie-fieg"
+      ]
+    },
+    {
+      "name": "Peter Rahal",
+      "firstKnownBusiness": "RXBAR, 2012/2013",
+      "employment": "Fruit-processing internships, including a placement in Belgium",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "First-person How I Built This interview describes working in Belgium after graduation, before returning home and starting RXBAR. Not counted merely because his family owned a food business. Founding-year reporting varies between 2012 and 2013; sequence is consistent.",
+      "sources": [
+        "https://podscripts.co/podcasts/how-i-built-this-with-guy-raz/live-episode-rxbar-peter-rahal",
+        "https://www.inc.com/magazine/201804/danielle-sacks/rxbar-peter-rahal-exit-interview.html"
+      ]
+    },
+    {
+      "name": "Luca Ferrari",
+      "firstKnownBusiness": "Evertale, before Bending Spoons",
+      "employment": "McKinsey consultant",
+      "beforeFirst": "unclear",
+      "beforeLater": "confirmed",
+      "evidence": "McKinsey overlaps work on Evertale, so it cannot simply be treated as a job before becoming a founder. It clearly predates Bending Spoons.",
+      "sources": [
+        "https://www.davidsenra.com/episode/luca-ferrari",
+        "https://ceointerviews.ai/interview/1032864/"
+      ]
+    },
+    {
+      "name": "Mati Staniszewski",
+      "firstKnownBusiness": "ElevenLabs, 2022",
+      "employment": "Palantir deployment strategist",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Official employer biography explicitly places Palantir before ElevenLabs. Student-led Mathscon is not treated as a commercial company.",
+      "sources": [
+        "https://elevenlabs.io/blog/authors/mati-staniszewski"
+      ]
+    },
+    {
+      "name": "Zach Dell",
+      "firstKnownBusiness": "Thread, 2013",
+      "employment": "Blackstone analyst/intern; Thrive Capital",
+      "beforeFirst": "unclear",
+      "beforeLater": "confirmed",
+      "evidence": "Finance employment predates Base Power, but he had already founded Thread in high school. No earlier employment sequence established.",
+      "sources": [
+        "https://www.davidsenra.com/episode/zach-dell",
+        "https://tech.yahoo.com/computing/articles/michael-dells-nepo-babies-family-180649000.html"
+      ]
+    },
+    {
+      "name": "Doug Leone",
+      "firstKnownBusiness": null,
+      "employment": "Sales roles and Sequoia partner",
+      "beforeFirst": "not_applicable",
+      "beforeLater": "not_applicable",
+      "evidence": "Founder of Sequoia was Don Valentine. Current episode describes Leone returning to Sequoia, not founding a new company at 69. No commercial founder role established here.",
+      "sources": [
+        "https://www.davidsenra.com/episode/doug-leone"
+      ]
+    },
+    {
+      "name": "Torsten Reil",
+      "firstKnownBusiness": "NaturalMotion, 2001",
+      "employment": "Oxford DPhil research",
+      "beforeFirst": "unclear",
+      "beforeLater": "unclear",
+      "evidence": "Oxford identifies him as a DPhil student when NaturalMotion emerged. Academic research is not automatically employment at someone else's company. Later employment/ownership is not sufficiently separated here.",
+      "sources": [
+        "https://innovation.ox.ac.uk/wp-content/uploads/2014/04/OIF-brochure_2014_final.pdf",
+        "https://www.davidsenra.com/episode/torsten-reil"
+      ]
+    },
+    {
+      "name": "Sam Altman",
+      "firstKnownBusiness": "Loopt, 2005",
+      "employment": null,
+      "beforeFirst": "unclear",
+      "beforeLater": "unclear",
+      "evidence": "Loopt began while leaving Stanford. A Goldman internship offer was reportedly not taken. An offer, investing and YC leadership after founding Loopt do not establish employment before his first founding.",
+      "sources": [
+        "https://www.ycombinator.com/blog/uncut-interview-with-sam-altman-on-masters-of-scale/",
+        "https://fortune.com/2026/08/12/sam-altman-goldman-sachs-openai/"
+      ]
+    },
+    {
+      "name": "Travis Kalanick",
+      "firstKnownBusiness": "New Way Academy, age 18",
+      "employment": "Cutco door-to-door sales",
+      "beforeFirst": "unclear",
+      "beforeLater": "confirmed",
+      "evidence": "Cutco sales precede Uber, but available summaries disagree on dates relative to his teenage SAT-prep business. Conservative first-company classification stays unclear.",
+      "sources": [
+        "https://www.gobankingrates.com/net-worth/business-people/first-jobs-billionaires-like-warren-buffett-and-jeff-bezos/",
+        "https://thedynamics.ai/articles/travis-kalanick"
+      ]
+    },
+    {
+      "name": "Lulu Cheng Meservey",
+      "firstKnownBusiness": "TrailRunner International, 2016",
+      "employment": "J.P. Morgan financial analyst; World Bank consultant; McLarty adviser",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "TrailRunner's own biography in its FARA registration lists these earlier roles. Substack/Activision alone would only establish employment before her later company Rostra.",
+      "sources": [
+        "https://efile.fara.gov/docs/6808-Exhibit-AB-20200327-1.pdf",
+        "https://www.davidsenra.com/episode/lulu-cheng-meservey"
+      ]
+    },
+    {
+      "name": "Michael Ovitz",
+      "firstKnownBusiness": "CAA, 1975",
+      "employment": "Fox while in college; William Morris trainee and agent",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Describes full-time Fox work while at UCLA; William Morris employment also precedes founding CAA.",
+      "sources": [
+        "https://www.davidsenra.com/episode/michael-ovitz",
+        "https://time.com/archive/6727818/michael-ovitz-michael-mouse/"
+      ]
+    },
+    {
+      "name": "Micky Malka",
+      "firstKnownBusiness": "Heptagon, 1991",
+      "employment": null,
+      "beforeFirst": "unclear",
+      "beforeLater": "unclear",
+      "evidence": "SEC biography establishes co-founding Heptagon at 18. No preceding employee/intern role established. Later investing or CEO roles in his own companies do not qualify.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1099590/000119312514167062/d713510ddef14a.htm"
+      ]
+    },
+    {
+      "name": "David Heinemeier Hansson",
+      "firstKnownBusiness": "Early web projects / Basecamp founder-partner role",
+      "employment": "Programming and contract work",
+      "beforeFirst": "unclear",
+      "beforeLater": "unclear",
+      "evidence": "Freelance work, early web ventures and joining an existing 37signals partnership need a clearer chronology. Partnership entry is not automatically founding the existing company.",
+      "sources": [
+        "https://www.davidsenra.com/episode/david-heinemeier-hansson"
+      ]
+    },
+    {
+      "name": "Jeff Zalaznick",
+      "firstKnownBusiness": "Restaurant websites before Major Food Group",
+      "employment": "J.P. Morgan analyst; Mandarin Oriental employee",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Explicit employee-to-entrepreneur chronology before his first restaurant websites, not just before MFG.",
+      "sources": [
+        "https://www.davidsenra.com/episode/jeff-zalaznick",
+        "https://www.ice.edu/blog/conversation-with-major-food-group"
+      ]
+    },
+    {
+      "name": "Eric Glyman",
+      "firstKnownBusiness": "Paribus, 2013/2014",
+      "employment": "Houlihan Lokey summer analyst; Millstein financial analyst",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Contemporaneous professional biography and dated career history place finance work before Paribus. His student/nonprofit Global China Connection role is outside the commercial-company definition.",
+      "sources": [
+        "https://thomasliu244.wordpress.com/about-2/people/",
+        "https://www.clay.com/dossier/ramp-ceo",
+        "https://www.davidsenra.com/episode/eric-glyman"
+      ]
+    },
+    {
+      "name": "Jonathan Ross",
+      "firstKnownBusiness": "Groq, 2016",
+      "employment": "Google engineer and TPU developer",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Employer biography explicitly identifies Google work before founding Groq. Creating an internal chip project is not a separate company founding.",
+      "sources": [
+        "https://groq.humain.ai/jonathan-ross-every-word-matters/",
+        "https://mastersofscale.com/people/jonathan-ross/"
+      ]
+    },
+    {
+      "name": "Scott Wu",
+      "firstKnownBusiness": "Lunchclub, before Cognition",
+      "employment": "Founding engineer at Scale AI",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Episode biography places employee work at Scale AI before co-founding Lunchclub. Founding engineer is an employee role, not assumed to mean company co-founder.",
+      "sources": [
+        "https://www.davidsenra.com/episode/scott-wu"
+      ]
+    },
+    {
+      "name": "Steve Stoute",
+      "firstKnownBusiness": "Early artist-management ventures / Translation",
+      "employment": "Sony and Interscope executive; Arnell Group employee",
+      "beforeFirst": "unclear",
+      "beforeLater": "confirmed",
+      "evidence": "Strong employment history before Translation, but earliest independent management business and childhood work chronology remain unresolved. Later employment is not proof of employee-first.",
+      "sources": [
+        "https://www.davidsenra.com/episode/steve-stoute",
+        "https://www.linkedin.com/in/stevestoute"
+      ]
+    },
+    {
+      "name": "Ed Catmull",
+      "firstKnownBusiness": "Pixar, 1986",
+      "employment": "NYIT researcher; Lucasfilm computer division head",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Hired to Lucasfilm in 1979; the division was spun out as Pixar in 1986. An internal research group is not counted as his own commercial company.",
+      "sources": [
+        "https://www.davidsenra.com/episode/ed-catmull"
+      ]
+    },
+    {
+      "name": "Gustav Soderstrom",
+      "firstKnownBusiness": "Kenet Works, 2003",
+      "employment": "Yahoo after selling Kenet Works",
+      "beforeFirst": "unclear",
+      "beforeLater": "unclear",
+      "evidence": "Yahoo employment followed his first company. Spotify is not his founding role. The episode summary calls him a 13th Lab co-founder while another biography calls him an adviser, so that later-founder claim is not used in the count.",
+      "sources": [
+        "https://www.davidsenra.com/episode/gustav-soderstrom",
+        "https://www.kth.se/om/upptack/priser/arets-alumn/tidigare-mottagare/arets-alumn-2019-gustav-soderstrom-1.902493",
+        "https://www.imdb.com/name/nm12476028/bio/"
+      ]
+    },
+    {
+      "name": "Ivanka Trump",
+      "firstKnownBusiness": "Ivanka Trump Collection, 2007",
+      "employment": "Forest City Ratner project manager; Trump Organization employee",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Employment before launching her own collection is established in contemporary interviews and the episode history.",
+      "sources": [
+        "https://www.leadersmag.com/issues/2010.2_Apr/Women%20Leaders/Trump.html",
+        "https://www.davidsenra.com/episode/ivanka-trump"
+      ]
+    },
+    {
+      "name": "Rick Rubin",
+      "firstKnownBusiness": "Def Jam, 1984",
+      "employment": null,
+      "beforeFirst": "unclear",
+      "beforeLater": "unclear",
+      "evidence": "Started Def Jam from his NYU dorm. No preceding employee role established; making music or recording his own band is not employment evidence.",
+      "sources": [
+        "https://www.davidsenra.com/episode/rick-rubin"
+      ]
+    },
+    {
+      "name": "Strauss Zelnick",
+      "firstKnownBusiness": "ZMC, 2001",
+      "employment": "Columbia Pictures executive from 1983; later studio/music leadership",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Episode biography explicitly places Columbia employment in 1983 and ZMC founding in 2001.",
+      "sources": [
+        "https://www.davidsenra.com/episode/strauss-zelnick"
+      ]
+    },
+    {
+      "name": "Dana White",
+      "firstKnownBusiness": "Boxing/boxercise business, early 1990s",
+      "employment": "Boston Harbor Hotel bellhop",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Interviewed former colleague dates bellhop work to 1987, before the boxing business. White did not found the original UFC, which is not the founding anchor used here.",
+      "sources": [
+        "https://www.mmafighting.com/2022/6/16/23172040/promoter-returns-after-10-year-hiatus-with-combat-fc-1",
+        "https://en.wikipedia.org/wiki/Dana_White"
+      ]
+    },
+    {
+      "name": "Adam Foroughi",
+      "firstKnownBusiness": "Mobile-advertising businesses before AppLovin",
+      "employment": "Derivatives trader after university",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Episode history places derivatives trading before his two earlier mobile-ad businesses, rather than treating AppLovin as his first founding.",
+      "sources": [
+        "https://www.davidsenra.com/episode/adam-foroughi"
+      ]
+    },
+    {
+      "name": "David Baszucki",
+      "firstKnownBusiness": "Knowledge Revolution, late 1980s",
+      "employment": "General Motors engineering internship while at Stanford",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "GM placement during university predates 1985 graduation and subsequent Knowledge Revolution founding. This record uses a secondary biography and should be upgraded to a direct interview citation when available.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/David_Baszucki"
+      ]
+    },
+    {
+      "name": "Evan Spiegel",
+      "firstKnownBusiness": "FutureFreshman, before Snapchat",
+      "employment": "Red Bull and Abraxis BioScience internships in high school; Intuit internship",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "First-person episode transcript places high-school internships and Intuit before starting Future Freshman with Bobby Murphy, then Snapchat. Earlier company is included rather than treating Snapchat as the first founding.",
+      "sources": [
+        "https://www.davidsenra.com/episode/evan-spiegel"
+      ]
+    },
+    {
+      "name": "Tony Xu",
+      "firstKnownBusiness": "DoorDash, 2013",
+      "employment": "Restaurant dishwasher as a child; later professional work",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Episode history describes working alongside his mother at a restaurant well before DoorDash. Informal childhood ventures are not treated as separate identifiable companies.",
+      "sources": [
+        "https://www.davidsenra.com/episode/tony-xu"
+      ]
+    },
+    {
+      "name": "Marc Andreessen",
+      "firstKnownBusiness": "Mosaic Communications / Netscape, 1994",
+      "employment": "NCSA student developer; EIT employee",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "University Mosaic work and subsequent EIT employment precede Netscape. Mosaic as a university software project is not itself a company founding.",
+      "sources": [
+        "https://www.ncsa.illinois.edu/research/project-highlights/ncsa-mosaic/",
+        "https://citeseerx.ist.psu.edu/document?doi=f7b4eb92247ea82ba2836483b27189bbb6d2ef13&repid=rep1&type=pdf"
+      ]
+    },
+    {
+      "name": "Brian Armstrong",
+      "firstKnownBusiness": "Tutoring business in college, before Coinbase",
+      "employment": "Airbnb engineer; possible college library work",
+      "beforeFirst": "unclear",
+      "beforeLater": "confirmed",
+      "evidence": "Airbnb employment clearly predates Coinbase, but he had already run a tutoring business. The library-wage comparison in the transcript is insufficient to establish his own earlier employment chronology.",
+      "sources": [
+        "https://www.davidsenra.com/episode/brian-armstrong"
+      ]
+    },
+    {
+      "name": "Jason Fried",
+      "firstKnownBusiness": "Equipment resale at approximately 16; later 37signals",
+      "employment": "Grocery bagger from age 13",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "First-person interview gives both first job at 13 and first self-owned entrepreneurial project at approximately 16.",
+      "sources": [
+        "https://www.thebrilliance.com/interviews/jason-fried",
+        "https://thegreatdiscontent.com/interview/jason-fried/"
+      ]
+    },
+    {
+      "name": "Jimmy Iovine",
+      "firstKnownBusiness": "Record-label ventures, including Interscope, 1990",
+      "employment": "Recording engineer in the early 1970s",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Studio employment and engineering work predate his record-label founding. Work with an artist alone is not used as evidence of founding or mentorship.",
+      "sources": [
+        "https://www.davidsenra.com/episode/jimmy-iovine"
+      ]
+    },
+    {
+      "name": "Tobi Lutke",
+      "firstKnownBusiness": "Snowdevil, 2004",
+      "employment": "Computer-programming apprenticeship in Germany",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "German apprenticeship predates moving to Canada in 2002 and Snowdevil in 2004. Count includes apprenticeships, not merely schooling.",
+      "sources": [
+        "https://de.wikipedia.org/wiki/Tobias_L%C3%BCtke",
+        "https://www.davidsenra.com/episode/tobi-lutke"
+      ]
+    },
+    {
+      "name": "John Mackey",
+      "firstKnownBusiness": "SaferWay, 1978",
+      "employment": "Busboy, dishwasher, camp counselor and Good Food store assistant manager",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Directly lists pre-founder jobs and the Good Food experience that preceded his own store.",
+      "sources": [
+        "https://www.davidsenra.com/episode/john-mackey"
+      ]
+    },
+    {
+      "name": "Patrick O'Shaughnessy",
+      "firstKnownBusiness": "Invest Like the Best / Colossus; Positive Sum",
+      "employment": "O'Shaughnessy Asset Management intern from 2008",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Episode history places OSAM internship before his podcast and media/investment company founding. Employment in a family firm qualifies.",
+      "sources": [
+        "https://www.davidsenra.com/episode/patrick-oshaughnessy"
+      ]
+    },
+    {
+      "name": "James Dyson",
+      "firstKnownBusiness": "Ballbarrow venture, 1974",
+      "employment": "Rotork Marine Division",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Official Dyson history explicitly contrasts salaried Rotork work with going independent in 1974.",
+      "sources": [
+        "https://www.dyson.com/james-dyson"
+      ]
+    },
+    {
+      "name": "Todd Graves",
+      "firstKnownBusiness": "Raising Cane's, 1996",
+      "employment": "Refinery boilermaker and commercial fisherman",
+      "beforeFirst": "confirmed",
+      "beforeLater": "confirmed",
+      "evidence": "Official company history says these jobs funded the first restaurant.",
+      "sources": [
+        "https://www.raisingcanes.com/30th-birthday/",
+        "https://www.davidsenra.com/episode/todd-graves"
+      ]
+    },
+    {
+      "name": "Brad Jacobs",
+      "firstKnownBusiness": "Amerex, 1979",
+      "employment": null,
+      "beforeFirst": "unclear",
+      "beforeLater": "unclear",
+      "evidence": "Sources establish first founding at 23, but not a prior employee role. Ludwig Jesselson mentorship is not assumed to be employment.",
+      "sources": [
+        "https://www.davidsenra.com/episode/brad-jacobs",
+        "https://www.ice.com/insights/conversations/inside-the-ice-house/brad-jacobs-unveils-the-secret-sauce-for-how-to-make-a-few-billion-dollars"
+      ]
+    },
+    {
+      "name": "Michael Dell",
+      "firstKnownBusiness": "Childhood stamp ventures; PC's Limited, 1984",
+      "employment": "Restaurant dishwasher from age 12; stamp-store worker; newspaper salesperson",
+      "beforeFirst": "unclear",
+      "beforeLater": "confirmed",
+      "evidence": "First-person interview establishes childhood jobs before PC's Limited. Ordering versus earliest childhood stamp-selling ventures is unresolved.",
+      "sources": [
+        "https://achievement.org/achiever/michael-dell/"
+      ]
+    },
+    {
+      "name": "Daniel Ek",
+      "firstKnownBusiness": "Web-development business at 13/14",
+      "employment": "Tradera and Stardoll roles before Spotify",
+      "beforeFirst": "unclear",
+      "beforeLater": "confirmed",
+      "evidence": "Had already founded a web business before adult employment. Founding ages vary in sources, but neither supports employment before that first business.",
+      "sources": [
+        "https://ff.co/profile/daniel-ek",
+        "https://app.crb.gov/document/download/24211"
+      ]
+    }
+  ]
+}

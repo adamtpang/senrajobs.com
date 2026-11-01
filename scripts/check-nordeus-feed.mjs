@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {parseNordeusListing,parseNordeusDetail,fetchNordeus} from '../nordeus-feed.mjs';
+const card=(id,title,host='https://nordeus.com')=>`<a href="${host}/open-positions/engineering/${id}" class="position__item"><h4>${title}</h4></a>`;
+const html='<div class="position__tabs-content">'+card('1','Engineer')+card('1','Engineer')+card('2','Early Talent Program');
+const list=parseNordeusListing(html);assert.equal(list.rows.length,1);assert.equal(list.generalPrograms,1);
+assert.throws(()=>parseNordeusListing(html+card('1','Different')),/Conflicting/);
+assert.throws(()=>parseNordeusListing('<div class="position__tabs-content">'+card('1','Engineer','https://example.com')),/Invalid/);
+assert.throws(()=>parseNordeusListing('Service unavailable'),/structure/);
+const body='Build useful tools and work with the engineering team. '.repeat(3),detail=`<h1>Engineer</h1><div>${body}</div><div id="input_job_id">1</div><footer>Our office is in Belgrade</footer>`;
+assert.equal(parseNordeusDetail(detail,list.rows[0],'today').location,'');
+assert.equal(parseNordeusDetail(detail.replace(body,body+'This position is based in Belgrade.'),list.rows[0],'today').location,'Belgrade');
+assert.throws(()=>parseNordeusDetail(detail.replace('>1<','>9<'),list.rows[0],'today'),/mismatch/);
+const failed=await fetchNordeus({observedAt:'today',request:async()=>({ok:false,error:'HTTP 403'})});assert.equal(failed.status,'failed');assert.equal(failed.rows.length,0);
+const partial=await fetchNordeus({observedAt:'today',request:async url=>url.endsWith('/open-positions/')?{ok:true,text:html}:{ok:false,error:'HTTP 500'}});
+assert.equal(partial.rows.length,1);assert.equal(partial.status,'partial');assert.equal(partial.rows[0].locationStatus,'unknown');assert.equal(partial.failures.length,1);
+console.log('PASS Nordeus card identity, tab deduplication, general-program exclusion, description bounds, footer-location rejection and partial detail failures.');

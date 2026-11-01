@@ -1,0 +1,264 @@
+{
+ "37signals": {
+  "src": "/logos/37signals.com.png",
+  "domain": "37signals.com"
+ },
+ "Andreessen Horowitz": {
+  "src": "/logos/a16z.com.png",
+  "domain": "a16z.com"
+ },
+ "AppLovin": {
+  "src": "/logos/applovin.com.png",
+  "domain": "applovin.com"
+ },
+ "Atoms": {
+  "src": "",
+  "domain": "atoms.co",
+  "source": "https://atoms.co/"
+ },
+ "Base Power": {
+  "src": "/logos/basepowercompany.com.png",
+  "domain": "basepowercompany.com"
+ },
+ "Beats by Dre": {
+  "src": "/logos/beatsbydre.com.png",
+  "domain": "beatsbydre.com"
+ },
+ "Bending Spoons": {
+  "src": "/logos/bendingspoons.com.png",
+  "domain": "bendingspoons.com"
+ },
+ "CloudKitchens": {
+  "src": "/logos/cloudkitchens.com.png",
+  "domain": "cloudkitchens.com"
+ },
+ "Cognition": {
+  "src": "/logos/cognition.ai.png",
+  "domain": "cognition.ai"
+ },
+ "Coinbase": {
+  "src": "/logos/coinbase.com.png",
+  "domain": "coinbase.com"
+ },
+ "Colossus": {
+  "src": "/logos/colossus.com.png",
+  "domain": "colossus.com"
+ },
+ "Creative Artists Agency": {
+  "src": "/logos/caa.com.png",
+  "domain": "caa.com"
+ },
+ "David Protein": {
+  "src": "/logos/davidprotein.com.png",
+  "domain": "davidprotein.com"
+ },
+ "Def Jam": {
+  "src": "/logos/defjam.com.png",
+  "domain": "defjam.com"
+ },
+ "Dell Technologies": {
+  "src": "/logos/dell.com.png",
+  "domain": "dell.com"
+ },
+ "DoorDash": {
+  "src": "/logos/doordash.com.png",
+  "domain": "doordash.com"
+ },
+ "Dyson": {
+  "src": "/logos/dyson.com.png",
+  "domain": "dyson.com"
+ },
+ "ElevenLabs": {
+  "src": "/logos/elevenlabs.io.png",
+  "domain": "elevenlabs.io"
+ },
+ "Groq": {
+  "src": "/logos/groq.com.png",
+  "domain": "groq.com"
+ },
+ "GXO Logistics": {
+  "src": "/logos/gxo.com.png",
+  "domain": "gxo.com"
+ },
+ "Helsing": {
+  "src": "/logos/helsing.ai.png",
+  "domain": "helsing.ai"
+ },
+ "Interscope Records": {
+  "src": "/logos/interscope.com.png",
+  "domain": "interscope.com"
+ },
+ "Kith": {
+  "src": "/logos/kith.com.png",
+  "domain": "kith.com"
+ },
+ "Love.Life": {
+  "src": "/logos/love.life.png",
+  "domain": "love.life"
+ },
+ "MSD Capital": {
+  "src": "/logos/msdpartners.com.png",
+  "domain": "msdpartners.com"
+ },
+ "NaturalMotion": {
+  "src": "/logos/naturalmotion.com.png",
+  "domain": "naturalmotion.com"
+ },
+ "Neko Health": {
+  "src": "/logos/nekohealth.com.png",
+  "domain": "nekohealth.com"
+ },
+ "NewLimit": {
+  "src": "/logos/newlimit.com.png",
+  "domain": "newlimit.com"
+ },
+ "Nvidia": {
+  "src": "/logos/nvidia.com.png",
+  "domain": "nvidia.com"
+ },
+ "OpenAI": {
+  "src": "/logos/openai.com.png",
+  "domain": "openai.com"
+ },
+ "Pixar": {
+  "src": "/logos/pixar.com.png",
+  "domain": "pixar.com"
+ },
+ "Positive Sum": {
+  "src": "/logos/positivesum.com.png",
+  "domain": "positivesum.com"
+ },
+ "Prima Materia": {
+  "src": "/logos/primamateria.com.png",
+  "domain": "primamateria.com"
+ },
+ "Raising Cane's": {
+  "src": "/logos/raisingcanes.com.png",
+  "domain": "raisingcanes.com"
+ },
+ "Ramp": {
+  "src": "/logos/ramp.com.png",
+  "domain": "ramp.com"
+ },
+ "Ribbit Capital": {
+  "src": "/logos/ribbitcap.com.png",
+  "domain": "ribbitcap.com"
+ },
+ "Roblox": {
+  "src": "/logos/roblox.com.png",
+  "domain": "roblox.com"
+ },
+ "Rostra": {
+  "src": "/logos/rostra.co.png",
+  "domain": "rostra.co"
+ },
+ "RXBAR": {
+  "src": "/logos/rxbar.com.png",
+  "domain": "rxbar.com"
+ },
+ "RXO": {
+  "src": "/logos/rxo.com.png",
+  "domain": "rxo.com"
+ },
+ "Sequoia Capital": {
+  "src": "/logos/sequoiacap.com.png",
+  "domain": "sequoiacap.com"
+ },
+ "Shopify": {
+  "src": "/logos/shopify.com.png",
+  "domain": "shopify.com"
+ },
+ "Snap": {
+  "src": "/logos/snap.com.png",
+  "domain": "snap.com"
+ },
+ "Spotify": {
+  "src": "/logos/spotify.com.png",
+  "domain": "spotify.com"
+ },
+ "Take-Two Interactive": {
+  "src": "/logos/take2games.com.png",
+  "domain": "take2games.com"
+ },
+ "TKO Group Holdings": {
+  "src": "/logos/tkogrp.com.png",
+  "domain": "tkogrp.com"
+ },
+ "Tools for Humanity": {
+  "src": "/logos/toolsforhumanity.com.png",
+  "domain": "toolsforhumanity.com"
+ },
+ "Translation": {
+  "src": "/logos/translationllc.com.png",
+  "domain": "translationllc.com"
+ },
+ "Uber": {
+  "src": "/logos/uber.com.png",
+  "domain": "uber.com"
+ },
+ "UFC": {
+  "src": "/logos/ufc.com.png",
+  "domain": "ufc.com"
+ },
+ "United Rentals": {
+  "src": "/logos/unitedrentals.com.png",
+  "domain": "unitedrentals.com"
+ },
+ "UnitedMasters": {
+  "src": "/logos/unitedmasters.com.png",
+  "domain": "unitedmasters.com"
+ },
+ "Whole Foods Market": {
+  "src": "/logos/wholefoodsmarket.com.png",
+  "domain": "wholefoodsmarket.com"
+ },
+ "XPO": {
+  "src": "/logos/xpo.com.png",
+  "domain": "xpo.com"
+ },
+ "Major Food Group": {
+  "domain": "majorfood.com",
+  "src": "/logos/majorfood.com.png"
+ },
+ "QXO": {
+  "domain": "qxo.com",
+  "src": "/logos/qxo.com.ico"
+ },
+ "Long Lake": {
+  "source": "https://app.ashbyhq.com/api/images/org-theme-logo/9fa63ad0-97b1-405f-9776-fea65686e26d/7036ee0e-55cc-41e4-b742-5f96b6250b96/54bc0f20-cf9f-4af0-b727-cad97c756dbe.png",
+  "src": "/logos/long-lake.png"
+ },
+ "WME Group": {
+  "src": "/logos/wmegrp.com.jpg",
+  "domain": "wmegrp.com",
+  "source": "https://wmegrp.com/"
+ },
+ "MARI": {
+  "src": "/logos/marigrp.com.svg",
+  "domain": "marigrp.com",
+  "source": "https://marigrp.com/"
+ },
+ "How to Take Over the World": {
+  "src": "/logos/takeoverpod.com.png",
+  "domain": "www.takeoverpod.com",
+  "source": "https://www.takeoverpod.com/about"
+ },
+ "Scale AI": {
+  "src": "/logos/scale.com.png",
+  "domain": "scale.com",
+  "source": "https://scale.com/careers"
+ },
+ "Meta": {
+  "src": "/logos/meta.com.webp",
+  "domain": "www.metacareers.com",
+  "source": "https://www.metacareers.com/"
+ },
+ "Revolut": {
+  "src": "/logos/revolut.com.png",
+  "domain": "revolut.com"
+ },
+ "QuantumLight": {
+  "src": "/logos/quantumlightcapital.com.png",
+  "domain": "quantumlightcapital.com"
+ }
+}
