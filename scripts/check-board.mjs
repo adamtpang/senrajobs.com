@@ -31,7 +31,11 @@ assert.ok(data.every(r => r.founders.length && r.careers && Number.isFinite(Date
 assert.ok(html.includes('data-guest=')&&html.includes('id="companies-list"')&&html.includes('id="aggregate"'), 'Guest links must preserve the company-to-role browsing path');
 assert.equal((html.match(/class="founder"/g) || []).length, JSON.parse(fs.readFileSync('guests.json', 'utf8')).length);
 const embeddedRoles = JSON.parse(html.match(/<script id="role-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
-assert.deepEqual(embeddedRoles.map(role=>role.url).sort(),data.map(role=>role.url).sort(), 'Every indexed role must remain available to role browsing');
+const jobs = JSON.parse(fs.readFileSync('jobs.json','utf8'));
+const targets = fs.existsSync('targets.json') ? JSON.parse(fs.readFileSync('targets.json','utf8')) : [];
+const expected = new Set(data.map(role => role.url));
+for (const target of targets) for (const role of jobs[target.name]?.roles || []) if (/^https?:\/\//.test(role.url || '') && !/undefined$/.test(role.url)) expected.add(role.url);
+assert.deepEqual(embeddedRoles.map(role=>role.url).sort(),[...expected].sort(), 'Every indexed role must remain available to role browsing');
 assert.ok(!html.includes('details class="founder"') && !html.includes('details class="co"'), 'Guest and company navigation must not use nested expansion');
 const embeddedCompanies = JSON.parse(html.match(/<script id="company-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
 assert.ok(embeddedCompanies.every(company=>company.note!=='acquired or closed'));

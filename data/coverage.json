@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-01T19:10:55.363Z",
+  "generatedAt": "2026-11-01T20:00:07.513Z",
   "counts": {
     "employers": 107,
-    "roles": 33718,
-    "texasRoles": 5006,
-    "usRemotePossibilities": 368,
+    "roles": 34097,
+    "texasRoles": 5250,
+    "usRemotePossibilities": 381,
     "unknownLocations": 194,
     "staleRoles": 720,
     "complete": 46,

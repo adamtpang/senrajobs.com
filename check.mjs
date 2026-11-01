@@ -30,6 +30,8 @@ for (const file of ['index.html','jobs.json','guests.json','llms.txt']) {
 if (fs.existsSync('public/reports') || fs.existsSync('public/docs') || fs.existsSync('public/AGENTS.md') || fs.existsSync('public/api')) bad('public/ contains non-public paths');
 const html = fs.readFileSync('index.html','utf8');
 if (!html.includes('Last updated') || !/<time datetime="[^"]+"/.test(html)) bad('homepage is missing the Last updated timestamp');
+if (!html.includes('200x200bb') || html.includes('300x300bb')) bad('founder portraits should be the 200px rendition');
+if (!html.includes('requestIdleCallback')) bad('analytics should wait for idle');
 const now = Date.parse('2026-11-01T18:00:00.000Z');
 if (!isInWindow({ observedAt: '2026-11-01T16:00:00.000Z' }, now)) bad('recent observation should be inside 48h');
 if (isInWindow({ observedAt: '2026-09-30T12:00:00.000Z' }, now)) bad('September observation should be outside 48h');

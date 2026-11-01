@@ -61,8 +61,9 @@ fs.writeFileSync('data/coverage.json',JSON.stringify(discovery.coverage,null,2)+
 fs.writeFileSync('reports/coverage.md',discovery.markdown);
 const initials = (n) => n.split(" ").map((w) => w[0]).slice(0, 2).join("");
 const list = out.map((g) => {
-  const photo = photos[g.name]
-    ? `<img src="${esc(photos[g.name])}" alt="${esc(g.name)}" width="300" height="300" loading="lazy" decoding="async">`
+  const photoUrl = photos[g.name] ? photos[g.name].replace(/\/\d+x\d+bb(\.[a-z]+)?/i, "/200x200bb$1") : "";
+  const photo = photoUrl
+    ? `<img src="${esc(photoUrl)}" alt="${esc(g.name)}" width="200" height="200" loading="lazy" decoding="async">`
     : `<span class="ph" aria-hidden="true">${esc(initials(g.name))}</span>`;
   const current = g.companies.filter(c => c.note !== 'acquired or closed');
   const marks = current.map(c => {
@@ -104,7 +105,7 @@ const clientScript = ['job-utils.mjs','role-emoji.mjs','location-utils.mjs','boa
 const rendered = html
   .replace('__ROLE_DATA__', () => JSON.stringify(boardRoles.map(clientRole)).replace(/</g, '\\u003c'))
   .replace('__COMPANY_DATA__', () => JSON.stringify(companyRows.map(({ roles, ...company }) => ({ ...company, roleUrls:roles.map(role => role.url) }))).replace(/</g, '\\u003c'))
-  .replace('__GUEST_DATA__', () => JSON.stringify(out.map(guest => ({name:guest.name, episode:guest.episode, photo:photos[guest.name] || '', companies:guest.companies.filter(c => c.note !== 'acquired or closed').map(c => c.name.split(' (')[0])}))).replace(/</g,'\\u003c'))
+  .replace('__GUEST_DATA__', () => JSON.stringify(out.map(guest => ({name:guest.name, episode:guest.episode, photo:photos[guest.name] ? photos[guest.name].replace(/\/\d+x\d+bb(\.[a-z]+)?/i, "/200x200bb$1") : '', companies:guest.companies.filter(c => c.note !== 'acquired or closed').map(c => c.name.split(' (')[0])}))).replace(/</g,'\\u003c'))
   .replace('__COVERAGE_DATA__',()=>JSON.stringify(discovery.coverage).replace(/</g,'\\u003c'))
   .replace('__BOARD_SCRIPT__', () => `(() => {\n${clientScript}\n})();`.replace(/<\/script/gi,'<\\/script'))
   .replace('__ASSISTANT_SCRIPT__', () => `(() => {\n${['assistant/profile.mjs','assistant/interview-guide.mjs','assistant-ui.js'].map(file=>fs.readFileSync(file,'utf8').replace(/^import .*;\r?\n/gm,'').replace(/^export /gm,'')).join('\n')}\n})();`.replace(/<\/script/gi,'<\\/script'));
