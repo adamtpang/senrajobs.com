@@ -1,0 +1,65 @@
+[
+  {
+    "guest": "Eric Jorgenson",
+    "company": "Tesla",
+    "type": "episode-subject",
+    "subject": "Elon Musk",
+    "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+    "companySource": "https://www.tesla.com/elon-musk",
+    "checkedOn": "2026-10-19"
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "SpaceX / Starlink",
+    "type": "episode-subject",
+    "subject": "Elon Musk",
+    "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+    "companySource": "https://www.tesla.com/elon-musk",
+    "checkedOn": "2026-10-19"
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "Neuralink",
+    "type": "episode-subject",
+    "subject": "Elon Musk",
+    "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+    "companySource": "https://www.tesla.com/elon-musk",
+    "checkedOn": "2026-10-19"
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "xAI / X",
+    "type": "episode-subject",
+    "subject": "Elon Musk",
+    "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+    "companySource": "https://x.ai/careers/open-roles",
+    "checkedOn": "2026-10-19"
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "The Boring Company",
+    "type": "episode-subject",
+    "subject": "Elon Musk",
+    "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+    "companySource": "https://www.tesla.com/elon-musk",
+    "checkedOn": "2026-10-19"
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "PayPal",
+    "type": "episode-subject",
+    "subject": "Elon Musk",
+    "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+    "companySource": "https://www.paypalobjects.com/html/PayPal_Prospectus.pdf",
+    "checkedOn": "2026-10-28"
+  },
+  {
+    "guest": "Eric Jorgenson",
+    "company": "Zip2",
+    "type": "episode-subject",
+    "subject": "Elon Musk",
+    "source": "https://www.davidsenra.com/episode/eric-jorgenson",
+    "companySource": "https://www.paypalobjects.com/html/PayPal_Prospectus.pdf",
+    "checkedOn": "2026-10-28"
+  }
+]

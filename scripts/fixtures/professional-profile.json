@@ -1,0 +1,29 @@
+{
+  "experience":"Five years of backend software engineering with Python and TypeScript, owning services and incident response.",
+  "role":"Backend software engineer",
+  "location":"Austin, Texas",
+  "workMode":"Any",
+  "learning":"Reliable distributed systems and how a founder-led company makes decisions.",
+  "minimumPay":120000,
+  "currency":"USD",
+  "professional":{
+    "headline":"Backend engineer who owns reliable services",
+    "careerHistory":[{"role":"Backend software engineer","organization":"Synthetic Systems (fictional test)","work":"Owned Python APIs, TypeScript integrations and on-call incident response.","impact":"Reduced repeated incidents by adding tests, alerts and runbooks."}],
+    "skills":[{"name":"Python","evidence":"Built and maintained production APIs for five years.","depth":"Independent ownership"},{"name":"TypeScript","evidence":"Delivered API integrations and internal tools.","depth":"Independent delivery"},{"name":"PostgreSQL","evidence":"Designed schemas and investigated slow queries.","depth":"Practical production experience"}],
+    "projects":[{"name":"Service reliability project","work":"Added incident analysis, automated tests and dashboards.","impact":"Reduced recurring incidents in the candidate's reported project.","url":""}],
+    "achievements":["Owned services through deployment and incident response."],
+    "education":[],
+    "strengths":["Practical service ownership","Clear incident communication"],
+    "gaps":["Go, Kubernetes and large-scale distributed-systems experience are not established."],
+    "targetRoles":["Backend software engineer","Software engineer, infrastructure"],
+    "industries":["Energy","Developer infrastructure"],
+    "locations":["Austin, Texas"],
+    "environment":"Founder-led team with direct responsibility, useful feedback and sustainable on-call practices.",
+    "constraints":["Austin, Texas job location","Annual compensation at least USD 120000; unknown pay must be confirmed"],
+    "tradeoffs":["Prefer learning and meaningful ownership over employer prestige; willing to consider adjacent roles with manageable gaps."],
+    "availability":"Available after one month's notice.",
+    "workAuthorization":"",
+    "uncertainties":["Work eligibility and compensation must be confirmed with employers."],
+    "skippedTopics":[]
+  }
+}

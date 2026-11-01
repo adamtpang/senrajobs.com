@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import {parseGroqBrowserReceipt} from '../groq-feed.mjs';
+const base='.cache/employer-discovery-2026-10-26';
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const {board,content}=parseGroqBrowserReceipt(read(`${base}/groq-list.json`),read(`${base}/groq-details.json`));
+const jobs=read('jobs.json'),cache=read('.cache/job-content.json');
+const oldKey='Groq (founder; Groq stays independent after the Dec 2025 Nvidia licensing deal, no public careers page found 2026-09-19)';
+if(jobs[oldKey]?.roles?.length)throw Error('Old Groq records need explicit reconciliation');
+delete jobs[oldKey];
+const key='Groq (founder)';
+if(board.coverage.status!=='complete')throw Error('This migration requires a complete current board capture');
+jobs[key]=board;
+for(const [url,value] of Object.entries(content))if(!cache[url]||Date.parse(cache[url].observedAt||0)<=Date.parse(value.observedAt))cache[url]=value;
+fs.writeFileSync('jobs.json',JSON.stringify(jobs,null,1)+'\n');
+fs.writeFileSync('.cache/job-content.json',JSON.stringify(cache));
+fs.writeFileSync(`${base}/groq-integration.json`,JSON.stringify({at:new Date().toISOString(),...board.coverage,roles:board.roles.length},null,2));
+console.log(JSON.stringify({roles:board.roles.length,details:Object.keys(content).length,coverage:board.coverage.status}));

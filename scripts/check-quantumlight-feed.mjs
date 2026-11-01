@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {enrichQuantumLightDetails} from '../quantumlight-feed.mjs';
+import {isUSRemotePossibility} from '../location-utils.mjs';
+const url='https://revolutpeople.com/quantum-light/public/careers/position/example';
+const board={roles:[{title:'Engineer',url}],coverage:{listingStatus:'complete'}};
+const detail={title:'Engineer',text:'Engineer\nOffice:\nUnited Kingdom\nRemote:\nArmenia\n|\nPoland\nApply for this role\nAbout the role\nBuild reliable systems',apply:[url.replace('/position/','/apply/')],observedAt:'2026-10-26T18:00:00Z'};
+const result=enrichQuantumLightDetails(board,{[url]:detail});
+assert.equal(result.board.coverage.status,'complete');
+assert.deepEqual(result.board.roles[0].locations.map(l=>[l.raw,l.workplace]),[['United Kingdom','Office'],['Armenia','Remote'],['Poland','Remote']]);
+assert.equal(isUSRemotePossibility(result.board.roles[0]),false);
+for(const bad of [{...detail,title:'Other'},{...detail,apply:['https://example.com']},{...detail,text:detail.text.replace('Poland','+4')},{...detail,observedAt:'bad'}])assert.equal(enrichQuantumLightDetails(board,{[url]:bad}).failures.length,1);
+console.log('QuantumLight detail identity, application URL, location labels and completeness checks pass.');
