@@ -13,3 +13,6 @@ reports/assistant-*.pid
 *_CONTINUE_FROM_*.md
 
 public/
+
+# Content-hashed client bundle, rebuilt by build.mjs on every deploy
+assets/app/

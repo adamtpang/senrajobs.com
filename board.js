@@ -3,11 +3,13 @@ import { roleEmoji } from './assets/role-emoji.js';
 import { matchesLocation,displayLocation,texasEvidence,isUSRemotePossibility,isLocationUnknown } from './location-utils.mjs';
 
 const $ = id => document.getElementById(id);
+// The build ships role, company and coverage data inside the same hashed script as these controls.
+const embedded = id => (typeof __senraData !== 'undefined' && __senraData[id]) || JSON.parse($(id).textContent);
 const guests = JSON.parse($('guest-data').textContent);
-const roles = JSON.parse($('role-data').textContent);
-const coverage = JSON.parse($('coverage-data').textContent);
+const roles = embedded('role-data');
+const coverage = embedded('coverage-data');
 const byUrl = new Map(roles.map(role => [role.url,role]));
-const companies = JSON.parse($('company-data').textContent).map(company => ({...company,roles:company.roleUrls.map(url => byUrl.get(url)).filter(Boolean)}));
+const companies = embedded('company-data').map(company => ({...company,roles:company.roleUrls.map(url => byUrl.get(url)).filter(Boolean)}));
 const cards = [...document.querySelectorAll('[data-guest]')];
 const normalize = value => String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 const escape = value => String(value || '').replace(/[&<>"']/g,ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));

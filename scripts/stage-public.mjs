@@ -6,7 +6,7 @@ import path from 'node:path';
 const out = 'public';
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out);
-const required = ['index.html','research.html','interview-prompt.txt','og.png','robots.txt','sitemap.xml','llms.txt','guests.json','jobs.json'];
+const required = ['index.html','research.html','about.html','privacy.html','interview-prompt.txt','og.png','robots.txt','sitemap.xml','llms.txt','guests.json','jobs.json'];
 for (const file of required) fs.copyFileSync(file, path.join(out, file));
 for (const dir of ['logos','assets','data']) fs.cpSync(dir, path.join(out, dir), { recursive: true });
 // Later pull requests add these. Copy them when the build has produced them.

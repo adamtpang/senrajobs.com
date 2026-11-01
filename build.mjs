@@ -1,5 +1,6 @@
 // Compile GUESTS.md (research source of truth) into guests.json for the page.
 import fs from "node:fs";
+import { createHash } from "node:crypto";
 import { compileRoles, compileCompanies } from './board-data.mjs';
 import { discoveryReports } from './discovery-reports.mjs';
 import { clientRole } from './client-data.mjs';
@@ -100,15 +101,31 @@ const html = fs.readFileSync("template.html", "utf8")
   .replace("__JSONLD__", JSON.stringify(jsonld).replace(/</g, "\u003c"))
   .replace('__NO_SCRIPT__', companyRows.filter(c => c.careers).map(c => `<li><a href="${esc(c.careers)}" ${ext}>${esc(c.name)} careers ↗</a>${c.connections.map(connection=>` · <a href="${esc(connection.source)}" ${ext}>${esc(connection.label)}</a>`).join('')}</li>`).join(''))
   .replace("__LIST__", list);
-// Keep controls and data in one response so preview caches cannot mix releases.
-const clientScript = ['job-utils.mjs','role-emoji.mjs','location-utils.mjs','board.js'].map(file => fs.readFileSync(file,'utf8').replace(/^\uFEFF/, '').replace(/^import .*;\r?\n/gm,'').replace(/^export /gm,'')).join('\n');
+// Keep controls and data in one content-hashed script so preview caches cannot mix releases,
+// while the HTML document stays small enough for crawlers and fast first paint.
+const stripModule = file => fs.readFileSync(file,'utf8').replace(/^\uFEFF/, '').replace(/^import .*;\r?\n/gm,'').replace(/^export /gm,'');
+const clientScript = ['job-utils.mjs','role-emoji.mjs','location-utils.mjs','board.js'].map(stripModule).join('\n');
+const boardData = {
+  'role-data': boardRoles.map(clientRole),
+  'company-data': companyRows.map(({ roles, ...company }) => ({ ...company, roleUrls:roles.map(role => role.url) })),
+  'coverage-data': discovery.coverage
+};
+const assistantScript = ['assistant/profile.mjs','assistant/interview-guide.mjs','assistant-ui.js'].map(stripModule).join('\n');
+const appBundle = `(() => {\nconst __senraData = ${JSON.stringify(boardData)};\n${clientScript}\n})();\n(() => {\n${assistantScript}\n})();\n`;
+const appHash = createHash('sha256').update(appBundle).digest('hex').slice(0, 16);
+fs.rmSync('assets/app', { recursive: true, force: true });
+fs.mkdirSync('assets/app', { recursive: true });
+fs.writeFileSync(`assets/app/app.${appHash}.js`, appBundle);
 const rendered = html
-  .replace('__ROLE_DATA__', () => JSON.stringify(boardRoles.map(clientRole)).replace(/</g, '\\u003c'))
-  .replace('__COMPANY_DATA__', () => JSON.stringify(companyRows.map(({ roles, ...company }) => ({ ...company, roleUrls:roles.map(role => role.url) }))).replace(/</g, '\\u003c'))
   .replace('__GUEST_DATA__', () => JSON.stringify(out.map(guest => ({name:guest.name, episode:guest.episode, photo:photos[guest.name] ? photos[guest.name].replace(/\/\d+x\d+bb(\.[a-z]+)?/i, "/200x200bb$1") : '', companies:guest.companies.filter(c => c.note !== 'acquired or closed').map(c => c.name.split(' (')[0])}))).replace(/</g,'\\u003c'))
-  .replace('__COVERAGE_DATA__',()=>JSON.stringify(discovery.coverage).replace(/</g,'\\u003c'))
-  .replace('__BOARD_SCRIPT__', () => `(() => {\n${clientScript}\n})();`.replace(/<\/script/gi,'<\\/script'))
-  .replace('__ASSISTANT_SCRIPT__', () => `(() => {\n${['assistant/profile.mjs','assistant/interview-guide.mjs','assistant-ui.js'].map(file=>fs.readFileSync(file,'utf8').replace(/^import .*;\r?\n/gm,'').replace(/^export /gm,'')).join('\n')}\n})();`.replace(/<\/script/gi,'<\\/script'));
+  .replace('__APP_SCRIPT__', `/assets/app/app.${appHash}.js`);
+// The CSP in vercel.json allows the inline analytics loader by hash. Fail the build if they drift.
+const analyticsInline = rendered.match(/<script data-posthog-fleet>([\s\S]*?)<\/script>/)?.[1];
+if (analyticsInline !== undefined) {
+  const analyticsHash = `'sha256-${createHash('sha256').update(analyticsInline).digest('base64')}'`;
+  const csp = JSON.parse(fs.readFileSync('vercel.json','utf8')).headers.flatMap(rule => rule.headers).find(h => h.key === 'Content-Security-Policy')?.value || '';
+  if (!csp.includes(analyticsHash)) throw new Error(`vercel.json Content-Security-Policy must allow the analytics loader: ${analyticsHash}`);
+}
 fs.writeFileSync("index.html", rendered);
 fs.writeFileSync('interview-prompt.txt',createExtractPrompt()+'\n');
 // Keep .js helpers available for direct board.js module debugging.
@@ -144,7 +161,7 @@ const rows = fresh.map((role) => {
   return `<li data-austin="${austin ? "1" : "0"}" data-remote="${role.remote === true ? "1" : "0"}" data-tracks="${esc(tracks)}"><a href="${esc(role.url)}" ${ext}>${esc(role.title)}</a><span class="sub">${esc(sub)}</span>${payText ? `<span class="pay">${esc(payText)}</span>` : ""}</li>`;
 }).join("");
 fs.writeFileSync("new.html", fs.readFileSync("new-template.html","utf8").replaceAll("__COUNT__", fresh.length.toLocaleString("en-US")).replaceAll("__GENERATED__", esc(generatedLabel)).replace("__LIST__", rows));
-fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/new</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url></urlset>\n`);
+fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/new</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/about.html</loc></url><url><loc>https://senrajobs.com/privacy.html</loc></url><url><loc>https://senrajobs.com/research.html</loc></url></urlset>\n`);
 fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.\n\nNew roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.\n\n` +
   out.map((g) => `## ${g.name}\n` + g.companies.map((c) => `- ${c.name}: ${c.careers || c.note}`).join("\n")).join("\n\n") +
   (targets.length ? `\n\n## Target companies\n` + targets.map((t) => `- ${t.name}: ${t.careers}${t.boardName ? ` (board name: ${t.boardName})` : ""}`).join("\n") : "") + "\n");
