@@ -11,3 +11,5 @@ reports/assistant-*.pid
 
 # Generated cross-agent transcript summaries: may contain private chat content
 *_CONTINUE_FROM_*.md
+
+public/

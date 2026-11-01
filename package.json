@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node build.mjs",
+    "build": "node build.mjs && node scripts/stage-public.mjs",
     "dev": "node scripts/dev-server.mjs",
     "worker": "node assistant/worker.mjs",
     "check:assistant": "node scripts/check-assistant.mjs"

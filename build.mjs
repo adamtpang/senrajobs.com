@@ -56,8 +56,10 @@ const list = out.map((g) => {
 }).join("");
 const companies = new Set(out.flatMap((x) => x.companies.filter((c) => c.careers).map((c) => c.name.split(" (")[0]))).size;
 const fetchedDates = Object.values(jobs).filter(Boolean).map(j => Date.parse(j.fetched)).filter(Number.isFinite);
-const updated = fetchedDates.length
-  ? new Date(Math.max(...fetchedDates)).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" })
+const fetchedAt = fetchedDates.length ? new Date(Math.max(...fetchedDates)) : null;
+const updatedIso = fetchedAt ? fetchedAt.toISOString() : "";
+const updated = fetchedAt
+  ? new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(fetchedAt)
   : "unavailable";
 const career = careerResearch(JSON.parse(fs.readFileSync('reports/guest-career-history.json', 'utf8')));
 fs.writeFileSync('research.html', career.html);
@@ -75,7 +77,7 @@ const jsonld = {
 };
 const html = fs.readFileSync("template.html", "utf8")
   .replaceAll('__CAREER_CONFIRMED__', career.confirmed).replaceAll('__CAREER_COHORT__', career.cohort).replaceAll('__CAREER_PERCENT__', career.percent)
-  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__UPDATED__", updated).replaceAll("__ROLES__", boardRoles.length.toLocaleString("en-US"))
+  .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__UPDATED_ISO__", updatedIso).replaceAll("__UPDATED__", updated).replaceAll("__ROLES__", boardRoles.length.toLocaleString("en-US"))
   .replace("__JSONLD__", JSON.stringify(jsonld).replace(/</g, "\u003c"))
   .replace('__NO_SCRIPT__', companyRows.filter(c => c.careers).map(c => `<li><a href="${esc(c.careers)}" ${ext}>${esc(c.name)} careers ↗</a>${c.connections.map(connection=>` · <a href="${esc(connection.source)}" ${ext}>${esc(connection.label)}</a>`).join('')}</li>`).join(''))
   .replace("__LIST__", list);

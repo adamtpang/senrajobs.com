@@ -97,6 +97,8 @@
   @media(max-width:650px) { .role-finder { right:12px; width:calc(100vw - 24px); bottom:calc(16px + env(safe-area-inset-bottom) + var(--chat-offset,0px)); max-height:calc(var(--chat-viewport,100dvh) - 32px); } #chat-toggle { right:16px; bottom:calc(16px + env(safe-area-inset-bottom) + var(--chat-offset,0px)); } .ranked-role h3 { font-size:20px; } .fit-reason,.ranked-role details { margin-left:0; } }
   h1 { font:400 clamp(64px,11vw,158px)/.9 "Schmalfette Grotesk",Impact,sans-serif; margin:0; letter-spacing:-.01em; }
   .intro { margin:20px 0 0; font-size:20px; }
+  .updated { margin:8px 0 0; color:var(--muted); font-size:15px; }
+  .updated time { color:inherit; font-weight:600; }
   .search-control { display:block; max-width:480px; margin:0 0 24px; }
   .context-actions { display:flex; gap:20px; margin:16px 0 0; font-size:15px; }
   .context-actions a { display:inline-flex; align-items:center; min-height:44px; }
@@ -187,7 +189,7 @@
 <body>
 <main>
   <header class="masthead">
-    <div><h1 tabindex="-1">senrajobs.com</h1><p class="intro">Jobs at David Senra’s guests’ companies.</p></div>
+    <div><h1 tabindex="-1">senrajobs.com</h1><p class="intro">Jobs at David Senra’s guests’ companies.</p><p class="updated">Last updated <time datetime="__UPDATED_ISO__">__UPDATED__</time>.</p></div>
   </header>
   <section id="assistant" class="role-finder" role="dialog" aria-modal="false" aria-labelledby="assistant-title" hidden>
     <div class="chat-heading"><h2 id="assistant-title">Find my role</h2><button id="chat-close" type="button" aria-label="Close chat">×</button></div>
@@ -220,7 +222,7 @@
       <p>David Senra studies founders. About two-thirds of the founder guests we researched were employees first.</p>
       <p>Working for a great founder can be an apprenticeship: learn how a company is built from the inside, then go build your own.</p>
       <p class="research-note">__CAREER_CONFIRMED__ of __CAREER_COHORT__ (__CAREER_PERCENT__%), before their earliest documented business. Includes jobs, internships and apprenticeships. <a href="/research.html">Research &amp; sources ↗</a></p>
-      <p class="research-note">Free fan project. Not affiliated with <a href="https://www.davidsenra.com/">David Senra</a>. Latest role refresh __UPDATED__.</p>
+      <p class="research-note">Free fan project. Not affiliated with <a href="https://www.davidsenra.com/">David Senra</a>. Last updated <time datetime="__UPDATED_ISO__">__UPDATED__</time>.</p>
     </div></details>
     <p><a id="feedback-link" href="https://wa.me/60197981734" target="_blank" rel="noopener" aria-label="Give feedback on WhatsApp">WhatsApp feedback ↗</a></p>
     <p class="site-credit"><a href="https://adampang.com/" target="_blank" rel="noopener" aria-label="Made by Adam Pang">adampang.com</a></p>
