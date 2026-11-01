@@ -24,8 +24,9 @@ const photos = fs.existsSync("photos.json") ? JSON.parse(fs.readFileSync("photos
 const SHOW = 12; // roles inline per company; the rest live behind "all roles" to keep the page light
 const initials = (n) => n.split(" ").map((w) => w[0]).slice(0, 2).join("");
 const list = out.map((g) => {
-  const photo = photos[g.name]
-    ? `<img src="${esc(photos[g.name])}" alt="${esc(g.name)}" width="300" height="300" loading="lazy" decoding="async">`
+  const photoUrl = photos[g.name] ? photos[g.name].replace(/\/\d+x\d+bb(\.[a-z]+)?/i, "/200x200bb$1") : "";
+  const photo = photoUrl
+    ? `<img src="${esc(photoUrl)}" alt="${esc(g.name)}" width="200" height="200" loading="lazy" decoding="async">`
     : `<span class="ph" aria-hidden="true">${esc(initials(g.name))}</span>`;
   const live = g.companies.reduce((n, c) => n + (jobs[c.name]?.roles.length || 0), 0);
   const meta = `${g.companies.length} compan${g.companies.length === 1 ? "y" : "ies"}${live ? ` · ${live} open roles` : ""}`;
