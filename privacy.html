@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · Senra Jobs</title><meta name="description" content="What Senra Jobs collects, which services process it, and how long it is kept.">
+<link rel="canonical" href="https://senrajobs.com/privacy.html"><link rel="stylesheet" href="https://use.typekit.net/qcy7obf.css">
+<style>
+@font-face{font-family:"Schmalfette Grotesk";src:url("https://cdn.prod.website-files.com/68a3314e7e1c857e33d93b10/68b94590f437128b666278c3_SchmalfetteGrotesk.woff2") format("woff2");font-weight:400;font-display:swap}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font:18px/1.5 "tt-commons-pro",Arial,sans-serif;-webkit-font-smoothing:antialiased}main{max-width:760px;margin:auto;padding:48px 40px}a{color:inherit;text-underline-offset:4px}:focus-visible{outline:2px solid #000;outline-offset:4px}h1{font:400 clamp(64px,11vw,110px)/.9 "Schmalfette Grotesk",Impact,sans-serif;text-transform:uppercase;margin:32px 0 24px}h2{font-size:24px;font-weight:500;margin:36px 0 12px}p,li{margin:0 0 14px}ul{padding-left:22px}.note{color:#666;font-size:15px}footer{border-top:1px solid #e3e3e3;margin-top:40px;padding-top:20px;color:#666;font-size:14px;display:flex;flex-wrap:wrap;gap:8px 20px}footer a{display:inline-flex;align-items:center;min-height:44px}@media(max-width:650px){main{padding:28px 16px}}
+</style></head><body><main>
+<a href="/">← Senra Jobs</a>
+<h1>Privacy</h1>
+<p class="note">Last updated <time datetime="2026-11-01">November 1, 2026</time>.</p>
+<p>Senra Jobs (senrajobs.com) is a free, independent directory of David Senra's interview guests and the open roles at their companies. Adam Pang (<a href="https://adampang.com/">adampang.com</a>) operates the site. This page lists what the site collects, which outside services handle it, and how long it is kept. Senra Jobs has no accounts, shows no ads and does not sell personal data.</p>
+
+<h2>Browsing the site</h2>
+<p>Vercel hosts senrajobs.com. Like any web host, Vercel receives your IP address, browser user agent and the address you request, and keeps them in server logs to deliver and protect the site.</p>
+<p>Fonts load from Adobe Fonts (use.typekit.net and p.typekit.net), which records font usage for licensing, and one display font loads from the Webflow CDN (cdn.prod.website-files.com). Guest portraits load from Apple Podcasts image servers (is1-ssl.mzstatic.com), megaphone.imgix.net and the Webflow CDN. Company logos are served by senrajobs.com itself. Each of these services receives your IP address and browser details when your browser fetches the file.</p>
+
+<h2>Analytics (PostHog)</h2>
+<p>The senrajobs.com homepage uses PostHog (US cloud, us.i.posthog.com) to count visits. PostHog stores a random anonymous ID in your browser so repeat visits can be counted; the site never tells PostHog who you are. The site sends:</p>
+<ul>
+<li>page view and page leave events;</li>
+<li>a few named events: opening a guest or company, filtering roles, and clicking a role's apply link (with the company and role title);</li>
+<li>page performance timings (Core Web Vitals), heatmap data (where on the page people click and scroll) and dead click detection (clicks that produce no visible change), which are enabled in the PostHog project settings.</li>
+</ul>
+<p>Before any event leaves your browser, the site removes referrer, campaign (UTM) and ad click ID fields and trims the page address to its path, so search text in the address bar is not sent. Automatic click capture, session recording and surveys are turned off in the site code. Blocking PostHog with a browser extension does not break the site.</p>
+
+<h2>Find my role assistant</h2>
+<p>The optional Find my role interview is the only part of Senra Jobs that handles text you write. What you type is sent to senrajobs.com, encrypted, and stored in a Neon Postgres database until a worker processes it. The worker runs on the operator's own computer and sends your answers, with role data, to an AI model from Anthropic (Claude) or OpenAI (Codex) under the operator's subscription. Requests and results are deleted after 24 hours.</p>
+<p>To keep results private to your browser and limit abuse, the assistant sets one cookie (senra_ai, HttpOnly, up to 30 days) holding a random session ID, and stores a keyed hash of your IP address with that session. Session and free credit records are deleted after 30 days without use. Your interview profile stays in page memory; if you opted in on an earlier version of the site, a saved profile may remain in this browser's local storage until you clear it. Please do not enter sensitive personal information, such as government ID numbers or health details.</p>
+
+<h2>Job data and employer sites</h2>
+<p>Role listings come from employers' own public job boards and careers pages, such as Greenhouse, Ashby, Lever and Workday. Senra Jobs does not accept job postings from users and does not collect applications. When you click a role, you leave Senra Jobs for the employer's site, and the employer's privacy policy applies to anything you submit there.</p>
+
+<h2>Contact and requests</h2>
+<p>Contacting the operator on <a href="https://wa.me/60197981734" target="_blank" rel="noopener">WhatsApp</a> shares your phone number and message with the operator and with WhatsApp (Meta). Use the same link to ask a question about this policy or to request deletion of anything that has not already been deleted automatically.</p>
+
+<footer><a href="/">Senra Jobs</a><a href="/about.html">About</a><a href="https://wa.me/60197981734" target="_blank" rel="noopener">Contact on WhatsApp ↗</a></footer>
+</main></body></html>

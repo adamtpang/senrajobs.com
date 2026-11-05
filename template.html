@@ -164,7 +164,8 @@
   #empty p { margin:0 0 12px; }
   footer { border-top:1px solid var(--line); margin-top:48px; padding-top:20px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; }
   footer p { margin:0; }
-  #feedback-link { display:inline-flex; align-items:center; min-height:44px; }
+  .footer-links { display:flex; flex-wrap:wrap; gap:0 20px; }
+  .footer-links a { display:inline-flex; align-items:center; min-height:44px; }
   .site-credit { flex-basis:100%; margin-top:12px; font-size:12px; }
   .site-credit a { color:#777; text-decoration:none; }
   .site-credit a:hover { color:#000; text-decoration:underline; }
@@ -189,17 +190,17 @@
 <body>
 <main>
   <header class="masthead">
-    <div><h1 tabindex="-1">senrajobs.com</h1><p class="intro">Jobs at David Senra’s guests’ companies.</p><p class="updated">Last updated <time datetime="__UPDATED_ISO__">__UPDATED__</time>. <a href="/new">New in 48 hours</a>.</p></div>
+    <div><h1 tabindex="-1">senrajobs.com</h1><p class="intro">Jobs at David Senra’s guests’ companies.</p><p class="updated">Last updated <time datetime="__UPDATED_ISO__">__UPDATED__</time>. <a href="/new">Browse roles new in the last 48 hours</a>.</p></div>
   </header>
   <section id="assistant" class="role-finder" role="dialog" aria-modal="false" aria-labelledby="assistant-title" hidden>
     <div class="chat-heading"><h2 id="assistant-title">Find my role</h2><button id="chat-close" type="button" aria-label="Close chat">×</button></div>
     <div class="chat-body">
-    <div class="interview-progress-line"><p id="interview-step" role="status" aria-live="polite">1 of 8 · Direction</p><p id="interview-eta">About 12–15 min remaining</p></div>
+    <div class="interview-progress-line"><div id="interview-step" role="status" aria-live="polite">1 of 8 · Direction</div><div id="interview-eta">About 12–15 min remaining</div></div>
     <progress id="interview-meter" max="100" value="0" aria-label="Interview completion"></progress>
-    <p id="interview-start-hint">Paste your résumé, or start with an answer. Say “skip” for any topic.</p>
+    <div id="interview-start-hint">Paste your résumé, or start with an answer. Say “skip” for any topic.</div>
     <div id="assistant-content" hidden aria-label="Career conversation" tabindex="0"></div>
     <form id="role-chat" class="chat-composer"><label class="sr-only" for="role-message">Your interview answer</label><textarea id="role-message" rows="2" maxlength="8000" placeholder="Your answer…" aria-describedby="chat-key-hint"></textarea><button id="chat-send" type="submit" aria-label="Send answer">↑</button></form>
-    <p id="chat-key-hint" class="chat-key-hint">Enter to send · Shift+Enter for a new line</p>
+    <div id="chat-key-hint" class="chat-key-hint">Enter to send · Shift+Enter for a new line</div>
     <p id="assistant-progress" role="status" aria-live="polite" hidden></p><p id="assistant-notice" role="alert"></p>
     <p id="assistant-reply" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
     </div>
@@ -219,21 +220,19 @@
   <footer>
     <details id="about" class="about"><summary>About</summary><div class="about-copy">
       <h2>Learn from the inside. Then build your own.</h2>
-      <p>David Senra studies founders. About two-thirds of the founder guests we researched were employees first.</p>
-      <p>Working for a great founder can be an apprenticeship: learn how a company is built from the inside, then go build your own.</p>
-      <p class="research-note">__CAREER_CONFIRMED__ of __CAREER_COHORT__ (__CAREER_PERCENT__%), before their earliest documented business. Includes jobs, internships and apprenticeships. <a href="/research.html">Research &amp; sources ↗</a></p>
+      <p>Senra Jobs is a free, independent directory of the __GUESTS__ guests interviewed on the David Senra podcast, the companies they founded, lead or are connected to, and the open roles those companies publish. It currently links __ROLES__ indexed roles and __COMPANIES__ companies with careers pages, and every application happens on the employer's own site.</p>
+      <p>David Senra studies founders, and about two-thirds of the founder guests researched for Senra Jobs were employees before they started their first documented business. Working for a great founder can be an apprenticeship: learn how a company is built from the inside, then go build your own.</p>
+      <p>Senra Jobs has no paid plans and no price for job seekers or employers. Browsing guests, companies and roles is free, and the site does not sell listings, placements or candidate data. The Find my role interview uses free daily credits only to limit abuse.</p>
+      <p>Role data on Senra Jobs comes from public employer job boards such as Greenhouse, Ashby, Lever and Workday, and the page shows when the boards were last fetched. The index is not a complete hiring inventory: some postings may have closed since the last fetch, and some employers have no supported public board.</p>
+      <p class="research-note">In the Senra Jobs research, __CAREER_CONFIRMED__ of __CAREER_COHORT__ founder guests (__CAREER_PERCENT__%) worked for someone else before their earliest documented business, counting jobs, internships and apprenticeships. <a href="/research.html">Research &amp; sources ↗</a></p>
       <p class="research-note">Free fan project. Not affiliated with <a href="https://www.davidsenra.com/">David Senra</a>. Last updated <time datetime="__UPDATED_ISO__">__UPDATED__</time>.</p>
     </div></details>
-    <p><a id="feedback-link" href="https://wa.me/60197981734" target="_blank" rel="noopener" aria-label="Give feedback on WhatsApp">WhatsApp feedback ↗</a></p>
+    <p class="footer-links"><a href="/about.html">About Senra Jobs</a><a href="/privacy.html">Privacy</a><a id="feedback-link" href="https://wa.me/60197981734" target="_blank" rel="noopener">Contact or give feedback on WhatsApp ↗</a></p>
     <p class="site-credit"><a href="https://adampang.com/" target="_blank" rel="noopener" aria-label="Made by Adam Pang">adampang.com</a></p>
   </footer>
 </main>
 
 <script id="guest-data" type="application/json">__GUEST_DATA__</script>
-<script id="role-data" type="application/json">__ROLE_DATA__</script>
-<script id="coverage-data" type="application/json">__COVERAGE_DATA__</script>
-<script id="company-data" type="application/json">__COMPANY_DATA__</script>
-<script data-board-controls>__BOARD_SCRIPT__</script>
-<script data-assistant>__ASSISTANT_SCRIPT__</script>
+<script data-board-controls src="__APP_SCRIPT__" defer></script>
 </body>
 </html>
