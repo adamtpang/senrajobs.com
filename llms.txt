@@ -1,8 +1,8 @@
 # Senra Jobs
 
-> Free directory of the 50 guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own. Independent fan project, not affiliated with David Senra or Founders.
+> Free directory of the 50 guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.
 
-Founders podcast episodes, linked to jobs only when the episode title names a person or company already on this board: https://senrajobs.com/founders
+Founders podcast episodes, with jobs only when the episode title names a person or company already on this board: https://senrajobs.com/founders
 
 New roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.
 
