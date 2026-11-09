@@ -1,6 +1,6 @@
 {
   "outputDirectory": "public",
-  "rewrites": [{ "source": "/new", "destination": "/new.html" }],
+  "rewrites": [{ "source": "/new", "destination": "/new.html" }, { "source": "/founders", "destination": "/founders.html" }],
   "functions": { "api/assistant.mjs": { "maxDuration": 30 } },
   "headers": [
     {
@@ -10,7 +10,7 @@
         { "key": "Vary", "value": "User-Agent" },
         { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'sha256-J0GAeilXcZ3VHCltdM924uYUWCJbHbP8QkyQQ4n05Gg=' https://us-assets.i.posthog.com; style-src 'self' 'unsafe-inline' https://use.typekit.net https://p.typekit.net; font-src 'self' https://use.typekit.net https://cdn.prod.website-files.com; img-src 'self' data: https://is1-ssl.mzstatic.com https://megaphone.imgix.net https://cdn.prod.website-files.com https://p.typekit.net; connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'sha256-J0GAeilXcZ3VHCltdM924uYUWCJbHbP8QkyQQ4n05Gg=' 'sha256-LUGCivVXDUF1HG6chrqHXdSf7ut2x5dD0DLNeX+jDk0=' https://us-assets.i.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://is1-ssl.mzstatic.com https://megaphone.imgix.net https://cdn.prod.website-files.com; connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" },
         { "key": "X-Frame-Options", "value": "DENY" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }

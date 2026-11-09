@@ -9,6 +9,7 @@ import { createExtractPrompt } from './assistant/extract-prompt.mjs';
 import {matchesLocation,displayLocation} from './location-utils.mjs';
 import {applyCompanyConnections} from './company-connections.mjs';
 import { isInWindow, feedItem, formatPay, trackIds, isRemote } from './feed.mjs';
+import { matchCatalog, normalize } from './founders-catalog.mjs';
 const out = [];
 let g = null;
 for (const line of fs.readFileSync("GUESTS.md", "utf8").split(/\r?\n/)) {
@@ -120,12 +121,16 @@ const rendered = html
   .replace('__GUEST_DATA__', () => JSON.stringify(out.map(guest => ({name:guest.name, episode:guest.episode, photo:photos[guest.name] ? photos[guest.name].replace(/\/\d+x\d+bb(\.[a-z]+)?/i, "/200x200bb$1") : '', companies:guest.companies.filter(c => c.note !== 'acquired or closed').map(c => c.name.split(' (')[0])}))).replace(/</g,'\\u003c'))
   .replace('__APP_SCRIPT__', `/assets/app/app.${appHash}.js`);
 // The CSP in vercel.json allows the inline analytics loader by hash. Fail the build if they drift.
+const csp = JSON.parse(fs.readFileSync('vercel.json','utf8')).headers.flatMap(rule => rule.headers).find(h => h.key === 'Content-Security-Policy')?.value || '';
 const analyticsInline = rendered.match(/<script data-posthog-fleet>([\s\S]*?)<\/script>/)?.[1];
 if (analyticsInline !== undefined) {
   const analyticsHash = `'sha256-${createHash('sha256').update(analyticsInline).digest('base64')}'`;
-  const csp = JSON.parse(fs.readFileSync('vercel.json','utf8')).headers.flatMap(rule => rule.headers).find(h => h.key === 'Content-Security-Policy')?.value || '';
   if (!csp.includes(analyticsHash)) throw new Error(`vercel.json Content-Security-Policy must allow the analytics loader: ${analyticsHash}`);
 }
+const themeBoot = 'try{var t=localStorage.getItem("senrajobs-theme");if(t==="senra"||t==="founders")document.documentElement.setAttribute("data-theme",t);}catch(e){}';
+const themeHash = `'sha256-${createHash('sha256').update(themeBoot).digest('base64')}'`;
+if (!rendered.includes(themeBoot)) throw new Error('Theme boot script missing from the page');
+if (!csp.includes(themeHash)) throw new Error(`vercel.json Content-Security-Policy must allow the theme boot script: ${themeHash}`);
 fs.writeFileSync("index.html", rendered);
 fs.writeFileSync('interview-prompt.txt',createExtractPrompt()+'\n');
 // Keep .js helpers available for direct board.js module debugging.
@@ -161,7 +166,36 @@ const rows = fresh.map((role) => {
   return `<li data-austin="${austin ? "1" : "0"}" data-remote="${role.remote === true ? "1" : "0"}" data-tracks="${esc(tracks)}"><a href="${esc(role.url)}" ${ext}>${esc(role.title)}</a><span class="sub">${esc(sub)}</span>${payText ? `<span class="pay">${esc(payText)}</span>` : ""}</li>`;
 }).join("");
 fs.writeFileSync("new.html", fs.readFileSync("new-template.html","utf8").replaceAll("__COUNT__", fresh.length.toLocaleString("en-US")).replaceAll("__GENERATED__", esc(generatedLabel)).replace("__LIST__", rows));
-fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/new</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/about.html</loc></url><url><loc>https://senrajobs.com/privacy.html</loc></url><url><loc>https://senrajobs.com/research.html</loc></url></urlset>\n`);
-fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.\n\nNew roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.\n\n` +
+const foundersCatalog = JSON.parse(fs.readFileSync('data/founders-episodes.json', 'utf8'));
+const foundersEpisodes = matchCatalog(foundersCatalog.episodes, out);
+const foundersDate = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' });
+const durationLabel = seconds => {
+  if (!seconds) return '';
+  const minutes = Math.round(seconds / 60);
+  if (minutes < 60) return `${minutes} min`;
+  return `${Math.floor(minutes / 60)} hr ${minutes % 60} min`;
+};
+const foundersList = foundersEpisodes.map(episode => {
+  const when = episode.published ? `<time datetime="${esc(episode.published)}">${esc(foundersDate.format(new Date(episode.published)))}</time>` : '';
+  const length = durationLabel(episode.durationSeconds);
+  const meta = [when, length].filter(Boolean).join(' · ');
+  const official = episode.url
+    ? `<a href="${esc(episode.url)}" ${ext}>Episode page ↗</a>`
+    : `<a href="${esc(foundersCatalog.show)}" ${ext}>Show page ↗</a><span class="ep-gap">No episode page in the public sitemap.</span>`;
+  const people = episode.guests.map(name => `<a href="/?view=companies&amp;guest=${encodeURIComponent(name)}">${esc(name)} on the board</a>`);
+  const companies = episode.companies.map(company => `<a href="/?view=roles&amp;company=${encodeURIComponent(company.name)}">${esc(company.name)} roles</a>`);
+  const board = episode.companies.length ? '1' : '0';
+  const search = normalize([episode.number, episode.title, episode.subject, episode.summary, ...episode.guests, ...episode.companies.map(company => company.name)].filter(Boolean).join(' '));
+  return `<article class="episode" data-board="${board}" data-search="${esc(search)}"><p class="ep-num">${episode.number ? esc(String(episode.number)) : '—'}</p><div class="episode-body"><h2>${esc(episode.subject)}</h2>${meta ? `<p class="ep-meta">${meta}</p>` : ''}${episode.summary ? `<p class="ep-summary">${esc(episode.summary)}</p>` : ''}<p class="ep-links">${official}${people.join('')}${companies.join('')}</p></div></article>`;
+}).join('');
+const foundersFetched = foundersCatalog.fetchedOn ? foundersDate.format(new Date(foundersCatalog.fetchedOn)) : 'the catalog date';
+fs.writeFileSync('founders.html', fs.readFileSync('founders-template.html', 'utf8')
+  .replaceAll('__COUNT__', foundersEpisodes.length.toLocaleString('en-US'))
+  .replaceAll('__LINKED__', foundersEpisodes.filter(episode => episode.url).length.toLocaleString('en-US'))
+  .replaceAll('__FETCHED__', esc(foundersFetched))
+  .replaceAll('__FEED__', esc(foundersCatalog.feed))
+  .replace('__LIST__', foundersList));
+fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/founders</loc><lastmod>${(foundersCatalog.fetchedOn || anchor.toISOString()).slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/new</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/about.html</loc></url><url><loc>https://senrajobs.com/privacy.html</loc></url><url><loc>https://senrajobs.com/research.html</loc></url></urlset>\n`);
+fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own. Independent fan project, not affiliated with David Senra or Founders.\n\nFounders podcast episodes, linked to jobs only when the episode title names a person or company already on this board: https://senrajobs.com/founders\n\nNew roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.\n\n` +
   out.map((g) => `## ${g.name}\n` + g.companies.map((c) => `- ${c.name}: ${c.careers || c.note}`).join("\n")).join("\n\n") +
   (targets.length ? `\n\n## Target companies\n` + targets.map((t) => `- ${t.name}: ${t.careers}${t.boardName ? ` (board name: ${t.boardName})` : ""}`).join("\n") : "") + "\n");

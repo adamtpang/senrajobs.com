@@ -4,7 +4,7 @@ import { createRequire } from 'node:module';
 const require=createRequire(import.meta.url);
 fs.mkdirSync('.cache',{recursive:true});
 const destination=fs.mkdtempSync(path.resolve('.cache','public-deploy-'));
-for(const file of ['index.html','research.html','about.html','privacy.html','interview-prompt.txt','og.png','robots.txt','sitemap.xml','llms.txt','guests.json','jobs.json','vercel.json'])fs.copyFileSync(file,path.join(destination,file));
+for(const file of ['index.html','research.html','about.html','privacy.html','founders.html','interview-prompt.txt','og.png','robots.txt','sitemap.xml','llms.txt','guests.json','jobs.json','vercel.json'])fs.copyFileSync(file,path.join(destination,file));
 for(const directory of ['logos','assets','data'])fs.cpSync(directory,path.join(destination,directory),{recursive:true});
 fs.mkdirSync(path.join(destination,'.vercel'));fs.copyFileSync('.vercel/project.json',path.join(destination,'.vercel/project.json'));
 fs.mkdirSync(path.join(destination,'api'));
