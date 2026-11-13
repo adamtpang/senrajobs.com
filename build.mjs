@@ -158,10 +158,11 @@ const rows = fresh.map((role) => {
   const austin = /\baustin\b|\btexas\b|\btx\b/i.test(role.location || "");
   const tracks = trackIds(role.title).join(" ");
   const payText = formatPay(role.pay);
-  const sub = [role.company, role.location, role.remote === true ? "Remote" : "", role.firstSeen ? `First seen ${String(role.firstSeen).slice(0, 10)}` : "", role.postedAt ? `Posted ${String(role.postedAt).slice(0, 10)}` : ""].filter(Boolean).join(" · ");
-  return `<li data-austin="${austin ? "1" : "0"}" data-remote="${role.remote === true ? "1" : "0"}" data-tracks="${esc(tracks)}"><a href="${esc(role.url)}" ${ext}>${esc(role.title)}</a><span class="sub">${esc(sub)}</span>${payText ? `<span class="pay">${esc(payText)}</span>` : ""}</li>`;
+  const place = [role.location || "Location not listed", role.remote === true && !/remote/i.test(role.location || "") ? "Remote" : ""].filter(Boolean).join(" · ");
+  const seen = role.postedAt ? `Posted ${String(role.postedAt).slice(0, 10)}` : role.firstSeen ? `First seen ${String(role.firstSeen).slice(0, 10)}` : "";
+  return `<li data-austin="${austin ? "1" : "0"}" data-remote="${role.remote === true ? "1" : "0"}" data-tracks="${esc(tracks)}" data-pay="${payText ? "1" : "0"}"><a class="role" href="${esc(role.url)}" ${ext}>${esc(role.title)}</a><span class="facts"><span class="company">${esc(role.company)}</span><span class="place">${esc(place)}</span><span class="pay${payText ? "" : " none"}">${esc(payText || "Pay not listed")}</span>${seen ? `<span class="seen">${esc(seen)}</span>` : ""}</span></li>`;
 }).join("");
-fs.writeFileSync("new.html", fs.readFileSync("new-template.html","utf8").replaceAll("__COUNT__", fresh.length.toLocaleString("en-US")).replaceAll("__GENERATED__", esc(generatedLabel)).replace("__LIST__", rows));
+fs.writeFileSync("new.html", fs.readFileSync("new-template.html","utf8").replaceAll("__COUNT__", fresh.length.toLocaleString("en-US")).replaceAll("__GENERATED__", esc(generatedLabel)).replaceAll("__PAY_COUNT__", fresh.filter((role) => formatPay(role.pay)).length.toLocaleString("en-US")).replace("__LIST__", rows));
 const foundersCatalog = JSON.parse(fs.readFileSync('data/founders-episodes.json', 'utf8'));
 const foundersEpisodes = matchCatalog(foundersCatalog.episodes, out);
 const foundersDate = new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' });

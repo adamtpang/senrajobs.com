@@ -23,10 +23,15 @@
   label { display:flex; flex-direction:column; gap:4px; font-size:13px; color:var(--muted); min-width:min(100%, 220px); }
   select { min-height:44px; font:inherit; color:var(--fg); background:transparent; border:1px solid var(--line); border-radius:10px; padding:8px 10px; }
   .roles { list-style:none; margin:0; padding:0; }
-  .roles li { padding:12px 0; border-top:1px solid var(--line); }
-  .roles a { font-weight:600; }
-  .sub { color:var(--muted); font-size:13px; display:block; }
-  .pay { font-size:13px; }
+  .roles li { padding:10px 0 12px; border-top:1px solid var(--line); }
+  .roles a.role { display:inline-flex; align-items:center; min-height:44px; font-weight:600; overflow-wrap:anywhere; }
+  .facts { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1.4fr) minmax(0,1.3fr) auto; gap:4px 16px; font-size:15px; color:var(--muted); }
+  .facts span { overflow-wrap:anywhere; }
+  .facts .company { color:var(--fg); }
+  .facts .pay { color:var(--fg); }
+  .facts .pay.none { color:var(--muted); }
+  .facts .seen { font-size:13px; text-align:right; white-space:nowrap; }
+  @media(max-width:700px) { .facts { grid-template-columns:1fr; } .facts .seen { text-align:left; } }
   #empty { display:none; }
   code { font-size:14px; }
 </style>
@@ -35,7 +40,7 @@
 <main>
   <p><a href="/">← Senra Jobs</a></p>
   <h1>New in 48 hours</h1>
-  <p class="meta" id="summary">__COUNT__ roles first seen by this index, or posted by the company, in the 48 hours before __GENERATED__. First seen is the first time this index recorded the role, so a gap between fetches includes roles the company posted earlier. A posted date is shown only when the board provides one.</p>
+  <p class="meta" id="summary">__COUNT__ roles first seen by this index, or posted by the company, in the 48 hours before __GENERATED__. First seen is the first time this index recorded the role, so a gap between fetches includes roles the company posted earlier. A posted date is shown only when the board provides one. Every row shows the role, company, location and pay. Pay appears only when the employer published a figure: __PAY_COUNT__ of these roles list one.</p>
   <form class="filters">
     <label>Place
       <select id="place" aria-label="Filter by place">
@@ -52,6 +57,12 @@
         <option value="applied-ai">Applied AI</option>
         <option value="ai-agents">AI agents</option>
         <option value="solutions-engineer">Solutions engineer</option>
+      </select>
+    </label>
+    <label>Pay
+      <select id="pay" aria-label="Filter by pay">
+        <option value="all">Any</option>
+        <option value="listed">Pay listed</option>
       </select>
     </label>
   </form>
