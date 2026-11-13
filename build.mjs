@@ -70,7 +70,7 @@ const list = out.map((g) => {
   const current = g.companies.filter(c => c.note !== 'acquired or closed');
   const marks = current.map(c => {
     const name=c.name.split(' (')[0],src=logos[name]?.src;
-    return src ? `<img src="${esc(src)}" alt="${esc(name)}" title="${esc(name)}" width="28" height="28" loading="lazy" decoding="async">` : `<span class="guest-company-initials" role="img" aria-label="${esc(name)}" title="${esc(name)}">${esc(initials(name))}</span>`;
+    return src ? `<img src="${esc(src)}" alt="${esc(name)}" title="${esc(name)}" width="32" height="32" loading="lazy" decoding="async">` : `<span class="guest-company-initials" role="img" aria-label="${esc(name)}" title="${esc(name)}">${esc(initials(name))}</span>`;
   }).join('');
   const href = `?view=companies&guest=${encodeURIComponent(g.name)}`;
   return `<a class="founder" data-guest="${esc(g.name)}" href="${esc(href)}" aria-label="Explore companies connected to ${esc(g.name)}"><span class="guest-photo">${photo}</span><span class="who"><b>${esc(g.name)}<span class="guest-arrow" aria-hidden="true">→</span></b><span class="guest-companies">${marks}</span></span></a>`;

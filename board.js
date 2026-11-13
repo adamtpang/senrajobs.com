@@ -22,6 +22,7 @@ const sorts = {
   companies:[['name','Name A to Z'],['count','Most roles']],
   roles:[['role','Role A to Z'],['location','Location A to Z'],['department','Department A to Z'],['company','Company A to Z'],...payBuckets.map(bucket => ['pay|' + bucket,`Pay ${bucket.replace('|','/')}, high to low`])]
 };
+const payLine=role=>{const full=formatPublishedPay(role),short=full.replace(' · period unspecified','');return `<p class="pay"${short===full?'':' title="The posting does not state a pay period"'}>${escape(short)}</p>`;};
 function defaults(view='guests') { return {view,guest:'',company:'',q:'',sort:sorts[view][0][0],location:'',role:'',pay:''}; }
 function readState() {
   const params = new URLSearchParams(location.search);
@@ -97,7 +98,7 @@ function roleRow(role) {
   const freshness=role.sourceStatus!=='current' ? `Previous data · observed ${new Date(role.observedAt).toLocaleDateString('en-US',{month:'short',day:'numeric'})}` : role.coverage?.status==='partial' ? (role.coverage.listingStatus==='complete'?'Some source details unavailable':'Partial source coverage') : '';
   const workplace=[role.employmentType,{onsite:'On-site',hybrid:'Hybrid',remote:'Remote'}[normalize(role.workplace)] || role.workplace].filter(Boolean).join(' · ');
   const fit=personalFits.get(role.url),label=fit?.incompatible?'Outside your requirements':fit?(fit.score!==null&&Number.isFinite(fit.score)?`${fit.score}/100`:fit.scoreRange?`${fit.scoreRange[0]}–${fit.scoreRange[1]}/100`:'Insufficient evidence')+' · '+(fit.tier==='U'?'provisional':fit.tier+' tier'):'Assess my fit';
-  return `<article class="aggregate-role"><div><a class="aggregate-title" data-apply data-company="${escape(role.company)}" href="${escape(role.url)}" target="_blank" rel="noopener"><span class="role-emoji" aria-hidden="true">${roleEmoji(role.title)}</span><span class="role-title">${escape(role.title)}</span></a>${context}${freshness?`<p class="source-note">${escape(freshness)}</p>`:''}</div><div class="aggregate-meta"><p>${escape(displayLocation(role))}</p>${workplace?`<p>${escape(workplace)}</p>`:''}${role.pay || role.payRanges?.length ? `<p class="pay">${escape(formatPublishedPay(role))}</p>` : ''}${role.payNote?`<p class="source-note">${escape(role.payNote)}</p>`:''}${hasProfileMatches?`<button class="role-fit" data-assess="${escape(role.url)}" type="button" aria-label="${escape(label+' for '+role.title)}">${escape(label)} →</button>`:''}</div></article>`;
+  return `<article class="aggregate-role"><div><a class="aggregate-title" data-apply data-company="${escape(role.company)}" href="${escape(role.url)}" target="_blank" rel="noopener"><span class="role-emoji" aria-hidden="true">${roleEmoji(role.title)}</span><span class="role-title">${escape(role.title)}</span></a>${context}${freshness?`<p class="source-note">${escape(freshness)}</p>`:''}</div><div class="aggregate-meta"><p>${escape(displayLocation(role))}</p>${workplace?`<p>${escape(workplace)}</p>`:''}${role.pay || role.payRanges?.length ? payLine(role) : ''}${role.payNote?`<p class="source-note">${escape(role.payNote)}</p>`:''}${hasProfileMatches?`<button class="role-fit" data-assess="${escape(role.url)}" type="button" aria-label="${escape(label+' for '+role.title)}">${escape(label)} →</button>`:''}</div></article>`;
 }
 function render() {
   renderContext();
