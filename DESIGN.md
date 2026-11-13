@@ -49,9 +49,10 @@ Weights: 400 for text, 500 for titles and names, 600 for emphasis inside a line.
 ## Layout
 
 - One column with 16px gutters on phones.
-- Home shows the full masthead: headline, one-line intro, "last updated" line.
+- Home shows the full masthead: headline, one-line intro, "last updated" line, and the one-line
+  independence notice.
 - Inner pages (company list, role list) shrink the site name to 36px and hide the intro and
-  "last updated" line, so content starts near the top.
+  "last updated" line, so content starts near the top. The independence notice stays on every page.
 - Lists are single rows separated by a `--line` hairline, never cards with shadows.
 - No horizontal scroll at 320px. Long names wrap (`overflow-wrap:anywhere`).
 
@@ -82,7 +83,8 @@ Weights: 400 for text, 500 for titles and names, 600 for emphasis inside a line.
 
 - Plain and short. Say what the posting says; label unknowns as unknown.
 - No em dashes anywhere.
-- The site is independent of David Senra and Founders. The About section says so; keep it.
+- The site is independent of David Senra and Founders. The notice under the headline and the About
+  section both say so; keep both.
 
 ## Before you ship a design change
 
