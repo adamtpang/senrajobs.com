@@ -12,9 +12,8 @@
   "domain": "applovin.com"
  },
  "Atoms": {
-  "src": "",
-  "domain": "atoms.co",
-  "source": "https://atoms.co/"
+  "src": "/logos/atoms.co.png",
+  "domain": "atoms.co"
  },
  "Base Power": {
   "src": "/logos/basepowercompany.com.png",
@@ -260,5 +259,133 @@
  "QuantumLight": {
   "src": "/logos/quantumlightcapital.com.png",
   "domain": "quantumlightcapital.com"
+ },
+ "Robinhood": {
+  "src": "/logos/robinhood.com.png",
+  "domain": "robinhood.com"
+ },
+ "Harmonic": {
+  "src": "/logos/harmonic.fun.png",
+  "domain": "harmonic.fun"
+ },
+ "Flexjet": {
+  "src": "/logos/flexjet.com.png",
+  "domain": "flexjet.com"
+ },
+ "Sentient Jet": {
+  "src": "/logos/sentient.com.png",
+  "domain": "sentient.com"
+ },
+ "Corporate Wings": {
+  "src": "/logos/corporatewings.com.png",
+  "domain": "corporatewings.com"
+ },
+ "Flexjet Technical Services": {
+  "src": "/logos/flexjet.com.png",
+  "domain": "flexjet.com"
+ },
+ "Corient": {
+  "src": "/logos/corient.com.png",
+  "domain": "corient.com"
+ },
+ "CI Financial": {
+  "src": "/logos/cifinancial.com.png",
+  "domain": "cifinancial.com"
+ },
+ "Medici Brands": {
+  "src": "/logos/davidprotein.com.png",
+  "domain": "davidprotein.com"
+ },
+ "Epogee": {
+  "src": "/logos/epogee.com.png",
+  "domain": "epogee.com"
+ },
+ "Pronto AI": {
+  "src": "/logos/pronto.ai.png",
+  "domain": "pronto.ai"
+ },
+ "Otter": {
+  "src": "/logos/tryotter.com.png",
+  "domain": "tryotter.com"
+ },
+ "Picnic": {
+  "src": "/logos/trypicnic.com.png",
+  "domain": "trypicnic.com"
+ },
+ "OnePay": {
+  "src": "/logos/onepay.com.png",
+  "domain": "onepay.com"
+ },
+ "NODE Foundation": {
+  "src": "/logos/nodefoundation.com.png",
+  "domain": "nodefoundation.com"
+ },
+ "UnitedMasters / Translation": {
+  "src": "/logos/unitedmasters.com.png",
+  "domain": "unitedmasters.com"
+ },
+ "Crystal Dynamics": {
+  "src": "/logos/crystaldynamics.com.png",
+  "domain": "crystaldynamics.com"
+ },
+ "Scribe Media": {
+  "src": "/logos/scribemedia.com.png",
+  "domain": "scribemedia.com"
+ },
+ "Tesla": {
+  "src": "/logos/tesla.com.png",
+  "domain": "tesla.com"
+ },
+ "SpaceX / Starlink": {
+  "src": "/logos/spacex.com.png",
+  "domain": "spacex.com"
+ },
+ "Neuralink": {
+  "src": "/logos/neuralink.com.png",
+  "domain": "neuralink.com"
+ },
+ "xAI / X": {
+  "src": "/logos/x.ai.png",
+  "domain": "x.ai"
+ },
+ "The Boring Company": {
+  "src": "/logos/boringcompany.com.png",
+  "domain": "boringcompany.com"
+ },
+ "PayPal": {
+  "src": "/logos/paypal.com.png",
+  "domain": "paypal.com"
+ },
+ "ResearchHub": {
+  "src": "/logos/researchhub.com.png",
+  "domain": "researchhub.com"
+ },
+ "USC Iovine and Young Academy": {
+  "src": "/logos/iovine-young.usc.edu.png",
+  "domain": "iovine-young.usc.edu"
+ },
+ "Michael & Susan Dell Foundation": {
+  "src": "/logos/dell.org.png",
+  "domain": "dell.org"
+ },
+ "ZMC": {
+  "src": "/logos/zmclp.com.png",
+  "domain": "zmclp.com"
+ },
+ "Palo Alto Networks": {
+  "src": "/logos/paloaltonetworks.com.png",
+  "domain": "paloaltonetworks.com"
+ },
+ "20th Century Studios": {
+  "src": "/logos/20thcenturystudios.com.png",
+  "domain": "20thcenturystudios.com"
+ },
+ "Lab37": {
+  "src": "/logos/lab37.us.png",
+  "domain": "lab37.us"
+ },
+ "DFO Management": {
+  "src": "/logos/dellfamilyoffice.com.png",
+  "domain": "dellfamilyoffice.com"
  }
 }

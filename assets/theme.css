@@ -20,18 +20,23 @@
   --display-transform: uppercase;
   --display-style: normal;
   --body-size: 17px;
+  --text-1: 13px;
+  --text-2: 15px;
+  --text-3: 17px;
+  --text-4: 20px;
+  --text-5: 24px;
   --body-leading: 1.5;
   --site-width: 1440px;
   --page-pad-y: 48px;
   --page-pad-x: 40px;
   --radius: 24px;
   --radius-sm: 12px;
-  --nav-size: .875rem;
+  --nav-size: var(--text-1);
   --nav-tracking: .16em;
   --nav-transform: uppercase;
   --wordmark-font: var(--font-display);
   --wordmark-style: normal;
-  --wordmark-size: 1.05rem;
+  --wordmark-size: var(--text-3);
   --wordmark-tracking: .14em;
   --wordmark-weight: 400;
   --shadow: 0 16px 60px #0002, 0 2px 8px #0001;
@@ -62,18 +67,23 @@ html[data-theme="founders"] {
   --display-transform: none;
   --display-style: normal;
   --body-size: 17px;
+  --text-1: 13px;
+  --text-2: 15px;
+  --text-3: 17px;
+  --text-4: 20px;
+  --text-5: 24px;
   --body-leading: 1.8;
   --site-width: 1020px;
   --page-pad-y: 12px;
   --page-pad-x: 24px;
   --radius: .375rem;
   --radius-sm: .25rem;
-  --nav-size: .875rem;
+  --nav-size: var(--text-1);
   --nav-tracking: 0;
   --nav-transform: none;
   --wordmark-font: var(--font-display);
   --wordmark-style: italic;
-  --wordmark-size: 28px;
+  --wordmark-size: var(--text-5);
   --wordmark-tracking: -.04em;
   --wordmark-weight: 400;
   --shadow: 0 0 0 1px #0000001f, 0 1px 1px #00000005, 0 4px 8px -4px #0000000a, 0 16px 24px -8px #0000000f;
@@ -89,7 +99,7 @@ html[data-theme="founders"] .title-senra { display: none; }
 .skip-link { position: absolute; left: 16px; top: 0; transform: translateY(-120%); background: var(--fg); color: var(--bg); padding: 10px 16px; z-index: 30; }
 .skip-link:focus { transform: none; }
 .site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin: 0 0 28px; padding-top: 8px; }
-.wordmark { font-family: var(--wordmark-font); font-style: var(--wordmark-style); font-size: var(--wordmark-size); font-weight: var(--wordmark-weight); letter-spacing: var(--wordmark-tracking); text-transform: var(--nav-transform); line-height: 1; text-decoration: none; color: var(--fg); }
+.wordmark { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--wordmark-font); font-style: var(--wordmark-style); font-size: var(--wordmark-size); font-weight: var(--wordmark-weight); letter-spacing: var(--wordmark-tracking); text-transform: var(--nav-transform); line-height: 1; text-decoration: none; color: var(--fg); }
 .site-nav-links { display: flex; flex-wrap: wrap; gap: 4px 4px; }
 .site-nav-links a { color: var(--muted); text-decoration: none; font-size: var(--nav-size); letter-spacing: var(--nav-tracking); text-transform: var(--nav-transform); min-height: 44px; display: inline-flex; align-items: center; padding: 0 8px; border-radius: var(--radius-sm); }
 .site-nav-links a[aria-current="page"] { color: var(--fg); }
@@ -100,7 +110,7 @@ html[data-theme="founders"] .title-senra { display: none; }
 html[data-theme="senra"] .mode-switch [data-set-theme="senra"],
 html[data-theme="founders"] .mode-switch [data-set-theme="founders"] { background: var(--toggle-on); color: var(--toggle-on-fg); }
 .mode-switch button:focus-visible { outline: 2px solid var(--focus); outline-offset: -3px; }
-.independence { color: var(--muted); font-size: 13px; margin: 12px 0 0; max-width: 46rem; }
+.independence { color: var(--muted); font-size: var(--text-1); margin: 12px 0 0; max-width: 46rem; }
 html[data-theme="senra"] .masthead { border-top: 4px solid var(--mark); padding-top: 18px; }
 html[data-theme="founders"] .masthead { border-top: 0; padding-top: 12px; }
 html[data-theme="founders"] h1 { max-width: 46rem; font-family: var(--font-sans); }
@@ -147,5 +157,5 @@ html[data-theme="founders"] .site-nav-links a[aria-current="page"] { color: var(
 }
 @media (max-width: 650px) {
   html[data-theme="senra"] { --page-pad-y: 28px; --page-pad-x: 16px; --grid-columns: 2; }
-  html[data-theme="founders"] { --page-pad-x: 20px; --grid-columns: 2; --wordmark-size: 24px; }
+  html[data-theme="founders"] { --page-pad-x: 20px; --grid-columns: 2; --wordmark-size: var(--text-4); }
 }
