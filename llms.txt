@@ -1,10 +1,22 @@
 # Senra Jobs
 
-> Free directory of the 50 guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own. Independent fan project, not affiliated with David Senra or Founders.
+> Free directory of the 53 guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own. Independent fan project, not affiliated with David Senra or Founders.
 
 Founders podcast episodes, linked to jobs only when the episode title names a person or company already on this board: https://senrajobs.com/founders
 
 New roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.
+
+## Vlad Tenev
+- Robinhood: https://job-boards.greenhouse.io/robinhood
+- Harmonic: https://jobs.ashbyhq.com/Harmonic
+
+## Nikesh Arora
+- Palo Alto Networks: https://paloaltonetworks.wd5.myworkdayjobs.com/en-US/panwexternalcareers
+
+## Scott Kupor
+- Andreessen Horowitz: https://a16z.com/about/jobs/
+- U.S. Office of Personnel Management (director): https://www.opm.gov/about-us/careers-at-opm/
+- Loudcloud / Opsware (early employee): acquired or closed
 
 ## Rafael Vivas
 - AppLovin: https://www.applovin.com/en/careers
