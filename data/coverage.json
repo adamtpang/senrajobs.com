@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-13T22:40:27.609Z",
+  "generatedAt": "2026-11-13T23:01:58.139Z",
   "counts": {
     "employers": 111,
-    "roles": 38818,
-    "texasRoles": 5421,
+    "roles": 38848,
+    "texasRoles": 5428,
     "usRemotePossibilities": 413,
-    "unknownLocations": 1164,
-    "staleRoles": 20020,
-    "complete": 38,
-    "partial": 25,
-    "failed": 18,
+    "unknownLocations": 1165,
+    "staleRoles": 19317,
+    "complete": 46,
+    "partial": 26,
+    "failed": 9,
     "link-only": 30
   },
   "scope": "Employers associated with guests and explicitly labeled episode subjects. The legacy founders field names connected interview guests, not necessarily company founders; connections identifies indirect episode-subject links. Complete means the supported public listing was retrieved at observation time, not that every company hiring channel is covered. Unpublished or inaccessible jobs are excluded.",
@@ -330,22 +330,63 @@
         {
           "association": "Beats by Dre",
           "careersUrl": "https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA",
-          "source": "manual:apple-beats",
+          "source": "beats-public:beats",
           "sourceUrl": "https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA",
-          "observedAt": "2026-10-27T18:36:04.152Z",
-          "lastAttempt": "2026-11-13T19:20:52.765Z",
-          "status": "failed",
-          "reason": "No supported public ATS found on the official careers page",
-          "listingStatus": "failed",
-          "retained": true
+          "observedAt": "2026-11-13T23:01:31.430Z",
+          "lastAttempt": "2026-11-13T23:01:31.430Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "Beats product search exhausted: 73 unique posting records of 73 advertised, grouped into 48 positions; 0 invalid and 0 duplicate records excluded. Scope is Apple's Beats product filter only.",
+          "total": 73,
+          "pages": 4,
+          "pageReceipts": [
+            {
+              "url": "https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA",
+              "page": 1,
+              "total": 73,
+              "rows": 20,
+              "invalid": 0
+            },
+            {
+              "url": "https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA&page=2",
+              "page": 2,
+              "total": 73,
+              "rows": 20,
+              "invalid": 0
+            },
+            {
+              "url": "https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA&page=3",
+              "page": 3,
+              "total": 73,
+              "rows": 20,
+              "invalid": 0
+            },
+            {
+              "url": "https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA&page=4",
+              "page": 4,
+              "total": 73,
+              "rows": 13,
+              "invalid": 0
+            }
+          ],
+          "retained": false,
+          "identityUrl": "https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA",
+          "scope": "Only postings Apple lists under its Beats product filter. Never widened to other Apple jobs.",
+          "unknownLocations": 0,
+          "enrichment": {
+            "eligible": 0,
+            "attempted": 0,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
-      "roles": 17,
-      "texasRoles": 0,
+      "status": "complete",
+      "roles": 48,
+      "texasRoles": 4,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 17
+      "staleRoles": 0
     },
     {
       "company": "Bending Spoons",
@@ -420,25 +461,81 @@
         {
           "association": "CI Financial (CEO; not founder)",
           "careersUrl": "https://ci.wd3.myworkdayjobs.com/en-US/CI_FINANCIAL_EXTERNAL_CAREER-SITE",
-          "source": "workday",
-          "sourceUrl": "https://ci.wd3.myworkdayjobs.com/en-US/CI_FINANCIAL_EXTERNAL_CAREER-SITE",
-          "observedAt": "2026-10-28T15:39:48.836Z",
-          "lastAttempt": "2026-11-13T19:20:17.108Z",
-          "status": "failed",
-          "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
-          "listingStatus": "failed",
-          "retained": true,
+          "source": "ci-public:ci-financial",
+          "sourceUrl": "https://ci.wd3.myworkdayjobs.com/wday/cxs/ci/CI_FINANCIAL_EXTERNAL_CAREER-SITE/jobs",
+          "observedAt": "2026-11-13T23:01:21.424Z",
+          "lastAttempt": "2026-11-13T23:01:21.424Z",
+          "status": "partial",
+          "listingStatus": "complete",
+          "reason": "All advertised listings retrieved; 1 job locations remain unresolved after bounded detail retrieval",
+          "total": 86,
+          "pages": 5,
+          "pageReceipts": [
+            {
+              "url": "https://ci.wd3.myworkdayjobs.com/wday/cxs/ci/CI_FINANCIAL_EXTERNAL_CAREER-SITE/jobs",
+              "page": 1,
+              "offset": 0,
+              "appliedFacets": {},
+              "status": 200,
+              "total": 86,
+              "rows": 20
+            },
+            {
+              "url": "https://ci.wd3.myworkdayjobs.com/wday/cxs/ci/CI_FINANCIAL_EXTERNAL_CAREER-SITE/jobs",
+              "page": 2,
+              "offset": 20,
+              "appliedFacets": {},
+              "status": 200,
+              "total": 0,
+              "rows": 20
+            },
+            {
+              "url": "https://ci.wd3.myworkdayjobs.com/wday/cxs/ci/CI_FINANCIAL_EXTERNAL_CAREER-SITE/jobs",
+              "page": 3,
+              "offset": 40,
+              "appliedFacets": {},
+              "status": 200,
+              "total": 0,
+              "rows": 20
+            },
+            {
+              "url": "https://ci.wd3.myworkdayjobs.com/wday/cxs/ci/CI_FINANCIAL_EXTERNAL_CAREER-SITE/jobs",
+              "page": 4,
+              "offset": 60,
+              "appliedFacets": {},
+              "status": 200,
+              "total": 0,
+              "rows": 20
+            },
+            {
+              "url": "https://ci.wd3.myworkdayjobs.com/wday/cxs/ci/CI_FINANCIAL_EXTERNAL_CAREER-SITE/jobs",
+              "page": 5,
+              "offset": 80,
+              "appliedFacets": {},
+              "status": 200,
+              "total": 0,
+              "rows": 6
+            }
+          ],
+          "retained": false,
+          "excluded": [],
           "identityUrl": "https://ci.wd3.myworkdayjobs.com/en-US/CI_FINANCIAL_EXTERNAL_CAREER-SITE",
           "scope": "Separate CI public board. Manual refresh must retain verified Corient cross-post deduplication; generic Workday import would duplicate a requisition.",
-          "unknownLocations": 0
+          "unknownLocations": 1,
+          "enrichment": {
+            "eligible": 1,
+            "attempted": 1,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
-      "roles": 78,
+      "status": "partial",
+      "roles": 86,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
-      "unknownLocations": 0,
-      "staleRoles": 78
+      "unknownLocations": 1,
+      "staleRoles": 0
     },
     {
       "company": "CloudKitchens",
@@ -1512,25 +1609,221 @@
         {
           "association": "Flexjet (chairman)",
           "careersUrl": "https://careers.flexjet.com/us/en",
-          "source": "manual:flexjet-public-phenom-clearcompany",
+          "source": "flexjet-public:flexjet",
           "sourceUrl": "https://careers.flexjet.com/us/en/search-results",
-          "observedAt": "2026-10-28T15:55:17.500Z",
-          "lastAttempt": "2026-11-13T19:20:16.836Z",
-          "status": "failed",
-          "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
-          "listingStatus": "failed",
-          "retained": true,
+          "observedAt": "2026-11-13T23:00:17.503Z",
+          "lastAttempt": "2026-11-13T23:00:17.503Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "Flexjet group public search: 142 unique of 142 advertised roles over 21 page requests; 0 failed pages, 0 invalid and 57 repeated records excluded. Brand labels are not in the list feed, so rows carry the group label unless the feed names a brand. Sentient Jet and Corporate Wings boards are not read here.",
+          "total": 142,
+          "pages": 21,
+          "pageReceipts": [
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent",
+              "offset": 0,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=10",
+              "offset": 10,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=20",
+              "offset": 20,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=30",
+              "offset": 30,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=40",
+              "offset": 40,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=50",
+              "offset": 50,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=60",
+              "offset": 60,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=70",
+              "offset": 70,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=80",
+              "offset": 80,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=90",
+              "offset": 90,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=100",
+              "offset": 100,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=110",
+              "offset": 110,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=120",
+              "offset": 120,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=130",
+              "offset": 130,
+              "status": "observed",
+              "total": 142,
+              "rows": 8,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=140",
+              "offset": 140,
+              "status": "observed",
+              "total": 142,
+              "rows": 2,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent",
+              "offset": 0,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=10",
+              "offset": 10,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=20",
+              "offset": 20,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=30",
+              "offset": 30,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=40",
+              "offset": 40,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=50",
+              "offset": 50,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 2,
+              "invalid": 0
+            }
+          ],
+          "retained": false,
           "identityUrl": "https://careers.flexjet.com/us/en",
           "scope": "Global group search plus direct public ATS. Exact requisition mirrors and public brand labels preserved; manual reconciliation required.",
-          "unknownLocations": 0
+          "unknownLocations": 0,
+          "enrichment": {
+            "eligible": 0,
+            "attempted": 0,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
-      "roles": 150,
-      "texasRoles": 5,
+      "status": "complete",
+      "roles": 142,
+      "texasRoles": 4,
       "usRemotePossibilities": 1,
       "unknownLocations": 0,
-      "staleRoles": 150
+      "staleRoles": 0
     },
     {
       "company": "Flexjet Technical Services",
@@ -1542,25 +1835,221 @@
         {
           "association": "Flexjet Technical Services (Nextant Aerospace / Constant Aviation operations)",
           "careersUrl": "https://careers.flexjet.com/us/en/c/aircraft-maintenance-and-support-jobs",
-          "source": "manual:flexjet-technical-services-scoped",
-          "sourceUrl": "https://careers.flexjet.com/us/en/c/aircraft-maintenance-and-support-jobs",
-          "observedAt": "2026-10-28T15:55:17.500Z",
-          "lastAttempt": "2026-11-13T19:20:16.838Z",
-          "status": "failed",
-          "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
-          "listingStatus": "failed",
-          "retained": true,
+          "source": "flexjet-public:flexjet-technical",
+          "sourceUrl": "https://careers.flexjet.com/us/en/search-results",
+          "observedAt": "2026-11-13T23:00:48.887Z",
+          "lastAttempt": "2026-11-13T23:00:48.887Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "Only roles in category \"Aircraft Maintenance and Support\" whose published title names Flexjet Technical Services: 6. Group search: 142 unique of 142 advertised roles over 21 page requests; 0 failed pages, 0 invalid and 57 repeated records excluded. Other maintenance roles are not assigned to the division by the feed and stay with the parent board.",
+          "total": 6,
+          "pages": 21,
+          "pageReceipts": [
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent",
+              "offset": 0,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=10",
+              "offset": 10,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=20",
+              "offset": 20,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=30",
+              "offset": 30,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=40",
+              "offset": 40,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=50",
+              "offset": 50,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=60",
+              "offset": 60,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=70",
+              "offset": 70,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=80",
+              "offset": 80,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=90",
+              "offset": 90,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=100",
+              "offset": 100,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=110",
+              "offset": 110,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=120",
+              "offset": 120,
+              "status": "observed",
+              "total": 142,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=130",
+              "offset": 130,
+              "status": "observed",
+              "total": 142,
+              "rows": 8,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?sortBy=Most%20recent&from=140",
+              "offset": 140,
+              "status": "observed",
+              "total": 142,
+              "rows": 2,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent",
+              "offset": 0,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=10",
+              "offset": 10,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=20",
+              "offset": 20,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=30",
+              "offset": 30,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=40",
+              "offset": 40,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 0,
+              "invalid": 0
+            },
+            {
+              "url": "https://careers.flexjet.com/us/en/search-results?category=Aircraft%20Maintenance%20and%20Support&sortBy=Most%20recent&from=50",
+              "offset": 50,
+              "appliedFacets": {
+                "category": "Aircraft Maintenance and Support"
+              },
+              "status": "observed",
+              "total": 57,
+              "rows": 2,
+              "invalid": 0
+            }
+          ],
+          "retained": false,
           "identityUrl": "https://careers.flexjet.com/us/en/c/aircraft-maintenance-and-support-jobs",
           "scope": "Only explicit Technical Services assignments; parent mirrors deduplicated and other division roles remain unknown.",
-          "unknownLocations": 0
+          "unknownLocations": 0,
+          "enrichment": {
+            "eligible": 0,
+            "attempted": 0,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
-      "roles": 3,
+      "status": "complete",
+      "roles": 6,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 3
+      "staleRoles": 0
     },
     {
       "company": "Groq",
@@ -2475,22 +2964,42 @@
         {
           "association": "Love.Life",
           "careersUrl": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=17763c3e-6689-4e44-8e0b-eac90764d9d5&ccId=9200392115678_2&lang=en_US",
-          "source": "manual:adp-public-browser",
-          "sourceUrl": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=17763c3e-6689-4e44-8e0b-eac90764d9d5&ccId=9200392115678_2&lang=en_US",
-          "observedAt": "2026-10-26T20:34:43.183Z",
-          "lastAttempt": "2026-11-13T19:20:55.106Z",
-          "status": "failed",
-          "reason": "No supported public ATS found on the official careers page",
-          "listingStatus": "failed",
-          "retained": true
+          "source": "adp-public:17763c3e-6689-4e44-8e0b-eac90764d9d5|9200392115678_2",
+          "sourceUrl": "https://workforcenow.adp.com/mascsr/default/careercenter/public/events/staffing/v1/job-requisitions?cid=17763c3e-6689-4e44-8e0b-eac90764d9d5&ccId=9200392115678_2&lang=en_US",
+          "observedAt": "2026-11-13T23:01:43.078Z",
+          "lastAttempt": "2026-11-13T23:01:43.078Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "All 7 advertised public requisitions collected (meta.totalNumber). Completeness applies only to this ADP career center at observation time; department is not published in the list feed.",
+          "total": 7,
+          "pages": 1,
+          "pageReceipts": [
+            {
+              "url": "https://workforcenow.adp.com/mascsr/default/careercenter/public/events/staffing/v1/job-requisitions?cid=17763c3e-6689-4e44-8e0b-eac90764d9d5&ccId=9200392115678_2&lang=en_US&$top=50",
+              "page": 1,
+              "total": 7,
+              "rows": 7,
+              "invalid": 0
+            }
+          ],
+          "retained": false,
+          "identityUrl": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=17763c3e-6689-4e44-8e0b-eac90764d9d5&ccId=9200392115678_2&lang=en_US",
+          "scope": "Love.Life public ADP career center only.",
+          "unknownLocations": 0,
+          "enrichment": {
+            "eligible": 0,
+            "attempted": 0,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
-      "roles": 6,
+      "status": "complete",
+      "roles": 7,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 6
+      "staleRoles": 0
     },
     {
       "company": "Lunchclub",
@@ -2699,22 +3208,42 @@
         {
           "association": "Michael & Susan Dell Foundation",
           "careersUrl": "https://www.dell.org/careers/",
-          "source": "manual:dell-foundation-browser",
+          "source": "dell-foundation-public:dellfoundation",
           "sourceUrl": "https://www.dell.org/careers/",
-          "observedAt": "2026-10-27T19:20:30.719Z",
-          "lastAttempt": "2026-11-13T19:21:32.454Z",
-          "status": "failed",
-          "reason": "No supported public ATS found on the official careers page",
-          "listingStatus": "failed",
-          "retained": true
+          "observedAt": "2026-11-13T23:01:45.992Z",
+          "lastAttempt": "2026-11-13T23:01:45.992Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "Single official listing table exhausted: 8 openings, every linked row valid. The page advertises no total and shows no pagination. Scope is the foundation careers page only.",
+          "total": null,
+          "pages": 1,
+          "pageReceipts": [
+            {
+              "url": "https://www.dell.org/careers/",
+              "page": 1,
+              "total": null,
+              "rows": 8,
+              "invalid": 0
+            }
+          ],
+          "retained": false,
+          "identityUrl": "https://www.dell.org/careers/",
+          "scope": "Only jobs listed on the foundation careers page.",
+          "unknownLocations": 0,
+          "enrichment": {
+            "eligible": 0,
+            "attempted": 0,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
+      "status": "complete",
       "roles": 8,
       "texasRoles": 3,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 8
+      "staleRoles": 0
     },
     {
       "company": "NaturalMotion",
@@ -5832,25 +6361,266 @@
         {
           "association": "PayPal (Elon Musk; episode subject; historical co-founder)",
           "careersUrl": "https://paypal.eightfold.ai/careers",
-          "source": "manual:paypal-eightfold-public",
-          "sourceUrl": "https://paypal.eightfold.ai/careers",
-          "observedAt": "2026-10-28T15:43:55.413Z",
-          "lastAttempt": "2026-11-13T19:20:51.608Z",
-          "status": "failed",
-          "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
-          "listingStatus": "failed",
-          "retained": true,
+          "source": "paypal-public:paypal",
+          "sourceUrl": "https://paypal.eightfold.ai/api/pcsx/search",
+          "observedAt": "2026-11-13T22:59:51.316Z",
+          "lastAttempt": "2026-11-13T22:59:51.316Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "Public Eightfold employee board collected in full: 326 of 326 advertised positions over 33 pages. 0 invalid and 0 duplicate records excluded. Contractor and other hiring channels are not part of this board.",
+          "total": 326,
+          "pages": 33,
+          "pageReceipts": [
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=0",
+              "page": 1,
+              "start": 0,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=10",
+              "page": 2,
+              "start": 10,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=20",
+              "page": 3,
+              "start": 20,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=30",
+              "page": 4,
+              "start": 30,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=40",
+              "page": 5,
+              "start": 40,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=50",
+              "page": 6,
+              "start": 50,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=60",
+              "page": 7,
+              "start": 60,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=70",
+              "page": 8,
+              "start": 70,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=80",
+              "page": 9,
+              "start": 80,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=90",
+              "page": 10,
+              "start": 90,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=100",
+              "page": 11,
+              "start": 100,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=110",
+              "page": 12,
+              "start": 110,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=120",
+              "page": 13,
+              "start": 120,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=130",
+              "page": 14,
+              "start": 130,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=140",
+              "page": 15,
+              "start": 140,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=150",
+              "page": 16,
+              "start": 150,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=160",
+              "page": 17,
+              "start": 160,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=170",
+              "page": 18,
+              "start": 170,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=180",
+              "page": 19,
+              "start": 180,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=190",
+              "page": 20,
+              "start": 190,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=200",
+              "page": 21,
+              "start": 200,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=210",
+              "page": 22,
+              "start": 210,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=220",
+              "page": 23,
+              "start": 220,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=230",
+              "page": 24,
+              "start": 230,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=240",
+              "page": 25,
+              "start": 240,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=250",
+              "page": 26,
+              "start": 250,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=260",
+              "page": 27,
+              "start": 260,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=270",
+              "page": 28,
+              "start": 270,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=280",
+              "page": 29,
+              "start": 280,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=290",
+              "page": 30,
+              "start": 290,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=300",
+              "page": 31,
+              "start": 300,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=310",
+              "page": 32,
+              "start": 310,
+              "rows": 10,
+              "invalid": 0
+            },
+            {
+              "url": "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=320",
+              "page": 33,
+              "start": 320,
+              "rows": 6,
+              "invalid": 0
+            }
+          ],
+          "retained": false,
           "identityUrl": "https://paypal.eightfold.ai/careers",
           "scope": "Public employee board. Moving totals and uncollected contractor channel make coverage partial; paced manual refresh and detail verification required.",
-          "unknownLocations": 0
+          "unknownLocations": 0,
+          "enrichment": {
+            "eligible": 0,
+            "attempted": 0,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
-      "roles": 318,
-      "texasRoles": 94,
+      "status": "complete",
+      "roles": 326,
+      "texasRoles": 98,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 318
+      "staleRoles": 0
     },
     {
       "company": "Picnic",
@@ -6924,22 +7694,30 @@
           "careersUrl": "https://www.shopify.com/careers",
           "source": "shopify-page:shopify",
           "sourceUrl": "https://www.shopify.com/careers",
-          "observedAt": "2026-10-26T17:02:25.713Z",
-          "lastAttempt": "2026-11-13T19:20:53.255Z",
-          "status": "failed",
-          "reason": "Public job list missing",
-          "listingStatus": "failed",
-          "retained": true,
+          "observedAt": "2026-11-13T23:01:47.400Z",
+          "lastAttempt": "2026-11-13T23:01:47.400Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "Exhausted public page payload (role list): 112 unique listed roles; no independently advertised global total",
+          "total": null,
+          "pages": 1,
+          "retained": false,
           "identityUrl": "https://www.shopify.com/careers",
-          "unknownLocations": 0
+          "unknownLocations": 0,
+          "enrichment": {
+            "eligible": 0,
+            "attempted": 0,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
-      "roles": 123,
+      "status": "complete",
+      "roles": 112,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 123
+      "staleRoles": 0
     },
     {
       "company": "Snap",
@@ -7512,22 +8290,42 @@
         {
           "association": "TrailRunner International (co-founder; former president)",
           "careersUrl": "https://trailrunner.bamboohr.com/careers",
-          "source": "manual:bamboohr-trailrunner",
-          "sourceUrl": "https://trailrunner.bamboohr.com/careers",
-          "observedAt": "2026-10-27T17:56:45.137Z",
-          "lastAttempt": "2026-11-13T19:20:25.606Z",
-          "status": "failed",
-          "reason": "No supported public ATS found on the official careers page",
-          "listingStatus": "failed",
-          "retained": true
+          "source": "bamboohr-public:trailrunner",
+          "sourceUrl": "https://trailrunner.bamboohr.com/careers/list",
+          "observedAt": "2026-11-13T23:01:44.303Z",
+          "lastAttempt": "2026-11-13T23:01:44.303Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "Single public careers list payload exhausted: 4 openings matching meta.totalCount 4. Completeness applies only to this BambooHR board at observation time; pay and posting dates are not in the list feed.",
+          "total": 4,
+          "pages": 1,
+          "pageReceipts": [
+            {
+              "url": "https://trailrunner.bamboohr.com/careers/list",
+              "page": 1,
+              "total": 4,
+              "rows": 4,
+              "invalid": 0
+            }
+          ],
+          "retained": false,
+          "identityUrl": "https://trailrunner.bamboohr.com/careers",
+          "scope": "TrailRunner public BambooHR board only.",
+          "unknownLocations": 0,
+          "enrichment": {
+            "eligible": 0,
+            "attempted": 0,
+            "unattempted": 0,
+            "limitPerBoard": 75
+          }
         }
       ],
-      "status": "failed",
+      "status": "complete",
       "roles": 4,
       "texasRoles": 1,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 4
+      "staleRoles": 0
     },
     {
       "company": "U.S. Office of Personnel Management",

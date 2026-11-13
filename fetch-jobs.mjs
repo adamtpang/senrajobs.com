@@ -16,6 +16,7 @@ const selectedGuest=guestName?guests.find(guest=>guest.name===guestName):null;
 if(guestName&&!selectedGuest)throw new Error(`Unknown guest: ${guestName}`);
 const guestCompanies=companyName?new Set([companyName]):selectedGuest?new Set(selectedGuest.companies.filter(company=>company.note!=='acquired or closed').map(company=>company.name)):null;
 const jobs=workdayOnly||greenhouseOnly||guestCompanies?{...previous}:{},tasks=new Map(),shared=new Map();
+const CARRY_DETAIL=new Set(['flexjet-public','ci-public','paypal-public','beats-public','adp-public','bamboohr-public','dell-foundation-public']);
 // Requirements text supports private matching; public jobs.json carries listing metadata.
 const contentPath='.cache/job-content.json';
 const content=fs.existsSync(contentPath)?JSON.parse(fs.readFileSync(contentPath,'utf8')):{};
@@ -53,6 +54,14 @@ async function refresh(company){
   return result;
  })());
  const result=await shared.get(key);
+ // Listing feeds for these employers omit fields that earlier detail-page reviews recorded. For the same
+ // posting URL, keep the earlier value where the fresh row has none, and say where it came from.
+ if(CARRY_DETAIL.has(src.kind)&&result.status!=='failed'){
+  const earlier=new Map((previous[company.name]?.roles||[]).map(role=>[role.url,role]));
+  result.rows=result.rows.map(row=>{const old=earlier.get(row.url);if(!old)return row;const kept={};
+   for(const field of ['pay','payRanges','publishedCompensationText','department','employmentType','workplace','employerBrand','associationBasis'])if((row[field]==null||row[field]===''||(Array.isArray(row[field])&&!row[field].length)||(field==='employerBrand'&&/brand unspecified/.test(row[field])))&&old[field]!=null&&old[field]!==''&&!(Array.isArray(old[field])&&!old[field].length))kept[field]=old[field];
+   return Object.keys(kept).length?{...row,...kept,detailCarriedFrom:old.detailObservedAt||old.detailCarriedFrom||old.observedAt}:row;});
+ }
  const publicRows=result.rows.map(({description,...row})=>{if(description)content[row.url]={text:description,closed:false,observedAt,source:row.sourceUrl||result.endpoint};return row;});
  const board=retainBoard(previous[company.name],{...result,rows:publicRows},observedAt);
  board.careersUrl=careers;

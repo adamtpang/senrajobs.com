@@ -39,14 +39,47 @@ export function decodeShopifyDetail(html, expectedId) {
 
 export function decodeShopifyPage(html) {
   const loader=decodeShopifyLoaders(html)?.['($locale)/careers'];
-  if(!Array.isArray(loader?.jobPostingsWithJobs)||!Array.isArray(loader?.atsLocations))throw Error('Public job list missing');
   // Do not return internal job objects, hiring teams, or unrelated loader fields.
-  return {postings:loader.jobPostingsWithJobs.map(row=>row.jobPosting),locations:loader.atsLocations};
+  if(Array.isArray(loader?.jobPostingsWithJobs)&&Array.isArray(loader?.atsLocations))return {postings:loader.jobPostingsWithJobs.map(row=>row.jobPosting),locations:loader.atsLocations};
+  // Since November 2026 the page carries a slimmer public list: loader.roles.
+  if(Array.isArray(loader?.roles)){
+    if(loader.roles.length>5000)throw Error('Unexpected careers role list size');
+    return {roles:loader.roles};
+  }
+  throw Error('Public job list missing');
+}
+
+const SHOPIFY_ID=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+const short=(value,max)=>typeof value==='string'&&value.trim().length>0&&value.length<=max?value.trim():'';
+
+// Role-list shape: {id,title,description,location,locations[],discipline,disciplineSlug,quests[],href}.
+// Only id, title, href, locations and discipline are read. The list has no employment type,
+// publish date or per-posting status, so those stay empty instead of being guessed.
+function parseShopifyRoles(roles,endpoint,observedAt){
+  // The list is the employer's own public listing. A record carrying an explicit status or
+  // listing flag that says otherwise is not an open listed posting and is left out.
+  const listed=roles.filter(r=>r&&typeof r==='object'&&(r.status===undefined||r.status==='Published')&&(r.isListed===undefined||r.isListed===true));
+  const rows=[],seen=new Set();let invalid=0;
+  for(const r of listed){
+    const id=typeof r.id==='string'?r.id:'',title=short(r.title,300);
+    // The listing link must be the public posting page for this same id.
+    if(!SHOPIFY_ID.test(id)||!title||typeof r.href!=='string'||!new RegExp(`^/careers/[a-z0-9-]{1,200}_${id}$`).test(r.href)){invalid++;continue;}
+    if(seen.has(id))continue;seen.add(id);
+    const named=array(r.locations).length?array(r.locations):[r.location];
+    const raws=named.map(l=>short(l,200)).filter(Boolean).slice(0,50);
+    // "Remote - Canada" is the employer's own wording: workplace Remote, place Canada.
+    const remote=raws.length>0&&raws.every(l=>/^Remote - \S/.test(l));
+    const places=[...new Set(remote?raws.map(l=>l.slice(9).trim()):raws)];
+    // Same public url format as before; the site redirects it to the posting page.
+    rows.push({...base(id,title,`${endpoint}?ashby_jid=${id}`,endpoint,observedAt),department:short(r.discipline,100).replace(/[<>]/g,''),location:places[0]||'',secondaryLocations:places.slice(1),locations:places.map(l=>location(l,endpoint,observedAt)),workplace:remote?'Remote':'',employmentType:'',publishedAt:'',locationStatus:places.length?'published':'unknown'});
+  }
+  return {rows,status:invalid?'partial':'complete',reason:invalid?`${invalid} malformed listed records excluded`:`Exhausted public page payload (role list): ${rows.length} unique listed roles; no independently advertised global total`,total:null,pages:1,endpoint,observedAt};
 }
 
 export function parseShopify(html,observedAt){
   const endpoint='https://www.shopify.com/careers';
-  const {postings,locations}=decodeShopifyPage(html);
+  const {postings,locations,roles}=decodeShopifyPage(html);
+  if(roles)return parseShopifyRoles(roles,endpoint,observedAt);
   const published=postings.filter(p=>p?.status==='Published'&&p.isListed===true);
   const rows=published.filter(p=>p.id&&p.title&&/^https:\/\/www\.shopify\.com\/careers(?:[/?]|$)/.test(p.externalLink||'')).map(p=>{
     const secondary=array(p.locationIds?.secondaryLocationIds).map(id=>locations.find(l=>l.id===id)).filter(Boolean).map(l=>l.externalName||l.name).filter(Boolean);
