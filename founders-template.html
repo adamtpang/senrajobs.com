@@ -1,60 +1,52 @@
 <!doctype html>
-<html lang="en" data-theme="senra">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Founders episodes · senrajobs.com</title>
+<title>Founders episodes · Senra Jobs</title>
 <link rel="canonical" href="https://senrajobs.com/founders">
-<meta name="description" content="Browse Founders podcast episodes and open jobs at the companies already on senrajobs.com. Independent fan project.">
-<meta name="robots" content="index,follow">
+<meta name="description" content="Browse Founders podcast episodes and open roles at companies already on Senra Jobs.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪜</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:ital,wght@0,400;0,500;0,600&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600&amp;display=swap">
-<link rel="stylesheet" href="/assets/theme.css">
-<script>try{var t=localStorage.getItem("senrajobs-theme");if(t==="senra"||t==="founders")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<link rel="stylesheet" href="https://use.typekit.net/qcy7obf.css">
 <style>
-  * { box-sizing:border-box; }
-  body { margin:0; color:var(--fg); background:var(--bg); font:var(--body-size)/var(--body-leading) var(--font-sans); -webkit-font-smoothing:antialiased; }
-  main { max-width:var(--site-width); margin:auto; padding:var(--page-pad-y) var(--page-pad-x) 80px; }
-  a { color:inherit; text-underline-offset:4px; }
-  :focus-visible { outline:2px solid var(--focus); outline-offset:3px; }
-  h1 { font-family:var(--font-display); font-weight:var(--display-weight); font-size:var(--display-size); line-height:var(--display-leading); letter-spacing:var(--display-tracking); text-transform:var(--display-transform); font-style:var(--display-style); margin:0; overflow-wrap:anywhere; }
-  .intro { margin:16px 0 0; max-width:46rem; }
-  .source-note { color:var(--muted); font-size:14px; max-width:46rem; }
-  footer { border-top:1px solid var(--line); margin-top:36px; padding-top:20px; color:var(--muted); font-size:13px; display:flex; flex-wrap:wrap; gap:8px 20px; }
-  footer a { min-height:44px; display:inline-flex; align-items:center; }
-  @media(max-width:650px) { main { padding:28px 16px 72px; } }
+@font-face{font-family:"Schmalfette Grotesk";src:url("https://cdn.prod.website-files.com/68a3314e7e1c857e33d93b10/68b94590f437128b666278c3_SchmalfetteGrotesk.woff2") format("woff2");font-weight:400;font-display:swap}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font:18px/1.5 "tt-commons-pro",Arial,sans-serif;-webkit-font-smoothing:antialiased}main{max-width:760px;margin:auto;padding:48px 40px 80px}a{color:inherit;text-underline-offset:4px}:focus-visible{outline:2px solid #000;outline-offset:4px}h1{font:400 clamp(64px,11vw,110px)/.9 "Schmalfette Grotesk",Impact,sans-serif;text-transform:uppercase;margin:32px 0 24px}p{margin:0 0 14px}.note{color:#666;font-size:15px}
+.tools{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:end;margin:8px 0 20px}
+.tools label{display:flex;flex-direction:column;gap:6px;font-size:15px;color:#666;flex:1;min-width:min(100%,240px)}
+.tools input[type=search]{font:inherit;color:#000;background:#fff;border:1px solid #000;border-radius:24px;min-height:44px;padding:10px 16px;width:100%}
+.board-only{flex-direction:row;align-items:center;gap:8px;min-height:44px;color:#000;flex:0 0 auto}
+.episode{padding:22px 0;border-top:1px solid #e3e3e3}
+.ep-num{margin:0;color:#666;font-size:15px}
+.episode h2{margin:4px 0 0;font-size:22px;font-weight:500;line-height:1.2}
+.ep-meta,.ep-links{color:#666;font-size:15px;margin:8px 0 0}
+.ep-summary{margin:8px 0 0}
+.ep-links{display:flex;flex-wrap:wrap;gap:8px 16px}
+.ep-links a{min-height:44px;display:inline-flex;align-items:center}
+footer{border-top:1px solid #e3e3e3;margin-top:40px;padding-top:20px;color:#666;font-size:14px;display:flex;flex-wrap:wrap;gap:8px 20px}footer a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:650px){main{padding:28px 16px 64px}}
 </style>
 </head>
 <body>
-<a class="skip-link" href="#episode-list">Skip to episodes</a>
 <main>
-  <nav class="site-nav" aria-label="Site"><a class="wordmark" href="/">senrajobs.com</a><div class="site-nav-links"><a href="/">Jobs</a><a href="/founders" aria-current="page">Episodes</a></div><div class="mode-switch" role="group" aria-label="Look and feel"><button type="button" data-set-theme="senra" aria-pressed="true">David Senra</button><button type="button" data-set-theme="founders" aria-pressed="false">Founders</button></div></nav>
-  <header class="masthead">
-    <p class="eyebrow">Founders podcast</p>
-    <h1><span class="title-senra">Episodes</span><span class="title-founders">Episodes, and the companies still hiring.</span></h1>
-    <p class="intro">__COUNT__ public episodes. When a title names a person or company already on this jobs board, the row links to those roles.</p>
-    <p class="independence">Independent fan project. Not affiliated with David Senra or Founders.</p>
-    <p class="source-note">Titles, numbers, dates and summaries are from the public Founders RSS feed, fetched __FETCHED__. Episode page links are the matching URLs on the Founders sitemap. Show notes are not used for company matching, so sponsor mentions stay out of the jobs links. __LINKED__ episodes have a sitemap page; the rest link to the show.</p>
-  </header>
-  <form class="episode-tools" action="/founders" method="get" role="search">
-    <label>Search episodes
-      <input id="ep-q" type="search" name="q" placeholder="Founder, company, or episode number" autocomplete="off">
-    </label>
-    <label class="board-only"><input id="ep-board" type="checkbox"> On this board</label>
-  </form>
-  <p id="ep-count" role="status">__COUNT__ episodes</p>
-  <div id="episode-list" class="episode-list">__LIST__</div>
-  <footer>
-    <a href="/">Jobs</a>
-    <a href="/about.html">About</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="__FEED__">RSS source ↗</a>
-    <a href="https://www.founderspodcast.com/">founderspodcast.com ↗</a>
-  </footer>
+<a href="/">← Senra Jobs</a>
+<h1>Episodes</h1>
+<p>__COUNT__ public Founders episodes. When a title names a person or company already on this jobs board, the row links to those roles.</p>
+<p class="note">Independent fan project. Not affiliated with David Senra or Founders. Titles, numbers, dates and summaries come from the public RSS feed, fetched __FETCHED__. Episode links are sitemap pages on founderspodcast.com. __LINKED__ episodes have one; the rest link to the show. Sponsor notes are not used for job links.</p>
+<form class="tools" action="/founders" method="get" role="search">
+  <label>Search episodes
+    <input id="ep-q" type="search" name="q" placeholder="Founder, company, or episode number" autocomplete="off">
+  </label>
+  <label class="board-only"><input id="ep-board" type="checkbox"> On this board</label>
+</form>
+<p id="ep-count" class="note" role="status">__COUNT__ episodes</p>
+<div id="episode-list">__LIST__</div>
+<footer>
+  <a href="/">Senra Jobs</a>
+  <a href="/about.html">About</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="__FEED__">RSS source ↗</a>
+</footer>
 </main>
-<script src="/assets/theme.js" defer></script>
 <script src="/assets/founders.js" defer></script>
 </body>
 </html>

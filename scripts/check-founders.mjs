@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import { parseFeed, sitemapEpisodeUrls, attachOfficialUrls, matchCatalog, normalize } from '../founders-catalog.mjs';
 
@@ -55,39 +56,30 @@ assert.ok(liveAri && liveAri.guests.includes('Ari Emanuel'), 'Episode 436 should
 assert.ok(liveAri.companies.some(company => company.name === 'WME Group'));
 assert.ok(!live.some(episode => episode.summary && /made possible by/i.test(episode.summary)));
 
-const pages = ['index.html', 'about.html', 'privacy.html', 'research.html', 'new.html', 'founders.html'];
-const boot = 'localStorage.getItem("senrajobs-theme")';
-for (const page of pages) {
+// Generated pages (index.html, new.html, research.html) change with every guest and role refresh,
+// so only hand-written sources are compared with the pre-theme commit. template.html is excluded since the
+// 2026-11-13 design pass (see DESIGN.md). Line endings are normalized.
+const norm = (text) => text.replace(/\r\n/g, '\n').replace(/app\.[0-9a-f]{16}\.js/g, 'app.HASH.js');
+const pageBytes = (page) => norm(fs.readFileSync(page).toString('utf8'));
+for (const page of ['about.html', 'privacy.html', 'new-template.html', 'career-research.mjs']) {
+  const previous = norm(execFileSync('git', ['show', `2aa3a66:${page}`], { encoding: 'utf8' }));
+  assert.equal(pageBytes(page), previous, `${page} must match the page from before the theme change`);
+}
+for (const page of ['index.html', 'about.html', 'privacy.html', 'research.html', 'new.html']) {
   const html = fs.readFileSync(page, 'utf8');
-  assert.ok(html.includes('data-theme="senra"'), page);
-  assert.ok(html.includes(boot), page);
-  assert.ok(html.includes('/assets/theme.css'), page);
-  assert.ok(html.includes('/assets/theme.js'), page);
-  assert.ok(/not affiliated with/i.test(html) && /David Senra/.test(html) && /Founders/.test(html), page);
-  assert.ok(html.includes('data-set-theme="senra"') && html.includes('data-set-theme="founders"'), page);
+  assert.ok(!html.includes('data-set-theme'), page);
+  assert.ok(!html.includes('senrajobs-theme'), page);
+  assert.ok(!html.includes('/assets/theme.css') && !html.includes('fonts.googleapis.com'), page);
 }
 const foundersPage = fs.readFileSync('founders.html', 'utf8');
 assert.ok(foundersPage.includes('Episode page') || foundersPage.includes('Show page'));
 assert.ok(foundersPage.includes('Ari Emanuel'));
 assert.ok(foundersPage.includes('https://www.founderspodcast.com/episodes/'));
+assert.ok(foundersPage.includes('Schmalfette Grotesk') && foundersPage.includes('use.typekit.net'));
+assert.ok(!foundersPage.includes('data-set-theme') && !foundersPage.includes('/assets/theme.css') && !foundersPage.includes('fonts.googleapis.com'));
 assert.ok(!foundersPage.includes('__COUNT__') && !foundersPage.includes('__LIST__'));
 assert.equal((foundersPage.match(/class="episode"/g) || []).length, catalog.episodes.length);
-
-const theme = fs.readFileSync('assets/theme.css', 'utf8');
-assert.ok(theme.includes('html[data-theme="senra"]') && theme.includes('html[data-theme="founders"]'));
-assert.ok(theme.includes('--accent: #006bff') && theme.includes('--foreground') === false);
-assert.ok(theme.includes('#4cbb17') && theme.includes('Anton') && theme.includes('Libre Baskerville'));
-assert.ok(!theme.includes('Schmalfette') && !theme.includes('typekit'));
-const contrast = (hex, other = '#ffffff') => {
-  const lin = channel => { const c = channel / 255; return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
-  const lum = value => { const h = value.slice(1); const channels = [0, 2, 4].map(index => lin(parseInt(h.slice(index, index + 2), 16))); return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2]; };
-  const a = lum(hex), b = lum(other); return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
-};
-assert.ok(contrast('#006bff') >= 4.5, 'Founders accent must be readable on white');
-assert.ok(contrast('#595959') >= 4.5);
-assert.ok(contrast('#171717') >= 7);
-assert.ok(contrast('#000000') >= 7);
-assert.ok(contrast('#4cbb17') < 3, 'Senra green is decorative and must not be treated as text');
+assert.ok(!fs.existsSync('assets/theme.css') && !fs.existsSync('assets/theme.js') && !fs.existsSync('docs/design-tokens.md'));
 
 const index = fs.readFileSync('index.html', 'utf8');
 assert.ok(index.includes('id="list"') && index.includes('data-guest='));

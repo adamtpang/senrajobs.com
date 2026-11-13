@@ -70,7 +70,7 @@ const list = out.map((g) => {
   const current = g.companies.filter(c => c.note !== 'acquired or closed');
   const marks = current.map(c => {
     const name=c.name.split(' (')[0],src=logos[name]?.src;
-    return src ? `<img src="${esc(src)}" alt="${esc(name)}" title="${esc(name)}" width="28" height="28" loading="lazy" decoding="async">` : `<span class="guest-company-initials" role="img" aria-label="${esc(name)}" title="${esc(name)}">${esc(initials(name))}</span>`;
+    return src ? `<img src="${esc(src)}" alt="${esc(name)}" title="${esc(name)}" width="32" height="32" loading="lazy" decoding="async">` : `<span class="guest-company-initials" role="img" aria-label="${esc(name)}" title="${esc(name)}">${esc(initials(name))}</span>`;
   }).join('');
   const href = `?view=companies&guest=${encodeURIComponent(g.name)}`;
   return `<a class="founder" data-guest="${esc(g.name)}" href="${esc(href)}" aria-label="Explore companies connected to ${esc(g.name)}"><span class="guest-photo">${photo}</span><span class="who"><b>${esc(g.name)}<span class="guest-arrow" aria-hidden="true">→</span></b><span class="guest-companies">${marks}</span></span></a>`;
@@ -121,16 +121,12 @@ const rendered = html
   .replace('__GUEST_DATA__', () => JSON.stringify(out.map(guest => ({name:guest.name, episode:guest.episode, photo:photos[guest.name] ? photos[guest.name].replace(/\/\d+x\d+bb(\.[a-z]+)?/i, "/200x200bb$1") : '', companies:guest.companies.filter(c => c.note !== 'acquired or closed').map(c => c.name.split(' (')[0])}))).replace(/</g,'\\u003c'))
   .replace('__APP_SCRIPT__', `/assets/app/app.${appHash}.js`);
 // The CSP in vercel.json allows the inline analytics loader by hash. Fail the build if they drift.
-const csp = JSON.parse(fs.readFileSync('vercel.json','utf8')).headers.flatMap(rule => rule.headers).find(h => h.key === 'Content-Security-Policy')?.value || '';
 const analyticsInline = rendered.match(/<script data-posthog-fleet>([\s\S]*?)<\/script>/)?.[1];
 if (analyticsInline !== undefined) {
   const analyticsHash = `'sha256-${createHash('sha256').update(analyticsInline).digest('base64')}'`;
+  const csp = JSON.parse(fs.readFileSync('vercel.json','utf8')).headers.flatMap(rule => rule.headers).find(h => h.key === 'Content-Security-Policy')?.value || '';
   if (!csp.includes(analyticsHash)) throw new Error(`vercel.json Content-Security-Policy must allow the analytics loader: ${analyticsHash}`);
 }
-const themeBoot = 'try{var t=localStorage.getItem("senrajobs-theme");if(t==="senra"||t==="founders")document.documentElement.setAttribute("data-theme",t);}catch(e){}';
-const themeHash = `'sha256-${createHash('sha256').update(themeBoot).digest('base64')}'`;
-if (!rendered.includes(themeBoot)) throw new Error('Theme boot script missing from the page');
-if (!csp.includes(themeHash)) throw new Error(`vercel.json Content-Security-Policy must allow the theme boot script: ${themeHash}`);
 fs.writeFileSync("index.html", rendered);
 fs.writeFileSync('interview-prompt.txt',createExtractPrompt()+'\n');
 // Keep .js helpers available for direct board.js module debugging.
@@ -196,6 +192,6 @@ fs.writeFileSync('founders.html', fs.readFileSync('founders-template.html', 'utf
   .replaceAll('__FEED__', esc(foundersCatalog.feed))
   .replace('__LIST__', foundersList));
 fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/founders</loc><lastmod>${(foundersCatalog.fetchedOn || anchor.toISOString()).slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/new</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/about.html</loc></url><url><loc>https://senrajobs.com/privacy.html</loc></url><url><loc>https://senrajobs.com/research.html</loc></url></urlset>\n`);
-fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own. Independent fan project, not affiliated with David Senra or Founders.\n\nFounders podcast episodes, linked to jobs only when the episode title names a person or company already on this board: https://senrajobs.com/founders\n\nNew roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.\n\n` +
+fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.\n\nFounders podcast episodes, with jobs only when the episode title names a person or company already on this board: https://senrajobs.com/founders\n\nNew roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.\n\n` +
   out.map((g) => `## ${g.name}\n` + g.companies.map((c) => `- ${c.name}: ${c.careers || c.note}`).join("\n")).join("\n\n") +
   (targets.length ? `\n\n## Target companies\n` + targets.map((t) => `- ${t.name}: ${t.careers}${t.boardName ? ` (board name: ${t.boardName})` : ""}`).join("\n") : "") + "\n");
