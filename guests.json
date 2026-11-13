@@ -1,5 +1,56 @@
 [
   {
+    "name": "Vlad Tenev",
+    "episode": {
+      "title": "Building Robinhood, Surviving GameStop & A $500 Million Phone Call | Vlad Tenev (2026-11-11)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000801172887"
+    },
+    "companies": [
+      {
+        "name": "Robinhood",
+        "careers": "https://job-boards.greenhouse.io/robinhood"
+      },
+      {
+        "name": "Harmonic",
+        "careers": "https://jobs.ashbyhq.com/Harmonic"
+      }
+    ]
+  },
+  {
+    "name": "Nikesh Arora",
+    "episode": {
+      "title": "Building a $250B Cybersecurity Giant | Nikesh Arora, Palo Alto Networks (2026-11-08)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000800536977"
+    },
+    "companies": [
+      {
+        "name": "Palo Alto Networks",
+        "careers": "https://paloaltonetworks.wd5.myworkdayjobs.com/en-US/panwexternalcareers"
+      }
+    ]
+  },
+  {
+    "name": "Scott Kupor",
+    "episode": {
+      "title": "a16z's First Employee on the History of a16z, Venture Capital & Fixing the Government | Scott Kupor (2026-11-04)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000799775972"
+    },
+    "companies": [
+      {
+        "name": "Andreessen Horowitz",
+        "careers": "https://a16z.com/about/jobs/"
+      },
+      {
+        "name": "U.S. Office of Personnel Management (director)",
+        "careers": "https://www.opm.gov/about-us/careers-at-opm/"
+      },
+      {
+        "name": "Loudcloud / Opsware (early employee)",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
     "name": "Rafael Vivas",
     "episode": {
       "title": "High School Dropout to Multi-Billionaire: The Relentless Drive of Rafael Vivas (2026-11-01)",

@@ -1,5 +1,23 @@
 Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.megaphone.fm/david-senra), davidsenra.com/podcast, official company sites. Guest census reconciled 2026-10-28: 50 interviews, 49 distinct guests and one trailer; Michael Ovitz appears twice. Kenn Ricci is the latest published interview (2026-10-28). This verifies guest coverage, not exhaustive employer associations or job collection. Links marked (unverified) returned 403/404/406/429/timeout to an automated fetch (often bot protection, not necessarily a dead page).
 
+## Vlad Tenev (episode: Building Robinhood, Surviving GameStop & A $500 Million Phone Call | Vlad Tenev, 2026-11-11, https://podcasts.apple.com/us/podcast/id1836497887?i=1000801172887)
+- Robinhood: https://job-boards.greenhouse.io/robinhood (co-founder and CEO; verified 2026-11-11, the official https://careers.robinhood.com careers site requests this exact Greenhouse board, which returned 156 postings)
+- Harmonic: https://jobs.ashbyhq.com/Harmonic (co-founder and executive chairman; verified 2026-11-11, the official https://www.harmonic.fun/careers/ page links this exact Ashby board, which returned 9 postings, and harmonic.fun names him Co-Founder and Executive Chairman)
+
+Identity, episode date and title verified in the official feed (track 1000801172887) and https://www.davidsenra.com/episode/vlad-tenev. The feed describes him as co-founder and CEO of Robinhood. Harmonic is not named in the episode description; the association comes from Harmonic's own site. His earlier startup selling trading software to hedge funds is mentioned in the feed without a name and is no longer operating, so it is not listed.
+
+## Nikesh Arora (episode: Building a $250B Cybersecurity Giant | Nikesh Arora, Palo Alto Networks, 2026-11-08, https://podcasts.apple.com/us/podcast/id1836497887?i=1000800536977)
+- Palo Alto Networks: https://paloaltonetworks.wd5.myworkdayjobs.com/en-US/panwexternalcareers (chairman and CEO since 2018, not founder; verified 2026-11-08, the official https://jobs.paloaltonetworks.com careers site links this exact Workday board, which reported 1359 postings)
+
+Identity, episode date and title verified in the official feed (track 1000800536977) and https://www.davidsenra.com/episode/nikesh-arora. The feed describes him as chairman and CEO of Palo Alto Networks, not its founder; earlier roles at Google (chief business officer) and SoftBank (president) are past employment, not listed.
+
+## Scott Kupor (episode: a16z's First Employee on the History of a16z, Venture Capital & Fixing the Government | Scott Kupor, 2026-11-04, https://podcasts.apple.com/us/podcast/id1836497887?i=1000799775972)
+- Andreessen Horowitz: https://a16z.com/about/jobs/ (first employee, 2009, and managing partner for about 16.5 years; shared association with Marc Andreessen, same firm-only board)
+- U.S. Office of Personnel Management (director): https://www.opm.gov/about-us/careers-at-opm/ (unverified, returned 403 to an automated fetch; federal openings are posted through USAJOBS, no supported public ATS inventory imported)
+- Loudcloud / Opsware (early employee): acquired by Hewlett-Packard (2007), skipped
+
+Identity, episode date and title verified in the official feed (track 1000799775972) and https://www.davidsenra.com/episode/scott-kupor. The feed describes him as a16z's first employee and current OPM director, not a founder of either; he worked with Marc Andreessen and Ben Horowitz at Loudcloud and Opsware.
+
 ## Rafael Vivas (episode: High School Dropout to Multi-Billionaire: The Relentless Drive of Rafael Vivas, 2026-11-01, https://podcasts.apple.com/us/podcast/id1836497887?i=1000799195101)
 - AppLovin: https://www.applovin.com/en/careers (founding team member and first business hire, 2011; shared association with Adam Foroughi)
 - Lion Studios (co-founder): acquired by Tripledot Studios with AppLovin's mobile games business (closed 2025-06-30), skipped
