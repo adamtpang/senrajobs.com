@@ -56,9 +56,12 @@ assert.ok(liveAri && liveAri.guests.includes('Ari Emanuel'), 'Episode 436 should
 assert.ok(liveAri.companies.some(company => company.name === 'WME Group'));
 assert.ok(!live.some(episode => episode.summary && /made possible by/i.test(episode.summary)));
 
-const pageBytes = (page) => fs.readFileSync(page).toString('utf8').replace(/app\.[0-9a-f]{16}\.js/g, 'app.HASH.js');
-for (const page of ['index.html', 'about.html', 'privacy.html', 'research.html', 'new.html', 'template.html', 'new-template.html', 'career-research.mjs']) {
-  const previous = execFileSync('git', ['show', `2aa3a66:${page}`], { encoding: 'utf8' }).replace(/app\.[0-9a-f]{16}\.js/g, 'app.HASH.js');
+// Generated pages (index.html, new.html, research.html) change with every guest and role refresh,
+// so only the hand-written sources are compared with the pre-theme commit. Line endings are normalized.
+const norm = (text) => text.replace(/\r\n/g, '\n').replace(/app\.[0-9a-f]{16}\.js/g, 'app.HASH.js');
+const pageBytes = (page) => norm(fs.readFileSync(page).toString('utf8'));
+for (const page of ['about.html', 'privacy.html', 'template.html', 'new-template.html', 'career-research.mjs']) {
+  const previous = norm(execFileSync('git', ['show', `2aa3a66:${page}`], { encoding: 'utf8' }));
   assert.equal(pageBytes(page), previous, `${page} must match the page from before the theme change`);
 }
 for (const page of ['index.html', 'about.html', 'privacy.html', 'research.html', 'new.html']) {
