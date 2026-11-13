@@ -16,17 +16,28 @@ import { dysonPay } from './dyson-pay.mjs';
 import { snapPay } from './snap-pay.mjs';
 import { fetchCulinary } from './culinary-feed.mjs';
 import { fetchNode,fetchCrystal } from './scoped-foundation-studio-feed.mjs';
+import { fetchPayPal } from './paypal-feed.mjs';
+import { fetchFlexjet } from './flexjet-feed.mjs';
+import { fetchBeats } from './beats-feed.mjs';
+import { fetchAdp } from './adp-feed.mjs';
+import { fetchBambooHr } from './bamboohr-feed.mjs';
+import { fetchDellFoundation } from './dell-foundation-feed.mjs';
+import { fetchCiFinancial } from './ci-feed.mjs';
 export const SOURCE_OVERRIDES = {
-  'Flexjet (chairman)':{kind:'scoped-manual',slug:'flexjet',identityUrl:'https://careers.flexjet.com/us/en',scope:'Global group search plus direct public ATS. Exact requisition mirrors and public brand labels preserved; manual reconciliation required.'},
+  'Flexjet (chairman)':{kind:'flexjet-public',slug:'flexjet',identityUrl:'https://careers.flexjet.com/us/en',scope:'Global group search plus direct public ATS. Exact requisition mirrors and public brand labels preserved; manual reconciliation required.'},
   'Sentient Jet (chairman)':{kind:'scoped-manual',slug:'sentient-jet',identityUrl:'https://sentient.com/private-jet-careers/',scope:'Named employer board; its current role mirrors Flexjet and uses the shared canonical URL.'},
   'Corporate Wings (early owner and operator)':{kind:'scoped-manual',slug:'corporate-wings',identityUrl:'https://corporatewings.com/careers',scope:'Exact Corporate Wings public board; no parent or portfolio expansion.'},
-  'Flexjet Technical Services (Nextant Aerospace / Constant Aviation operations)':{kind:'scoped-manual',slug:'flexjet-technical',identityUrl:'https://careers.flexjet.com/us/en/c/aircraft-maintenance-and-support-jobs',scope:'Only explicit Technical Services assignments; parent mirrors deduplicated and other division roles remain unknown.'},
+  'Flexjet Technical Services (Nextant Aerospace / Constant Aviation operations)':{kind:'flexjet-public',slug:'flexjet-technical',identityUrl:'https://careers.flexjet.com/us/en/c/aircraft-maintenance-and-support-jobs',scope:'Only explicit Technical Services assignments; parent mirrors deduplicated and other division roles remain unknown.'},
+  'Beats by Dre':{kind:'beats-public',slug:'beats',identityUrl:'https://jobs.apple.com/en-us/search?product=beats-audio-accessories-BTSAA',scope:'Only postings Apple lists under its Beats product filter. Never widened to other Apple jobs.'},
+  'Love.Life':{kind:'adp-public',slug:'17763c3e-6689-4e44-8e0b-eac90764d9d5|9200392115678_2',identityUrl:'https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=17763c3e-6689-4e44-8e0b-eac90764d9d5&ccId=9200392115678_2&lang=en_US',scope:'Love.Life public ADP career center only.'},
+  'TrailRunner International (co-founder; former president)':{kind:'bamboohr-public',slug:'trailrunner',identityUrl:'https://trailrunner.bamboohr.com/careers',scope:'TrailRunner public BambooHR board only.'},
+  'Michael & Susan Dell Foundation':{kind:'dell-foundation-public',slug:'dellfoundation',identityUrl:'https://www.dell.org/careers/',scope:'Only jobs listed on the foundation careers page.'},
   'NODE Foundation (co-founder; nonprofit)':{kind:'node-public',slug:'nodefoundation',identityUrl:'https://nodefoundation.com/careers',scope:'Named nonprofit employer. Promotional/uncertain listings and general expressions of interest are excluded.'},
   'Crystal Dynamics (former president and CEO)':{kind:'crystal-public',slug:'crystaldynamics',identityUrl:'https://www.crystaldynamics.com/careers/',scope:'Named studio board; historical Zelnick executive association. Graduate cohort eligibility and conflicting pay sections are preserved.'},
   'USC Iovine and Young Academy (co-founder; nonprofit school)':{kind:'scoped-manual',slug:'usc-academy',identityUrl:'https://iovine-young.usc.edu/faculty-positions',scope:'Only Academy-assigned roles manually verified from official descriptions. No university-wide import.'},
   '20th Century Studios (formerly 20th Century Fox; former president and COO)':{kind:'scoped-manual',slug:'20th-century-studios',identityUrl:'https://join.disneycareers.com/global/en/20th-century-studios',scope:'Only explicit studio assignments or the named film corporation as employer. Shared Disney roles are excluded; manual detail review required.'},
-  'CI Financial (CEO; not founder)':{kind:'scoped-manual',slug:'ci-financial',identityUrl:'https://ci.wd3.myworkdayjobs.com/en-US/CI_FINANCIAL_EXTERNAL_CAREER-SITE',scope:'Separate CI public board. Manual refresh must retain verified Corient cross-post deduplication; generic Workday import would duplicate a requisition.'},
-  'PayPal (Elon Musk; episode subject; historical co-founder)':{kind:'scoped-manual',slug:'paypal',identityUrl:'https://paypal.eightfold.ai/careers',scope:'Public employee board. Moving totals and uncollected contractor channel make coverage partial; paced manual refresh and detail verification required.'},
+  'CI Financial (CEO; not founder)':{kind:'ci-public',slug:'ci-financial',identityUrl:'https://ci.wd3.myworkdayjobs.com/en-US/CI_FINANCIAL_EXTERNAL_CAREER-SITE',scope:'Separate CI public board. Manual refresh must retain verified Corient cross-post deduplication; generic Workday import would duplicate a requisition.'},
+  'PayPal (Elon Musk; episode subject; historical co-founder)':{kind:'paypal-public',slug:'paypal',identityUrl:'https://paypal.eightfold.ai/careers',scope:'Public employee board. Moving totals and uncollected contractor channel make coverage partial; paced manual refresh and detail verification required.'},
   'OnePay (Walmart-Ribbit venture; Malka founding-board association)':{kind:'ashby',slug:'oneapp',identityUrl:'https://www.onepay.com/careers',scope:'Official OnePay careers page links the legacy oneapp Ashby account. Venture-building/founding-board association with Micky Malka, not a current CEO claim or a general Ribbit portfolio expansion.'},
   'Major Food Group':{kind:'culinary-public',slug:'majorfood',identityUrl:'https://www.majorfood.com/careers',scope:'Official careers page embeds Culinary Agents client CA-DS-MAJORFOOD16, majorfood-select. Restaurant brands inherit only explicit widget membership; other brand channels remain unverified.'},
   Dyson:{kind:'workday',slug:'dyson|wd3|dyson_careers',identityUrl:'https://careers.dyson.com/en-gb/job-description/national-account-manager-home-direct-ecommerce/JR37846/',scope:'Official Dyson job-detail Apply links identify the public dyson_careers Workday site. The independent careers search was exhausted and reconciled by requisition ID; additional Workday-only postings are retained with their public detail evidence.'},
@@ -89,7 +100,14 @@ export function sourceIdentityMatches(source,name) {
  const brand=name.split(' (')[0];
  if(source.kind==='node-public')return brand==='NODE Foundation'&&source.slug==='nodefoundation';
  if(source.kind==='crystal-public')return brand==='Crystal Dynamics'&&source.slug==='crystaldynamics';
- if(source.kind==='scoped-manual')return ({'USC Iovine and Young Academy':'usc-academy','20th Century Studios':'20th-century-studios','CI Financial':'ci-financial',PayPal:'paypal',Flexjet:'flexjet','Sentient Jet':'sentient-jet','Corporate Wings':'corporate-wings','Flexjet Technical Services':'flexjet-technical'})[brand]===source.slug;
+ if(source.kind==='scoped-manual')return ({'USC Iovine and Young Academy':'usc-academy','20th Century Studios':'20th-century-studios','Sentient Jet':'sentient-jet','Corporate Wings':'corporate-wings'})[brand]===source.slug;
+ if(source.kind==='flexjet-public')return ({Flexjet:'flexjet','Flexjet Technical Services':'flexjet-technical'})[brand]===source.slug;
+ if(source.kind==='ci-public')return brand==='CI Financial'&&source.slug==='ci-financial';
+ if(source.kind==='paypal-public')return brand==='PayPal'&&source.slug==='paypal';
+ if(source.kind==='beats-public')return brand==='Beats by Dre'&&source.slug==='beats';
+ if(source.kind==='adp-public')return brand==='Love.Life'&&source.slug==='17763c3e-6689-4e44-8e0b-eac90764d9d5|9200392115678_2';
+ if(source.kind==='bamboohr-public')return brand==='TrailRunner International'&&source.slug==='trailrunner';
+ if(source.kind==='dell-foundation-public')return brand==='Michael & Susan Dell Foundation'&&source.slug==='dellfoundation';
  if(source.kind==='culinary-public')return brand==='Major Food Group'&&source.slug==='majorfood';
  if(source.kind==='unitedmasters-public')return brand==='UnitedMasters / Translation'&&source.slug==='unitedmasterstranslation';
  if(source.kind==='canes-public')return brand==="Raising Cane's"&&source.slug==='raisingcanes';
@@ -167,6 +185,13 @@ export async function fetchBoard(source,{request=requestPublic,maxPages=500,obse
  if(source.kind==='crystal-public')return fetchCrystal({request,observedAt,mapJob:mapATSJob});
  if(source.kind==='scoped-manual')return {rows:[],status:'failed',observedAt,endpoint:source.identityUrl,reason:'This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.'};
  if(source.kind==='atoms-public'){const result=await fetchAtoms({request,observedAt,mapJob:mapATSJob,preferredUrls});return source.slug==='all'?result:selectAtomsBrand(result,source.slug);}
+ if(source.kind==='flexjet-public')return fetchFlexjet(source,{request,observedAt});
+ if(source.kind==='ci-public')return fetchCiFinancial({request,maxPages,observedAt,mapJob:mapATSJob});
+ if(source.kind==='paypal-public')return fetchPayPal({request,observedAt});
+ if(source.kind==='beats-public')return fetchBeats({request,observedAt});
+ if(source.kind==='adp-public')return fetchAdp(source,{request,observedAt});
+ if(source.kind==='bamboohr-public')return fetchBambooHr(source,{request,observedAt});
+ if(source.kind==='dell-foundation-public')return fetchDellFoundation({request,observedAt});
  if(source.kind==='culinary-public')return fetchCulinary({request,observedAt});
  if(source.kind==='workday')return fetchWorkday(source,{request,maxPages,observedAt,mapJob:mapATSJob});
  if(source.kind==='medici-public')return fetchMedici(source,{request,observedAt});
