@@ -144,6 +144,8 @@
   .company-logo,.company-initials { width:40px; height:40px; flex-shrink:0; object-fit:contain; }
   .company-initials { display:grid; place-items:center; background:#f3f3f3; font-size:var(--text-1); font-weight:500; }
   .company-count { font-size:var(--text-2); color:var(--muted); text-align:right; }
+  .company-checked { display:block; font-size:var(--text-1); font-weight:400; margin-top:2px; }
+  .company-checked.stale { color:var(--fg); }
   .company-arrow { font-size:var(--text-4); }
   .aggregate-role { display:flex; justify-content:space-between; gap:24px; padding:15px 0; border-top:1px solid var(--line); }
   .aggregate-role > div:first-child { min-width:0; }
@@ -182,7 +184,7 @@
     main { padding:28px 16px 112px; } h1 { font-size:clamp(48px,11vw,72px); } .intro { font-size:var(--text-3); margin-top:16px; }
     .search-control { max-width:none; }
     #list { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 16px; } .who b { font-size:var(--text-4); }
-    .company-name { font-size:var(--text-4); } .company-count { font-size:var(--text-1); max-width:90px; }
+    .company-name { font-size:var(--text-4); } .company-count { font-size:var(--text-1); max-width:130px; }
     .aggregate-role { display:block; } .aggregate-title { font-size:var(--text-4); } .aggregate-meta { max-width:100%; text-align:left; margin:10px 0 0 28px; }
     #context-title { font-size:var(--text-5); }
   }
@@ -192,7 +194,7 @@
 <body>
 <main>
   <header class="masthead">
-    <div><h1 tabindex="-1">senrajobs.com</h1><p class="intro">Jobs at David Senra’s guests’ companies.</p><p class="updated">Last updated <time datetime="__UPDATED_ISO__">__UPDATED__</time>. <a href="/new">Browse roles new in the last 48 hours</a>.</p><p class="independence">Independent fan project. Not affiliated with David Senra or Founders.</p></div>
+    <div><h1 tabindex="-1">senrajobs.com</h1><p class="intro">Open roles at companies that guests of the David Senra podcast founded, lead or helped build.</p><p class="updated">Last updated <time datetime="__UPDATED_ISO__">__UPDATED__</time>. <a href="/new">Browse roles new in the last 48 hours</a>.</p><p class="independence">Independent fan project. Not affiliated with David Senra or Founders.</p></div>
   </header>
   <section id="assistant" class="role-finder" role="dialog" aria-modal="false" aria-labelledby="assistant-title" hidden>
     <div class="chat-heading"><h2 id="assistant-title">Find my role</h2><button id="chat-close" type="button" aria-label="Close chat">×</button></div>

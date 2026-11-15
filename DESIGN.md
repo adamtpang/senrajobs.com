@@ -49,6 +49,7 @@ Weights: 400 for text, 500 for titles and names, 600 for emphasis inside a line.
 ## Layout
 
 - One column with 16px gutters on phones.
+- The one-line intro states the listing rule: companies that guests of the show founded, lead or helped build.
 - Home shows the full masthead: headline, one-line intro, "last updated" line, and the one-line
   independence notice.
 - Inner pages (company list, role list) shrink the site name to 36px and hide the intro and
@@ -62,7 +63,8 @@ Weights: 400 for text, 500 for titles and names, 600 for emphasis inside a line.
   32px. Hover or focus tints the tile.
 - **Company mark:** logo from `company-logos.json` (run `node scripts/fetch-logos.mjs` after adding
   companies, then `node build.mjs`). If there is none, an initials tile at `--text-1`, weight 600.
-- **Company row:** 40px mark, name, role count, arrow. Rows with no indexed roles link straight to
+- **Company row:** 40px mark, name, role count, the date its job board was last checked, arrow. If the
+  latest refresh failed, the label reads "Last checked <date>, may be out of date". Rows with no indexed roles link straight to
   the employer's careers page.
 - **Role row:** grayscale icon, title (links to the employer's posting, opens in a new tab),
   location and pay at `--text-2`. Show only what the posting states. If the pay period is not

@@ -48,6 +48,14 @@ for (const target of targets) {
 }
 for (const role of boardRoles) role.logo = logos[role.company.split(' (')[0]]?.src || '';
 const companyRows = compileCompanies(out, boardRoles, logos);
+// Per-company freshness: the last successful board fetch, and whether the latest attempt failed.
+for (const row of companyRows) {
+  const boards = Object.entries(jobs).filter(([name, board]) => name.split(' (')[0] === row.name && board?.fetched && Number.isFinite(Date.parse(board.fetched)));
+  if (!boards.length) continue;
+  const oldest = boards.map(([, board]) => board).sort((x, y) => Date.parse(x.fetched) - Date.parse(y.fetched))[0];
+  row.checked = oldest.fetched;
+  row.stale = boards.some(([, board]) => board.refreshFailed === true || board.coverage?.status === 'failed');
+}
 for (const target of targets) {
   const board = jobs[target.name];
   if (!board?.roles?.length || companyRows.some(row => row.name === target.name)) continue;
@@ -68,8 +76,11 @@ const list = out.map((g) => {
     ? `<img src="${esc(photoUrl)}" alt="${esc(g.name)}" width="200" height="200" loading="lazy" decoding="async">`
     : `<span class="ph" aria-hidden="true">${esc(initials(g.name))}</span>`;
   const current = g.companies.filter(c => c.note !== 'acquired or closed');
+  // Divisions that share one brand mark (for example the Fanatics boards) show it once.
+  const shownMarks = new Set();
   const marks = current.map(c => {
     const name=c.name.split(' (')[0],src=logos[name]?.src;
+    if (src) { if (shownMarks.has(src)) return ''; shownMarks.add(src); }
     return src ? `<img src="${esc(src)}" alt="${esc(name)}" title="${esc(name)}" width="32" height="32" loading="lazy" decoding="async">` : `<span class="guest-company-initials" role="img" aria-label="${esc(name)}" title="${esc(name)}">${esc(initials(name))}</span>`;
   }).join('');
   const href = `?view=companies&guest=${encodeURIComponent(g.name)}`;
