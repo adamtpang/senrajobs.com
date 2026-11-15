@@ -1,6 +1,6 @@
 {
   "outputDirectory": "public",
-  "rewrites": [{ "source": "/new", "destination": "/new.html" }, { "source": "/founders", "destination": "/founders.html" }],
+  "rewrites": [{ "source": "/new", "destination": "/new.html" }, { "source": "/founders", "destination": "/founders.html" }, { "source": "/sectors/:slug", "destination": "/sectors/:slug.html" }, { "source": "/companies/most-roles", "destination": "/companies/most-roles.html" }],
   "functions": { "api/assistant.mjs": { "maxDuration": 30 } },
   "headers": [
     {

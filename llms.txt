@@ -6,6 +6,8 @@ Founders podcast episodes, with jobs only when the episode title names a person 
 
 New roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.
 
+Browse companies by sector: https://senrajobs.com/sectors/ai-software, https://senrajobs.com/sectors/consumer, https://senrajobs.com/sectors/finance, https://senrajobs.com/sectors/hardware-energy-space, https://senrajobs.com/sectors/logistics-industrial, https://senrajobs.com/sectors/food-retail, https://senrajobs.com/sectors/media-sports-entertainment, https://senrajobs.com/sectors/other, https://senrajobs.com/companies/most-roles
+
 ## Michael Rubin
 - Fanatics: https://job-boards.greenhouse.io/fanaticsinc
 - Fanatics Commerce: https://job-boards.greenhouse.io/fanaticscommerce

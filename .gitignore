@@ -16,3 +16,7 @@ public/
 
 # Content-hashed client bundle, rebuilt by build.mjs on every deploy
 assets/app/
+
+# Sector and ranking pages, rebuilt by build.mjs on every deploy
+sectors/
+companies/

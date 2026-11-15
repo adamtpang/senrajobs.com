@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import { createHash } from "node:crypto";
 import { compileRoles, compileCompanies } from './board-data.mjs';
+import { buildSectorPages } from './sector-pages.mjs';
 import { discoveryReports } from './discovery-reports.mjs';
 import { clientRole } from './client-data.mjs';
 import { careerResearch } from './career-research.mjs';
@@ -93,6 +94,12 @@ const updatedIso = fetchedAt ? fetchedAt.toISOString() : "";
 const updated = fetchedAt
   ? new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" }).format(fetchedAt)
   : "unavailable";
+// Static sector and ranking pages (see sector-pages.mjs). The analytics snippet is reused byte for byte
+// from the home template so it matches the Content-Security-Policy hash.
+const sectorLabels = fs.existsSync('company-sectors.json') ? JSON.parse(fs.readFileSync('company-sectors.json', 'utf8')) : null;
+const analyticsSnippet = fs.readFileSync('template.html', 'utf8').split('\r').join('').match(/<script data-posthog-fleet>.*?<\/script>/s)?.[0] || '';
+const sectorPages = buildSectorPages({ companyRows, labels: sectorLabels, generated: updated, analytics: analyticsSnippet });
+if (sectorPages.missing.length) throw new Error(`company-sectors.json has no sector for: ${sectorPages.missing.join(', ')}`);
 const career = careerResearch(JSON.parse(fs.readFileSync('reports/guest-career-history.json', 'utf8')));
 fs.writeFileSync('research.html', career.html);
 const jsonld = {
@@ -109,6 +116,7 @@ const jsonld = {
 };
 const html = fs.readFileSync("template.html", "utf8")
   .replaceAll('__CAREER_CONFIRMED__', career.confirmed).replaceAll('__CAREER_COHORT__', career.cohort).replaceAll('__CAREER_PERCENT__', career.percent)
+  .replace('__SECTOR_LINKS__', () => sectorPages.homeLinks)
   .replaceAll("__GUESTS__", out.length).replaceAll("__COMPANIES__", companies).replaceAll("__UPDATED_ISO__", updatedIso).replaceAll("__UPDATED__", updated).replaceAll("__ROLES__", boardRoles.length.toLocaleString("en-US"))
   .replace("__JSONLD__", JSON.stringify(jsonld).replace(/</g, "\u003c"))
   .replace('__NO_SCRIPT__', companyRows.filter(c => c.careers).map(c => `<li><a href="${esc(c.careers)}" ${ext}>${esc(c.name)} careers ↗</a>${c.connections.map(connection=>` · <a href="${esc(connection.source)}" ${ext}>${esc(connection.label)}</a>`).join('')}</li>`).join(''))
@@ -203,7 +211,8 @@ fs.writeFileSync('founders.html', fs.readFileSync('founders-template.html', 'utf
   .replaceAll('__FETCHED__', esc(foundersFetched))
   .replaceAll('__FEED__', esc(foundersCatalog.feed))
   .replace('__LIST__', foundersList));
-fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/founders</loc><lastmod>${(foundersCatalog.fetchedOn || anchor.toISOString()).slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/new</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/about.html</loc></url><url><loc>https://senrajobs.com/privacy.html</loc></url><url><loc>https://senrajobs.com/research.html</loc></url></urlset>\n`);
+fs.writeFileSync("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://senrajobs.com/</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/founders</loc><lastmod>${(foundersCatalog.fetchedOn || anchor.toISOString()).slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/new</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url><url><loc>https://senrajobs.com/about.html</loc></url><url><loc>https://senrajobs.com/privacy.html</loc></url><url><loc>https://senrajobs.com/research.html</loc></url>${sectorPages.paths.map(p => `<url><loc>https://senrajobs.com/${p}</loc><lastmod>${anchor.toISOString().slice(0, 10)}</lastmod></url>`).join('')}</urlset>\n`);
 fs.writeFileSync("llms.txt", `# Senra Jobs\n\n> Free directory of the ${out.length} guests interviewed on the David Senra podcast, including founders and company leaders, their associated companies, and careers links. Join a great company, learn from inside, then build your own.\n\nFounders podcast episodes, with jobs only when the episode title names a person or company already on this board: https://senrajobs.com/founders\n\nNew roles from the 48 hours before the latest observation: https://senrajobs.com/new.json (page https://senrajobs.com/new, RSS https://senrajobs.com/new.xml). Pay is included only when the board posted it.\n\n` +
+  (sectorPages.paths.length ? `Browse companies by sector: ${sectorPages.paths.map((p) => `https://senrajobs.com/${p}`).join(', ')}\n\n` : '') +
   out.map((g) => `## ${g.name}\n` + g.companies.map((c) => `- ${c.name}: ${c.careers || c.note}`).join("\n")).join("\n\n") +
   (targets.length ? `\n\n## Target companies\n` + targets.map((t) => `- ${t.name}: ${t.careers}${t.boardName ? ` (board name: ${t.boardName})` : ""}`).join("\n") : "") + "\n");
