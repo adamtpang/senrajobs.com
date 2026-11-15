@@ -1,5 +1,6 @@
 // Public ATS refresh with explicit pagination, location provenance and coverage.
 import fs from 'node:fs';
+import { expireStaleBoards } from './expire-stale.mjs';
 import { SOURCE_OVERRIDES,sourceIdentityMatches,requestPublic,detectSource,fetchBoard,enrichRole,retainBoard } from './ats.mjs';
 import { isLocationUnknown,texasEvidence } from './location-utils.mjs';
 const guests=JSON.parse(fs.readFileSync('guests.json','utf8'));
@@ -87,6 +88,7 @@ for(const target of targets){
 }
 // Preserve closed-company history in data, but never expose it as current hiring.
 for(const [name,board]of Object.entries(previous))if(!tasks.has(name))jobs[name]=board;
+for(const e of expireStaleBoards(jobs))console.log('Expired '+e.rolesDropped+' stale roles from '+e.name);
 fs.writeFileSync('jobs.json',JSON.stringify(jobs,null,1)+'\n');
 fs.mkdirSync('.cache',{recursive:true});fs.writeFileSync(contentPath,JSON.stringify(content));
 // Existing portraits are retained on lookup failure. No candidate or private data is read.
