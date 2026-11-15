@@ -126,7 +126,7 @@ export function sourceIdentityMatches(source,name) {
  if(source.kind==='wholefoods-page'&&brand==='Whole Foods Market'&&source.slug==='wholefoods')return true;
  if(['greenhouse','taketwo-public'].includes(source.kind)&&brand==='Take-Two Interactive'&&source.slug==='taketwo')return true;
  if(source.kind==='naturalmotion-public'&&brand==='NaturalMotion'&&source.slug==='nmcareers')return true;
- const aliases={'Atoms':['atoms','citystoragesystems'], 'Andreessen Horowitz':['a16z','andreessenhorowitz'], 'Creative Artists Agency':['caa','creativeartistsagency'], Snap:['snapchat','snap'], 'United Rentals':['ur','unitedrentals']};
+ const aliases={'Atoms':['atoms','citystoragesystems'], 'Andreessen Horowitz':['a16z','andreessenhorowitz'], 'Creative Artists Agency':['caa','creativeartistsagency'], Snap:['snapchat','snap'], 'United Rentals':['ur','unitedrentals'], Fanatics:['fanaticsinc'], 'Fanatics Betting & Gaming':['fanaticsfbg']};
  const account=norm(source.slug.split('|')[0]);
  return [norm(brand),...(aliases[brand]||[])].some(alias=>account===alias || account===alias+'usa' || account===alias+'jobs');
 }

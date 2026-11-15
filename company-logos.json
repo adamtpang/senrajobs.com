@@ -387,5 +387,21 @@
  "DFO Management": {
   "src": "/logos/dellfamilyoffice.com.png",
   "domain": "dellfamilyoffice.com"
+ },
+ "Fanatics": {
+  "src": "/logos/fanaticsinc.com.png",
+  "domain": "fanaticsinc.com"
+ },
+ "Fanatics Commerce": {
+  "src": "/logos/fanaticsinc.com.png",
+  "domain": "fanaticsinc.com"
+ },
+ "Fanatics Collectibles": {
+  "src": "/logos/fanaticsinc.com.png",
+  "domain": "fanaticsinc.com"
+ },
+ "Fanatics Betting & Gaming": {
+  "src": "/logos/fanaticsinc.com.png",
+  "domain": "fanaticsinc.com"
  }
 }
