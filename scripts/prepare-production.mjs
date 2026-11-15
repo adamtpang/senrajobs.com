@@ -6,6 +6,7 @@ fs.mkdirSync('.cache',{recursive:true});
 const destination=fs.mkdtempSync(path.resolve('.cache','public-deploy-'));
 for(const file of ['index.html','research.html','about.html','privacy.html','founders.html','interview-prompt.txt','og.png','robots.txt','sitemap.xml','llms.txt','guests.json','jobs.json','vercel.json'])fs.copyFileSync(file,path.join(destination,file));
 for(const directory of ['logos','assets','data'])fs.cpSync(directory,path.join(destination,directory),{recursive:true});
+for(const directory of ['sectors','companies'])if(fs.existsSync(directory))fs.cpSync(directory,path.join(destination,directory),{recursive:true});
 fs.mkdirSync(path.join(destination,'.vercel'));fs.copyFileSync('.vercel/project.json',path.join(destination,'.vercel/project.json'));
 fs.mkdirSync(path.join(destination,'api'));
 // Bundle only public API handlers. Local auth, runtime, prompts, research and job-content cache never ship.

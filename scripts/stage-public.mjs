@@ -9,6 +9,8 @@ fs.mkdirSync(out);
 const required = ['index.html','research.html','about.html','privacy.html','founders.html','interview-prompt.txt','og.png','robots.txt','sitemap.xml','llms.txt','guests.json','jobs.json'];
 for (const file of required) fs.copyFileSync(file, path.join(out, file));
 for (const dir of ['logos','assets','data']) fs.cpSync(dir, path.join(out, dir), { recursive: true });
+// Generated browse pages (sector-pages.mjs).
+for (const dir of ['sectors','companies']) if (fs.existsSync(dir)) fs.cpSync(dir, path.join(out, dir), { recursive: true });
 // Later pull requests add these. Copy them when the build has produced them.
 for (const file of ['new.html','new.json','new.xml','targets.json']) {
   if (fs.existsSync(file)) fs.copyFileSync(file, path.join(out, file));

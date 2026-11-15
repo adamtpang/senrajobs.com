@@ -1,0 +1,577 @@
+{
+ "20th Century Studios": {
+  "sector": "media-sports-entertainment",
+  "basis": "Disney-owned film studio, formerly 20th Century Fox.",
+  "source": "GUESTS.md"
+ },
+ "37signals": {
+  "sector": "ai-software",
+  "basis": "Software company that makes Basecamp, HEY and ONCE.",
+  "source": "GUESTS.md"
+ },
+ "Amerex Oil Associates": {
+  "sector": "finance",
+  "basis": "Oil brokerage firm that arranged oil contracts between buyers and sellers.",
+  "source": "https://www.jpe.com/"
+ },
+ "American Recordings": {
+  "sector": "media-sports-entertainment",
+  "basis": "Independent record label headed by Rick Rubin, released through Republic.",
+  "source": "employer-associations.json"
+ },
+ "Andreessen Horowitz": {
+  "sector": "finance",
+  "basis": "Venture capital firm (a16z).",
+  "source": "GUESTS.md"
+ },
+ "AppLovin": {
+  "sector": "ai-software",
+  "basis": "Advertising software platform that places ads in mobile games and apps.",
+  "source": "https://www.applovin.com"
+ },
+ "Atoms": {
+  "sector": "hardware-energy-space",
+  "basis": "Builds physical automation for the food, mining and transport industries.",
+  "source": "https://atoms.co"
+ },
+ "BMG Entertainment": {
+  "sector": "media-sports-entertainment",
+  "basis": "Former music arm of Bertelsmann, mostly sold to Sony in 2008.",
+  "source": "https://en.wikipedia.org/wiki/Bertelsmann_Music_Group"
+ },
+ "Base Power": {
+  "sector": "hardware-energy-space",
+  "basis": "Home battery and electricity company.",
+  "source": "GUESTS.md"
+ },
+ "Beats by Dre": {
+  "sector": "hardware-energy-space",
+  "basis": "Headphone and audio accessories brand, now a product team inside Apple.",
+  "source": "GUESTS.md"
+ },
+ "Bending Spoons": {
+  "sector": "consumer",
+  "basis": "Acquires and runs digital products such as Evernote, Vimeo, Remini and WeTransfer.",
+  "source": "https://bendingspoons.com"
+ },
+ "CI Financial": {
+  "sector": "finance",
+  "basis": "Asset and wealth management company; parent of Corient.",
+  "source": "GUESTS.md"
+ },
+ "CloudKitchens": {
+  "sector": "food-retail",
+  "basis": "Runs delivery-only commercial kitchens used by restaurants.",
+  "source": "https://atoms.co"
+ },
+ "Cognition": {
+  "sector": "ai-software",
+  "basis": "AI lab that builds AI software engineering tools.",
+  "source": "GUESTS.md"
+ },
+ "Coinbase": {
+  "sector": "finance",
+  "basis": "Cryptocurrency exchange.",
+  "source": "GUESTS.md"
+ },
+ "Colossus": {
+  "sector": "media-sports-entertainment",
+  "basis": "Business and investing magazine and podcast network (Invest Like the Best).",
+  "source": "https://colossus.com/about-us/"
+ },
+ "Corient": {
+  "sector": "finance",
+  "basis": "Wealth management firm managing about $525 billion.",
+  "source": "GUESTS.md"
+ },
+ "Corporate Wings": {
+  "sector": "logistics-industrial",
+  "basis": "Aircraft charter and management operator that employs pilots.",
+  "source": "GUESTS.md"
+ },
+ "Creative Artists Agency": {
+  "sector": "media-sports-entertainment",
+  "basis": "Talent agency (CAA).",
+  "source": "GUESTS.md"
+ },
+ "Crystal Dynamics": {
+  "sector": "media-sports-entertainment",
+  "basis": "Video game studio that develops the Tomb Raider games.",
+  "source": "https://www.crystaldynamics.com"
+ },
+ "DFO Management": {
+  "sector": "finance",
+  "basis": "Dell family office that manages Dell-family capital, formerly MSD Capital.",
+  "source": "GUESTS.md"
+ },
+ "David Protein": {
+  "sector": "food-retail",
+  "basis": "Protein bar brand owned by Medici Brands.",
+  "source": "GUESTS.md"
+ },
+ "Def Jam": {
+  "sector": "media-sports-entertainment",
+  "basis": "Record label, part of Universal Music Group.",
+  "source": "GUESTS.md"
+ },
+ "Dell Technologies": {
+  "sector": "hardware-energy-space",
+  "basis": "Maker of computers, servers and storage hardware.",
+  "source": "GUESTS.md"
+ },
+ "Directional Aviation": {
+  "sector": "logistics-industrial",
+  "basis": "Private aviation investment firm behind Flexjet and Sentient Jet.",
+  "source": "GUESTS.md"
+ },
+ "DoorDash": {
+  "sector": "consumer",
+  "basis": "Food delivery marketplace app.",
+  "source": "GUESTS.md"
+ },
+ "Dyson": {
+  "sector": "hardware-energy-space",
+  "basis": "Maker of vacuum cleaners, fans and other household appliances.",
+  "source": "GUESTS.md"
+ },
+ "ElevenLabs": {
+  "sector": "ai-software",
+  "basis": "Voice AI company.",
+  "source": "GUESTS.md"
+ },
+ "Endeavor": {
+  "sector": "media-sports-entertainment",
+  "basis": "Entertainment and sports holding company that kept a controlling TKO stake.",
+  "source": "GUESTS.md"
+ },
+ "Epogee": {
+  "sector": "food-retail",
+  "basis": "Food technology firm that makes EPG, a plant-based fat alternative.",
+  "source": "https://hgventures.com/epogee-acquired-by-david/"
+ },
+ "Fanatics": {
+  "sector": "media-sports-entertainment",
+  "basis": "Sports merchandise, collectibles and betting company.",
+  "source": "GUESTS.md"
+ },
+ "Fanatics Betting & Gaming": {
+  "sector": "media-sports-entertainment",
+  "basis": "Sports betting and online gaming division of Fanatics.",
+  "source": "GUESTS.md"
+ },
+ "Fanatics Collectibles": {
+  "sector": "media-sports-entertainment",
+  "basis": "Sports trading cards and collectibles division of Fanatics, including Topps.",
+  "source": "GUESTS.md"
+ },
+ "Fanatics Commerce": {
+  "sector": "media-sports-entertainment",
+  "basis": "Licensed sports merchandise and apparel division of Fanatics.",
+  "source": "GUESTS.md"
+ },
+ "Flexjet": {
+  "sector": "logistics-industrial",
+  "basis": "Private jet operator selling fractional ownership and leases.",
+  "source": "GUESTS.md"
+ },
+ "Flexjet Technical Services": {
+  "sector": "logistics-industrial",
+  "basis": "Aircraft maintenance and engineering arm of Flexjet.",
+  "source": "GUESTS.md"
+ },
+ "GXO Logistics": {
+  "sector": "logistics-industrial",
+  "basis": "Contract logistics provider that runs warehouses for other companies.",
+  "source": "https://www.jpe.com/"
+ },
+ "Groq": {
+  "sector": "hardware-energy-space",
+  "basis": "Designs the LPU AI chip and sells fast AI inference on it through its cloud.",
+  "source": "https://groq.com"
+ },
+ "HallPass": {
+  "sector": "food-retail",
+  "basis": "Low-sugar, reduced-calorie candy brand owned by Medici Brands.",
+  "source": "https://hallpasscandy.com"
+ },
+ "Hamilton Resources": {
+  "sector": "finance",
+  "basis": "Global oil trading company that executed contracts with oil companies and countries.",
+  "source": "https://www.jpe.com/"
+ },
+ "Harmonic": {
+  "sector": "ai-software",
+  "basis": "AI lab whose model Aristotle formally verifies software and hardware.",
+  "source": "https://www.harmonic.fun"
+ },
+ "Helsing": {
+  "sector": "ai-software",
+  "basis": "Defense technology company.",
+  "source": "GUESTS.md"
+ },
+ "How to Take Over the World": {
+  "sector": "media-sports-entertainment",
+  "basis": "History podcast about great leaders, hosted by Ben Wilson.",
+  "source": "GUESTS.md"
+ },
+ "Interscope Records": {
+  "sector": "media-sports-entertainment",
+  "basis": "Record label, part of Universal Music Group.",
+  "source": "GUESTS.md"
+ },
+ "Jacobs Private Equity": {
+  "sector": "finance",
+  "basis": "Investment vehicle of Brad Jacobs for large equity investments.",
+  "source": "https://www.jpe.com/"
+ },
+ "Kith": {
+  "sector": "food-retail",
+  "basis": "Streetwear apparel brand and retailer.",
+  "source": "GUESTS.md"
+ },
+ "Lab37": {
+  "sector": "hardware-energy-space",
+  "basis": "Builds kitchen robots such as Bowl Builder that assemble restaurant meals.",
+  "source": "https://www.lab37.us"
+ },
+ "Lemon Bank": {
+  "sector": "finance",
+  "basis": "Brazilian bank whose correspondent network Banco do Brasil took over in 2009.",
+  "source": "GUESTS.md"
+ },
+ "Long Lake": {
+  "sector": "finance",
+  "basis": "Holding company that buys services businesses and runs them with its own AI platform.",
+  "source": "https://www.generalcatalyst.com/stories/manufacturing-outliers-long-lake"
+ },
+ "Love.Life": {
+  "sector": "consumer",
+  "basis": "Longevity club offering medical care, fitness, recovery, spa and a cafe.",
+  "source": "https://love.life"
+ },
+ "Lunchclub": {
+  "sector": "consumer",
+  "basis": "App that uses AI to match people for 1:1 professional networking meetings.",
+  "source": "https://lunchclub.com"
+ },
+ "MARI": {
+  "sector": "media-sports-entertainment",
+  "basis": "Live events and experiences group that includes TodayTix Group.",
+  "source": "GUESTS.md"
+ },
+ "Major Food Group": {
+  "sector": "food-retail",
+  "basis": "Restaurant group behind Carbone, ZZ's and Torrisi.",
+  "source": "GUESTS.md"
+ },
+ "Medici Brands": {
+  "sector": "food-retail",
+  "basis": "Packaged food group that owns David Protein, HallPass and Epogee.",
+  "source": "GUESTS.md"
+ },
+ "Meta": {
+  "sector": "consumer",
+  "basis": "Social media company behind Facebook, Instagram and WhatsApp.",
+  "source": "GUESTS.md"
+ },
+ "Michael & Susan Dell Foundation": {
+  "sector": "unknown",
+  "basis": "Nonprofit philanthropic foundation that makes grants; none of the seven sectors fit.",
+  "source": "GUESTS.md"
+ },
+ "NODE Foundation": {
+  "sector": "media-sports-entertainment",
+  "basis": "Nonprofit digital art space that runs exhibitions and artist events in Palo Alto.",
+  "source": "https://nodefoundation.com"
+ },
+ "NaturalMotion": {
+  "sector": "media-sports-entertainment",
+  "basis": "Video game studio, part of Zynga and Take-Two.",
+  "source": "GUESTS.md"
+ },
+ "Neko Health": {
+  "sector": "consumer",
+  "basis": "Consumer health company offering preventive body scans.",
+  "source": "GUESTS.md"
+ },
+ "Neuralink": {
+  "sector": "hardware-energy-space",
+  "basis": "Develops implantable brain-computer interface devices.",
+  "source": "GUESTS.md"
+ },
+ "NewLimit": {
+  "sector": "hardware-energy-space",
+  "basis": "Biotech company developing epigenetic reprogramming drugs to rejuvenate aging cells.",
+  "source": "https://www.newlimit.com"
+ },
+ "Nvidia": {
+  "sector": "hardware-energy-space",
+  "basis": "Designs graphics and AI chips.",
+  "source": "GUESTS.md"
+ },
+ "O'Shaughnessy Asset Management": {
+  "sector": "finance",
+  "basis": "Asset management firm, now a Franklin Templeton subsidiary.",
+  "source": "GUESTS.md"
+ },
+ "OnePay": {
+  "sector": "finance",
+  "basis": "Consumer fintech app created by Walmart and Ribbit Capital.",
+  "source": "GUESTS.md"
+ },
+ "OpenAI": {
+  "sector": "ai-software",
+  "basis": "AI lab that makes ChatGPT.",
+  "source": "GUESTS.md"
+ },
+ "Otter": {
+  "sector": "ai-software",
+  "basis": "Restaurant software for managing delivery orders and operations.",
+  "source": "GUESTS.md"
+ },
+ "Palo Alto Networks": {
+  "sector": "ai-software",
+  "basis": "Cybersecurity software company.",
+  "source": "GUESTS.md"
+ },
+ "Patagon": {
+  "sector": "finance",
+  "basis": "Latin American online finance portal bought by Openbank (Santander) in 2000.",
+  "source": "https://en.wikipedia.org/wiki/Openbank"
+ },
+ "PayPal": {
+  "sector": "finance",
+  "basis": "Online payments company.",
+  "source": "GUESTS.md"
+ },
+ "Picnic": {
+  "sector": "food-retail",
+  "basis": "Office lunch delivery service.",
+  "source": "https://atoms.co"
+ },
+ "Pixar": {
+  "sector": "media-sports-entertainment",
+  "basis": "Animated film studio owned by Disney.",
+  "source": "GUESTS.md"
+ },
+ "Planet Harvest": {
+  "sector": "food-retail",
+  "basis": "Produce supply-chain business.",
+  "source": "GUESTS.md"
+ },
+ "Positive Sum": {
+  "sector": "finance",
+  "basis": "Venture capital firm that backs founders.",
+  "source": "https://positivesum.com"
+ },
+ "Prima Materia": {
+  "sector": "finance",
+  "basis": "Investment company founded by Daniel Ek and Shakil Khan.",
+  "source": "GUESTS.md"
+ },
+ "ProFood Properties": {
+  "sector": "food-retail",
+  "basis": "Real estate for food production facilities and cold storage.",
+  "source": "https://atoms.co"
+ },
+ "Pronto AI": {
+  "sector": "hardware-energy-space",
+  "basis": "Autonomous haulage systems for trucks at mines and quarries.",
+  "source": "https://www.pronto.ai"
+ },
+ "QXO": {
+  "sector": "logistics-industrial",
+  "basis": "Distributor and installer of roofing, insulation and other building products.",
+  "source": "https://www.jpe.com/"
+ },
+ "QuantumLight": {
+  "sector": "finance",
+  "basis": "Venture capital firm founded by Nik Storonsky.",
+  "source": "GUESTS.md"
+ },
+ "RXBAR": {
+  "sector": "food-retail",
+  "basis": "Protein bar brand, now owned by Kellanova and Mars.",
+  "source": "GUESTS.md"
+ },
+ "RXO": {
+  "sector": "logistics-industrial",
+  "basis": "Freight brokerage that connects shippers with independent truck carriers.",
+  "source": "https://www.jpe.com/"
+ },
+ "Raising Cane's": {
+  "sector": "food-retail",
+  "basis": "Fast-food restaurant chain serving chicken fingers.",
+  "source": "GUESTS.md"
+ },
+ "Ramp": {
+  "sector": "finance",
+  "basis": "Corporate cards and spend management fintech.",
+  "source": "GUESTS.md"
+ },
+ "ResearchHub": {
+  "sector": "consumer",
+  "basis": "Online platform for open-access science publishing, paid peer review and research funding.",
+  "source": "https://www.researchhub.com/about"
+ },
+ "Revolut": {
+  "sector": "finance",
+  "basis": "Digital bank and financial app.",
+  "source": "GUESTS.md"
+ },
+ "Ribbit Capital": {
+  "sector": "finance",
+  "basis": "Venture capital firm focused on fintech.",
+  "source": "GUESTS.md"
+ },
+ "Robinhood": {
+  "sector": "finance",
+  "basis": "Stock and crypto trading app.",
+  "source": "GUESTS.md"
+ },
+ "Roblox": {
+  "sector": "consumer",
+  "basis": "Online platform where people play and build games.",
+  "source": "GUESTS.md"
+ },
+ "Rostra": {
+  "sector": "media-sports-entertainment",
+  "basis": "Communications advisory firm that helps founders speak directly to the public.",
+  "source": "https://rostra.co/about/"
+ },
+ "Scale AI": {
+  "sector": "ai-software",
+  "basis": "Provides training data and evaluation for AI models.",
+  "source": "GUESTS.md"
+ },
+ "Scour": {
+  "sector": "consumer",
+  "basis": "Defunct multimedia search engine and peer-to-peer file sharing service.",
+  "source": "https://en.wikipedia.org/wiki/Scour_Inc."
+ },
+ "Scribe Media": {
+  "sector": "media-sports-entertainment",
+  "basis": "Book writing, publishing and marketing services for nonfiction authors.",
+  "source": "https://scribemedia.com"
+ },
+ "Sentient Jet": {
+  "sector": "logistics-industrial",
+  "basis": "Private jet card and charter company.",
+  "source": "GUESTS.md"
+ },
+ "Sequoia Capital": {
+  "sector": "finance",
+  "basis": "Venture capital firm.",
+  "source": "GUESTS.md"
+ },
+ "Shopify": {
+  "sector": "consumer",
+  "basis": "Ecommerce platform for online stores.",
+  "source": "GUESTS.md"
+ },
+ "Snap": {
+  "sector": "consumer",
+  "basis": "Maker of the Snapchat messaging app.",
+  "source": "GUESTS.md"
+ },
+ "SpaceX / Starlink": {
+  "sector": "hardware-energy-space",
+  "basis": "Builds rockets and the Starlink satellite internet network.",
+  "source": "GUESTS.md"
+ },
+ "Spotify": {
+  "sector": "consumer",
+  "basis": "Music and podcast streaming service.",
+  "source": "GUESTS.md"
+ },
+ "TKO Group Holdings": {
+  "sector": "media-sports-entertainment",
+  "basis": "Sports and entertainment company that owns UFC and WWE.",
+  "source": "GUESTS.md"
+ },
+ "Take-Two Interactive": {
+  "sector": "media-sports-entertainment",
+  "basis": "Video game publisher that owns Rockstar Games, 2K and Zynga.",
+  "source": "GUESTS.md"
+ },
+ "Tesla": {
+  "sector": "hardware-energy-space",
+  "basis": "Maker of electric vehicles and batteries.",
+  "source": "GUESTS.md"
+ },
+ "The Boring Company": {
+  "sector": "hardware-energy-space",
+  "basis": "Tunnel construction company.",
+  "source": "GUESTS.md"
+ },
+ "Tools for Humanity": {
+  "sector": "ai-software",
+  "basis": "Develops World, a crypto network with the WLD token, World ID and the Orb scanner.",
+  "source": "https://en.wikipedia.org/wiki/World_(blockchain)"
+ },
+ "TrailRunner International": {
+  "sector": "media-sports-entertainment",
+  "basis": "Strategy and communications advisory firm for crisis and financial communications.",
+  "source": "https://trailrunnerint.com"
+ },
+ "U.S. Office of Personnel Management": {
+  "sector": "unknown",
+  "basis": "Federal agency that manages the US government civilian workforce; no sector fits.",
+  "source": "GUESTS.md"
+ },
+ "UFC": {
+  "sector": "media-sports-entertainment",
+  "basis": "Mixed martial arts league, part of TKO Group.",
+  "source": "GUESTS.md"
+ },
+ "USC Iovine and Young Academy": {
+  "sector": "unknown",
+  "basis": "USC school teaching technology, design and business; a school with no fitting sector.",
+  "source": "https://iovine-young.usc.edu/about"
+ },
+ "Uber": {
+  "sector": "consumer",
+  "basis": "Ride-hailing and delivery app.",
+  "source": "GUESTS.md"
+ },
+ "United Rentals": {
+  "sector": "logistics-industrial",
+  "basis": "Construction equipment rental company.",
+  "source": "https://www.jpe.com/"
+ },
+ "UnitedMasters / Translation": {
+  "sector": "media-sports-entertainment",
+  "basis": "UnitedMasters distributes music for artists; Translation is a creative ad agency.",
+  "source": "https://www.translationllc.com/"
+ },
+ "Vestron Inc.": {
+  "sector": "media-sports-entertainment",
+  "basis": "Former film and home video company whose titles are now in the Lionsgate library.",
+  "source": "employer-associations.json"
+ },
+ "WME Group": {
+  "sector": "media-sports-entertainment",
+  "basis": "Talent agency and representation group.",
+  "source": "GUESTS.md"
+ },
+ "Whole Foods Market": {
+  "sector": "food-retail",
+  "basis": "Grocery store chain owned by Amazon.",
+  "source": "GUESTS.md"
+ },
+ "XPO": {
+  "sector": "logistics-industrial",
+  "basis": "Freight transportation and trucking company.",
+  "source": "https://www.jpe.com/"
+ },
+ "ZMC": {
+  "sector": "finance",
+  "basis": "Private equity firm that invests in media, entertainment and communications companies.",
+  "source": "https://zmclp.com"
+ },
+ "xAI / X": {
+  "sector": "ai-software",
+  "basis": "AI lab that makes Grok, combined with the X social platform.",
+  "source": "GUESTS.md"
+ }
+}
