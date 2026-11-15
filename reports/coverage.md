@@ -1,8 +1,8 @@
 # Public location coverage
 
-Observed 2026-11-15T21:41:00.551Z.
+Observed 2026-11-15T21:50:13.954Z.
 
-115 employers; 52 complete, 24 partial, 9 failed, 30 link-only. 38893 unique role URLs; 5450 Texas-location roles, 411 US-remote possibilities (Texas eligibility unconfirmed), 1159 unknown locations, 13891 stale/retained roles.
+115 employers; 52 complete, 24 partial, 9 failed, 30 link-only. 30639 unique role URLs; 3955 Texas-location roles, 411 US-remote possibilities (Texas eligibility unconfirmed), 1144 unknown locations, 5637 stale/retained roles.
 
 This is not an exhaustive inventory of all Texas jobs. No headquarters-based location inference is used. Read data/coverage.json for source URLs, timestamps, pagination and detail limits.
 
@@ -106,7 +106,7 @@ This is not an exhaustive inventory of all Texas jobs. No headquarters-based loc
 | SpaceX / Starlink | complete | 2758 | 1114 | 0 | 0 | Public listing retrieved |
 | Spotify | complete | 87 | 0 | 0 | 0 | Public listing retrieved; Public listing retrieved |
 | Take-Two Interactive | partial | 197 | 30 | 0 | 2 | Take-Two Interactive: 35 (complete); 2K: 90 (complete); Rockstar Games: 15 (complete); NaturalMotion: 5 (complete); Zynga: 44 (complete); Ghost Story Games: 4 (complete); Small Giant Games: 4 (complete); Nordeus: 9 (partial). 11 mirrored postings merged by employer job identity, title and location. These verified channels do not establish exhaustive subsidiary coverage. Gearbox's direct careers page is blocked; remaining studios and cross-channel mirrors require reconciliation. |
-| Tesla | failed | 8254 | 1495 | 0 | 15 | HTTP 403 |
+| Tesla | failed | 0 | 0 | 0 | 0 | Roles removed after 14 days without a successful refresh. HTTP 403 |
 | The Boring Company | complete | 135 | 50 | 0 | 0 | Exhausted server-rendered page: 135 unique listings; no independently advertised global total |
 | TKO Group Holdings | complete | 62 | 6 | 0 | 0 | Public listing retrieved |
 | Tools for Humanity | complete | 8 | 0 | 0 | 0 | Public listing retrieved |

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-15T21:41:00.551Z",
+  "generatedAt": "2026-11-15T21:50:13.954Z",
   "counts": {
     "employers": 115,
-    "roles": 38893,
-    "texasRoles": 5450,
+    "roles": 30639,
+    "texasRoles": 3955,
     "usRemotePossibilities": 411,
-    "unknownLocations": 1159,
-    "staleRoles": 13891,
+    "unknownLocations": 1144,
+    "staleRoles": 5637,
     "complete": 52,
     "partial": 24,
     "failed": 9,
@@ -10299,17 +10299,17 @@
           "observedAt": "2026-10-26T19:13:05.647Z",
           "lastAttempt": "2026-11-15T18:36:03.379Z",
           "status": "failed",
-          "reason": "HTTP 403",
+          "reason": "Roles removed after 14 days without a successful refresh. HTTP 403",
           "listingStatus": "failed",
-          "retained": true
+          "retained": false
         }
       ],
       "status": "failed",
-      "roles": 8254,
-      "texasRoles": 1495,
+      "roles": 0,
+      "texasRoles": 0,
       "usRemotePossibilities": 0,
-      "unknownLocations": 15,
-      "staleRoles": 8254
+      "unknownLocations": 0,
+      "staleRoles": 0
     },
     {
       "company": "The Boring Company",
