@@ -1,8 +1,8 @@
 # Public location coverage
 
-Observed 2026-11-15T21:50:13.954Z.
+Observed 2026-11-15T22:05:40.487Z.
 
-115 employers; 52 complete, 24 partial, 9 failed, 30 link-only. 30639 unique role URLs; 3955 Texas-location roles, 411 US-remote possibilities (Texas eligibility unconfirmed), 1144 unknown locations, 5637 stale/retained roles.
+115 employers; 55 complete, 24 partial, 6 failed, 30 link-only. 30638 unique role URLs; 3953 Texas-location roles, 417 US-remote possibilities (Texas eligibility unconfirmed), 1143 unknown locations, 4033 stale/retained roles.
 
 This is not an exhaustive inventory of all Texas jobs. No headquarters-based location inference is used. Read data/coverage.json for source URLs, timestamps, pagination and detail limits.
 
@@ -62,7 +62,7 @@ This is not an exhaustive inventory of all Texas jobs. No headquarters-based loc
 | Major Food Group | partial | 133 | 11 | 0 | 1 | Collected 84 public widget cards; 1 detail failures. Widget exposes no independent total or verifiable pagination contract; additional channels remain unverified. |
 | MARI | partial | 35 | 0 | 0 | 0 | MARI: 14 (complete); TodayTix Group: 4 (complete). Public payloads exhausted; other portfolio hiring channels and city-level site detail remain unreconciled. |
 | Medici Brands | partial | 50 | 0 | 0 | 1 | Public group widget collected; all published brands. No independent total or pagination contract; 0 invalid and 0 duplicate records excluded. Other group hiring channels remain unverified. |
-| Meta | failed | 1285 | 165 | 36 | 6 | No supported public ATS found on the official careers page |
+| Meta | complete | 1343 | 163 | 42 | 5 | All 1343 jobs in the careers search data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read. |
 | Michael & Susan Dell Foundation | complete | 8 | 3 | 0 | 0 | Single official listing table exhausted: 8 openings, every linked row valid. The page advertises no total and shows no pagination. Scope is the foundation careers page only. |
 | NaturalMotion | complete | 5 | 0 | 0 | 0 | Official NaturalMotion board exhausted; parent Zynga jobs are not all attributed to this founder. |
 | Neko Health | complete | 125 | 0 | 0 | 0 | Public listing retrieved |
@@ -84,12 +84,12 @@ This is not an exhaustive inventory of all Texas jobs. No headquarters-based loc
 | Prima Materia | link-only | 0 | 0 | 0 | 0 | No supported ATS found during bounded official-site discovery |
 | ProFood Properties | link-only | 0 | 0 | 0 | 0 | No verified careers URL or official domain in research |
 | Pronto AI | partial | 33 | 1 | 0 | 0 | 33 indexed postings for Pronto AI, selected by explicit Brand metadata. Published employer labels are preserved. This does not establish every brand hiring channel or zero openings when no postings match. cssmerge: 346 (complete); atoms: 161 (complete); lab37: 27 (complete); otter: 22 (complete). 197 mirrors merged only when internal requisition, title, published locations and full normalized description agree. Other hiring channels and unassigned brands remain unverified. Failed or partial channels cannot invalidate older postings. |
-| QuantumLight | failed | 8 | 0 | 0 | 0 | HTTP 403 |
+| QuantumLight | complete | 6 | 0 | 0 | 0 | All 6 postings on the public careers page collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read. |
 | QXO | partial | 1213 | 148 | 0 | 0 | QXO external feed: 266/266 (complete). TopBuild: 411 (complete). Other acquired-employer channels remain unreconciled. |
 | Raising Cane's | complete | 2618 | 579 | 0 | 0 | All emitted public pages retrieved and advertised total matched. |
 | Ramp | complete | 180 | 0 | 1 | 0 | Public listing retrieved |
 | ResearchHub | link-only | 0 | 0 | 0 | 0 | No supported ATS found during bounded official-site discovery |
-| Revolut | failed | 311 | 0 | 1 | 0 | HTTP 403 |
+| Revolut | complete | 254 | 0 | 1 | 0 | All 254 positions in the careers page data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read. |
 | Ribbit Capital | link-only | 0 | 0 | 0 | 0 | No supported ATS found during bounded official-site discovery |
 | Robinhood | complete | 165 | 28 | 0 | 0 | Public listing retrieved |
 | Roblox | complete | 271 | 0 | 0 | 0 | Public listing retrieved |

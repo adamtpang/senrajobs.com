@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-15T21:50:13.954Z",
+  "generatedAt": "2026-11-15T22:05:40.487Z",
   "counts": {
     "employers": 115,
-    "roles": 30639,
-    "texasRoles": 3955,
-    "usRemotePossibilities": 411,
-    "unknownLocations": 1144,
-    "staleRoles": 5637,
-    "complete": 52,
+    "roles": 30638,
+    "texasRoles": 3953,
+    "usRemotePossibilities": 417,
+    "unknownLocations": 1143,
+    "staleRoles": 4033,
+    "complete": 55,
     "partial": 24,
-    "failed": 9,
+    "failed": 6,
     "link-only": 30
   },
   "scope": "Employers associated with guests and explicitly labeled episode subjects. The legacy founders field names connected interview guests, not necessarily company founders; connections identifies indirect episode-subject links. Complete means the supported public listing was retrieved at observation time, not that every company hiring channel is covered. Unpublished or inaccessible jobs are excluded.",
@@ -3311,22 +3311,32 @@
         {
           "association": "Meta (chief AI officer, not founder)",
           "careersUrl": "https://www.metacareers.com/",
-          "source": "manual:meta-browser",
-          "sourceUrl": "https://www.metacareers.com/",
-          "observedAt": "2026-10-26T21:58:20.063Z",
-          "lastAttempt": "2026-11-15T18:35:27.814Z",
-          "status": "failed",
-          "reason": "No supported public ATS found on the official careers page",
-          "listingStatus": "failed",
-          "retained": true
+          "source": "local:meta-rendered",
+          "sourceUrl": "https://www.metacareers.com/jobsearch/",
+          "observedAt": "2026-11-15T22:03:51.454Z",
+          "lastAttempt": "2026-11-15T22:03:51.454Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "All 1343 jobs in the careers search data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read.",
+          "total": 1343,
+          "pages": 1,
+          "pageReceipts": [
+            {
+              "url": "https://www.metacareers.com/jobsearch/",
+              "page": 1,
+              "total": 1343,
+              "rows": 1343
+            }
+          ],
+          "retained": false
         }
       ],
-      "status": "failed",
-      "roles": 1285,
-      "texasRoles": 165,
-      "usRemotePossibilities": 36,
-      "unknownLocations": 6,
-      "staleRoles": 1285
+      "status": "complete",
+      "roles": 1343,
+      "texasRoles": 163,
+      "usRemotePossibilities": 42,
+      "unknownLocations": 5,
+      "staleRoles": 0
     },
     {
       "company": "Michael & Susan Dell Foundation",
@@ -7061,22 +7071,32 @@
         {
           "association": "QuantumLight (founder)",
           "careersUrl": "https://revolutpeople.com/quantum-light/public/careers",
-          "source": "manual:revolutpeople-quantum-light",
+          "source": "local:quantumlight-rendered",
           "sourceUrl": "https://revolutpeople.com/quantum-light/public/careers",
-          "observedAt": "2026-10-26T15:45:49.592Z",
-          "lastAttempt": "2026-11-15T18:35:14.006Z",
-          "status": "failed",
-          "reason": "HTTP 403",
-          "listingStatus": "failed",
-          "retained": true
+          "observedAt": "2026-11-15T22:03:45.747Z",
+          "lastAttempt": "2026-11-15T22:03:45.747Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "All 6 postings on the public careers page collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read.",
+          "total": 6,
+          "pages": 1,
+          "pageReceipts": [
+            {
+              "url": "https://revolutpeople.com/quantum-light/public/careers",
+              "page": 1,
+              "total": 6,
+              "rows": 6
+            }
+          ],
+          "retained": false
         }
       ],
-      "status": "failed",
-      "roles": 8,
+      "status": "complete",
+      "roles": 6,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 8
+      "staleRoles": 0
     },
     {
       "company": "QXO",
@@ -9358,22 +9378,32 @@
         {
           "association": "Revolut (co-founder and CEO)",
           "careersUrl": "https://www.revolut.com/careers/",
-          "source": "manual:revolut-public-browser",
+          "source": "local:revolut-rendered",
           "sourceUrl": "https://www.revolut.com/careers/",
-          "observedAt": "2026-10-26T17:25:55.896Z",
-          "lastAttempt": "2026-11-15T18:35:13.835Z",
-          "status": "failed",
-          "reason": "HTTP 403",
-          "listingStatus": "failed",
-          "retained": true
+          "observedAt": "2026-11-15T22:03:44.221Z",
+          "lastAttempt": "2026-11-15T22:03:44.221Z",
+          "status": "complete",
+          "listingStatus": "complete",
+          "reason": "All 254 positions in the careers page data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read.",
+          "total": 254,
+          "pages": 1,
+          "pageReceipts": [
+            {
+              "url": "https://www.revolut.com/careers/",
+              "page": 1,
+              "total": 254,
+              "rows": 254
+            }
+          ],
+          "retained": false
         }
       ],
-      "status": "failed",
-      "roles": 311,
+      "status": "complete",
+      "roles": 254,
       "texasRoles": 0,
       "usRemotePossibilities": 1,
       "unknownLocations": 0,
-      "staleRoles": 311
+      "staleRoles": 0
     },
     {
       "company": "Ribbit Capital",

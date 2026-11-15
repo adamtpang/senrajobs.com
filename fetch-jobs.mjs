@@ -24,6 +24,10 @@ const content=fs.existsSync(contentPath)?JSON.parse(fs.readFileSync(contentPath,
 for(const guest of guests)for(const company of guest.companies)if(company.note!=='acquired or closed')tasks.set(company.name,company);
 async function pool(items,limit,action){let index=0;await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{while(index<items.length){const i=index++;await action(items[i],i);}}));}
 async function refresh(company){
+ // Boards captured by the weekly local browser run (scripts/capture-rendered-boards.mjs) answer 403 here.
+ // Leave a recent capture alone; once it is older than ten days the normal path marks it out of date.
+ const local=previous[company.name];
+ if(local?.source?.startsWith('local:')&&Date.now()-Date.parse(local.fetched)<10*864e5)return local;
  const observedAt=new Date().toISOString();const name=company.name.split(' (')[0];let careers=company.careers,src=SOURCE_OVERRIDES[company.name],detection;
  if(!careers){
   const domain=logos[name]?.domain;
