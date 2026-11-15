@@ -1,5 +1,14 @@
 Sources: Apple Podcasts (iTunes lookup API for show id1836497887, feed feeds.megaphone.fm/david-senra), davidsenra.com/podcast, official company sites. Guest census reconciled 2026-10-28: 50 interviews, 49 distinct guests and one trailer; Michael Ovitz appears twice. Kenn Ricci is the latest published interview (2026-10-28). This verifies guest coverage, not exhaustive employer associations or job collection. Links marked (unverified) returned 403/404/406/429/timeout to an automated fetch (often bot protection, not necessarily a dead page).
 
+## Michael Rubin (episode: What It Means to Be a "Real" Entrepreneur | Michael Rubin, Fanatics, 2026-11-15, https://podcasts.apple.com/us/podcast/id1836497887?i=1000802049206)
+- Fanatics: https://job-boards.greenhouse.io/fanaticsinc (founder and CEO; verified 2026-11-15, the official https://www.fanaticsinc.com/join-our-team page links this Fanatics Inc. corporate board)
+- Fanatics Commerce: https://job-boards.greenhouse.io/fanaticscommerce (Fanatics division; verified 2026-11-15, linked from the same official page)
+- Fanatics Collectibles: https://job-boards.greenhouse.io/fanaticscollectibles (Fanatics division, includes Topps; verified 2026-11-15, linked from the same official page)
+- Fanatics Betting & Gaming: https://job-boards.greenhouse.io/fanaticsfbg (Fanatics division; verified 2026-11-15, linked from the same official page)
+- GSI Commerce (founder): acquired by eBay (2011), skipped
+
+Identity, episode date and title verified in the official feed (track 1000802049206) and https://www.davidsenra.com/episode/michael-rubin. The feed describes him as founder and CEO of Fanatics and recounts GSI Commerce's sale to eBay. His earlier ski shop and closeout businesses are not operating companies with a careers page. Lids and Topps link to storefronts on the official page, not separate job boards.
+
 ## Vlad Tenev (episode: Building Robinhood, Surviving GameStop & A $500 Million Phone Call | Vlad Tenev, 2026-11-11, https://podcasts.apple.com/us/podcast/id1836497887?i=1000801172887)
 - Robinhood: https://job-boards.greenhouse.io/robinhood (co-founder and CEO; verified 2026-11-11, the official https://careers.robinhood.com careers site requests this exact Greenhouse board, which returned 156 postings)
 - Harmonic: https://jobs.ashbyhq.com/Harmonic (co-founder and executive chairman; verified 2026-11-11, the official https://www.harmonic.fun/careers/ page links this exact Ashby board, which returned 9 postings, and harmonic.fun names him Co-Founder and Executive Chairman)

@@ -1,5 +1,34 @@
 [
   {
+    "name": "Michael Rubin",
+    "episode": {
+      "title": "What It Means to Be a \"Real\" Entrepreneur | Michael Rubin, Fanatics (2026-11-15)",
+      "url": "https://podcasts.apple.com/us/podcast/id1836497887?i=1000802049206"
+    },
+    "companies": [
+      {
+        "name": "Fanatics",
+        "careers": "https://job-boards.greenhouse.io/fanaticsinc"
+      },
+      {
+        "name": "Fanatics Commerce",
+        "careers": "https://job-boards.greenhouse.io/fanaticscommerce"
+      },
+      {
+        "name": "Fanatics Collectibles",
+        "careers": "https://job-boards.greenhouse.io/fanaticscollectibles"
+      },
+      {
+        "name": "Fanatics Betting & Gaming",
+        "careers": "https://job-boards.greenhouse.io/fanaticsfbg"
+      },
+      {
+        "name": "GSI Commerce (founder)",
+        "note": "acquired or closed"
+      }
+    ]
+  },
+  {
     "name": "Vlad Tenev",
     "episode": {
       "title": "Building Robinhood, Surviving GameStop & A $500 Million Phone Call | Vlad Tenev (2026-11-11)",
