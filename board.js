@@ -82,13 +82,14 @@ function renderContext() {
 function mark(company) {
   return company.logo ? `<img class="company-logo" src="${escape(company.logo)}" alt="" width="40" height="40" loading="lazy">` : `<span class="company-initials" aria-hidden="true">${escape(company.name.split(/\s+/).slice(0,2).map(word=>word[0]).join(''))}</span>`;
 }
+const checkedLabel=company=>{if(!company?.checked)return '';const date=new Date(company.checked);if(!Number.isFinite(date.getTime()))return '';const day=date.toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'});return company.stale?`Last checked ${day}, may be out of date`:`Checked ${day}`;};
 function companyRow(company) {
   const connection=(company.connections||[]).find(c=>!state.guest||c.guest===state.guest);
   const content=`${mark(company)}<span class="company-name">${escape(company.name)}${connection?`<small class="company-connection">${escape(connection.label)}</small>`:''}</span>`;
   const count=company.roles.length ? `${company.roles.length.toLocaleString()} roles` : company.careers ? 'Careers' : 'No roles indexed';
   const direct=!company.roles.length&&company.careers;
   const link=direct?`data-careers href="${escape(company.careers)}" target="_blank" rel="noopener"`:`data-company="${escape(company.name)}" href="${escape(urlFor({...defaults('roles'),guest:state.guest,company:company.name}))}"`;
-  return `<a class="company-row" ${link}>${content}<span class="company-count">${count}</span><span class="company-arrow" aria-hidden="true">${direct?'↗':'→'}</span></a>`;
+  return `<a class="company-row" ${link}>${content}<span class="company-count">${count}${company.roles.length&&checkedLabel(company)?`<small class="company-checked${company.stale?' stale':''}">${escape(checkedLabel(company))}</small>`:''}</span><span class="company-arrow" aria-hidden="true">${direct?'↗':'→'}</span></a>`;
 }
 function roleRow(role) {
   const company=companies.find(company=>company.name===(state.company||role.company.split(' (')[0]));
@@ -144,7 +145,7 @@ function render() {
     }
   }
   const noun=state.view==='guests' ? 'guest' : state.view==='companies' ? 'company' : 'role';
-  $('results').textContent=`${count.toLocaleString()} ${count===1 ? noun : noun==='company' ? 'companies' : noun+'s'}${state.view==='roles' && count>limit ? ` · showing ${limit}` : ''}`;
+  $('results').textContent=`${count.toLocaleString()} ${count===1 ? noun : noun==='company' ? 'companies' : noun+'s'}${state.view==='roles' && count>limit ? ` · showing ${limit}` : ''}${state.view==='roles'&&state.company&&checkedLabel(companies.find(c=>c.name===state.company)) ? ` · ${checkedLabel(companies.find(c=>c.name===state.company)).replace(/^[A-Z]/,m=>m.toLowerCase())}` : ''}`;
   $('results').hidden=state.view==='companies'&&!!state.guest;
   $('empty').hidden=count>0;
   if (state.view==='companies' && !count && state.guest && !state.q.trim()) $('empty-message').textContent='No current companies listed.';
