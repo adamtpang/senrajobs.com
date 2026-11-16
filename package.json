@@ -9,7 +9,7 @@
     "check:assistant": "node scripts/check-assistant.mjs"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^1.0.2",
-    "jose": "^6.2.12"
+    "@neondatabase/serverless": "^1.2.1",
+    "jose": "^6.2.17"
   }
 }
