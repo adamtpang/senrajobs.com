@@ -99,6 +99,9 @@ fs.mkdirSync('.cache',{recursive:true});fs.writeFileSync(contentPath,JSON.string
 const feed=await requestPublic('https://itunes.apple.com/lookup?id=1836497887&entity=podcastEpisode&limit=200');
 const byId=Object.fromEntries((feed.data?.results||[]).filter(x=>x.trackId).map(x=>[String(x.trackId),x.artworkUrl600]));
 const photos=fs.existsSync('photos.json')?JSON.parse(fs.readFileSync('photos.json','utf8')):{};
-for(const guest of guests){const id=guest.episode?.url?.match(/[?&]i=(\d+)/)?.[1];if(id&&byId[id])photos[guest.name]=byId[id].replace('600x600bb','300x300bb');}
+// Guests whose episode link is not an Apple link are matched by exact episode title, so every portrait
+// is the same kind of file: the Apple Podcasts episode artwork.
+const byTitle=Object.fromEntries((feed.data?.results||[]).filter(x=>x.trackId&&x.trackName).map(x=>[x.trackName.trim(),x.artworkUrl600]));
+for(const guest of guests){const id=guest.episode?.url?.match(/[?&]i=(\d+)/)?.[1];const art=(id&&byId[id])||byTitle[guest.episode?.title?.replace(/ \(\d{4}-\d{2}-\d{2}\)$/,'').trim()];if(art)photos[guest.name]=art.replace('600x600bb','300x300bb');}
 fs.writeFileSync('photos.json',JSON.stringify(photos,null,1)+'\n');
 console.log(`Screened ${selectedTasks.length} current company associations; ${shared.size} unique ATS feeds. Run node build.mjs for inventory and coverage reports.`);

@@ -31,7 +31,9 @@ if (fs.existsSync('public/reports') || fs.existsSync('public/docs') || fs.exists
 const html = fs.readFileSync('index.html','utf8');
 if (!html.includes('Last updated') || !/<time datetime="[^"]+"/.test(html)) bad('homepage is missing the Last updated timestamp');
 if (!html.includes('240x240bb') || !/<img [^>]*srcset="[^"]+640x640bb[^"]* 640w[^"]*" sizes="/.test(html)) bad('founder portraits should offer several widths, 240px to 960px');
-if (/megaphone\.imgix\.net[^"' ]*max-w=3000/.test(html)) bad('a portrait still loads the 3000px original');
+for (const [, tag] of html.matchAll(/<span class="guest-photo">(<img [^>]*>)/g)) {
+  if (!/^<img src="https:\/\/is1-ssl\.mzstatic\.com\/[^"]+\/400x400bb\.[a-z]+" srcset="[^"]+ 240w, [^"]+ 400w, [^"]+ 640w, [^"]+ 960w" sizes="/.test(tag)) bad(`non-standard portrait: ${tag.slice(0, 120)}`);
+}
 if (!html.includes('requestIdleCallback')) bad('analytics should wait for idle');
 const now = Date.parse('2026-11-01T18:00:00.000Z');
 if (!isInWindow({ observedAt: '2026-11-01T16:00:00.000Z' }, now)) bad('recent observation should be inside 48h');

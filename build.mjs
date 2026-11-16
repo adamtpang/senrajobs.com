@@ -77,19 +77,11 @@ const PORTRAIT_SIZES = "(max-width:650px) calc(50vw - 24px), (max-width:950px) c
 const APPLE_SIZE = /\/\d+x\d+bb(\.[a-z]+)?$/i;
 function portraitAt(url, width) {
   if (APPLE_SIZE.test(url)) return url.replace(APPLE_SIZE, `/${width}x${width}bb$1`);
-  if (url.startsWith("https://megaphone.imgix.net/")) {
-    const u = new URL(url);
-    u.searchParams.delete("max-w");
-    u.searchParams.delete("max-h");
-    u.searchParams.set("w", width);
-    u.searchParams.set("h", width);
-    return u.toString();
-  }
-  return null;
+  // Every portrait is the Apple Podcasts episode artwork, so all share one source and one set of sizes.
+  throw new Error(`Portrait is not Apple Podcasts episode artwork: ${url}`);
 }
 function portraitSources(url) {
   if (!url) return { src: "", srcset: "" };
-  if (!portraitAt(url, 400)) return { src: url, srcset: "" };
   return { src: portraitAt(url, 400), srcset: PORTRAIT_WIDTHS.map((w) => `${portraitAt(url, w)} ${w}w`).join(", ") };
 }
 const initials = (n) => n.split(" ").map((w) => w[0]).slice(0, 2).join("");
