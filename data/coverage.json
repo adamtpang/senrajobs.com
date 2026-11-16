@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-16T03:22:34.657Z",
+  "generatedAt": "2026-11-16T14:50:02.383Z",
   "counts": {
     "employers": 115,
-    "roles": 30628,
-    "texasRoles": 3952,
-    "usRemotePossibilities": 417,
+    "roles": 30633,
+    "texasRoles": 3953,
+    "usRemotePossibilities": 416,
     "unknownLocations": 1143,
     "staleRoles": 4023,
     "complete": 55,
@@ -3313,28 +3313,28 @@
           "careersUrl": "https://www.metacareers.com/",
           "source": "local:meta-rendered",
           "sourceUrl": "https://www.metacareers.com/jobsearch/",
-          "observedAt": "2026-11-15T22:03:51.454Z",
-          "lastAttempt": "2026-11-15T22:03:51.454Z",
+          "observedAt": "2026-11-16T14:49:54.418Z",
+          "lastAttempt": "2026-11-16T14:49:54.418Z",
           "status": "complete",
           "listingStatus": "complete",
-          "reason": "All 1343 jobs in the careers search data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read.",
-          "total": 1343,
+          "reason": "All 1344 jobs in the careers search data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read.",
+          "total": 1344,
           "pages": 1,
           "pageReceipts": [
             {
               "url": "https://www.metacareers.com/jobsearch/",
               "page": 1,
-              "total": 1343,
-              "rows": 1343
+              "total": 1344,
+              "rows": 1344
             }
           ],
           "retained": false
         }
       ],
       "status": "complete",
-      "roles": 1343,
-      "texasRoles": 163,
-      "usRemotePossibilities": 42,
+      "roles": 1344,
+      "texasRoles": 164,
+      "usRemotePossibilities": 41,
       "unknownLocations": 5,
       "staleRoles": 0
     },
@@ -7073,8 +7073,8 @@
           "careersUrl": "https://revolutpeople.com/quantum-light/public/careers",
           "source": "local:quantumlight-rendered",
           "sourceUrl": "https://revolutpeople.com/quantum-light/public/careers",
-          "observedAt": "2026-11-15T22:03:45.747Z",
-          "lastAttempt": "2026-11-15T22:03:45.747Z",
+          "observedAt": "2026-11-16T14:49:49.026Z",
+          "lastAttempt": "2026-11-16T14:49:49.026Z",
           "status": "complete",
           "listingStatus": "complete",
           "reason": "All 6 postings on the public careers page collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read.",
@@ -9380,26 +9380,26 @@
           "careersUrl": "https://www.revolut.com/careers/",
           "source": "local:revolut-rendered",
           "sourceUrl": "https://www.revolut.com/careers/",
-          "observedAt": "2026-11-15T22:03:44.221Z",
-          "lastAttempt": "2026-11-15T22:03:44.221Z",
+          "observedAt": "2026-11-16T14:49:47.519Z",
+          "lastAttempt": "2026-11-16T14:49:47.519Z",
           "status": "complete",
           "listingStatus": "complete",
-          "reason": "All 254 positions in the careers page data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read.",
-          "total": 254,
+          "reason": "All 258 positions in the careers page data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read.",
+          "total": 258,
           "pages": 1,
           "pageReceipts": [
             {
               "url": "https://www.revolut.com/careers/",
               "page": 1,
-              "total": 254,
-              "rows": 254
+              "total": 258,
+              "rows": 258
             }
           ],
           "retained": false
         }
       ],
       "status": "complete",
-      "roles": 254,
+      "roles": 258,
       "texasRoles": 0,
       "usRemotePossibilities": 1,
       "unknownLocations": 0,

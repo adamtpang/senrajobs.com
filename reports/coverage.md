@@ -1,8 +1,8 @@
 # Public location coverage
 
-Observed 2026-11-16T03:22:34.657Z.
+Observed 2026-11-16T14:50:02.383Z.
 
-115 employers; 55 complete, 24 partial, 6 failed, 30 link-only. 30628 unique role URLs; 3952 Texas-location roles, 417 US-remote possibilities (Texas eligibility unconfirmed), 1143 unknown locations, 4023 stale/retained roles.
+115 employers; 55 complete, 24 partial, 6 failed, 30 link-only. 30633 unique role URLs; 3953 Texas-location roles, 416 US-remote possibilities (Texas eligibility unconfirmed), 1143 unknown locations, 4023 stale/retained roles.
 
 This is not an exhaustive inventory of all Texas jobs. No headquarters-based location inference is used. Read data/coverage.json for source URLs, timestamps, pagination and detail limits.
 
@@ -62,7 +62,7 @@ This is not an exhaustive inventory of all Texas jobs. No headquarters-based loc
 | Major Food Group | partial | 133 | 11 | 0 | 1 | Collected 84 public widget cards; 1 detail failures. Widget exposes no independent total or verifiable pagination contract; additional channels remain unverified. |
 | MARI | partial | 35 | 0 | 0 | 0 | MARI: 14 (complete); TodayTix Group: 4 (complete). Public payloads exhausted; other portfolio hiring channels and city-level site detail remain unreconciled. |
 | Medici Brands | partial | 50 | 0 | 0 | 1 | Public group widget collected; all published brands. No independent total or pagination contract; 0 invalid and 0 duplicate records excluded. Other group hiring channels remain unverified. |
-| Meta | complete | 1343 | 163 | 42 | 5 | All 1343 jobs in the careers search data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read. |
+| Meta | complete | 1344 | 164 | 41 | 5 | All 1344 jobs in the careers search data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read. |
 | Michael & Susan Dell Foundation | complete | 8 | 3 | 0 | 0 | Single official listing table exhausted: 8 openings, every linked row valid. The page advertises no total and shows no pagination. Scope is the foundation careers page only. |
 | NaturalMotion | complete | 5 | 0 | 0 | 0 | Official NaturalMotion board exhausted; parent Zynga jobs are not all attributed to this founder. |
 | Neko Health | complete | 125 | 0 | 0 | 0 | Public listing retrieved |
@@ -89,7 +89,7 @@ This is not an exhaustive inventory of all Texas jobs. No headquarters-based loc
 | Raising Cane's | complete | 2618 | 579 | 0 | 0 | All emitted public pages retrieved and advertised total matched. |
 | Ramp | complete | 180 | 0 | 1 | 0 | Public listing retrieved |
 | ResearchHub | link-only | 0 | 0 | 0 | 0 | No supported ATS found during bounded official-site discovery |
-| Revolut | complete | 254 | 0 | 1 | 0 | All 254 positions in the careers page data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read. |
+| Revolut | complete | 258 | 0 | 1 | 0 | All 258 positions in the careers page data collected in one page load by the local browser run. Pay is carried over from earlier detail reads of the same role, not re-read. |
 | Ribbit Capital | link-only | 0 | 0 | 0 | 0 | No supported ATS found during bounded official-site discovery |
 | Robinhood | complete | 165 | 28 | 0 | 0 | Public listing retrieved |
 | Roblox | complete | 271 | 0 | 0 | 0 | Public listing retrieved |
