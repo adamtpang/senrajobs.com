@@ -4,6 +4,10 @@
 // Listed here: company name (text before any parenthetical) and the days its last good fetch stays valid.
 import fs from 'node:fs';
 
+// Every board whose refresh keeps failing (blocked sites, scoped sources awaiting a manual review) loses
+// its roles after this many days and falls back to its careers link. A later successful refresh restores them.
+export const DEFAULT_EXPIRE_DAYS = 14;
+// Per-company overrides of that number.
 export const EXPIRE_AFTER_DAYS = {
   Tesla: 14, // careers search answers 403 to automated requests; the last capture was a manual browser pass
 };
@@ -11,8 +15,8 @@ export const EXPIRE_AFTER_DAYS = {
 export function expireStaleBoards(jobs, now = Date.now()) {
   const expired = [];
   for (const [name, board] of Object.entries(jobs)) {
-    const days = EXPIRE_AFTER_DAYS[name.split(' (')[0]];
-    if (!days || !board?.roles?.length) continue;
+    const days = EXPIRE_AFTER_DAYS[name.split(' (')[0]] ?? DEFAULT_EXPIRE_DAYS;
+    if (!board?.roles?.length) continue;
     const failed = board.refreshFailed === true || board.coverage?.status === 'failed';
     const fetched = Date.parse(board.fetched);
     if (!failed || !Number.isFinite(fetched) || now - fetched <= days * 864e5) continue;
