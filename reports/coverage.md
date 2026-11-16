@@ -1,6 +1,6 @@
 # Public location coverage
 
-Observed 2026-11-15T22:05:40.487Z.
+Observed 2026-11-16T02:50:28.763Z.
 
 115 employers; 55 complete, 24 partial, 6 failed, 30 link-only. 30638 unique role URLs; 3953 Texas-location roles, 417 US-remote possibilities (Texas eligibility unconfirmed), 1143 unknown locations, 4033 stale/retained roles.
 

@@ -70,11 +70,33 @@ const texasCsv=[['Title','Company','Guests','Austin','Published locations','Work
 fs.writeFileSync('data/texas-roles.csv',texasCsv+'\r\n');
 fs.writeFileSync('data/coverage.json',JSON.stringify(discovery.coverage,null,2)+'\n');
 fs.writeFileSync('reports/coverage.md',discovery.markdown);
+// Portraits fill a card up to 322px wide, so a fixed 200px file looks soft, most of all on
+// high-density screens. Offer several widths and let the browser pick the smallest sharp one.
+const PORTRAIT_WIDTHS = [240, 400, 640, 960];
+const PORTRAIT_SIZES = "(max-width:650px) calc(50vw - 24px), (max-width:950px) calc(33vw - 32px), min(322px, calc(25vw - 38px))";
+const APPLE_SIZE = /\/\d+x\d+bb(\.[a-z]+)?$/i;
+function portraitAt(url, width) {
+  if (APPLE_SIZE.test(url)) return url.replace(APPLE_SIZE, `/${width}x${width}bb$1`);
+  if (url.startsWith("https://megaphone.imgix.net/")) {
+    const u = new URL(url);
+    u.searchParams.delete("max-w");
+    u.searchParams.delete("max-h");
+    u.searchParams.set("w", width);
+    u.searchParams.set("h", width);
+    return u.toString();
+  }
+  return null;
+}
+function portraitSources(url) {
+  if (!url) return { src: "", srcset: "" };
+  if (!portraitAt(url, 400)) return { src: url, srcset: "" };
+  return { src: portraitAt(url, 400), srcset: PORTRAIT_WIDTHS.map((w) => `${portraitAt(url, w)} ${w}w`).join(", ") };
+}
 const initials = (n) => n.split(" ").map((w) => w[0]).slice(0, 2).join("");
 const list = out.map((g) => {
-  const photoUrl = photos[g.name] ? photos[g.name].replace(/\/\d+x\d+bb(\.[a-z]+)?/i, "/200x200bb$1") : "";
-  const photo = photoUrl
-    ? `<img src="${esc(photoUrl)}" alt="${esc(g.name)}" width="200" height="200" loading="lazy" decoding="async">`
+  const portrait = portraitSources(photos[g.name]);
+  const photo = portrait.src
+    ? `<img src="${esc(portrait.src)}"${portrait.srcset ? ` srcset="${esc(portrait.srcset)}" sizes="${PORTRAIT_SIZES}"` : ""} alt="${esc(g.name)}" width="400" height="400" loading="lazy" decoding="async">`
     : `<span class="ph" aria-hidden="true">${esc(initials(g.name))}</span>`;
   const current = g.companies.filter(c => c.note !== 'acquired or closed');
   // Divisions that share one brand mark (for example the Fanatics boards) show it once.
@@ -137,7 +159,7 @@ fs.rmSync('assets/app', { recursive: true, force: true });
 fs.mkdirSync('assets/app', { recursive: true });
 fs.writeFileSync(`assets/app/app.${appHash}.js`, appBundle);
 const rendered = html
-  .replace('__GUEST_DATA__', () => JSON.stringify(out.map(guest => ({name:guest.name, episode:guest.episode, photo:photos[guest.name] ? photos[guest.name].replace(/\/\d+x\d+bb(\.[a-z]+)?/i, "/200x200bb$1") : '', companies:guest.companies.filter(c => c.note !== 'acquired or closed').map(c => c.name.split(' (')[0])}))).replace(/</g,'\\u003c'))
+  .replace('__GUEST_DATA__', () => JSON.stringify(out.map(guest => ({name:guest.name, episode:guest.episode, photo:portraitSources(photos[guest.name]).src, companies:guest.companies.filter(c => c.note !== 'acquired or closed').map(c => c.name.split(' (')[0])}))).replace(/</g,'\\u003c'))
   .replace('__APP_SCRIPT__', `/assets/app/app.${appHash}.js`);
 // The CSP in vercel.json allows the inline analytics loader by hash. Fail the build if they drift.
 const analyticsInline = rendered.match(/<script data-posthog-fleet>([\s\S]*?)<\/script>/)?.[1];
