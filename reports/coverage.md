@@ -1,14 +1,14 @@
 # Public location coverage
 
-Observed 2026-11-16T03:00:38.357Z.
+Observed 2026-11-16T03:22:34.657Z.
 
-115 employers; 55 complete, 24 partial, 6 failed, 30 link-only. 30638 unique role URLs; 3953 Texas-location roles, 417 US-remote possibilities (Texas eligibility unconfirmed), 1143 unknown locations, 4033 stale/retained roles.
+115 employers; 55 complete, 24 partial, 6 failed, 30 link-only. 30628 unique role URLs; 3952 Texas-location roles, 417 US-remote possibilities (Texas eligibility unconfirmed), 1143 unknown locations, 4023 stale/retained roles.
 
 This is not an exhaustive inventory of all Texas jobs. No headquarters-based location inference is used. Read data/coverage.json for source URLs, timestamps, pagination and detail limits.
 
 | Employer | Coverage | Roles | Texas | US remote possibilities | Unknown | Source limitation |
 |---|---|---:|---:|---:|---:|---|
-| 20th Century Studios | failed | 1 | 0 | 0 | 0 | This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled. |
+| 20th Century Studios | failed | 0 | 0 | 0 | 0 | Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled. |
 | 37signals | complete | 0 | 0 | 0 | 0 | Official careers page explicitly states there are no current job openings |
 | Amerex Oil Associates | link-only | 0 | 0 | 0 | 0 | No verified careers URL or official domain in research |
 | American Recordings | link-only | 0 | 0 | 0 | 0 | No verified careers URL or official domain in research |
@@ -25,7 +25,7 @@ This is not an exhaustive inventory of all Texas jobs. No headquarters-based loc
 | Coinbase | complete | 265 | 0 | 158 | 0 | Public listing retrieved |
 | Colossus | link-only | 0 | 0 | 0 | 0 | No supported ATS found during bounded official-site discovery; No supported ATS found during bounded official-site discovery |
 | Corient | complete | 121 | 25 | 0 | 0 | Public listing retrieved |
-| Corporate Wings | failed | 1 | 1 | 0 | 0 | This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled. |
+| Corporate Wings | failed | 0 | 0 | 0 | 0 | Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled. |
 | Creative Artists Agency | partial | 104 | 1 | 0 | 1 | All advertised listings retrieved; 1 job locations remain unresolved after bounded detail retrieval |
 | Crystal Dynamics | partial | 10 | 0 | 0 | 0 | Public board advertises 11 entries; 7 specific Spring 2027 internships verified, 1 general applications excluded, 3 detail/identity failures. Graduate eligibility is cohort-specific. Coverage is limited to this official board; no other studio channels inferred. Partial failures must retain older roles. |
 | David Protein | partial | 20 | 0 | 0 | 1 | Public group widget collected; only explicit David Protein assignments. No independent total or pagination contract; 0 invalid and 0 duplicate records excluded. Other group hiring channels remain unverified. |
@@ -99,7 +99,7 @@ This is not an exhaustive inventory of all Texas jobs. No headquarters-based loc
 | Scale AI | complete | 170 | 2 | 0 | 0 | Public listing retrieved |
 | Scour | link-only | 0 | 0 | 0 | 0 | No verified careers URL or official domain in research |
 | Scribe Media | link-only | 0 | 0 | 0 | 0 | No supported public ATS found on the official careers page |
-| Sentient Jet | failed | 1 | 0 | 0 | 0 | This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled. |
+| Sentient Jet | failed | 0 | 0 | 0 | 0 | Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled. |
 | Sequoia Capital | link-only | 0 | 0 | 0 | 0 | No supported ATS found during bounded official-site discovery |
 | Shopify | complete | 112 | 0 | 0 | 0 | Exhausted public page payload (role list): 112 unique listed roles; no independently advertised global total |
 | Snap | partial | 216 | 6 | 0 | 44 | All advertised listings retrieved; 44 job locations remain unresolved after bounded detail retrieval |
@@ -113,10 +113,10 @@ This is not an exhaustive inventory of all Texas jobs. No headquarters-based loc
 | TrailRunner International | complete | 4 | 1 | 0 | 0 | Single public careers list payload exhausted: 4 openings matching meta.totalCount 4. Completeness applies only to this BambooHR board at observation time; pay and posting dates are not in the list feed. |
 | U.S. Office of Personnel Management | link-only | 0 | 0 | 0 | 0 | No supported public ATS found on the official careers page |
 | Uber | complete | 815 | 32 | 0 | 0 | Public listing retrieved |
-| UFC | failed | 11 | 0 | 0 | 0 | HTTP 403 |
+| UFC | failed | 0 | 0 | 0 | 0 | Roles removed after 14 days without a successful refresh. HTTP 403 |
 | United Rentals | complete | 1231 | 175 | 1 | 0 | Public listing retrieved |
 | UnitedMasters / Translation | complete | 34 | 0 | 0 | 0 | Shared public board exhausted; employer brands follow the published department hierarchy. |
-| USC Iovine and Young Academy | failed | 1 | 0 | 0 | 0 | This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled. |
+| USC Iovine and Young Academy | failed | 0 | 0 | 0 | 0 | Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled. |
 | Vestron Inc. | link-only | 0 | 0 | 0 | 0 | No verified careers URL or official domain in research |
 | Whole Foods Market | partial | 6082 | 330 | 0 | 0 | Malformed or non-public records excluded; advertised total not reconciled; 251 records with internal/private/non-external flags excluded |
 | WME Group | complete | 42 | 2 | 0 | 0 | Public listing retrieved |

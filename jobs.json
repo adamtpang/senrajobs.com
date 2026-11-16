@@ -10139,108 +10139,50 @@
   "sourceUrl": "https://apply.clearcompany.com/sentient",
   "careersUrl": "https://sentient.com/private-jet-careers/",
   "fetched": "2026-10-28T15:55:17.500Z",
-  "roles": [
-   {
-    "id": "1131",
-    "title": "Business Development Representative",
-    "url": "https://careers.flexjet.com/us/en/job/1131/Business-Development-Representative",
-    "employerBrand": "SentientJet",
-    "employerBrandSource": "official-employer-page",
-    "sourceEmployerLabel": "SentientJet",
-    "department": "Corporate, Operations and Owner Support",
-    "employmentType": "Full Time",
-    "location": "Quincy, MA, US, 02169",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Quincy, MA, US, 02169",
-      "city": "",
-      "state": "",
-      "country": "",
-      "sourceUrl": "https://careers.flexjet.com/us/en/job/1131/Business-Development-Representative",
-      "observedAt": "2026-10-28T15:50:17.509Z",
-      "source": "employer-job-description",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "workplace": "No",
-    "pay": null,
-    "publishedAt": "2026-08-14T00:22:11.900+0000",
-    "sourceUrl": "https://careers.flexjet.com/us/en/job/1131/Business-Development-Representative",
-    "observedAt": "2026-10-28T15:50:17.509Z",
-    "detailObservedAt": "2026-10-28T15:50:17.509Z",
-    "sourceStatus": "current",
-    "sourceJobIdentity": "clearcompany:ebd95446-c69f-d7cf-fcec-01664dd2a8b3",
-    "sourceApplyUrl": "https://flexjet.clearcompany.com/careers/jobs/ebd95446-c69f-d7cf-fcec-01664dd2a8b3/apply"
-   }
-  ],
+  "roles": [],
   "coverage": {
    "status": "failed",
-   "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
+   "reason": "Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
    "listingStatus": "failed",
    "lastAttempt": "2026-11-15T18:35:13.809Z",
-   "retained": true,
+   "retained": false,
    "identityUrl": "https://sentient.com/private-jet-careers/",
    "scope": "Named employer board; its current role mirrors Flexjet and uses the shared canonical URL.",
    "unknownLocations": 0
   },
   "refreshFailed": true,
-  "lastAttempt": "2026-11-15T18:35:13.809Z"
+  "lastAttempt": "2026-11-15T18:35:13.809Z",
+  "expired": {
+   "at": "2026-11-16T03:22:32.538Z",
+   "lastFetched": "2026-10-28T15:55:17.500Z",
+   "rolesDropped": 1,
+   "afterDays": 14
+  }
  },
  "Corporate Wings (early owner and operator)": {
   "source": "manual:clearcompany-corporatewings",
   "sourceUrl": "https://apply.clearcompany.com/corporatewings",
   "careersUrl": "https://corporatewings.com/careers",
   "fetched": "2026-10-28T15:55:17.500Z",
-  "roles": [
-   {
-    "id": "1121",
-    "title": "Corporate Wings Gulfstream 650 Captain (Must reside within 2 hours of KDAL)",
-    "url": "https://apply.clearcompany.com/corporatewings?jobId=db6f4943-b656-2da5-7a6a-33cfb3327aea",
-    "employerBrand": "Corporate Wings",
-    "employerBrandSource": "official-employer-feed",
-    "sourceEmployerLabel": "Corporate Wings",
-    "department": "204 Aircraft Management",
-    "employmentType": "",
-    "location": "Dallas TX",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Dallas TX",
-      "city": "",
-      "state": "",
-      "country": "",
-      "sourceUrl": "https://apply.clearcompany.com/corporatewings?jobId=db6f4943-b656-2da5-7a6a-33cfb3327aea",
-      "observedAt": "2026-10-28T15:50:49.813Z",
-      "source": "employer-job-description",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "workplace": "",
-    "pay": null,
-    "publishedAt": "2026-08-03T00:00:00",
-    "sourceUrl": "https://apply.clearcompany.com/corporatewings?jobId=db6f4943-b656-2da5-7a6a-33cfb3327aea",
-    "observedAt": "2026-10-28T15:50:49.813Z",
-    "detailObservedAt": "2026-10-28T15:50:49.813Z",
-    "sourceStatus": "current",
-    "sourceJobIdentity": "clearcompany:db6f4943-b656-2da5-7a6a-33cfb3327aea",
-    "sourceApplyUrl": "https://flexjet.clearcompany.com/careers/jobs/db6f4943-b656-2da5-7a6a-33cfb3327aea/apply"
-   }
-  ],
+  "roles": [],
   "coverage": {
    "status": "failed",
-   "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
+   "reason": "Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
    "listingStatus": "failed",
    "lastAttempt": "2026-11-15T18:35:13.809Z",
-   "retained": true,
+   "retained": false,
    "identityUrl": "https://corporatewings.com/careers",
    "scope": "Exact Corporate Wings public board; no parent or portfolio expansion.",
    "unknownLocations": 0
   },
   "refreshFailed": true,
-  "lastAttempt": "2026-11-15T18:35:13.809Z"
+  "lastAttempt": "2026-11-15T18:35:13.809Z",
+  "expired": {
+   "at": "2026-11-16T03:22:32.538Z",
+   "lastFetched": "2026-10-28T15:55:17.500Z",
+   "rolesDropped": 1,
+   "afterDays": 14
+  }
  },
  "AppLovin": {
   "source": "greenhouse:applovin",
@@ -299953,72 +299895,26 @@
   "source": "manual:disney-film-entity",
   "sourceUrl": "https://join.disneycareers.com/global/en/20th-century-studios",
   "fetched": "2026-10-28T15:39:50.273Z",
-  "roles": [
-   {
-    "id": "10162364",
-    "title": "Senior Manager, Production Sustainability (DE Burbank)",
-    "url": "https://join.disneycareers.com/global/en/job/10162364/Senior-Manager-Production-Sustainability-DE-Burbank",
-    "department": "Production",
-    "location": "Burbank, California, United States of America",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Burbank, California, United States of America",
-      "city": "Burbank",
-      "state": "California",
-      "country": "United States",
-      "sourceUrl": "https://join.disneycareers.com/global/en/job/10162364/Senior-Manager-Production-Sustainability-DE-Burbank",
-      "observedAt": "2026-10-28T15:39:50.273Z",
-      "source": "employer-job-description",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "employmentType": "Full Time",
-    "workplace": "Hybrid",
-    "employerBrand": "Twentieth Century Fox Film Corporation",
-    "employerBrandSource": "official-employer-page",
-    "sourceEmployerLabel": "Twentieth Century Fox Film Corporation",
-    "pay": {
-     "min": 139200,
-     "max": 186600,
-     "currency": "USD",
-     "period": "year"
-    },
-    "payRanges": [
-     {
-      "min": 139200,
-      "max": 186600,
-      "currency": "USD",
-      "period": "year",
-      "type": "Burbank base hiring range",
-      "publishedText": "The hiring range for this position in Burbank, CA is $139,200 to $186,600 per year.",
-      "sourceUrl": "https://join.disneycareers.com/global/en/job/10162364/Senior-Manager-Production-Sustainability-DE-Burbank"
-     }
-    ],
-    "publishedAt": "2026-10-20T01:27:38.000Z",
-    "observedAt": "2026-10-28T15:39:50.273Z",
-    "detailObservedAt": "2026-10-28T15:39:50.273Z",
-    "sourceUrl": "https://join.disneycareers.com/global/en/job/10162364/Senior-Manager-Production-Sustainability-DE-Burbank",
-    "sourceStatus": "current",
-    "sourceJobIdentity": "disney:10162364",
-    "scopeNote": "The named employer is Twentieth Century Fox Film Corporation. Disney categorizes this cross-production role under Disney Entertainment Television, not the 20th Century Studios business label. No parent-wide job attribution.",
-    "eligibilitySummary": "Requires10+years in sustainability/film/TV or related work, including3+years people management; bachelor’s degree; Burbank commuting distance; four onsite days weekly; up to25% travel."
-   }
-  ],
+  "roles": [],
   "coverage": {
    "status": "failed",
-   "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
+   "reason": "Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
    "listingStatus": "failed",
    "lastAttempt": "2026-11-15T18:35:57.530Z",
-   "retained": true,
+   "retained": false,
    "identityUrl": "https://join.disneycareers.com/global/en/20th-century-studios",
    "scope": "Only explicit studio assignments or the named film corporation as employer. Shared Disney roles are excluded; manual detail review required.",
    "unknownLocations": 0
   },
   "refreshFailed": true,
   "lastAttempt": "2026-11-15T18:35:57.530Z",
-  "careersUrl": "https://join.disneycareers.com/global/en/20th-century-studios"
+  "careersUrl": "https://join.disneycareers.com/global/en/20th-century-studios",
+  "expired": {
+   "at": "2026-11-16T03:22:32.538Z",
+   "lastFetched": "2026-10-28T15:39:50.273Z",
+   "rolesDropped": 1,
+   "afterDays": 14
+  }
  },
  "BMG Entertainment (former president and CEO)": {
   "source": "research",
@@ -300049,398 +299945,22 @@
   "sourceUrl": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc",
   "careersUrl": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc",
   "fetched": "2026-10-26T21:01:31.492Z",
-  "roles": [
-   {
-    "id": "2192593",
-    "title": "Videographer",
-    "url": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/videographer-2192593",
-    "sourceUrl": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc",
-    "observedAt": "2026-10-26T21:42:23.858Z",
-    "sourceStatus": "current",
-    "employerBrand": "UFC",
-    "location": "Las Vegas, NV",
-    "locations": [
-     {
-      "raw": "Las Vegas, NV",
-      "sourceUrl": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/videographer-2192593",
-      "observedAt": "2026-10-26T21:42:23.858Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "department": "Camera Operator · Audio/Video Editing and Production · Media/Video Production",
-    "pay": null,
-    "payRanges": []
-   },
-   {
-    "id": "R0008650",
-    "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/jobs",
-    "observedAt": "2026-10-26T19:35:47.286Z",
-    "sourceStatus": "current",
-    "locationSource": "role-detail",
-    "title": "Senior Global Immigration Specialist",
-    "url": "https://wwecorp.wd5.myworkdayjobs.com/TKO/job/Las-Vegas-NV---UFC-Headquarters/Senior-Global-Immigration-Specialist_R0008650-1",
-    "detailApi": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Senior-Global-Immigration-Specialist_R0008650-1",
-    "location": "Las Vegas, NV - UFC Headquarters",
-    "rawLocation": "Las Vegas, NV - UFC Headquarters",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Las Vegas, NV - UFC Headquarters",
-      "city": "",
-      "state": "",
-      "country": "United States of America",
-      "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Senior-Global-Immigration-Specialist_R0008650-1",
-      "observedAt": "2026-10-26T19:35:52.085Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "rawDetailLocations": [
-     "Las Vegas, NV - UFC Headquarters"
-    ],
-    "detailAttempt": {
-     "url": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Senior-Global-Immigration-Specialist_R0008650-1",
-     "observedAt": "2026-10-26T19:35:52.085Z",
-     "status": "observed"
-    },
-    "alternateUrls": [
-     "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/senior-global-immigration-specialist-2191994"
-    ],
-    "employerBrand": "UFC careers",
-    "associationSource": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/senior-global-immigration-specialist-2191994"
-   },
-   {
-    "id": "R0008613",
-    "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/jobs",
-    "observedAt": "2026-10-26T19:35:47.286Z",
-    "sourceStatus": "current",
-    "locationSource": "role-detail",
-    "title": "Senior Producer, Originals Production",
-    "url": "https://wwecorp.wd5.myworkdayjobs.com/TKO/job/Las-Vegas-NV---UFC-Headquarters/Senior-Producer--Originals-Production_R0008613-1",
-    "detailApi": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Senior-Producer--Originals-Production_R0008613-1",
-    "location": "Las Vegas, NV - UFC Headquarters",
-    "rawLocation": "Las Vegas, NV - UFC Headquarters",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Las Vegas, NV - UFC Headquarters",
-      "city": "",
-      "state": "",
-      "country": "United States of America",
-      "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Senior-Producer--Originals-Production_R0008613-1",
-      "observedAt": "2026-10-26T19:35:52.839Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "rawDetailLocations": [
-     "Las Vegas, NV - UFC Headquarters"
-    ],
-    "detailAttempt": {
-     "url": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Senior-Producer--Originals-Production_R0008613-1",
-     "observedAt": "2026-10-26T19:35:52.839Z",
-     "status": "observed"
-    },
-    "alternateUrls": [
-     "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/senior-producer-originals-production-2190827"
-    ],
-    "employerBrand": "UFC careers",
-    "associationSource": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/senior-producer-originals-production-2190827"
-   },
-   {
-    "id": "R0008612",
-    "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/jobs",
-    "observedAt": "2026-10-26T19:35:47.286Z",
-    "sourceStatus": "current",
-    "locationSource": "role-detail",
-    "title": "Editor III",
-    "url": "https://wwecorp.wd5.myworkdayjobs.com/TKO/job/Las-Vegas-NV/Editor-III_R0008612-1",
-    "detailApi": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV/Editor-III_R0008612-1",
-    "location": "Las Vegas, NV",
-    "rawLocation": "Las Vegas, NV",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Las Vegas, NV",
-      "city": "",
-      "state": "",
-      "country": "United States of America",
-      "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV/Editor-III_R0008612-1",
-      "observedAt": "2026-10-26T19:35:52.980Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "rawDetailLocations": [
-     "Las Vegas, NV"
-    ],
-    "detailAttempt": {
-     "url": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV/Editor-III_R0008612-1",
-     "observedAt": "2026-10-26T19:35:52.980Z",
-     "status": "observed"
-    },
-    "alternateUrls": [
-     "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/editor-iii-2190758"
-    ],
-    "employerBrand": "UFC careers",
-    "associationSource": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/editor-iii-2190758"
-   },
-   {
-    "id": "R0008540",
-    "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/jobs",
-    "observedAt": "2026-10-26T19:35:47.286Z",
-    "sourceStatus": "current",
-    "locationSource": "role-detail",
-    "title": "Vice President, UFC Performance Institute Operations",
-    "url": "https://wwecorp.wd5.myworkdayjobs.com/TKO/job/Las-Vegas-NV---UFC-Headquarters/Vice-President--UFC-Performance-Institute-Operations_R0008540-1",
-    "detailApi": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Vice-President--UFC-Performance-Institute-Operations_R0008540-1",
-    "location": "Las Vegas, NV - UFC Headquarters",
-    "rawLocation": "Las Vegas, NV - UFC Headquarters",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Las Vegas, NV - UFC Headquarters",
-      "city": "",
-      "state": "",
-      "country": "United States of America",
-      "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Vice-President--UFC-Performance-Institute-Operations_R0008540-1",
-      "observedAt": "2026-10-26T19:35:53.198Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "rawDetailLocations": [
-     "Las Vegas, NV - UFC Headquarters"
-    ],
-    "detailAttempt": {
-     "url": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Vice-President--UFC-Performance-Institute-Operations_R0008540-1",
-     "observedAt": "2026-10-26T19:35:53.198Z",
-     "status": "observed"
-    },
-    "alternateUrls": [
-     "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/vice-president-ufc-performance-institute-operations-2190478"
-    ],
-    "employerBrand": "UFC careers",
-    "associationSource": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/vice-president-ufc-performance-institute-operations-2190478"
-   },
-   {
-    "id": "2187803",
-    "title": "Senior Manager, Sports Medicine",
-    "url": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/senior-manager-sports-medicine-2187803",
-    "sourceUrl": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc",
-    "observedAt": "2026-10-26T21:42:32.835Z",
-    "sourceStatus": "current",
-    "employerBrand": "UFC",
-    "location": "Las Vegas, NV",
-    "locations": [
-     {
-      "raw": "Las Vegas, NV",
-      "sourceUrl": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/senior-manager-sports-medicine-2187803",
-      "observedAt": "2026-10-26T21:42:32.835Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "department": "Athletic Trainer/Physical Therapy/Doctor · Strength and Conditioning / Fitness · Operations",
-    "pay": null,
-    "payRanges": []
-   },
-   {
-    "id": "R0008425",
-    "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/jobs",
-    "observedAt": "2026-10-26T19:35:47.286Z",
-    "sourceStatus": "current",
-    "locationSource": "role-detail",
-    "title": "Producer, Originals Production",
-    "url": "https://wwecorp.wd5.myworkdayjobs.com/TKO/job/Las-Vegas-NV/Producer--Originals-Production_R0008425-1",
-    "detailApi": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV/Producer--Originals-Production_R0008425-1",
-    "location": "Las Vegas, NV",
-    "rawLocation": "Las Vegas, NV",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Las Vegas, NV",
-      "city": "",
-      "state": "",
-      "country": "United States of America",
-      "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV/Producer--Originals-Production_R0008425-1",
-      "observedAt": "2026-10-26T19:35:53.722Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "rawDetailLocations": [
-     "Las Vegas, NV"
-    ],
-    "detailAttempt": {
-     "url": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV/Producer--Originals-Production_R0008425-1",
-     "observedAt": "2026-10-26T19:35:53.722Z",
-     "status": "observed"
-    },
-    "alternateUrls": [
-     "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/producer-originals-production-2186662"
-    ],
-    "employerBrand": "UFC careers",
-    "associationSource": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/producer-originals-production-2186662"
-   },
-   {
-    "id": "R0008077",
-    "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/jobs",
-    "observedAt": "2026-10-26T19:35:47.286Z",
-    "sourceStatus": "current",
-    "locationSource": "role-detail",
-    "title": "Director, Partnership Marketing, UFC & ZB",
-    "url": "https://wwecorp.wd5.myworkdayjobs.com/TKO/job/Las-Vegas-NV---UFC-Headquarters/Director--Partnership-Marketing--UFC---ZB_R0008077-1",
-    "detailApi": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Director--Partnership-Marketing--UFC---ZB_R0008077-1",
-    "location": "Las Vegas, NV - UFC Headquarters",
-    "rawLocation": "Las Vegas, NV - UFC Headquarters",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Las Vegas, NV - UFC Headquarters",
-      "city": "",
-      "state": "",
-      "country": "United States of America",
-      "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Director--Partnership-Marketing--UFC---ZB_R0008077-1",
-      "observedAt": "2026-10-26T19:35:54.216Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "rawDetailLocations": [
-     "Las Vegas, NV - UFC Headquarters"
-    ],
-    "detailAttempt": {
-     "url": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Director--Partnership-Marketing--UFC---ZB_R0008077-1",
-     "observedAt": "2026-10-26T19:35:54.216Z",
-     "status": "observed"
-    },
-    "alternateUrls": [
-     "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/director-partnership-marketing-ufc-zb-2185364"
-    ],
-    "employerBrand": "UFC careers",
-    "associationSource": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/director-partnership-marketing-ufc-zb-2185364"
-   },
-   {
-    "id": "JR20845",
-    "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/jobs",
-    "observedAt": "2026-10-26T19:35:47.286Z",
-    "sourceStatus": "current",
-    "locationSource": "role-detail",
-    "title": "Technical Producer",
-    "url": "https://wwecorp.wd5.myworkdayjobs.com/TKO/job/Las-Vegas-NV---UFC-Headquarters/Technical-Producer_JR20845-1",
-    "detailApi": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Technical-Producer_JR20845-1",
-    "location": "Las Vegas, NV - UFC Headquarters",
-    "rawLocation": "Las Vegas, NV - UFC Headquarters",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Las Vegas, NV - UFC Headquarters",
-      "city": "",
-      "state": "",
-      "country": "United States of America",
-      "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Technical-Producer_JR20845-1",
-      "observedAt": "2026-10-26T19:35:54.399Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "rawDetailLocations": [
-     "Las Vegas, NV - UFC Headquarters"
-    ],
-    "detailAttempt": {
-     "url": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/Las-Vegas-NV---UFC-Headquarters/Technical-Producer_JR20845-1",
-     "observedAt": "2026-10-26T19:35:54.399Z",
-     "status": "observed"
-    },
-    "alternateUrls": [
-     "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/technical-producer-2184441"
-    ],
-    "employerBrand": "UFC careers",
-    "associationSource": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/technical-producer-2184441"
-   },
-   {
-    "id": "R0008350",
-    "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/jobs",
-    "observedAt": "2026-10-26T19:35:47.286Z",
-    "sourceStatus": "current",
-    "locationSource": "role-detail",
-    "title": "Director, App Security",
-    "url": "https://wwecorp.wd5.myworkdayjobs.com/TKO/job/New-York-NY/Director--App-Security_R0008350",
-    "detailApi": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/New-York-NY/Director--App-Security_R0008350",
-    "location": "New York, NY",
-    "rawLocation": "New York, NY",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "New York, NY",
-      "city": "",
-      "state": "",
-      "country": "United States of America",
-      "sourceUrl": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/New-York-NY/Director--App-Security_R0008350",
-      "observedAt": "2026-10-26T19:35:54.821Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "rawDetailLocations": [
-     "New York, NY"
-    ],
-    "detailAttempt": {
-     "url": "https://wwecorp.wd5.myworkdayjobs.com/wday/cxs/wwecorp/TKO/job/New-York-NY/Director--App-Security_R0008350",
-     "observedAt": "2026-10-26T19:35:54.821Z",
-     "status": "observed"
-    },
-    "alternateUrls": [
-     "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/director-app-security-2181980"
-    ],
-    "employerBrand": "UFC careers",
-    "associationSource": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/director-app-security-2181980"
-   },
-   {
-    "id": "2169770",
-    "title": "MMA Coordinator",
-    "url": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/mma-coordinator-2169770",
-    "sourceUrl": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc",
-    "observedAt": "2026-10-26T21:42:41.422Z",
-    "sourceStatus": "current",
-    "employerBrand": "UFC",
-    "location": "China",
-    "locations": [
-     {
-      "raw": "China",
-      "sourceUrl": "https://www.teamworkonline.com/combat-sports-jobs/mmajobs/ufc/mma-coordinator-2169770",
-      "observedAt": "2026-10-26T21:42:41.422Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "department": "Coach · Team Administration/Operations · Game Operations, Events, & Productions",
-    "pay": null,
-    "payRanges": []
-   }
-  ],
+  "roles": [],
   "coverage": {
    "status": "failed",
-   "reason": "HTTP 403",
+   "reason": "Roles removed after 14 days without a successful refresh. HTTP 403",
    "listingStatus": "failed",
    "lastAttempt": "2026-11-15T18:35:57.530Z",
-   "retained": true
+   "retained": false
   },
   "refreshFailed": true,
-  "lastAttempt": "2026-11-15T18:35:57.530Z"
+  "lastAttempt": "2026-11-15T18:35:57.530Z",
+  "expired": {
+   "at": "2026-11-16T03:22:32.538Z",
+   "lastFetched": "2026-10-26T21:01:31.492Z",
+   "rolesDropped": 11,
+   "afterDays": 14
+  }
  },
  "Roblox": {
   "source": "greenhouse:roblox",
@@ -496826,76 +496346,25 @@
   "sourceUrl": "https://usccareers.usc.edu/job/los-angeles/assistant-associate-professor-of-practice-in-human-ai-interaction-machine-learning-and-data-design/1209/100684964720",
   "careersUrl": "https://iovine-young.usc.edu/faculty-positions",
   "fetched": "2026-10-27T22:38:51.489Z",
-  "roles": [
-   {
-    "id": "REQ20180117",
-    "title": "Assistant/Associate Professor of Practice in Human-AI Interaction, Machine Learning, and Data Design",
-    "url": "https://usccareers.usc.edu/job/los-angeles/assistant-associate-professor-of-practice-in-human-ai-interaction-machine-learning-and-data-design/1209/100684964720",
-    "applicationUrl": "https://facultypositions.usc.edu/FAS/application/position?postingId=REQ20180117",
-    "employerBrand": "USC Iovine and Young Academy",
-    "employerBrandSource": "explicit-role-description",
-    "sourceEmployerLabel": "Iovine and Young Academy",
-    "department": "Technology and Engineering",
-    "facultyRanks": [
-     "Assistant Professor (Non Tenure Track)",
-     "Associate Professor (Non Tenure Track)"
-    ],
-    "employmentType": "",
-    "location": "Los Angeles, CA",
-    "secondaryLocations": [],
-    "locations": [
-     {
-      "raw": "Los Angeles, CA",
-      "city": "Los Angeles, CA - University Park Campus",
-      "state": "California",
-      "country": "United States",
-      "sourceUrl": "https://usccareers.usc.edu/job/los-angeles/assistant-associate-professor-of-practice-in-human-ai-interaction-machine-learning-and-data-design/1209/100684964720",
-      "observedAt": "2026-10-27T22:38:51.489Z",
-      "source": "role-detail",
-      "confidence": "published"
-     }
-    ],
-    "locationStatus": "published",
-    "workplace": "",
-    "publishedAt": "2026-09-15",
-    "applicationDeadline": "2026-11-01",
-    "pay": {
-     "min": 120000,
-     "max": 179000,
-     "currency": "USD",
-     "period": "year"
-    },
-    "payRanges": [
-     {
-      "min": 120000,
-      "max": 179000,
-      "currency": "USD",
-      "period": "year",
-      "type": "Base salary",
-      "sourceUrl": "https://usccareers.usc.edu/job/los-angeles/assistant-associate-professor-of-practice-in-human-ai-interaction-machine-learning-and-data-design/1209/100684964720",
-      "publishedText": "The annual base salary range for the following faculty ranks in this posting is: Assistant/Associate Professor of Practice, Technology: $120,000 - $179,000."
-     }
-    ],
-    "sourceUrl": "https://usccareers.usc.edu/job/los-angeles/assistant-associate-professor-of-practice-in-human-ai-interaction-machine-learning-and-data-design/1209/100684964720",
-    "observedAt": "2026-10-27T22:38:51.489Z",
-    "detailObservedAt": "2026-10-27T22:38:51.489Z",
-    "sourceStatus": "current",
-    "eligibilitySummary": "PhD in computer science, engineering or related field; or a relevant master's degree plus at least 5 years of relevant industry or academic experience. Advanced AI/ML systems experience required; teaching/mentoring preferred.",
-    "scopeNote": "Only this explicitly Academy-assigned role; excludes unrelated USC vacancies. Jimmy Iovine association concerns the Academy founding gift, not operation or control of USC."
-   }
-  ],
+  "roles": [],
   "coverage": {
    "status": "failed",
-   "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
+   "reason": "Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
    "listingStatus": "failed",
    "lastAttempt": "2026-11-15T18:36:23.167Z",
-   "retained": true,
+   "retained": false,
    "identityUrl": "https://iovine-young.usc.edu/faculty-positions",
    "scope": "Only Academy-assigned roles manually verified from official descriptions. No university-wide import.",
    "unknownLocations": 0
   },
   "refreshFailed": true,
-  "lastAttempt": "2026-11-15T18:36:23.167Z"
+  "lastAttempt": "2026-11-15T18:36:23.167Z",
+  "expired": {
+   "at": "2026-11-16T03:22:32.538Z",
+   "lastFetched": "2026-10-27T22:38:51.489Z",
+   "rolesDropped": 1,
+   "afterDays": 14
+  }
  },
  "Shopify": {
   "source": "shopify-page:shopify",

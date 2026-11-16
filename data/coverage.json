@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-16T03:00:38.357Z",
+  "generatedAt": "2026-11-16T03:22:34.657Z",
   "counts": {
     "employers": 115,
-    "roles": 30638,
-    "texasRoles": 3953,
+    "roles": 30628,
+    "texasRoles": 3952,
     "usRemotePossibilities": 417,
     "unknownLocations": 1143,
-    "staleRoles": 4033,
+    "staleRoles": 4023,
     "complete": 55,
     "partial": 24,
     "failed": 6,
@@ -35,20 +35,20 @@
           "observedAt": "2026-10-28T15:39:50.273Z",
           "lastAttempt": "2026-11-15T18:35:57.530Z",
           "status": "failed",
-          "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
+          "reason": "Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
           "listingStatus": "failed",
-          "retained": true,
+          "retained": false,
           "identityUrl": "https://join.disneycareers.com/global/en/20th-century-studios",
           "scope": "Only explicit studio assignments or the named film corporation as employer. Shared Disney roles are excluded; manual detail review required.",
           "unknownLocations": 0
         }
       ],
       "status": "failed",
-      "roles": 1,
+      "roles": 0,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 1
+      "staleRoles": 0
     },
     {
       "company": "37signals",
@@ -833,20 +833,20 @@
           "observedAt": "2026-10-28T15:55:17.500Z",
           "lastAttempt": "2026-11-15T18:35:13.809Z",
           "status": "failed",
-          "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
+          "reason": "Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
           "listingStatus": "failed",
-          "retained": true,
+          "retained": false,
           "identityUrl": "https://corporatewings.com/careers",
           "scope": "Exact Corporate Wings public board; no parent or portfolio expansion.",
           "unknownLocations": 0
         }
       ],
       "status": "failed",
-      "roles": 1,
-      "texasRoles": 1,
+      "roles": 0,
+      "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 1
+      "staleRoles": 0
     },
     {
       "company": "Creative Artists Agency",
@@ -9862,20 +9862,20 @@
           "observedAt": "2026-10-28T15:55:17.500Z",
           "lastAttempt": "2026-11-15T18:35:13.809Z",
           "status": "failed",
-          "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
+          "reason": "Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
           "listingStatus": "failed",
-          "retained": true,
+          "retained": false,
           "identityUrl": "https://sentient.com/private-jet-careers/",
           "scope": "Named employer board; its current role mirrors Flexjet and uses the shared canonical URL.",
           "unknownLocations": 0
         }
       ],
       "status": "failed",
-      "roles": 1,
+      "roles": 0,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 1
+      "staleRoles": 0
     },
     {
       "company": "Sequoia Capital",
@@ -10701,17 +10701,17 @@
           "observedAt": "2026-10-26T21:01:31.492Z",
           "lastAttempt": "2026-11-15T18:35:57.530Z",
           "status": "failed",
-          "reason": "HTTP 403",
+          "reason": "Roles removed after 14 days without a successful refresh. HTTP 403",
           "listingStatus": "failed",
-          "retained": true
+          "retained": false
         }
       ],
       "status": "failed",
-      "roles": 11,
+      "roles": 0,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 6
+      "staleRoles": 0
     },
     {
       "company": "United Rentals",
@@ -11373,20 +11373,20 @@
           "observedAt": "2026-10-27T22:38:51.489Z",
           "lastAttempt": "2026-11-15T18:36:23.167Z",
           "status": "failed",
-          "reason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
+          "reason": "Roles removed after 14 days without a successful refresh. This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
           "listingStatus": "failed",
-          "retained": true,
+          "retained": false,
           "identityUrl": "https://iovine-young.usc.edu/faculty-positions",
           "scope": "Only Academy-assigned roles manually verified from official descriptions. No university-wide import.",
           "unknownLocations": 0
         }
       ],
       "status": "failed",
-      "roles": 1,
+      "roles": 0,
       "texasRoles": 0,
       "usRemotePossibilities": 0,
       "unknownLocations": 0,
-      "staleRoles": 1
+      "staleRoles": 0
     },
     {
       "company": "Vestron Inc.",

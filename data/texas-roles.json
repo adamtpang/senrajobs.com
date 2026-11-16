@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-16T03:00:38.357Z",
+  "generatedAt": "2026-11-16T03:22:34.657Z",
   "counts": {
     "employers": 115,
-    "roles": 30638,
-    "texasRoles": 3953,
+    "roles": 30628,
+    "texasRoles": 3952,
     "usRemotePossibilities": 417,
     "unknownLocations": 1143,
-    "staleRoles": 4033,
+    "staleRoles": 4023,
     "complete": 55,
     "partial": 24,
     "failed": 6,
@@ -12087,51 +12087,6 @@
       "texasEvidence": [
         {
           "location": "US-TX-Houston-3712 Autry Park Drive-0600",
-          "basis": "explicit-state"
-        }
-      ]
-    },
-    {
-      "company": "Corporate Wings",
-      "companyAssociations": [
-        "Corporate Wings (early owner and operator)"
-      ],
-      "founders": [
-        "Kenn Ricci"
-      ],
-      "connections": [],
-      "id": "1121",
-      "title": "Corporate Wings Gulfstream 650 Captain (Must reside within 2 hours of KDAL)",
-      "officialUrl": "https://apply.clearcompany.com/corporatewings?jobId=db6f4943-b656-2da5-7a6a-33cfb3327aea",
-      "location": "Dallas TX",
-      "rawLocation": "Dallas TX",
-      "secondaryLocations": [],
-      "allLocations": [
-        {
-          "raw": "Dallas TX",
-          "city": "",
-          "state": "",
-          "country": "",
-          "sourceUrl": "https://apply.clearcompany.com/corporatewings?jobId=db6f4943-b656-2da5-7a6a-33cfb3327aea",
-          "observedAt": "2026-10-28T15:50:49.813Z",
-          "source": "employer-job-description",
-          "confidence": "published"
-        }
-      ],
-      "workplace": "Unspecified",
-      "workplaceEvidence": null,
-      "publishedPay": null,
-      "payType": null,
-      "publishedPayRanges": [],
-      "sourceUrl": "https://apply.clearcompany.com/corporatewings?jobId=db6f4943-b656-2da5-7a6a-33cfb3327aea",
-      "observedAt": "2026-10-28T15:50:49.813Z",
-      "lastAttempt": "2026-11-15T18:35:13.809Z",
-      "sourceStatus": "stale",
-      "coverageStatus": "failed",
-      "coverageReason": "This scoped source requires a fresh manual employer-assignment review; retaining prior verified roles with their original observation dates. Parent-wide discovery is disabled.",
-      "texasEvidence": [
-        {
-          "location": "Dallas TX",
           "basis": "explicit-state"
         }
       ]
