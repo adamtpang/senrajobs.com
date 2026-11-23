@@ -91,8 +91,18 @@ try {
   if (!fonts.loaded.some((f) => /Schmalfette/.test(f)) || !fonts.loaded.some((f) => /tt-commons-pro/.test(f))) {
     throw Error(`Site fonts did not load (loaded: ${fonts.loaded.join(', ') || 'none'}); refusing to write a card with fallback fonts`);
   }
-  const overflow = await page.evaluate(() => document.documentElement.scrollHeight > 630 || document.documentElement.scrollWidth > 1200);
-  if (overflow) throw Error('Card content overflows 1200x630');
+  // html and body are pinned to 1200x630 with overflow hidden, so the root never grows. Measure every
+  // element against the 64px safe margin instead, and the body's own content size, so clipping fails loudly.
+  const overflow = await page.evaluate(() => {
+    const margin = 64, limit = { right: 1200 - margin, bottom: 630 - margin };
+    const out = [...document.body.querySelectorAll('*')].filter((el) => {
+      const r = el.getBoundingClientRect();
+      return r.width && r.height && (r.left < margin - 0.5 || r.top < margin - 0.5 || r.right > limit.right + 0.5 || r.bottom > limit.bottom + 0.5);
+    }).map((el) => el.tagName.toLowerCase() + (el.className ? '.' + el.className : ''));
+    if (document.body.scrollHeight > document.body.clientHeight || document.body.scrollWidth > document.body.clientWidth) out.push('body content');
+    return out;
+  });
+  if (overflow.length) throw Error(`Card content leaves the 64px safe area: ${[...new Set(overflow)].join(', ')}`);
   await page.screenshot({ path: 'og.png', type: 'png' });
   const png = fs.readFileSync('og.png');
   console.log(`og.png ${png.readUInt32BE(16)}x${png.readUInt32BE(20)}, ${png.length} bytes; rows: ${COMPANIES.join(', ')}; fonts: ${[...new Set(fonts.loaded)].join(', ')}`);
