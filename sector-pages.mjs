@@ -47,8 +47,13 @@ function page({ path, title, heading, lede, rows, nav, generated, analytics, cou
 <meta property="og:description" content="${esc(lede)}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="https://senrajobs.com/og.png?v=20261007">
+<meta property="og:image" content="https://senrajobs.com/og.png?v=20261123">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Senra Jobs: guests of David Senra’s show, their companies and links to open roles. Free, independent fan project.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://senrajobs.com/og.png?v=20261123">
 <script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪜</text></svg>">
 <link rel="preconnect" href="https://cdn.prod.website-files.com" crossorigin>
